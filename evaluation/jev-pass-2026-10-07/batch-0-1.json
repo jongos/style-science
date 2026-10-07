@@ -1,0 +1,339 @@
+{
+  "state": {
+    "study": "Exploratory semantic design probes. Synthetic descriptions only. No rendered images or human outcome measurements. Each question is independent."
+  },
+  "questions": {
+    "density_lookup_v1": {
+      "type": "choice",
+      "instructions": "Scenario: Technicians locate one fault code among 50 on a desktop display; entries have short labels and stable IDs. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "Spacious entries showing fewer entries per screen.",
+        "A": "Compact indexed rows showing many entries."
+      }
+    },
+    "density_reading_v1": {
+      "type": "choice",
+      "instructions": "Scenario: Readers study a 4000-word explanation on desktop for understanding; there is no space limit. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "Moderate spacing with a continuous reading column.",
+        "A": "Compact text with little separation between sections."
+      }
+    },
+    "density_unknown_v1": {
+      "type": "choice",
+      "instructions": "Scenario: A page contains 50 items. Their length, purpose, audience and viewport are unspecified. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "Spacious separated entries.",
+        "A": "Compact indexed rows."
+      }
+    },
+    "comparison_v1": {
+      "type": "choice",
+      "instructions": "Scenario: People compare three plans on the same eight attributes on desktop. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "One complete narrative about each plan in sequence.",
+        "A": "Aligned attribute rows across all three plans."
+      }
+    },
+    "narrative_v1": {
+      "type": "choice",
+      "instructions": "Scenario: People read three independent personal accounts to understand each author; comparing matching attributes is not the task. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "One continuous narrative for each account.",
+        "A": "Aligned attribute rows across all three accounts."
+      }
+    },
+    "mobile_compare_v1": {
+      "type": "choice",
+      "instructions": "Scenario: On a narrow phone, users compare three plans on eight attributes. Full side-by-side columns require unreadably small text. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "Use an attribute selector with readable plan values and explicit comparison labels.",
+        "A": "Keep all columns side by side and reduce text size."
+      }
+    },
+    "whitespace_room_v1": {
+      "type": "choice",
+      "instructions": "Scenario: A short explanatory page has ample screen space. Its paragraphs currently run together. Font and contrast are readable. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "Keep section separation unchanged.",
+        "A": "Increase separation between meaningful sections."
+      }
+    },
+    "whitespace_cost_v1": {
+      "type": "choice",
+      "instructions": "Scenario: A frequently used operations view has readable labels and clear grouping; extra space would hide critical rows below the fold. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "Retain the current compact spacing.",
+        "A": "Increase separation between all rows."
+      }
+    },
+    "palette_semantics_v1": {
+      "type": "choice",
+      "instructions": "Scenario: A monitoring dashboard has six distinct alarm categories that operators must identify. Text labels and icons accompany color. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "Use one accent color for every category.",
+        "A": "Use multiple categorical colors with tested distinctions."
+      }
+    },
+    "palette_single_v1": {
+      "type": "choice",
+      "instructions": "Scenario: An essay has one primary action and no categories to distinguish. Both proposed palettes pass declared contrast checks. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "Use one action accent with neutral reading text.",
+        "A": "Use six categorical accent colors throughout."
+      }
+    },
+    "palette_distance_v1": {
+      "type": "choice",
+      "instructions": "Scenario: Two palettes differ greatly in computed color-space distance. No images, audience judgments or task outcomes are available. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "The distance is a descriptor that requires perceptual validation.",
+        "A": "The distance proves perceived design diversity."
+      }
+    },
+    "redundancy_alarm_v1": {
+      "type": "choice",
+      "instructions": "Scenario: A critical alarm must be understood by users including people with color-vision differences. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "Encode the alarm in color, a label and an icon.",
+        "A": "Encode the alarm in color alone."
+      }
+    },
+    "redundancy_noise_v1": {
+      "type": "choice",
+      "instructions": "Scenario: A routine settings list repeats the same neutral icon, label and explanatory sentence on every row; users know the labels. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "Remove repetitive explanations while retaining unambiguous labels.",
+        "A": "Retain all repeated cues on every row."
+      }
+    },
+    "novelty_art_v1": {
+      "type": "choice",
+      "instructions": "Scenario: An experimental digital exhibition asks visitors to explore an unfamiliar artistic world; novelty is an explicit goal and navigation remains discoverable. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "Use a conventional administrative table composition.",
+        "A": "Use a distinctive exploratory composition."
+      }
+    },
+    "novelty_operations_v1": {
+      "type": "choice",
+      "instructions": "Scenario: Operators repeatedly process time-sensitive records; fast accurate operation is the goal and they know the current conventions. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "I": "The supplied evidence establishes no relevant difference between the proposals.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "B": "Preserve familiar navigation while improving the visual craft.",
+        "A": "Introduce unfamiliar navigation for distinction."
+      }
+    }
+  },
+  "mapping": {
+    "density_lookup_v1": {
+      "id": "density_lookup",
+      "family": "density",
+      "prediction": "A",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "density_reading_v1": {
+      "id": "density_reading",
+      "family": "density",
+      "prediction": "B",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "density_unknown_v1": {
+      "id": "density_unknown",
+      "family": "density",
+      "prediction": "U",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "comparison_v1": {
+      "id": "comparison",
+      "family": "structure",
+      "prediction": "A",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "narrative_v1": {
+      "id": "narrative",
+      "family": "structure",
+      "prediction": "B",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "mobile_compare_v1": {
+      "id": "mobile_compare",
+      "family": "structure",
+      "prediction": "B",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "whitespace_room_v1": {
+      "id": "whitespace_room",
+      "family": "space",
+      "prediction": "A",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "whitespace_cost_v1": {
+      "id": "whitespace_cost",
+      "family": "space",
+      "prediction": "B",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "palette_semantics_v1": {
+      "id": "palette_semantics",
+      "family": "color",
+      "prediction": "A",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "palette_single_v1": {
+      "id": "palette_single",
+      "family": "color",
+      "prediction": "B",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "palette_distance_v1": {
+      "id": "palette_distance",
+      "family": "color",
+      "prediction": "B",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "redundancy_alarm_v1": {
+      "id": "redundancy_alarm",
+      "family": "redundancy",
+      "prediction": "B",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "redundancy_noise_v1": {
+      "id": "redundancy_noise",
+      "family": "redundancy",
+      "prediction": "B",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "novelty_art_v1": {
+      "id": "novelty_art",
+      "family": "novelty",
+      "prediction": "A",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "novelty_operations_v1": {
+      "id": "novelty_operations",
+      "family": "novelty",
+      "prediction": "B",
+      "variant": 1,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    }
+  }
+}

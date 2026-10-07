@@ -1,26 +1,94 @@
-# Generative Design Canvas — GDC-0
+# Style Science
 
-[Read the Style Science manifesto](https://jongos.github.io/style-science/). The landing page is built with JavaScript from `site/manifesto.json`; see `DESIGN.md` for its design rationale and checks.
+**Design deserves better questions.**
 
-Style Science is a research program. GDC-0 is an engineering prototype: portable design knowledge and executable constraint checks, consumed by JavaScript or Python. It is not a trained generator, a universal design graph or a validated quality model.
+We can generate a thousand designs. How do we explain the choices behind them, check that they meet the brief, and learn which ideas are worth carrying forward?
 
-Copy this directory to another project. No Dazzler installation, prompt, rendered examples, network request or third-party runtime dependency is needed for the verification engines. Node 22+ or Python 3.10+ is sufficient. The optional browser adapter accepts a host-supplied Playwright Page; React, Vue and other frontend stacks retain their own implementation and render normally.
+Style Science is a research program making design knowledge explicit: something we can examine, test, share and improve. The ambition is to help machines work with the reasons behind a design while leaving room for character, context and human judgment.
 
-## Run
+[Read the manifesto](https://jongos.github.io/style-science/) · [Try the prototype](#try-it) · [Explore the knowledge](knowledge/README.md) · [Contribute](#help-shape-the-work)
+
+## From principles to working tools
+
+A type size establishes importance. A distance separates or connects. A color directs attention. Style Science asks how those decisions can become knowledge that travels between tools without making every result look the same.
+
+Three commitments guide the work:
+
+- **Give decisions a reason.** Make assumptions and relationships clear enough to question and improve.
+- **Measure what you can defend.** Check concrete requirements, record uncertainty, and keep aesthetic judgment in the review process.
+- **Judge the thing people receive.** Inspect the rendered page, document or interface in the conditions where it will be used.
+
+The first working prototype is **Generative Design Canvas (GDC-0)**: portable design knowledge and executable constraint checks for JavaScript and Python. It gives design agents and application developers a way to ask, "Does this candidate satisfy the requirements we declared?"
+
+For example, a brief might require a heading to appear on desktop and mobile, meet a specified contrast ratio, retain a particular color, and avoid horizontal page overflow. GDC-0 evaluates those declared requirements against captured observations and reports **pass**, **fail** or **unknown**.
+
+| Available today | What it provides |
+| --- | --- |
+| Four HTML constraint checks | Document overflow, declared text visibility, text contrast and computed-style equality |
+| JavaScript and Python engines | Dependency-free verification with interoperable reference consumers |
+| Optional browser adapter | Observation capture from a host-supplied Playwright Page |
+| Portable knowledge library | Preserved reference material, provenance and a smaller registry of scoped entries |
+| Candidate filtering | Candidates whose declared checks all pass, ready for human review |
+
+GDC-0 is an early engineering prototype. It is not a trained generator or a validated model of design quality. No human study has been run. Its current value is a concrete, inspectable starting point for testing requirements and developing the research.
+
+## Try it
+
+Clone the repository and enter its directory:
+
+```shell
+git clone https://github.com/jongos/style-science.git
+cd style-science
+```
+
+The verification engines need **Node.js 22+** or **Python 3.10+**, with no third-party runtime dependencies. The test suite uses both runtimes:
+
+```shell
+npm test
+```
+
+For a small JavaScript example, calculate a contrast ratio directly:
+
+```shell
+node --input-type=module -e "import { contrast } from './engine.mjs'; console.log(contrast('#000000', '#ffffff'));"
+```
+
+This prints `21`, the contrast ratio of black and white. Next, open the [example plan](examples/plan.json) to see how requirements and desktop/mobile environments are declared.
+
+### Verify a rendered design
+
+1. Declare the environments and requirements in a plan, using the example as a starting point.
+2. Render your artifact and collect observations for each environment with the browser adapter described below.
+3. Save the collected snapshots as a JSON array in `snapshots.json`, then run either engine:
 
 ```shell
 node engine.mjs examples/plan.json snapshots.json
 python gdc.py examples/plan.json snapshots.json
-node --test test.mjs
 ```
 
-Exit 0 means every declared check passed; 2 means a failure or unknown; 1 means invalid input. The tests require both language runtimes. `GDC_PYTHON` selects a Python executable.
+`snapshots.json` is your capture output; it is not a bundled fixture. Exit `0` means every declared check passed; `2` means a failure or unknown; `1` means invalid input. Set `GDC_PYTHON` to select a Python executable for the test suite.
+
+### Integrate with your tools
+
+Copy this repository directory into another project to use the core locally. No Dazzler installation, prompt, rendered examples or network request is needed for verification. React, Vue and other frontend stacks retain their own implementation and render normally.
 
 JavaScript consumers import `verify`, `filterCandidates`, `validatePlan`, `fingerprint` and `contrast` from `engine.mjs`. Python consumers use the corresponding snake_case functions from `gdc.py`. This is interoperability of reference consumers, not an independently authored host adoption study.
 
 For rendered collection, import `capture` from `html.mjs`. Set the host Page viewport and color scheme to each declared environment, load the local artifact, exercise the relevant state, then call `capture(page, plan, environmentId)`. Capture after fonts and application content settle. Each distinct interaction state needs its own declared environment ID and capture. The adapter records actual dimensions/theme and never substitutes the requested values. Host navigation and application code remain outside the verifier's trust boundary.
 
-## Operational mathematics
+## Contextual decisions and research
+
+The [Contextual Design Science thesis](evaluation/THESIS.md) develops a mathematical direction for the project: feasible designs, task-specific outcome vectors and falsifiable intervention effects. An exploratory Jev pass produced 60 judgments across 30 synthetic scenarios. Two of the 15 scenarios checked under three option presentations changed their winning answer. These are observations of model behavior, not evidence of improved design quality.
+
+The optional [JavaScript decision module](decision.mjs) and [Python counterpart](decision.py) incorporate those findings. They require explicit context, normalize reordered and relabeled options, preserve abstention, and flag unstable advice. `reviewCandidate` (Python: `review_candidate`) recomputes GDC feasibility first, so a model recommendation cannot override a failed or unknown measurement. The modules consume recorded observations without network access; they do not call Jev or rank aesthetics. See the [decision tests](decision.test.mjs) for executable contract examples and [saved analysis](evaluation/jev-pass-2026-10-07/analysis.json) for the evidence.
+
+Run the full verification and decision suite with `npm test`. Future hypothesis runs must name the feature they will improve, remove or reject under either result.
+
+## How verification works
+
+The technical contract below defines what a passing result actually establishes. Keep these limits alongside any reported results.
+
+### Measurements
 
 - Overflow: `max(0, scrollWidth - clientWidth)`, passing only at zero CSS pixels. This detects document horizontal overflow, not all local clipping or overlap.
 - Contrast: normalized sRGB channels use `c/12.92` below/equal to 0.04045, otherwise `((c+0.055)/1.055)^2.4`; luminance is `0.2126R + 0.7152G + 0.0722B`; ratio is `(Ymax+0.05)/(Ymin+0.05)`. Compare unrounded values against the task's explicit threshold. This checks declared text/background pairs, not all accessibility requirements.
@@ -41,10 +109,32 @@ Keep native medium representations. DTCG tokens and DESIGN.md remain interchange
 
 Generation and final aesthetic judgment stay with the host and reviewer. `filterCandidates` preserves the eligible input order without ranking it. Boldness, distinction and contextual voice remain deliberate review criteria. A numerical distance is not evidence of perceptual diversity. Candidate selection may be extended only with declared instruments and evaluation evidence.
 
-## Evolution and evaluation
+## Help shape the work
+
+Useful contributions begin with a concrete design question, a reproducible example, or a limitation you can demonstrate. Good places to start include:
+
+- **Exercise the checks.** Bring a small rendered case that exposes a failure or an unsupported observation, with the expected result.
+- **Refine a knowledge entry.** Give a claim a clear scope, source, measurement and counterexample.
+- **Explore an adapter.** Preserve the target medium's semantics and define what evidence it can reliably supply.
+- **Strengthen the research plan.** Help specify how a proposed benefit could be evaluated before collecting results.
+
+[Open an issue](https://github.com/jongos/style-science/issues) to discuss a question or proposed change. Read the [maintenance guidance](AGENTS.md) for implementation boundaries and required checks, and the [changelog](CHANGELOG.md) for the project's development so far.
+
+### Evolution and evaluation
 
 Each executable entry names its measurement, scope, evidence class, limitations, tests and version. Changes require fixtures, a version change and an explicit effect on prior outputs. Relations are links between knowledge entries, not a universal graph for every medium. See `evaluation/protocol.json`: research enrollment is blocked until the analysis, practical effect, power analysis, budgets and reviewer sampling are preregistered. No human study has been run.
 
-## Notes and credits
+## Explore the repository
+
+| Start here | For |
+| --- | --- |
+| [Manifesto source](site/manifesto.json) and [site design notes](DESIGN.md) | The project's principles and the rationale behind its public page |
+| [JavaScript engine](engine.mjs) and [Python engine](gdc.py) | Verification, plan validation, fingerprints and candidate filtering |
+| [HTML adapter](html.mjs) | Capturing observations from a rendered page |
+| [Example plan](examples/plan.json) | A concrete desktop/mobile requirement set |
+| [Knowledge guide](knowledge/README.md) and [registry](knowledge/registry.json) | Source provenance, operational entries and scoped hypotheses |
+| [Evaluation protocol](evaluation/protocol.json) | Research status and prerequisites for a future study |
+
+## License and credits
 
 Original implementation: Apache-2.0; see LICENSE. Imported Dazzler references retain their existing credits and license files. Foundations include [WCAG contrast](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html), [DTCG 2025.10](https://www.designtokens.org/tr/2025.10/format/), [DESIGN.md](https://github.com/google-labs-code/design.md/blob/main/docs/spec.md), and [Draco 2](https://arxiv.org/abs/2308.14247). These sources do not endorse GDC-0 or establish its quality benefit.

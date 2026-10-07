@@ -1,15 +1,16 @@
 {
   "name": "@style-science/gdc",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "private": true,
   "license": "Apache-2.0",
   "exports": {
     ".": "./engine.mjs",
-    "./html": "./html.mjs"
+    "./html": "./html.mjs",
+    "./decision": "./decision.mjs"
   },
   "scripts": {
-    "test": "node --test test.mjs"
+    "test": "node --test test.mjs decision.test.mjs"
   },
   "engines": {
     "node": ">=22"

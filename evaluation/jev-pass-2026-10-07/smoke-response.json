@@ -1,0 +1,72 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "missing": {
+      "type": "choice",
+      "choice": "B",
+      "confidence": 1,
+      "probabilities": {
+        "B": 1,
+        "C": 0,
+        "D": 0,
+        "A": 0
+      },
+      "stats": {}
+    },
+    "conflict": {
+      "type": "choice",
+      "choice": "C",
+      "confidence": 1,
+      "probabilities": {
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "A": 0
+      },
+      "stats": {}
+    },
+    "ambiguous": {
+      "type": "choice",
+      "choice": "C",
+      "confidence": 1,
+      "probabilities": {
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "A": 0
+      },
+      "stats": {}
+    },
+    "retrieval": {
+      "type": "choice",
+      "choice": "K1",
+      "confidence": 1,
+      "probabilities": {
+        "K3": 0,
+        "K1": 1,
+        "none": 0,
+        "K2": 0
+      },
+      "stats": {}
+    },
+    "roadmap": {
+      "type": "choice",
+      "choice": "A",
+      "confidence": 1,
+      "probabilities": {
+        "B": 0,
+        "A": 1,
+        "D": 0,
+        "E": 0,
+        "C": 0
+      },
+      "stats": {}
+    }
+  },
+  "usage": {
+    "input_tokens": 1398,
+    "output_tokens": 231
+  },
+  "request_id": "playground_181afa6f50c515f41e7ab9f022e401ae67a",
+  "evaluation_time_ms": 80.2030630002264
+}

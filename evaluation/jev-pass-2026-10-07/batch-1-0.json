@@ -1,0 +1,339 @@
+{
+  "state": {
+    "study": "Exploratory semantic design probes. Synthetic descriptions only. No rendered images or human outcome measurements. Each question is independent."
+  },
+  "questions": {
+    "symmetry_compare_v0": {
+      "type": "choice",
+      "instructions": "Scenario: Two alternatives deserve equal attention and must be compared using the same fields. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Use equal visual weight and aligned fields.",
+        "B": "Give one alternative much more visual weight without a stated reason.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "symmetry_priority_v0": {
+      "type": "choice",
+      "instructions": "Scenario: A page contains one urgent task and several optional background references. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Give every item equal visual weight.",
+        "B": "Give the urgent task more visual weight.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "brand_prior_v0": {
+      "type": "choice",
+      "instructions": "Scenario: A financial education game explicitly requests bright playful colors for teenagers. Readability and correctness are separately checked. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Apply a muted formal palette because the subject is finance.",
+        "B": "Use the requested playful palette within the checked constraints.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "premium_unknown_v0": {
+      "type": "choice",
+      "instructions": "Scenario: A brief says premium. There is no audience, brand reference, product category or rendered image. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Choose a restrained monochrome style.",
+        "B": "Choose an ornate colorful style.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "equivalent_v0": {
+      "type": "choice",
+      "instructions": "Scenario: Two proposals have identical content, layout, typography, interaction, measurements and rendered pixels. Only their internal IDs differ. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Prefer proposal A.",
+        "B": "Prefer proposal B.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "font_unknown_v0": {
+      "type": "choice",
+      "instructions": "Scenario: Two installed fonts are available. Their metrics, rendered samples, reading task and audience are unspecified. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Prefer the serif font.",
+        "B": "Prefer the sans-serif font.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "line_length_v0": {
+      "type": "choice",
+      "instructions": "Scenario: An English long-form article has lines spanning nearly the entire ultrawide monitor. Readers report losing their place at line breaks. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Constrain the reading measure while preserving comfortable type size.",
+        "B": "Keep the current measure and add decorative color.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "threshold_generalization_v0": {
+      "type": "choice",
+      "instructions": "Scenario: A layout scores well on four HTML checks: overflow, text presence, contrast and a style lock. No audience test has been run. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Conclude the layout is aesthetically better.",
+        "B": "Conclude only the declared measured checks passed.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "unknown_measurement_v0": {
+      "type": "choice",
+      "instructions": "Scenario: A requested mobile snapshot is absent. Desktop passes all checks. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Infer mobile pass from desktop.",
+        "B": "Keep mobile status unknown and collect its observation.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "correlation_v0": {
+      "type": "choice",
+      "instructions": "Scenario: Popular websites often use a particular spacing ratio. There is no randomized comparison or control for brand, audience or task. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Treat the ratio as a causal design law.",
+        "B": "Treat the association as a hypothesis for controlled testing.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "confidence_v0": {
+      "type": "choice",
+      "instructions": "Scenario: A model assigns 99 percent confidence to a design recommendation. No domain calibration or human outcome data exists. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Treat the recommendation as experimentally validated.",
+        "B": "Record a confident model prediction with empirical benefit untested.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "constraint_v0": {
+      "type": "choice",
+      "instructions": "Scenario: A candidate has a declared contrast failure but receives a high aesthetic score. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Allow the score to compensate for the failure.",
+        "B": "Keep it ineligible until the requirement is satisfied or explicitly revised.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "scalar_weights_v0": {
+      "type": "choice",
+      "instructions": "Scenario: Two feasible candidates trade off task completion speed and audience preference. Stakeholders have supplied no exchange rate between them. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Choose universal fixed weights and declare one optimal.",
+        "B": "Retain both nondominated options pending a context-specific preference or experiment.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "sample_transfer_v0": {
+      "type": "choice",
+      "instructions": "Scenario: A layout intervention improves a single desktop essay for five expert designers. The proposed deployment is a mobile reference tool for novice users. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Transfer the result as an established benefit.",
+        "B": "Treat transfer as an untested hypothesis requiring target-task evaluation.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    },
+    "stop_rule_v0": {
+      "type": "choice",
+      "instructions": "Scenario: An additional design iteration has unknown expected benefit and a known positive rendering/review cost. No outcome history or deadline is supplied. Which conclusion or design direction is best supported for the stated task? Judge the supplied descriptions, not the option letters. Use insufficient evidence when a preference requires missing information; use no relevant difference only when equivalence is established.",
+      "criteria": {
+        "A": "Always generate another variation.",
+        "B": "Always stop immediately.",
+        "U": "The supplied evidence is insufficient to prefer either proposal.",
+        "I": "The supplied evidence establishes no relevant difference between the proposals."
+      }
+    }
+  },
+  "mapping": {
+    "symmetry_compare_v0": {
+      "id": "symmetry_compare",
+      "family": "symmetry",
+      "prediction": "A",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "symmetry_priority_v0": {
+      "id": "symmetry_priority",
+      "family": "symmetry",
+      "prediction": "B",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "brand_prior_v0": {
+      "id": "brand_prior",
+      "family": "context",
+      "prediction": "B",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "premium_unknown_v0": {
+      "id": "premium_unknown",
+      "family": "context",
+      "prediction": "U",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "equivalent_v0": {
+      "id": "equivalent",
+      "family": "invariance",
+      "prediction": "I",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "font_unknown_v0": {
+      "id": "font_unknown",
+      "family": "typography",
+      "prediction": "U",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "line_length_v0": {
+      "id": "line_length",
+      "family": "typography",
+      "prediction": "A",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "threshold_generalization_v0": {
+      "id": "threshold_generalization",
+      "family": "epistemic",
+      "prediction": "B",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "unknown_measurement_v0": {
+      "id": "unknown_measurement",
+      "family": "epistemic",
+      "prediction": "B",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "correlation_v0": {
+      "id": "correlation",
+      "family": "epistemic",
+      "prediction": "B",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "confidence_v0": {
+      "id": "confidence",
+      "family": "epistemic",
+      "prediction": "B",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "constraint_v0": {
+      "id": "constraint",
+      "family": "epistemic",
+      "prediction": "B",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "scalar_weights_v0": {
+      "id": "scalar_weights",
+      "family": "mathematics",
+      "prediction": "B",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "sample_transfer_v0": {
+      "id": "sample_transfer",
+      "family": "epistemic",
+      "prediction": "B",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    },
+    "stop_rule_v0": {
+      "id": "stop_rule",
+      "family": "mathematics",
+      "prediction": "U",
+      "variant": 0,
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U",
+        "I": "I"
+      }
+    }
+  }
+}

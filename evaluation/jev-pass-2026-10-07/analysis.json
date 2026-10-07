@@ -1,0 +1,1198 @@
+{
+  "date": "2026-10-07",
+  "evidenceClass": "exploratory-model-probes",
+  "model": [
+    "jev-1.13.0"
+  ],
+  "judgments": 60,
+  "scenarios": 30,
+  "threeVariantScenarios": 15,
+  "unstable": [
+    "density_lookup",
+    "palette_distance"
+  ],
+  "consistentAbstentions": [
+    "density_reading",
+    "density_unknown",
+    "palette_semantics"
+  ],
+  "limitations": [
+    "Synthetic text descriptions, not rendered perception or human outcomes.",
+    "Analyst-authored options and predictions are not independent ground truth.",
+    "Variants are correlated observations of the same model, not independent samples.",
+    "No latency comparison or quality-effect estimate.",
+    "The final 15 scenarios have only one variant and cannot pass the advisory gate."
+  ],
+  "results": [
+    {
+      "id": "density_lookup",
+      "family": "density",
+      "analystPrediction": "A",
+      "meanings": [
+        "A",
+        "U",
+        "A"
+      ],
+      "confidences": [
+        0.47,
+        0.41,
+        0.4
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "0ef4cdafb27e855f47fe6ce13f4928a3dded54be9183d01ffa5f0998e623e2f9",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "unstable",
+        "choice": null,
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.32,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "A",
+            "confidence": 0.47,
+            "probabilities": {
+              "B": 0.1,
+              "U": 0.27,
+              "A": 0.6,
+              "I": 0.03
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "U",
+            "confidence": 0.41,
+            "probabilities": {
+              "B": 0.04,
+              "A": 0.34,
+              "I": 0.06,
+              "U": 0.56
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "A",
+            "confidence": 0.4,
+            "probabilities": {
+              "U": 0.28,
+              "B": 0.13,
+              "A": 0.55,
+              "I": 0.04
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "density_reading",
+      "family": "density",
+      "analystPrediction": "B",
+      "meanings": [
+        "U",
+        "U",
+        "U"
+      ],
+      "confidences": [
+        0.65,
+        0.69,
+        0.6
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "afac4cf93837f3697147b18d620876f41aaabce74aaf2d87e2f375eec989eb24",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "abstain",
+        "choice": "U",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.07000000000000003,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "U",
+            "confidence": 0.65,
+            "probabilities": {
+              "B": 0.22,
+              "U": 0.74,
+              "A": 0,
+              "I": 0.04
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "U",
+            "confidence": 0.69,
+            "probabilities": {
+              "B": 0.18,
+              "I": 0.05,
+              "A": 0,
+              "U": 0.77
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "U",
+            "confidence": 0.6,
+            "probabilities": {
+              "U": 0.7,
+              "B": 0.24,
+              "A": 0,
+              "I": 0.06
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "density_unknown",
+      "family": "density",
+      "analystPrediction": "U",
+      "meanings": [
+        "U",
+        "U",
+        "U"
+      ],
+      "confidences": [
+        0.97,
+        0.97,
+        0.96
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "efc0f9d24c7240d3a76509f041a5d845f2582a4188926d5a996cffc6fb10015f",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "abstain",
+        "choice": "U",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.020000000000000004,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "U",
+            "confidence": 0.97,
+            "probabilities": {
+              "B": 0,
+              "U": 0.98,
+              "A": 0,
+              "I": 0.02
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "U",
+            "confidence": 0.97,
+            "probabilities": {
+              "B": 0,
+              "I": 0.01,
+              "A": 0.01,
+              "U": 0.98
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "U",
+            "confidence": 0.96,
+            "probabilities": {
+              "U": 0.97,
+              "B": 0,
+              "A": 0,
+              "I": 0.03
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "comparison",
+      "family": "structure",
+      "analystPrediction": "A",
+      "meanings": [
+        "A",
+        "A",
+        "A"
+      ],
+      "confidences": [
+        0.41,
+        0.63,
+        0.45
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "e2afa97fcfb1d5a1fdef9acedc91531a11ad56e4c91dbb6e42cfbe34b4598ed0",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "advisory",
+        "choice": "A",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.15434343434343434,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "A",
+            "confidence": 0.41,
+            "probabilities": {
+              "B": 0,
+              "U": 0.4,
+              "A": 0.56,
+              "I": 0.03
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "A",
+            "confidence": 0.63,
+            "probabilities": {
+              "B": 0,
+              "I": 0.02,
+              "A": 0.72,
+              "U": 0.26
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "A",
+            "confidence": 0.45,
+            "probabilities": {
+              "U": 0.35,
+              "B": 0.01,
+              "A": 0.59,
+              "I": 0.05
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "narrative",
+      "family": "structure",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.53,
+        0.65,
+        0.52
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "39364d7d25e2d36f593ac888a5f972f0f0318b61440dd42edabce6806595aea0",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "advisory",
+        "choice": "B",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.09999999999999999,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "B",
+            "confidence": 0.53,
+            "probabilities": {
+              "U": 0.31,
+              "B": 0.65,
+              "A": 0.01,
+              "I": 0.03
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "B",
+            "confidence": 0.65,
+            "probabilities": {
+              "B": 0.74,
+              "I": 0.02,
+              "A": 0,
+              "U": 0.24
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "B",
+            "confidence": 0.52,
+            "probabilities": {
+              "U": 0.31,
+              "B": 0.64,
+              "A": 0.01,
+              "I": 0.04
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mobile_compare",
+      "family": "structure",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.69,
+        0.33,
+        0.76
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "4a1b32d3400823dbbf2b2b881750792c0d52f5ccfa43438f4da23eae74deffaf",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "advisory",
+        "choice": "B",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.31999999999999995,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "B",
+            "confidence": 0.69,
+            "probabilities": {
+              "B": 0.77,
+              "U": 0.22,
+              "A": 0,
+              "I": 0.01
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "B",
+            "confidence": 0.33,
+            "probabilities": {
+              "B": 0.5,
+              "I": 0.03,
+              "A": 0,
+              "U": 0.47
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "B",
+            "confidence": 0.76,
+            "probabilities": {
+              "U": 0.17,
+              "B": 0.82,
+              "A": 0,
+              "I": 0.01
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "whitespace_room",
+      "family": "space",
+      "analystPrediction": "A",
+      "meanings": [
+        "A",
+        "A",
+        "A"
+      ],
+      "confidences": [
+        0.89,
+        0.76,
+        0.85
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "8a542b5f032ca1df4ac6b1af9d280c969c10084d316992e198ea75738edf8617",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "advisory",
+        "choice": "A",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.10000000000000003,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "A",
+            "confidence": 0.89,
+            "probabilities": {
+              "B": 0,
+              "U": 0.07,
+              "A": 0.92,
+              "I": 0.01
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "A",
+            "confidence": 0.76,
+            "probabilities": {
+              "B": 0,
+              "I": 0.03,
+              "A": 0.82,
+              "U": 0.15
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "A",
+            "confidence": 0.85,
+            "probabilities": {
+              "U": 0.09,
+              "B": 0.01,
+              "A": 0.89,
+              "I": 0.01
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "whitespace_cost",
+      "family": "space",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.87,
+        0.85,
+        0.91
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "35eb071bd008feb04dcfc91b2a636d96f54fe3767da4eb9d44ec09edeffc3e13",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "advisory",
+        "choice": "B",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.03999999999999996,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "B",
+            "confidence": 0.87,
+            "probabilities": {
+              "U": 0.09,
+              "B": 0.9,
+              "A": 0,
+              "I": 0.01
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "B",
+            "confidence": 0.85,
+            "probabilities": {
+              "B": 0.89,
+              "I": 0.02,
+              "A": 0,
+              "U": 0.09
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "B",
+            "confidence": 0.91,
+            "probabilities": {
+              "U": 0.06,
+              "B": 0.9299999999999999,
+              "A": 0,
+              "I": 0.01
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "palette_semantics",
+      "family": "color",
+      "analystPrediction": "A",
+      "meanings": [
+        "U",
+        "U",
+        "U"
+      ],
+      "confidences": [
+        0.52,
+        0.51,
+        0.49
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "b2fee983a119bcf3b1fb92b022e75d916b8835c2999ef7401eca7c3c10d416f6",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "abstain",
+        "choice": "U",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.04000000000000002,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "U",
+            "confidence": 0.52,
+            "probabilities": {
+              "B": 0.01,
+              "U": 0.64,
+              "A": 0.32,
+              "I": 0.03
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "U",
+            "confidence": 0.51,
+            "probabilities": {
+              "B": 0.02,
+              "I": 0.06,
+              "A": 0.29,
+              "U": 0.63
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "U",
+            "confidence": 0.49,
+            "probabilities": {
+              "U": 0.62,
+              "B": 0.01,
+              "A": 0.33,
+              "I": 0.04
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "palette_single",
+      "family": "color",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.4,
+        0.23,
+        0.29
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "747e6c9a58359b528df854583ccc91d6a305438ca2842b9fb021b96055760dea",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "advisory",
+        "choice": "B",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.13000000000000003,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "B",
+            "confidence": 0.4,
+            "probabilities": {
+              "B": 0.55,
+              "U": 0.33,
+              "A": 0,
+              "I": 0.12
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "B",
+            "confidence": 0.23,
+            "probabilities": {
+              "B": 0.42,
+              "I": 0.19,
+              "A": 0,
+              "U": 0.39
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "B",
+            "confidence": 0.29,
+            "probabilities": {
+              "U": 0.38,
+              "B": 0.47,
+              "A": 0,
+              "I": 0.15
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "palette_distance",
+      "family": "color",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "U",
+        "B"
+      ],
+      "confidences": [
+        0.51,
+        0.36,
+        0.45
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "762d6cb8f4f53e484fd14266b887dee14b4a937188dd340cfdbdfe63153ea782",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "unstable",
+        "choice": null,
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.16000000000000003,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "B",
+            "confidence": 0.51,
+            "probabilities": {
+              "B": 0.63,
+              "U": 0.37,
+              "A": 0,
+              "I": 0
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "U",
+            "confidence": 0.36,
+            "probabilities": {
+              "B": 0.47,
+              "I": 0.01,
+              "A": 0,
+              "U": 0.52
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "B",
+            "confidence": 0.45,
+            "probabilities": {
+              "U": 0.41,
+              "B": 0.59,
+              "A": 0,
+              "I": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "redundancy_alarm",
+      "family": "redundancy",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.77,
+        0.76,
+        0.76
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "af48b453228f058fdd23cafe7d4d8a0add4712d930421d45a4cf559c0358babb",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "advisory",
+        "choice": "B",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.020000000000000007,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "B",
+            "confidence": 0.77,
+            "probabilities": {
+              "B": 0.83,
+              "U": 0.16,
+              "A": 0,
+              "I": 0.01
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "B",
+            "confidence": 0.76,
+            "probabilities": {
+              "B": 0.82,
+              "I": 0.03,
+              "A": 0,
+              "U": 0.15
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "B",
+            "confidence": 0.76,
+            "probabilities": {
+              "U": 0.16,
+              "B": 0.82,
+              "A": 0,
+              "I": 0.02
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "redundancy_noise",
+      "family": "redundancy",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.85,
+        0.67,
+        0.87
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "3c5ef13dca4a6955fbbc6e30e4a2181aab65c5db27ec73ae3dda49d8f98087ff",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "advisory",
+        "choice": "B",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.15000000000000002,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "B",
+            "confidence": 0.85,
+            "probabilities": {
+              "B": 0.89,
+              "U": 0.1,
+              "A": 0,
+              "I": 0.01
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "B",
+            "confidence": 0.67,
+            "probabilities": {
+              "B": 0.75,
+              "I": 0.04,
+              "A": 0,
+              "U": 0.21
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "B",
+            "confidence": 0.87,
+            "probabilities": {
+              "U": 0.08,
+              "B": 0.9,
+              "A": 0,
+              "I": 0.02
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "novelty_art",
+      "family": "novelty",
+      "analystPrediction": "A",
+      "meanings": [
+        "A",
+        "A",
+        "A"
+      ],
+      "confidences": [
+        0.55,
+        0.55,
+        0.63
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "af933df08ea7ae263504cdaafe32d39a8f5d338a72ca6e6d273413c6f7b223d5",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "advisory",
+        "choice": "A",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.06999999999999997,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "A",
+            "confidence": 0.55,
+            "probabilities": {
+              "B": 0,
+              "U": 0.3,
+              "A": 0.66,
+              "I": 0.04
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "A",
+            "confidence": 0.55,
+            "probabilities": {
+              "B": 0,
+              "I": 0.04,
+              "A": 0.66,
+              "U": 0.3
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "A",
+            "confidence": 0.63,
+            "probabilities": {
+              "U": 0.23,
+              "B": 0,
+              "A": 0.72,
+              "I": 0.05
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "novelty_operations",
+      "family": "novelty",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.73,
+        0.8,
+        0.73
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "f0954a1b7c265237726a4d59ecfb9a32438acac77f153f07aec42f3b3b9c98e7",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "advisory",
+        "choice": "B",
+        "model": "jev-1.13.0",
+        "maxTotalVariation": 0.04999999999999997,
+        "observations": [
+          {
+            "variant": "baseline",
+            "choice": "B",
+            "confidence": 0.73,
+            "probabilities": {
+              "B": 0.8,
+              "U": 0.18,
+              "A": 0,
+              "I": 0.02
+            }
+          },
+          {
+            "variant": "reordered",
+            "choice": "B",
+            "confidence": 0.8,
+            "probabilities": {
+              "B": 0.85,
+              "I": 0.02,
+              "A": 0,
+              "U": 0.13
+            }
+          },
+          {
+            "variant": "relabeled",
+            "choice": "B",
+            "confidence": 0.73,
+            "probabilities": {
+              "U": 0.17,
+              "B": 0.8,
+              "A": 0,
+              "I": 0.03
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "symmetry_compare",
+      "family": "symmetry",
+      "analystPrediction": "A",
+      "meanings": [
+        "U"
+      ],
+      "confidences": [
+        0.41
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "c1b0cc5636e295be0223d1dbf6b89429355b11847365a4c680223f7f378b5fc8",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "symmetry_priority",
+      "family": "symmetry",
+      "analystPrediction": "B",
+      "meanings": [
+        "B"
+      ],
+      "confidences": [
+        0.52
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "1139f0c276a8ded059ff29ea3ea675dbb6f80787476cf4c813b5baccc0a74bf4",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "brand_prior",
+      "family": "context",
+      "analystPrediction": "B",
+      "meanings": [
+        "B"
+      ],
+      "confidences": [
+        0.79
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "f23abedea6e5c057e5679af3934d4351198dd28fddd3d8595a92d3cdaec05222",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "premium_unknown",
+      "family": "context",
+      "analystPrediction": "U",
+      "meanings": [
+        "U"
+      ],
+      "confidences": [
+        0.92
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "9131c08d02ffad772db2f712a2b6fbde21434ce622c40b5a19748d838149d3fb",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "equivalent",
+      "family": "invariance",
+      "analystPrediction": "I",
+      "meanings": [
+        "I"
+      ],
+      "confidences": [
+        0.79
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "5e160bef109a5d4305a9c122d046707bf64722d16f6d349ed43d2a74064bb010",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "font_unknown",
+      "family": "typography",
+      "analystPrediction": "U",
+      "meanings": [
+        "U"
+      ],
+      "confidences": [
+        0.99
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "c0622b29a132cf88fd9f50b801138c05fcb6591fcc73a79e77017381319233bf",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "line_length",
+      "family": "typography",
+      "analystPrediction": "A",
+      "meanings": [
+        "A"
+      ],
+      "confidences": [
+        0.92
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "ad2f635bd702d448266d52fe171af0ecb3745ed8732537054e232957cc7a0572",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "threshold_generalization",
+      "family": "epistemic",
+      "analystPrediction": "B",
+      "meanings": [
+        "B"
+      ],
+      "confidences": [
+        0.87
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "5337a6275b3c246380cc22b11b5a30425baf608b34163987309e323b6cee7903",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "unknown_measurement",
+      "family": "epistemic",
+      "analystPrediction": "B",
+      "meanings": [
+        "B"
+      ],
+      "confidences": [
+        0.87
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "353a0da351971eb2dcb214f737d596ddc2fc82b03422e2e0a5d7ee653d28ed62",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "correlation",
+      "family": "epistemic",
+      "analystPrediction": "B",
+      "meanings": [
+        "B"
+      ],
+      "confidences": [
+        0.81
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "8787714b9f246744474dd9bb3540ba45f81ce9a3067eb7ce764b97b9187ba1b5",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "confidence",
+      "family": "epistemic",
+      "analystPrediction": "B",
+      "meanings": [
+        "B"
+      ],
+      "confidences": [
+        0.75
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "d9cdcaf43fd59b764e029b4b0a354c962bc4d9861d33b21db5d533269e383e09",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "constraint",
+      "family": "epistemic",
+      "analystPrediction": "B",
+      "meanings": [
+        "B"
+      ],
+      "confidences": [
+        0.56
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "e618a885c1463783008f9acd293b51444d2d2cda152afdc17f7160c5f95e2ef7",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "scalar_weights",
+      "family": "mathematics",
+      "analystPrediction": "B",
+      "meanings": [
+        "B"
+      ],
+      "confidences": [
+        0.33
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "d302d715b1e01f8e7a984574f20b0e759b85a85117eb703341d772af6beccd19",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "sample_transfer",
+      "family": "epistemic",
+      "analystPrediction": "B",
+      "meanings": [
+        "B"
+      ],
+      "confidences": [
+        0.95
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "40525576a2801f64af065cd201936e39b0e6209b6cb58e0b3ae184d174feb32b",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    },
+    {
+      "id": "stop_rule",
+      "family": "mathematics",
+      "analystPrediction": "U",
+      "meanings": [
+        "U"
+      ],
+      "confidences": [
+        0.99
+      ],
+      "report": {
+        "decisionVersion": "0.1.0",
+        "contractHash": "fe1f35671dd92b2ec2656a2619fb3803debc97308fa437ff39e1702f2fe76c58",
+        "evidenceClass": "model-prediction",
+        "automaticAction": false,
+        "status": "needs-observations"
+      }
+    }
+  ]
+}
