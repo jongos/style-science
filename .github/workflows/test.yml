@@ -23,6 +23,8 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
-      - run: npm install --no-save --ignore-scripts --package-lock=false playwright@1.63.0
+      - run: npm install --no-save --ignore-scripts --package-lock=false playwright@1.63.0 axe-core@4.13.0
       - run: npx playwright install --with-deps chromium
       - run: node --test browser.test.mjs
+      - run: node tools/build_site.mjs
+      - run: node tools/test_site.mjs

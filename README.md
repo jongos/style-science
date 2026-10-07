@@ -1,5 +1,7 @@
 # Generative Design Canvas — GDC-0
 
+[Read the Style Science manifesto](https://jongos.github.io/style-science/). The landing page is built with JavaScript from `site/manifesto.json`; see `DESIGN.md` for its design rationale and checks.
+
 Style Science is a research program. GDC-0 is an engineering prototype: portable design knowledge and executable constraint checks, consumed by JavaScript or Python. It is not a trained generator, a universal design graph or a validated quality model.
 
 Copy this directory to another project. No Dazzler installation, prompt, rendered examples, network request or third-party runtime dependency is needed for the verification engines. Node 22+ or Python 3.10+ is sufficient. The optional browser adapter accepts a host-supplied Playwright Page; React, Vue and other frontend stacks retain their own implementation and render normally.

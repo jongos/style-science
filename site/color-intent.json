@@ -1,0 +1,13 @@
+{
+  "brief": "A precise industrial-design manifesto: warm mineral paper, near-black ink, an assertive oxide-red statement and a pale yellow-green signal on the dark experiment. Editorial, accountable, distinctive.",
+  "seed": "style-science-manifesto-001",
+  "count": 6,
+  "base": "#ac301b",
+  "ranges": {
+    "lightSurface": [0.9, 0.95],
+    "darkSurface": [0.18, 0.25],
+    "surfaceChroma": [0.012, 0.03],
+    "neutralChroma": [0.008, 0.025],
+    "neutralOffset": [40, 80]
+  }
+}
