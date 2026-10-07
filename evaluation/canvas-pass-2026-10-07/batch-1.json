@@ -1,0 +1,245 @@
+{
+  "state": {
+    "purpose": "Review proposed mathematical design-canvas features using synthetic scenarios. Each question is independent."
+  },
+  "hypotheses": [
+    {
+      "id": "intervals",
+      "feature": "Outcome comparison",
+      "ifSupported": "Add bounded effect intervals and an inconclusive state",
+      "ifRefuted": "Reject interval verdicts and retain raw measurement display only"
+    },
+    {
+      "id": "comparability",
+      "feature": "Measurement identity",
+      "ifSupported": "Require matching context, environment, units and instrument",
+      "ifRefuted": "Reject generalized comparison and accept only explicitly paired records"
+    },
+    {
+      "id": "experiment",
+      "feature": "Experiment admission",
+      "ifSupported": "Require concrete feature actions under both outcomes",
+      "ifRefuted": "Remove generic experiment scheduling and keep manual research only"
+    }
+  ],
+  "questions": {
+    "overlap_v1": {
+      "type": "choice",
+      "instructions": "Two measured completion-time ranges overlap. The candidate has a lower midpoint but the supplied bounds allow it to be slower. No probability distribution is supplied. Which implementation behavior is justified by the stated evidence? This is a semantic contract review, not a request to calculate or assert design laws.",
+      "criteria": {
+        "U": "Insufficient information to choose either interpretation.",
+        "B": "Report an unresolved effect from the supplied bounds.",
+        "A": "Mark the candidate faster using the midpoint."
+      }
+    },
+    "separated_v1": {
+      "type": "choice",
+      "instructions": "The entire measured candidate time range is below the entire baseline range by more than the declared meaningful difference. Conditions and units match. Which implementation behavior is justified by the stated evidence? This is a semantic contract review, not a request to calculate or assert design laws.",
+      "criteria": {
+        "U": "Insufficient information to choose either interpretation.",
+        "B": "Declare overall design quality improved.",
+        "A": "Report improvement on this measured time outcome only."
+      }
+    },
+    "small_effect_v1": {
+      "type": "choice",
+      "instructions": "A difference is fully inside the task owner's declared practically negligible band. Both signed improvement and signed worsening inside that band are possible. Which implementation behavior is justified by the stated evidence? This is a semantic contract review, not a request to calculate or assert design laws.",
+      "criteria": {
+        "U": "Insufficient information to choose either interpretation.",
+        "B": "Report that the designs are visually identical.",
+        "A": "Report practically negligible under these supplied bounds and declared band."
+      }
+    },
+    "threshold_v1": {
+      "type": "choice",
+      "instructions": "An effect range touches the meaningful-improvement threshold but also includes smaller effects. Which implementation behavior is justified by the stated evidence? This is a semantic contract review, not a request to calculate or assert design laws.",
+      "criteria": {
+        "U": "Insufficient information to choose either interpretation.",
+        "B": "Report inconclusive relative to that threshold.",
+        "A": "Report unambiguous meaningful improvement."
+      }
+    },
+    "probability_v1": {
+      "type": "choice",
+      "instructions": "Only lower and upper engineering bounds are supplied, with no sampling design or probability model. Which implementation behavior is justified by the stated evidence? This is a semantic contract review, not a request to calculate or assert design laws.",
+      "criteria": {
+        "U": "Insufficient information to choose either interpretation.",
+        "B": "Preserve bounds without inventing probability.",
+        "A": "Use the range width to infer probability of improvement."
+      }
+    },
+    "units_v1": {
+      "type": "choice",
+      "instructions": "One completion-time record is in milliseconds and one in seconds. No approved unit conversion has been applied. Which implementation behavior is justified by the stated evidence? This is a semantic contract review, not a request to calculate or assert design laws.",
+      "criteria": {
+        "U": "Insufficient information to choose either interpretation.",
+        "B": "Require explicit normalization to matching units before comparison.",
+        "A": "Compare raw numbers directly."
+      }
+    },
+    "environment_v1": {
+      "type": "choice",
+      "instructions": "The baseline is measured on desktop and the candidate only on mobile; the task is intended to work on both. Which implementation behavior is justified by the stated evidence? This is a semantic contract review, not a request to calculate or assert design laws.",
+      "criteria": {
+        "U": "Insufficient information to choose either interpretation.",
+        "B": "Require corresponding observations in each declared environment.",
+        "A": "Treat the two records as a paired effect."
+      }
+    },
+    "instrument_v1": {
+      "type": "choice",
+      "instructions": "Baseline comprehension uses a five-item quiz; candidate comprehension uses a different ten-item quiz, with no validated crosswalk. Which implementation behavior is justified by the stated evidence? This is a semantic contract review, not a request to calculate or assert design laws.",
+      "criteria": {
+        "U": "Insufficient information to choose either interpretation.",
+        "B": "Keep the effect unknown until instruments are comparable.",
+        "A": "Compare percentages as an equivalent instrument."
+      }
+    },
+    "proxy_v1": {
+      "type": "choice",
+      "instructions": "Candidate performance is predicted by Jev while baseline performance is measured with target users. Which implementation behavior is justified by the stated evidence? This is a semantic contract review, not a request to calculate or assert design laws.",
+      "criteria": {
+        "U": "Insufficient information to choose either interpretation.",
+        "B": "Separate model predictions from measured outcomes.",
+        "A": "Treat both as observed outcomes."
+      }
+    },
+    "tradeoff_v1": {
+      "type": "choice",
+      "instructions": "Candidate improves lookup time and worsens error rate. No permitted exchange rate is specified. Which implementation behavior is justified by the stated evidence? This is a semantic contract review, not a request to calculate or assert design laws.",
+      "criteria": {
+        "U": "Insufficient information to choose either interpretation.",
+        "B": "Combine the outcomes using equal weights.",
+        "A": "Preserve the per-outcome tradeoff without choosing a winner."
+      }
+    },
+    "actionable_v1": {
+      "type": "choice",
+      "instructions": "A proposed spacing experiment names the affected feature, baseline, intervention, outcome metric, budget, and different feature actions for supportive versus refuting evidence. Which implementation behavior is justified by the stated evidence? This is a semantic contract review, not a request to calculate or assert design laws.",
+      "criteria": {
+        "U": "Insufficient information to choose either interpretation.",
+        "B": "Discard it because no outcome is known in advance.",
+        "A": "Accept its plan for review, without claiming preregistration or permission to collect human data."
+      }
+    },
+    "no_action_v1": {
+      "type": "choice",
+      "instructions": "A proposed color experiment has the same action under every result: retain the existing feature without modification. Which implementation behavior is justified by the stated evidence? This is a semantic contract review, not a request to calculate or assert design laws.",
+      "criteria": {
+        "U": "Insufficient information to choose either interpretation.",
+        "B": "Reject it from this queue because no possible result changes a feature decision.",
+        "A": "Admit it into the feature-development queue."
+      }
+    }
+  },
+  "mapping": {
+    "overlap_v1": {
+      "hypothesis": "intervals",
+      "prediction": "B",
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U"
+      }
+    },
+    "separated_v1": {
+      "hypothesis": "intervals",
+      "prediction": "A",
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U"
+      }
+    },
+    "small_effect_v1": {
+      "hypothesis": "intervals",
+      "prediction": "A",
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U"
+      }
+    },
+    "threshold_v1": {
+      "hypothesis": "intervals",
+      "prediction": "B",
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U"
+      }
+    },
+    "probability_v1": {
+      "hypothesis": "intervals",
+      "prediction": "B",
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U"
+      }
+    },
+    "units_v1": {
+      "hypothesis": "comparability",
+      "prediction": "B",
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U"
+      }
+    },
+    "environment_v1": {
+      "hypothesis": "comparability",
+      "prediction": "B",
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U"
+      }
+    },
+    "instrument_v1": {
+      "hypothesis": "comparability",
+      "prediction": "B",
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U"
+      }
+    },
+    "proxy_v1": {
+      "hypothesis": "comparability",
+      "prediction": "B",
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U"
+      }
+    },
+    "tradeoff_v1": {
+      "hypothesis": "comparability",
+      "prediction": "A",
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U"
+      }
+    },
+    "actionable_v1": {
+      "hypothesis": "experiment",
+      "prediction": "A",
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U"
+      }
+    },
+    "no_action_v1": {
+      "hypothesis": "experiment",
+      "prediction": "B",
+      "decode": {
+        "A": "A",
+        "B": "B",
+        "U": "U"
+      }
+    }
+  }
+}

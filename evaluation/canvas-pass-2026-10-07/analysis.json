@@ -1,0 +1,233 @@
+{
+  "evidenceClass": "exploratory-semantic-contract-review",
+  "models": [
+    "jev-1.13.0"
+  ],
+  "judgments": 36,
+  "scenarios": 12,
+  "stable": 11,
+  "unstable": [
+    "tradeoff"
+  ],
+  "results": [
+    {
+      "id": "overlap",
+      "hypothesis": "intervals",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.89,
+        0.83,
+        0.83
+      ],
+      "stable": true
+    },
+    {
+      "id": "separated",
+      "hypothesis": "intervals",
+      "analystPrediction": "A",
+      "meanings": [
+        "A",
+        "A",
+        "A"
+      ],
+      "confidences": [
+        0.97,
+        0.97,
+        0.95
+      ],
+      "stable": true
+    },
+    {
+      "id": "small_effect",
+      "hypothesis": "intervals",
+      "analystPrediction": "A",
+      "meanings": [
+        "A",
+        "A",
+        "A"
+      ],
+      "confidences": [
+        0.89,
+        0.91,
+        0.83
+      ],
+      "stable": true
+    },
+    {
+      "id": "threshold",
+      "hypothesis": "intervals",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.97,
+        0.95,
+        0.95
+      ],
+      "stable": true
+    },
+    {
+      "id": "probability",
+      "hypothesis": "intervals",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.97,
+        0.97,
+        0.95
+      ],
+      "stable": true
+    },
+    {
+      "id": "units",
+      "hypothesis": "comparability",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.91,
+        0.83,
+        0.86
+      ],
+      "stable": true
+    },
+    {
+      "id": "environment",
+      "hypothesis": "comparability",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.92,
+        0.92,
+        0.89
+      ],
+      "stable": true
+    },
+    {
+      "id": "instrument",
+      "hypothesis": "comparability",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.98,
+        0.95,
+        0.98
+      ],
+      "stable": true
+    },
+    {
+      "id": "proxy",
+      "hypothesis": "comparability",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.92,
+        0.91,
+        0.89
+      ],
+      "stable": true
+    },
+    {
+      "id": "tradeoff",
+      "hypothesis": "comparability",
+      "analystPrediction": "A",
+      "meanings": [
+        "U",
+        "A",
+        "U"
+      ],
+      "confidences": [
+        0.46,
+        0.4,
+        0.43
+      ],
+      "stable": false
+    },
+    {
+      "id": "actionable",
+      "hypothesis": "experiment",
+      "analystPrediction": "A",
+      "meanings": [
+        "A",
+        "A",
+        "A"
+      ],
+      "confidences": [
+        0.61,
+        0.49,
+        0.45
+      ],
+      "stable": true
+    },
+    {
+      "id": "no_action",
+      "hypothesis": "experiment",
+      "analystPrediction": "B",
+      "meanings": [
+        "B",
+        "B",
+        "B"
+      ],
+      "confidences": [
+        0.92,
+        0.92,
+        0.94
+      ],
+      "stable": true
+    }
+  ],
+  "limitations": [
+    "Authored synthetic cases, not independent accuracy labels.",
+    "Model agreement is not a proof of interval arithmetic or a design-effect estimate.",
+    "No rendered artifacts or human outcomes were evaluated."
+  ],
+  "featureDecisions": [
+    {
+      "feature": "bounded outcome comparison",
+      "decision": "add",
+      "basis": "Stable semantic boundary responses; mathematical behavior independently tested with deterministic fixtures."
+    },
+    {
+      "feature": "measurement identity",
+      "decision": "add",
+      "basis": "Context/unit/instrument and prediction distinctions retained as explicit unknown states."
+    },
+    {
+      "feature": "automatic combined tradeoff ranking",
+      "decision": "reject",
+      "basis": "No authorized weights or validated ranking instrument; semantic tradeoff response is unstable."
+    },
+    {
+      "feature": "experiment admission",
+      "decision": "add",
+      "basis": "Distinct feature actions required; readiness for review never authorizes human collection."
+    }
+  ]
+}

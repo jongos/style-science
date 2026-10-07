@@ -2,6 +2,8 @@
 
 Status: research thesis and exploratory model evidence, October 7, 2026. No human study or design-quality improvement has been established.
 
+The subsequent [mathematical outcome canvas](CANVAS.md) implements conditional interval comparisons and feature-directed experiment admission. It does not estimate the causal effects proposed below. Its separate 36-judgment Jev contract review and deterministic tests are documented in that record.
+
 ## Thesis
 
 Design can be studied as the choice of a feasible intervention for a specified audience, task and environment. A useful mathematical framework should predict measurable consequences of those interventions, expose uncertainty and improve or eliminate an actual feature when its predictions are tested.

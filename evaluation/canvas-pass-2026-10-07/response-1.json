@@ -1,0 +1,143 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "overlap_v1": {
+      "type": "choice",
+      "choice": "B",
+      "confidence": 0.83,
+      "probabilities": {
+        "B": 0.89,
+        "U": 0.11,
+        "A": 0
+      },
+      "stats": {}
+    },
+    "separated_v1": {
+      "type": "choice",
+      "choice": "A",
+      "confidence": 0.97,
+      "probabilities": {
+        "B": 0.01,
+        "U": 0.01,
+        "A": 0.98
+      },
+      "stats": {}
+    },
+    "small_effect_v1": {
+      "type": "choice",
+      "choice": "A",
+      "confidence": 0.91,
+      "probabilities": {
+        "B": 0,
+        "U": 0.06,
+        "A": 0.9400000000000001
+      },
+      "stats": {}
+    },
+    "threshold_v1": {
+      "type": "choice",
+      "choice": "B",
+      "confidence": 0.95,
+      "probabilities": {
+        "B": 0.97,
+        "U": 0.03,
+        "A": 0
+      },
+      "stats": {}
+    },
+    "probability_v1": {
+      "type": "choice",
+      "choice": "B",
+      "confidence": 0.97,
+      "probabilities": {
+        "B": 0.98,
+        "U": 0.02,
+        "A": 0
+      },
+      "stats": {}
+    },
+    "units_v1": {
+      "type": "choice",
+      "choice": "B",
+      "confidence": 0.83,
+      "probabilities": {
+        "B": 0.89,
+        "U": 0.11,
+        "A": 0
+      },
+      "stats": {}
+    },
+    "environment_v1": {
+      "type": "choice",
+      "choice": "B",
+      "confidence": 0.92,
+      "probabilities": {
+        "B": 0.95,
+        "U": 0.05,
+        "A": 0
+      },
+      "stats": {}
+    },
+    "instrument_v1": {
+      "type": "choice",
+      "choice": "B",
+      "confidence": 0.95,
+      "probabilities": {
+        "B": 0.97,
+        "U": 0.03,
+        "A": 0
+      },
+      "stats": {}
+    },
+    "proxy_v1": {
+      "type": "choice",
+      "choice": "B",
+      "confidence": 0.91,
+      "probabilities": {
+        "B": 0.9400000000000001,
+        "U": 0.06,
+        "A": 0
+      },
+      "stats": {}
+    },
+    "tradeoff_v1": {
+      "type": "choice",
+      "choice": "A",
+      "confidence": 0.4,
+      "probabilities": {
+        "B": 0,
+        "U": 0.4,
+        "A": 0.6
+      },
+      "stats": {}
+    },
+    "actionable_v1": {
+      "type": "choice",
+      "choice": "A",
+      "confidence": 0.49,
+      "probabilities": {
+        "B": 0.01,
+        "U": 0.33,
+        "A": 0.66
+      },
+      "stats": {}
+    },
+    "no_action_v1": {
+      "type": "choice",
+      "choice": "B",
+      "confidence": 0.92,
+      "probabilities": {
+        "B": 0.95,
+        "U": 0.03,
+        "A": 0.02
+      },
+      "stats": {}
+    }
+  },
+  "usage": {
+    "input_tokens": 1811,
+    "output_tokens": 457
+  },
+  "request_id": "playground_18150acba52fdf347d886042c430a48bd5d",
+  "evaluation_time_ms": 68.41594200022882
+}

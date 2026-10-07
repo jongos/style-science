@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0 - 2026-10-07 - Mathematical outcome canvas
+
+- Added matching JavaScript/Python canvas modules for conservative interval effects by metric and environment, explicit practical thresholds, unknown evidence and feasibility blocking. No combined aesthetic score or automatic winner.
+- Added review-only experiment admission requiring concrete feature actions under both outcomes. Admission does not authorize collection or replace preregistration.
+- Preserved 36 new Jev judgments over 12 semantic scenarios: 11 stable interpretations, one unstable tradeoff interpretation. Rejected automatic tradeoff ranking; retained separate measured effects.
+- Added a labeled synthetic executable example and research record. All 22 tests pass locally, including interval properties and cross-language parity. No human design-effect claim is made; frozen library and downstream Dazzler copy are unchanged.
+
 ## 0.2.1 - 2026-10-07 - Portability and research maintenance
 
 - Fixed Python discovery in both parity suites; explicit overrides remain authoritative and missing/old interpreters fail clearly. CI now runs the entire npm test suite.

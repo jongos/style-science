@@ -29,6 +29,7 @@ For example, a brief might require a heading to appear on desktop and mobile, me
 | Optional browser adapter | Observation capture from a host-supplied Playwright Page |
 | Portable knowledge library | Preserved reference material, provenance and a smaller registry of scoped entries |
 | Candidate filtering | Candidates whose declared checks all pass, ready for human review |
+| Mathematical outcome canvas | Bounded effects by metric and environment, with explicit unknowns and preserved tradeoffs |
 
 GDC-0 is an early engineering prototype. It is not a trained generator or a validated model of design quality. No human study has been run. Its current value is a concrete, inspectable starting point for testing requirements and developing the research.
 
@@ -98,6 +99,16 @@ The [Contextual Design Science thesis](evaluation/THESIS.md) develops a mathemat
 The optional [JavaScript decision module](decision.mjs) and [Python counterpart](decision.py) incorporate those findings. They require explicit context, normalize reordered and relabeled options, preserve abstention, and flag unstable advice. `reviewCandidate` (Python: `review_candidate`) recomputes GDC feasibility first, so a model recommendation cannot override a failed or unknown measurement. The modules consume recorded observations without network access; they do not call Jev or rank aesthetics. See the [decision tests](decision.test.mjs) for executable contract examples and [saved analysis](evaluation/jev-pass-2026-10-07/analysis.json) for the evidence.
 
 Run the full verification and decision suite with `npm test`. Future hypothesis runs must name the feature they will improve, remove or reject under either result.
+
+### Compare design outcomes
+
+The [mathematical canvas](evaluation/CANVAS.md) compares baseline and candidate measurements using explicit units, instruments, context, artifact revisions and meaningful-effect thresholds. It reports improved, worsened, negligible, inconclusive or unknown for each outcome. It preserves tradeoffs and blocks infeasible candidates without assigning a universal style score.
+
+```shell
+node examples/canvas.mjs
+```
+
+This synthetic example shows a design becoming faster while producing more errors. JavaScript and Python consumers share the same contract. A further 36 Jev judgments informed the semantic boundaries; deterministic tests independently check the arithmetic. The canvas also checks that proposed experiments have a concrete feature decision under either outcome. See the [canvas research record](evaluation/CANVAS.md) for limits and the feature that was rejected.
 
 ## How verification works
 
