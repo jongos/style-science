@@ -7,14 +7,15 @@
   "conditions": [
     {
       "id": "baseline",
-      "knowledge": "current Dazzler",
-      "verification": "existing checks",
+      "knowledge": "Frozen prose library from Style Science commit 4f698a8a0fc0e40cfd2cfe8e18abbcb1ba4bd071, knowledge/inventory.json",
+      "verification": "Frozen GDC checks at the same commit, identical in baseline and treatment",
+      "host": "Any host implementing the pinned generation, rendering and review contract; no Dazzler runtime dependency",
       "selection": "render-and-critique best-of-k"
     },
     {
       "id": "treatment",
-      "knowledge": "GDC structured",
-      "verification": "GDC checks",
+      "knowledge": "Frozen registry at Style Science commit 4f698a8a0fc0e40cfd2cfe8e18abbcb1ba4bd071, knowledge/registry.json",
+      "verification": "Frozen GDC checks at the same commit, identical in baseline and treatment",
       "selection": "feasibility then blinded human comparison"
     },
     {
@@ -28,12 +29,6 @@
       "knowledge": "same GDC structured entries",
       "verification": "disabled",
       "selection": "same review procedure; no feasibility claims"
-    },
-    {
-      "id": "typing-ablation",
-      "knowledge": "same entries without epistemic labels",
-      "verification": "same GDC checks",
-      "selection": "same as treatment"
     }
   ],
   "controls": [
@@ -64,7 +59,10 @@
     "budget": null,
     "equivalenceMargin": null,
     "maintenanceCeiling": null,
-    "stoppingRule": null
+    "stoppingRule": null,
+    "hostModelAndPromptManifest": null,
+    "renderAndReviewManifest": null,
+    "conditionInputManifest": null
   },
   "interpretation": {
     "superiority": "Use preregistered effect and uncertainty criteria.",
@@ -83,7 +81,6 @@
     "If adequately powered evidence excludes a practical benefit, narrow the quality claim.",
     "If prose is equivalent within the preregistered margin, retain only justified execution benefits.",
     "If verifiers do not improve measured defects or cost, simplify them.",
-    "If epistemic labels do not affect scoped behavior, reconsider mandatory metadata.",
     "If another consumer cannot execute the contract, fix interoperability before claiming portability.",
     "If quality gains do not transfer, limit the generalization claim, not software compatibility.",
     "If descriptor distances fail human validation, do not use them to select candidates.",

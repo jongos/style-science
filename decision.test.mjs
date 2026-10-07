@@ -5,6 +5,7 @@ import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {assessChoice,decisionFingerprint,reviewCandidate} from './decision.mjs';
 import {fingerprint} from './engine.mjs';
+import {resolvePython} from './tools/python.mjs';
 
 const contract={id:'layout',context:{task:'Compare three plans',viewport:'Desktop'},requiredContext:['task','viewport'],options:{aligned:'Aligned comparison',narrative:'Sequential narratives',unknown:'Insufficient evidence',equal:'No relevant difference'},abstainOptions:['unknown','equal']};
 function observations(c=contract,choice='aligned') {
@@ -70,7 +71,7 @@ test('Python and JavaScript agree on decision states and fingerprints',()=>{
   for(const o of tied) {o.answer.confidence=0; for(const key of Object.keys(o.answer.probabilities)) o.answer.probabilities[key]=0.25;}
   const inputs=[{contract,observations:observations()},{contract,observations:altered},{contract,observations:tied},{contract,observations:observations(contract,'unknown')},{contract,observations:[]},{contract:{...contract,context:{}},observations:[]}];
   const source="import json,sys; from decision import assess_choice; print(json.dumps([assess_choice(x['contract'],x['observations']) for x in json.load(sys.stdin)]))";
-  const run=spawnSync(process.env.GDC_PYTHON||'python',['-c',source],{cwd:fileURLToPath(new URL('.',import.meta.url)),input:JSON.stringify(inputs),encoding:'utf8'});
+  const run=spawnSync(resolvePython(),['-X','utf8','-c',source],{cwd:fileURLToPath(new URL('.',import.meta.url)),input:JSON.stringify(inputs),encoding:'utf8'});
   assert.equal(run.status,0,run.stderr||String(run.error));
   assert.deepEqual(JSON.parse(run.stdout),inputs.map(x=>assessChoice(x.contract,x.observations)));
 });

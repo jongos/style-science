@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: 22
       - run: python --version
-      - run: node --test test.mjs
+      - run: npm test
       - run: python tools/build_knowledge_graph.py
       - run: git diff --exit-code knowledge/graph.json
       - run: python tools/build_package.py

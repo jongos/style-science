@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.1 - 2026-10-07 - Portability and research maintenance
+
+- Fixed Python discovery in both parity suites; explicit overrides remain authoritative and missing/old interpreters fail clearly. CI now runs the entire npm test suite.
+- Documented the supported Node 22 floor and reproducible local browser/site setup using CI dependency versions.
+- Added frozen import provenance and read-only source comparison. Original upstream revision remains explicitly unknown; no snapshot bytes changed or automatic sync added.
+- Pinned protocol inputs to an immutable Style Science commit and defined a host-neutral baseline. Host/model/prompt, render/review and condition manifests remain required before collection.
+- Retired the mandatory expanded taxonomy and typing ablation until a concrete feature decision justifies them. Replaced thesis session references with explicit dataset exclusions and stopping-method details.
+- Validation: all 16 local tests passed; knowledge graph regeneration preserved 57 nodes and 113 relationships. Read-only comparison with the current Dazzler source found 55 byte matches and two differences, without changing the frozen library.
+
 ## 0.2.0 - 2026-10-07 - Contextual decision research
 
 - Added matching dependency-free JavaScript and Python advisory modules with context fingerprints, explicit abstention, semantic option normalization and order/label sensitivity checks. Candidate review recomputes existing feasibility and never overrides fail or unknown.

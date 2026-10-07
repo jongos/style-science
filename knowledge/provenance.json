@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "snapshotDate": "2026-10-07",
+  "sourceProject": "Dazzler",
+  "sourceRevision": null,
+  "sourceRevisionStatus": "Unrecorded at import; snapshot included local development changes. Do not infer an upstream commit from matching files.",
+  "importCommit": "443f60c05385284548369057fa10fd4e9f1450a9",
+  "inventoryPath": "knowledge/inventory.json",
+  "inventorySha256": "24986bf4f464acad4f147bb6025fdc3d75a57b2ffca2fbb9dbef876b0d6c7db3",
+  "inventoryHashEncoding": "UTF-8 with CRLF normalized to LF; library file hashes remain exact bytes",
+  "updatePolicy": "Frozen source material. Explicit reviewed one-way imports only; never synchronize automatically. Record source revision plus dirty-file hashes for future imports."
+}

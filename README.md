@@ -43,6 +43,8 @@ cd style-science
 
 The verification engines need **Node.js 22+** or **Python 3.10+**, with no third-party runtime dependencies. The test suite uses both runtimes:
 
+Node 22 is the supported and CI-tested minimum, not a claim that every core API requires it. Older releases may run parts of the package but are outside the support contract. The suite discovers `python`, then `python3`, and requires version 3.10 or newer. `GDC_PYTHON` overrides discovery with an explicit executable path; a broken override fails clearly.
+
 ```shell
 npm test
 ```
@@ -54,6 +56,19 @@ node --input-type=module -e "import { contrast } from './engine.mjs'; console.lo
 ```
 
 This prints `21`, the contrast ratio of black and white. Next, open the [example plan](examples/plan.json) to see how requirements and desktop/mobile environments are declared.
+
+### Optional browser and site tests
+
+From the repository root, install the same development-only dependencies as CI:
+
+```shell
+npm install --no-save --ignore-scripts --package-lock=false playwright@1.63.0 axe-core@4.13.0
+npx playwright install chromium
+npm run test:browser
+npm run test:site
+```
+
+On Linux, use `npx playwright install --with-deps chromium` if browser system libraries are missing. `test:site` builds the site before checking it and writes screenshots and its report to `dist/site-evidence/`. These dependencies are not required by either verification engine. Hosts supplying their own Playwright can set `GDC_PLAYWRIGHT_MODULE` for adapter tests or `PLAYWRIGHT_MODULE` for site tests; site tests also need a locally resolvable `axe-core` package.
 
 ### Verify a rendered design
 

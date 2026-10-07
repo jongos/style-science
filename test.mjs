@@ -6,6 +6,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
+import { resolvePython } from "./tools/python.mjs";
 import {
   contrast,
   fingerprint,
@@ -115,6 +116,7 @@ test("stale evidence, unsupported observations and failing constraints cannot be
   assert.throws(() => verify(plan, [...snapshots(), snapshots()[0]]));
 });
 test("Python and JavaScript consumers agree on portable fixture outcomes", async () => {
+  const pythonCommand = resolvePython();
   const temp = await mkdtemp(path.join(tmpdir(), "gdc-conformance-"));
   try {
     // Run from a copied package outside Dazzler, without node_modules or skill prompts.
@@ -139,7 +141,7 @@ test("Python and JavaScript consumers agree on portable fixture outcomes", async
       const input = path.join(temp, "snapshots.json");
       await writeFile(input, JSON.stringify(cases[i]));
       const python = spawnSync(
-        process.env.GDC_PYTHON || "python",
+        pythonCommand,
         [
           "-X",
           "utf8",

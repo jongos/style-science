@@ -40,7 +40,7 @@ The research objective is lower decision and revision cost at acceptable task ou
 
 ## What this pass established
 
-The TypeSafe playground executed four batches against resolved model `jev-1.13.0`: 15 scenarios in three variants and 15 additional scenarios in one variant, for 60 judgments across 30 scenarios. An earlier five-question smoke run is retained separately and is excluded from those totals. The original six examples already open in the user's tab are not this experiment.
+The TypeSafe playground executed four batches against resolved model `jev-1.13.0`: 15 scenarios in three variants and 15 additional scenarios in one variant, for 60 judgments across 30 scenarios. An earlier five-question smoke run is retained separately and is excluded from those totals. Six pre-existing demonstration scenarios were not part of the collected dataset and are excluded from all counts and conclusions.
 
 The three variants used the original option order, reversed order, and swapped labels. They were sent as separate requests. The text scenarios covered density, layout, whitespace, palette roles, redundancy, novelty, symmetry, context, typography, uncertainty and mathematical claims. They contained no rendered images. Analyst predictions were recorded before the runs, but are not independent ground truth and are never reported as model accuracy.
 
@@ -85,7 +85,7 @@ No sample size, effect threshold, confidence cutoff or cost ceiling has been inv
     node evaluation/analyze-jev.mjs
     npm test
 
-The first command regenerates the four saved request specifications; it does not call Jev. The second reads the preserved playground responses and recomputes `analysis.json`. Tests include the actual density-lookup disagreement and cross-language parity. Original responses contain the resolved model and full answer distributions. Batches not run after the user's feature-decision constraint were removed.
+The first command regenerates the four saved request specifications; it does not call Jev. The second reads the preserved playground responses and recomputes `analysis.json`. Tests include the actual density-lookup disagreement and cross-language parity. Original responses contain the resolved model and full answer distributions. Planned batches `batch-1-1` and `batch-1-2` (reordered and relabeled variants of the second group) were not executed because they lacked an additional concrete feature decision. Their request files are not in the dataset. This exploratory stopping decision was made after inspecting earlier results; the pass was not preregistered.
 
 Official source checks used in this pass:
 
