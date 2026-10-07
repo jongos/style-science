@@ -1,13 +1,15 @@
 import { createHash } from 'node:crypto';
 import { verify } from './engine.mjs';
 
-export const decisionVersion = '0.1.0';
+export const decisionVersion = '0.2.0';
 const variants = ['baseline', 'reordered', 'relabeled'];
 const plain = x => x && typeof x === 'object' && !Array.isArray(x);
 const nonempty = x => typeof x === 'string' && x.trim().length > 0;
 const canonical = x => Array.isArray(x) ? `[${x.map(canonical).join(',')}]`
   : plain(x) ? `{${Object.keys(x).sort().map(k => `${JSON.stringify(k)}:${canonical(x[k])}`).join(',')}}` : JSON.stringify(x);
 const sameSet = (a,b) => a.length === b.length && new Set(a).size === a.length && a.every(x=>b.includes(x));
+// Closed policy: exact Jev releases or content digests, never arbitrary aliases.
+const pinnedModel = x => typeof x === 'string' && x===x.trim() && /^(?:jev-(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)|sha256:[a-f0-9]{64})$/.test(x);
 
 function validateContract(c) {
   if (!plain(c) || !sameSet(Object.keys(c), ['id','context','requiredContext','options','abstainOptions']) || !nonempty(c.id)) throw Error('Invalid decision contract');
@@ -25,15 +27,26 @@ export function decisionFingerprint(contract) {
 // Advisory only: repetition measures sensitivity, not independent corroboration.
 export function assessChoice(contract, observations) {
   const contractHash = decisionFingerprint(contract);
-  const base = { decisionVersion, contractHash, evidenceClass:'model-prediction', automaticAction:false };
+  const base = { decisionVersion, contractHash, evidenceClass:'model-prediction', automaticAction:false, releaseEligible:false, evidenceScope:'exploratory' };
   const missing = contract.requiredContext.filter(k=>!Object.hasOwn(contract.context,k) || !nonempty(contract.context[k]));
   if (missing.length) return {...base,status:'needs-context',missing};
   if (!Array.isArray(observations)) throw Error('Observations must be an array');
   const ids = Object.keys(contract.options);
   if (observations.length !== variants.length || !sameSet(observations.map(o=>o?.variant), variants)) return {...base,status:'needs-observations'};
   if (observations.some(o=>o.contractHash !== contractHash)) return {...base,status:'stale'};
-  if (observations.some(o=>!nonempty(o.model))) throw Error('Record the resolved model');
-  if (new Set(observations.map(o=>o.model)).size !== 1) return {...base,status:'model-mismatch'};
+  const modelIdentities = observations.map(o=>{
+    for (const key of ['model','resolvedModel','requestedModel']) {
+      if (o[key] !== undefined && o[key] !== null && typeof o[key] !== 'string') throw Error('Model identities must be text or null');
+    }
+    // An explicitly missing resolution must not fall back to a legacy value.
+    const resolvedModel = (Object.hasOwn(o,'resolvedModel') ? o.resolvedModel : o.model) ?? null;
+    return {variant:o.variant,requestedModel:o.requestedModel ?? null,resolvedModel,
+      identityStatus:!nonempty(resolvedModel)?'missing':pinnedModel(resolvedModel)?'pinned':'unpinned'};
+  });
+  base.modelIdentities = modelIdentities;
+  if (modelIdentities.some(o=>o.identityStatus==='missing')) return {...base,status:'needs-model',modelIdentityStatus:'missing'};
+  if (new Set(modelIdentities.map(o=>o.resolvedModel)).size !== 1) return {...base,status:'model-mismatch',modelIdentityStatus:'mixed'};
+  const modelIdentityStatus = modelIdentities[0].identityStatus;
   const normalized = observations.map(o=>{
     const a=o.answer, map=o.optionMap;
     if (!plain(map) || !sameSet(Object.values(map),ids) || !plain(a) || !Object.hasOwn(map,a.choice) || !plain(a.probabilities) || !sameSet(Object.keys(map),Object.keys(a.probabilities))) throw Error('Invalid option mapping or answer');
@@ -52,11 +65,14 @@ export function assessChoice(contract, observations) {
   const choice=normalized[0].choice;
   const tied=normalized.some(o=>Object.values(o.probabilities).filter(p=>p===o.probabilities[o.choice]).length>1);
   const status=normalized.some(o=>o.choice!==choice) ? 'unstable' : tied ? 'ambiguous' : contract.abstainOptions.includes(choice) ? 'abstain' : 'advisory';
-  return {...base,status,choice:['unstable','ambiguous'].includes(status)?null:choice,model:observations[0].model,maxTotalVariation,observations:normalized};
+  return {...base,status,choice:['unstable','ambiguous'].includes(status)?null:choice,
+    model:modelIdentities[0].resolvedModel,resolvedModel:modelIdentities[0].resolvedModel,modelIdentityStatus,
+    releaseEligible:modelIdentityStatus==='pinned' && status==='advisory',
+    evidenceScope:modelIdentityStatus==='pinned'?'version-pinned-model-observation':'exploratory',maxTotalVariation,observations:normalized};
 }
 
 export function reviewCandidate(plan, snapshots, contract, observations) {
   const feasibility=verify(plan,snapshots);
-  if(feasibility.status!=='pass') return {status:'blocked',automaticAction:false,feasibility};
+  if(feasibility.status!=='pass') return {status:'blocked',automaticAction:false,releaseEligible:false,feasibility};
   return {feasibility,...assessChoice(contract,observations)};
 }

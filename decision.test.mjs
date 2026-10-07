@@ -75,3 +75,77 @@ test('Python and JavaScript agree on decision states and fingerprints',()=>{
   assert.equal(run.status,0,run.stderr||String(run.error));
   assert.deepEqual(JSON.parse(run.stdout),inputs.map(x=>assessChoice(x.contract,x.observations)));
 });
+
+test('release evidence requires the closed immutable model identity policy',()=>{
+  for (const model of ['jev-latest','jev-preview','jev-1.13','jev-1.13.0-preview','jev-1.13.0-latest','jev-01.13.0','arbitrary-model','jev-1.13.0\n',' jev-1.13.0','sha256:abc']) {
+    const input=observations().map(o=>({...o,model}));
+    const report=assessChoice(contract,input);
+    assert.equal(report.status,'advisory',model);
+    assert.equal(report.modelIdentityStatus,'unpinned',model);
+    assert.equal(report.evidenceScope,'exploratory');
+    assert.equal(report.releaseEligible,false);
+    assert.equal(report.automaticAction,false);
+  }
+  for (const model of ['jev-1.13.0',`sha256:${'a'.repeat(64)}`]) {
+    const input=observations().map(o=>({...o,model}));
+    const report=assessChoice(contract,input);
+    assert.equal(report.releaseEligible,true);
+    assert.equal(report.resolvedModel,model);
+    assert.equal(report.modelIdentityStatus,'pinned');
+    assert.equal(report.evidenceClass,'model-prediction');
+    assert.equal(report.automaticAction,false);
+  }
+});
+
+test('requested aliases remain distinct from provider resolutions and missing identities',()=>{
+  const input=observations().map(o=>({...o,model:'jev-latest',requestedModel:'jev-latest',resolvedModel:'jev-1.13.0'}));
+  const report=assessChoice(contract,input);
+  assert.equal(report.releaseEligible,true);
+  assert.equal(report.model,'jev-1.13.0');
+  for (const identity of report.modelIdentities) {
+    assert.equal(identity.requestedModel,'jev-latest');
+    assert.equal(identity.resolvedModel,'jev-1.13.0');
+  }
+  for (const missing of [undefined,null,'',' ']) {
+    const input=observations().map(o=>({...o,resolvedModel:missing,requestedModel:'jev-latest'}));
+    assert.equal(assessChoice(contract,input).status,'needs-model');
+    assert.equal(assessChoice(contract,input).releaseEligible,false);
+  }
+  const absent=observations(); for (const o of absent) delete o.model;
+  assert.equal(assessChoice(contract,absent).status,'needs-model');
+  const mixed=observations(); mixed[2].resolvedModel='jev-1.14.0';
+  assert.equal(assessChoice(contract,mixed).status,'model-mismatch');
+  assert.equal(assessChoice(contract,mixed).releaseEligible,false);
+});
+
+test('identity pinning does not bypass context, sensitivity, abstention or feasibility',async()=>{
+  const inputs=[[],observations().slice(0,2),observations(contract,'unknown')];
+  const stale=observations(); stale[0].contractHash='stale'; inputs.push(stale);
+  const unstable=observations(); unstable[1]=observations(contract,'narrative')[1]; inputs.push(unstable);
+  const tied=observations();
+  for(const o of tied) for(const key of Object.keys(o.answer.probabilities)) o.answer.probabilities[key]=0.25;
+  inputs.push(tied);
+  for(const input of inputs) assert.equal(assessChoice(contract,input).releaseEligible,false);
+  assert.equal(assessChoice({...contract,context:{}},observations()).releaseEligible,false);
+  const plan=JSON.parse(await readFile(new URL('./examples/plan.json',import.meta.url),'utf8'));
+  assert.equal(reviewCandidate(plan,[],contract,observations()).releaseEligible,false);
+});
+
+test('JS/Python pinning parity covers pinned, aliases, missing, mixed and malformed identities',()=>{
+  const inputs=[];
+  for(const model of ['jev-1.13.0',`sha256:${'f'.repeat(64)}`,'jev-latest','jev-preview','jev-1.13.0\n','jev-01.13.0',null,'',42]) {
+    inputs.push(observations().map(o=>({...o,model})));
+  }
+  inputs.push(observations().map(o=>({...o,requestedModel:'jev-latest',resolvedModel:'jev-1.13.0'})));
+  inputs.push(observations().map(o=>({...o,requestedModel:'jev-preview',resolvedModel:null})));
+  const absent=observations(); for (const o of absent) delete o.model; inputs.push(absent);
+  const mixed=observations(); mixed[0].resolvedModel='jev-1.14.0'; inputs.push(mixed);
+  const aliasMix=observations(); aliasMix[0].model='jev-latest'; inputs.push(aliasMix);
+  const malformed=observations(); malformed[0].requestedModel={alias:'jev-latest'}; inputs.push(malformed);
+  const source="import json,sys\nfrom decision import assess_choice\ndef attempt(x):\n try: return assess_choice(x['contract'],x['observations'])\n except ValueError as e: return {'error':str(e)}\nprint(json.dumps([attempt(x) for x in json.load(sys.stdin)]))";
+  const run=spawnSync(resolvePython(),['-X','utf8','-c',source],{cwd:fileURLToPath(new URL('.',import.meta.url)),input:JSON.stringify(inputs.map(observations=>({contract,observations}))),encoding:'utf8'});
+  assert.equal(run.status,0,run.stderr||String(run.error));
+  assert.deepEqual(JSON.parse(run.stdout),inputs.map(input=>{
+    try {return assessChoice(contract,input);} catch(error) {return {error:error.message};}
+  }));
+});

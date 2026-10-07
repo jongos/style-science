@@ -98,6 +98,28 @@ The [Contextual Design Science thesis](evaluation/THESIS.md) develops a mathemat
 
 The optional [JavaScript decision module](decision.mjs) and [Python counterpart](decision.py) incorporate those findings. They require explicit context, normalize reordered and relabeled options, preserve abstention, and flag unstable advice. `reviewCandidate` (Python: `review_candidate`) recomputes GDC feasibility first, so a model recommendation cannot override a failed or unknown measurement. The modules consume recorded observations without network access; they do not call Jev or rank aesthetics. See the [decision tests](decision.test.mjs) for executable contract examples and [saved analysis](evaluation/jev-pass-2026-10-07/analysis.json) for the evidence.
 
+Decision module 0.2.0 separates advice from release evidence. Record `requestedModel`
+(for example, `jev-latest`) separately from `resolvedModel` (`jev-1.13.0`). Legacy
+`model` is used only when `resolvedModel` is absent, never when it is explicitly
+null or empty. Reports retain per-variant `modelIdentities`. The closed pinning
+policy accepts exact `jev-MAJOR.MINOR.PATCH` identities with no leading zeroes or
+suffixes, or `sha256:` followed by 64 lowercase hex characters. Other provider
+identity formats remain unpinned until a reviewed policy extension.
+
+Aliases, including `jev-latest` and `jev-preview`, may still produce exploratory
+`advisory` results, but have `modelIdentityStatus: "unpinned"`,
+`evidenceScope: "exploratory"` and `releaseEligible: false`. Missing resolutions
+return `needs-model`; mixed resolutions return `model-mismatch`. Only a pinned,
+stable substantive advisory passes this narrow gate. Consumers must check
+`releaseEligible`, not just `status`. Candidate releases must also use
+`reviewCandidate` to require measured feasibility. Neither field authorizes a
+release: host review and other evidence requirements remain necessary. An offline
+identity check cannot authenticate a provider response or prove that a provider
+never reuses a version label. Model agreement is not evidence of aesthetic quality.
+
+Portable release ZIPs now use an [explicit committed manifest](PACKAGING.md).
+Dirty working files and unfinished research cannot enter an archive implicitly.
+
 Run the full verification and decision suite with `npm test`. Future hypothesis runs must name the feature they will improve, remove or reject under either result.
 
 ### Compare design outcomes

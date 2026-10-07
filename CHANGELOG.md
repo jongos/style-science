@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased - Release Evidence and Packaging Corrections
+
+- Issue #12: replaced recursive working-directory packaging with an explicit committed distribution manifest and full source commit ID. Dirty/untracked files and local Git replacement refs cannot change release inputs. Required runtime exports, frozen knowledge hashes, licenses and provenance are checked; missing inputs fail without local fallback. Deterministic ZIPs record source/file hashes and never overwrite existing artifacts.
+- Issue #13: added matching JavaScript/Python model-identity gates in decision module 0.2.0. Exact Jev releases or SHA-256 identities can qualify; moving aliases remain explicitly exploratory. Requested and resolved models are retained separately, and missing/mixed identities fail qualification. Pinning and model agreement do not establish aesthetic quality or authorize release.
+- Added synthetic packaging regressions and model-identity/parity cases. Local validation: 50 core tests (including 9 Python packaging cases), 2 rendered browser tests and 2 read-only downstream checks pass. Packaging tests cover independent-process archive/hash equality, dirty inputs, missing notices, malformed manifests and source substitution. No Jev calls, private-data transmission or research-data changes were made.
+- Scope: the approved corrections are separate from unfinished research. The distribution manifest deliberately excludes that research; experimental exports require a separate distribution review before release. No package publication, Dazzler vendoring or skill installation is included.
+
 ## 0.3.0 - 2026-10-07 - Mathematical outcome canvas
 
 - Added matching JavaScript/Python canvas modules for conservative interval effects by metric and environment, explicit practical thresholds, unknown evidence and feasibility blocking. No combined aesthetic score or automatic winner.

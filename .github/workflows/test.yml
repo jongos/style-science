@@ -15,7 +15,7 @@ jobs:
       - run: npm test
       - run: python tools/build_knowledge_graph.py
       - run: git diff --exit-code knowledge/graph.json
-      - run: python tools/build_package.py
+      - run: python tools/build_package.py --revision "${{ github.sha }}" --output dist/ci-package
   browser:
     runs-on: ubuntu-latest
     steps:

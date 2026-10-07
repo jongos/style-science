@@ -2,10 +2,12 @@
 import hashlib
 import json
 import math
+import re
 from gdc import verify
 
-DECISION_VERSION = '0.1.0'
+DECISION_VERSION = '0.2.0'
 VARIANTS = {'baseline', 'reordered', 'relabeled'}
+PINNED_MODEL = re.compile(r'(?:jev-(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)|sha256:[a-f0-9]{64})', re.ASCII)
 
 
 def nonempty(value):
@@ -36,7 +38,7 @@ def decision_fingerprint(contract):
 
 def assess_choice(contract, observations):
     stamp = decision_fingerprint(contract)
-    base = dict(decisionVersion=DECISION_VERSION, contractHash=stamp, evidenceClass='model-prediction', automaticAction=False)
+    base = dict(decisionVersion=DECISION_VERSION, contractHash=stamp, evidenceClass='model-prediction', automaticAction=False, releaseEligible=False, evidenceScope='exploratory')
     missing = [k for k in contract['requiredContext'] if not nonempty(contract['context'].get(k))]
     if missing:
         return dict(base, status='needs-context', missing=missing)
@@ -46,10 +48,20 @@ def assess_choice(contract, observations):
         return dict(base, status='needs-observations')
     if any(o.get('contractHash') != stamp for o in observations):
         return dict(base, status='stale')
-    if any(not nonempty(o.get('model')) for o in observations):
-        raise ValueError('Record the resolved model')
-    if len({o['model'] for o in observations}) != 1:
-        return dict(base, status='model-mismatch')
+    model_identities = []
+    for o in observations:
+        for key in ('model', 'resolvedModel', 'requestedModel'):
+            if o.get(key) is not None and not isinstance(o[key], str):
+                raise ValueError('Model identities must be text or null')
+        resolved = o.get('resolvedModel') if 'resolvedModel' in o else o.get('model')
+        identity_status = 'missing' if not nonempty(resolved) else 'pinned' if PINNED_MODEL.fullmatch(resolved) else 'unpinned'
+        model_identities.append(dict(variant=o['variant'], requestedModel=o.get('requestedModel'), resolvedModel=resolved, identityStatus=identity_status))
+    base['modelIdentities'] = model_identities
+    if any(o['identityStatus'] == 'missing' for o in model_identities):
+        return dict(base, status='needs-model', modelIdentityStatus='missing')
+    if len({o['resolvedModel'] for o in model_identities}) != 1:
+        return dict(base, status='model-mismatch', modelIdentityStatus='mixed')
+    model_identity_status = model_identities[0]['identityStatus']
     ids = set(contract['options'])
     normalized = []
     for o in observations:
@@ -72,11 +84,12 @@ def assess_choice(contract, observations):
     choice = normalized[0]['choice']
     tied = any(sum(p == o['probabilities'][o['choice']] for p in o['probabilities'].values()) > 1 for o in normalized)
     status = 'unstable' if any(o['choice'] != choice for o in normalized) else 'ambiguous' if tied else 'abstain' if choice in contract['abstainOptions'] else 'advisory'
-    return dict(base, status=status, choice=None if status in ('unstable', 'ambiguous') else choice, model=observations[0]['model'], maxTotalVariation=distance, observations=normalized)
+    base.update(releaseEligible=model_identity_status == 'pinned' and status == 'advisory', evidenceScope='version-pinned-model-observation' if model_identity_status == 'pinned' else 'exploratory')
+    return dict(base, status=status, choice=None if status in ('unstable', 'ambiguous') else choice, model=model_identities[0]['resolvedModel'], resolvedModel=model_identities[0]['resolvedModel'], modelIdentityStatus=model_identity_status, maxTotalVariation=distance, observations=normalized)
 
 
 def review_candidate(plan, snapshots, contract, observations):
     feasibility = verify(plan, snapshots)
     if feasibility['status'] != 'pass':
-        return dict(status='blocked', automaticAction=False, feasibility=feasibility)
+        return dict(status='blocked', automaticAction=False, releaseEligible=False, feasibility=feasibility)
     return dict(feasibility=feasibility, **assess_choice(contract, observations))
