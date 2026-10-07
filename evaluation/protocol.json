@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "status": "design-only-not-preregistered",
+  "results": null,
+  "claim": "Executable design knowledge adds practical value beyond matched generation and review compute.",
+  "scope": "Agent-generated HTML documents and interfaces, including framework-rendered DOM. Python and JavaScript are consumers; HTML is an adapter target.",
+  "conditions": [
+    {
+      "id": "baseline",
+      "knowledge": "current Dazzler",
+      "verification": "existing checks",
+      "selection": "render-and-critique best-of-k"
+    },
+    {
+      "id": "treatment",
+      "knowledge": "GDC structured",
+      "verification": "GDC checks",
+      "selection": "feasibility then blinded human comparison"
+    },
+    {
+      "id": "representation-ablation",
+      "knowledge": "same entries and content in prose",
+      "verification": "same GDC checks",
+      "selection": "same as treatment"
+    },
+    {
+      "id": "verification-ablation",
+      "knowledge": "same GDC structured entries",
+      "verification": "disabled",
+      "selection": "same review procedure; no feasibility claims"
+    },
+    {
+      "id": "typing-ablation",
+      "knowledge": "same entries without epistemic labels",
+      "verification": "same GDC checks",
+      "selection": "same as treatment"
+    }
+  ],
+  "controls": [
+    "Same model/version and held-out briefs",
+    "Same candidate count, token budget, tool budget, rendering and elapsed-cost accounting",
+    "Freeze knowledge before held-out brief collection",
+    "Randomize presentation order and conceal condition labels",
+    "Log artifact, plan, package and prompt hashes; record host/browser versions and failed attempts"
+  ],
+  "primaryOutcomes": [
+    "Blinded target-audience preference",
+    "Task accuracy"
+  ],
+  "secondaryOutcomes": [
+    "Task time",
+    "Constraint failure rate and unknown coverage",
+    "Tokens, renders and latency",
+    "Maintenance hours",
+    "Human triplet diversity judgments"
+  ],
+  "requiredBeforeCollection": {
+    "minimumPracticalEffect": null,
+    "powerAnalysis": null,
+    "sampleSize": null,
+    "samplingPopulation": null,
+    "analysisModel": null,
+    "multiplicityPolicy": null,
+    "budget": null,
+    "equivalenceMargin": null,
+    "maintenanceCeiling": null,
+    "stoppingRule": null
+  },
+  "interpretation": {
+    "superiority": "Use preregistered effect and uncertainty criteria.",
+    "equivalence": "Requires a declared equivalence margin and adequately precise evidence.",
+    "inconclusive": "Failure to establish superiority is not proof of no benefit.",
+    "portability": "Report software conformance separately from quality-effect transfer across model families."
+  },
+  "deferred": [
+    "Learned weights",
+    "Automatic Pareto or perceptual diversity selection until validated instruments exist",
+    "Cross-medium quality claims",
+    "Motion",
+    "No-LLM generator ablation until a generator exists"
+  ],
+  "failureDecisions": [
+    "If adequately powered evidence excludes a practical benefit, narrow the quality claim.",
+    "If prose is equivalent within the preregistered margin, retain only justified execution benefits.",
+    "If verifiers do not improve measured defects or cost, simplify them.",
+    "If epistemic labels do not affect scoped behavior, reconsider mandatory metadata.",
+    "If another consumer cannot execute the contract, fix interoperability before claiming portability.",
+    "If quality gains do not transfer, limit the generalization claim, not software compatibility.",
+    "If descriptor distances fail human validation, do not use them to select candidates.",
+    "If unknown coverage dominates a task family, extend the adapter or exclude that family explicitly.",
+    "If maintenance exceeds the declared ceiling, reduce the registry.",
+    "If repeated candidates improve proxies but harm human/task outcomes, stop using those proxies as objectives."
+  ]
+}

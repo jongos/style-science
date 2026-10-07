@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "gdc-probe",
+  "revision": "fixture-1",
+  "medium": "html",
+  "environments": [
+    {
+      "id": "desktop",
+      "width": 1280,
+      "height": 800,
+      "colorScheme": "light"
+    },
+    {
+      "id": "mobile",
+      "width": 390,
+      "height": 844,
+      "colorScheme": "light"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "overflow",
+      "check": "viewport-overflow"
+    },
+    {
+      "id": "title",
+      "check": "visible-text",
+      "selector": "h1",
+      "text": "GDC probe"
+    },
+    {
+      "id": "contrast",
+      "check": "text-contrast",
+      "selector": "h1",
+      "minRatio": 4.5
+    },
+    {
+      "id": "lock",
+      "check": "style-equals",
+      "selector": "h1",
+      "property": "color",
+      "expected": "rgb(0, 0, 0)"
+    }
+  ]
+}

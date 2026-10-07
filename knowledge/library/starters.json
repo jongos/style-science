@@ -1,0 +1,627 @@
+{
+  "schemaVersion": 1,
+  "starters": [
+    {
+      "id": "W1",
+      "category": "websites",
+      "title": "Refresh an existing website",
+      "goal": "Refresh this website while preserving its brand, content and existing framework.",
+      "whenToUse": "When you have an existing interface or a concrete design brief.",
+      "prompt": "Use $dazzler-frontend to refresh this website while preserving its brand, content and existing framework.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control. If you supply a Figma frame, use available authorized read tools and preserve existing project tokens; otherwise use your supplied export and label the evidence gap.",
+      "exercises": "Preserve the brand, establish a primary action, check narrow reflow and keyboard focus, and save accepted decisions.",
+      "expect": "A working refresh with narrow/wide previews and a short change summary.",
+      "tips": "Review the existing tokens and primary user journey before changing code.",
+      "helpers": [
+        {
+          "script": "browser.cjs",
+          "subcommand": "inspect"
+        }
+      ],
+      "templates": [
+        "html-business"
+      ],
+      "references": [
+        "design-studio.md",
+        "design-handoff.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "A working refresh with narrow/wide previews and a short change summary."
+      ],
+      "limitations": [
+        "Review the existing tokens and primary user journey before changing code."
+      ]
+    },
+    {
+      "id": "W2",
+      "category": "websites",
+      "title": "Give a landing page stronger contrast",
+      "goal": "Make this landing page more vivid and readable, keeping its message and main action.",
+      "whenToUse": "When you have an existing interface or a concrete design brief.",
+      "prompt": "Use $dazzler-frontend to make this landing page more vivid and readable, keeping its message and main action.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control. Ask for a visual comp first only if you want one. Image generation depends on the host; a static proposal must still become real text and controls with rendered checks.",
+      "exercises": "Match the audience and stakes, make the main action clear, and inspect error recovery and keyboard controls.",
+      "expect": "A coherent palette, clearer type hierarchy and measured foreground/background pairs.",
+      "tips": "Preserve required brand colors; report conflicts instead of silently replacing them.",
+      "helpers": [
+        {
+          "script": "colors.mjs",
+          "subcommand": "recommend"
+        }
+      ],
+      "templates": [
+        "html-marketing"
+      ],
+      "references": [
+        "color-workflow.md",
+        "design-controls.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "A coherent palette, clearer type hierarchy and measured foreground/background pairs."
+      ],
+      "limitations": [
+        "Preserve required brand colors; report conflicts instead of silently replacing them."
+      ]
+    },
+    {
+      "id": "W3",
+      "category": "websites",
+      "title": "Compare a redesign proposal",
+      "goal": "Show a before-and-after redesign proposal for this page without changing the original.",
+      "whenToUse": "When you have an existing interface or a concrete design brief.",
+      "prompt": "Use $dazzler-frontend to show a before-and-after redesign proposal for this page without changing the original.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "Separate proposal files, comparison images and the reasons for each major change.",
+      "tips": "Keep the original read-only; apply the proposal only when requested.",
+      "helpers": [
+        {
+          "script": "browser.cjs",
+          "subcommand": "compare"
+        }
+      ],
+      "templates": [],
+      "references": [
+        "design-studio.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "Separate proposal files, comparison images and the reasons for each major change."
+      ],
+      "limitations": [
+        "Keep the original read-only; apply the proposal only when requested."
+      ]
+    },
+    {
+      "id": "W4",
+      "category": "websites",
+      "title": "Integrate Tailwind tokens",
+      "goal": "Make the design tokens in this Tailwind project consistent with its established brand.",
+      "whenToUse": "When you have an existing interface or a concrete design brief.",
+      "prompt": "Use $dazzler-frontend to make the design tokens in this Tailwind project consistent with its established brand.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "Version-appropriate theme mapping and a rendered component check.",
+      "tips": "Inspect Tailwind version and existing configuration; merge rather than replace it.",
+      "helpers": [
+        {
+          "script": "studio.mjs",
+          "subcommand": "tokens"
+        }
+      ],
+      "templates": [],
+      "references": [
+        "design-studio.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "Version-appropriate theme mapping and a rendered component check."
+      ],
+      "limitations": [
+        "Inspect Tailwind version and existing configuration; merge rather than replace it."
+      ]
+    },
+    {
+      "id": "D1",
+      "category": "documents",
+      "title": "Redesign a Word report",
+      "goal": "Make this Word report polished and easier to read while preserving every fact and document object.",
+      "whenToUse": "When you have a document or verified notes to improve.",
+      "prompt": "Use $dazzler-frontend to make this Word report polished and easier to read while preserving every fact and document object.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check reading measure, heading hierarchy, selective emphasis, font coverage and every printed page.",
+      "expect": "A revised DOCX plus page-by-page render checks and any preservation limitations.",
+      "tips": "Use host document tools for existing files; the basic content exporter cannot preserve arbitrary objects.",
+      "helpers": [
+        {
+          "script": "project.py",
+          "subcommand": "export"
+        }
+      ],
+      "templates": [
+        "docx-professional"
+      ],
+      "references": [
+        "design-studio.md"
+      ],
+      "hostCapabilities": [
+        "document-editing",
+        "document-rendering"
+      ],
+      "outputs": [
+        "A revised DOCX plus page-by-page render checks and any preservation limitations."
+      ],
+      "limitations": [
+        "Use host document tools for existing files; the basic content exporter cannot preserve arbitrary objects."
+      ]
+    },
+    {
+      "id": "D2",
+      "category": "documents",
+      "title": "Improve a resume",
+      "goal": "Make this resume clear, distinctive and professional without changing my facts.",
+      "whenToUse": "When you have a document or verified notes to improve.",
+      "prompt": "Use $dazzler-frontend to make this resume clear, distinctive and professional without changing my facts.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "A readable resume with consistent dates, hierarchy and checked pagination.",
+      "tips": "Aim for one page only if the supplied content fits; do not claim ATS certification.",
+      "helpers": [
+        {
+          "script": "fonts.py",
+          "subcommand": "recommend"
+        }
+      ],
+      "templates": [],
+      "references": [
+        "typography.md"
+      ],
+      "hostCapabilities": [
+        "document-editing",
+        "document-rendering"
+      ],
+      "outputs": [
+        "A readable resume with consistent dates, hierarchy and checked pagination."
+      ],
+      "limitations": [
+        "Aim for one page only if the supplied content fits; do not claim ATS certification."
+      ]
+    },
+    {
+      "id": "D3",
+      "category": "documents",
+      "title": "Write a one-page decision brief",
+      "goal": "Turn these notes and this table into a compelling one-page decision brief.",
+      "whenToUse": "When you have a document or verified notes to improve.",
+      "prompt": "Use $dazzler-frontend to turn these notes and this table into a compelling one-page decision brief.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "A print-ready brief with decision, evidence, table and next actions.",
+      "tips": "Retain units, caveats and all decision-critical information; inspect the actual page.",
+      "helpers": [
+        {
+          "script": "project.py",
+          "subcommand": "export"
+        }
+      ],
+      "templates": [
+        "docx-business"
+      ],
+      "references": [
+        "design-studio.md"
+      ],
+      "hostCapabilities": [
+        "document-editing",
+        "document-rendering"
+      ],
+      "outputs": [
+        "A print-ready brief with decision, evidence, table and next actions."
+      ],
+      "limitations": [
+        "Retain units, caveats and all decision-critical information; inspect the actual page."
+      ]
+    },
+    {
+      "id": "S1",
+      "category": "slides",
+      "title": "Restyle an existing deck",
+      "goal": "Restyle this presentation as a coherent branded deck while preserving its content and editable objects.",
+      "whenToUse": "When you have presentation content or an existing deck.",
+      "prompt": "Use $dazzler-frontend to restyle this presentation as a coherent branded deck while preserving its content and editable objects.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "A revised native deck and a visual review of every slide.",
+      "tips": "Use host presentation tools; the content exporter is not a lossless PPTX editor.",
+      "helpers": [
+        {
+          "script": "studio.mjs",
+          "subcommand": "tokens"
+        }
+      ],
+      "templates": [],
+      "references": [
+        "design-studio.md"
+      ],
+      "hostCapabilities": [
+        "presentation-editing",
+        "presentation-rendering"
+      ],
+      "outputs": [
+        "A revised native deck and a visual review of every slide."
+      ],
+      "limitations": [
+        "Use host presentation tools; the content exporter is not a lossless PPTX editor."
+      ]
+    },
+    {
+      "id": "S2",
+      "category": "slides",
+      "title": "Build a decision deck with a chart",
+      "goal": "Make a concise decision presentation from these facts and data, with an editable chart if supported.",
+      "whenToUse": "When you have presentation content or an existing deck.",
+      "prompt": "Use $dazzler-frontend to make a concise decision presentation from these facts and data, with an editable chart if supported.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "A decision-led deck, chart source data and explicit editable/static status.",
+      "tips": "Native charts require R, mschart and officer; label SVG/HTML fallback as static.",
+      "helpers": [
+        {
+          "script": "visualize.mjs",
+          "subcommand": null
+        }
+      ],
+      "templates": [],
+      "references": [
+        "visualization.md"
+      ],
+      "hostCapabilities": [
+        "presentation-editing",
+        "presentation-rendering"
+      ],
+      "outputs": [
+        "A decision-led deck, chart source data and explicit editable/static status."
+      ],
+      "limitations": [
+        "Native charts require R, mschart and officer; label SVG/HTML fallback as static."
+      ]
+    },
+    {
+      "id": "C1",
+      "category": "data-charts",
+      "title": "Explain a CSV with charts",
+      "goal": "Turn this CSV into a clear branded set of charts with labels, units and a data table.",
+      "whenToUse": "When you have actual data and a clear audience.",
+      "prompt": "Use $dazzler-frontend to turn this CSV into a clear branded set of charts with labels, units and a data table.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Preserve source values and units, choose the chart for the analytical relationship, check contrast and provide non-color cues.",
+      "expect": "Charts grounded in supplied rows, accessible equivalents and stated missing-value handling.",
+      "tips": "Do not invent observations or describe CSV visualization as Excel workbook editing.",
+      "helpers": [
+        {
+          "script": "visualize.mjs",
+          "subcommand": null
+        }
+      ],
+      "templates": [
+        "html-technical"
+      ],
+      "references": [
+        "visualization.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "Charts grounded in supplied rows, accessible equivalents and stated missing-value handling."
+      ],
+      "limitations": [
+        "Do not invent observations or describe CSV visualization as Excel workbook editing."
+      ]
+    },
+    {
+      "id": "C2",
+      "category": "data-charts",
+      "title": "Add a React sparkline",
+      "goal": "Add a compact, readable sparkline for this complete data series in the existing React UI.",
+      "whenToUse": "When you have actual data and a clear audience.",
+      "prompt": "Use $dazzler-frontend to add a compact, readable sparkline for this complete data series in the existing React UI.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "An integrated React component with trend context and a text equivalent.",
+      "tips": "Use the current React runtime; handle incomplete or unsupported series through another chart route.",
+      "helpers": [
+        {
+          "script": "visualize.mjs",
+          "subcommand": null
+        }
+      ],
+      "templates": [],
+      "references": [
+        "visualization.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "An integrated React component with trend context and a text equivalent."
+      ],
+      "limitations": [
+        "Use the current React runtime; handle incomplete or unsupported series through another chart route."
+      ]
+    },
+    {
+      "id": "B1",
+      "category": "brand",
+      "title": "Extract a brand system",
+      "goal": "Derive a usable design system from this existing site and its brand files.",
+      "whenToUse": "When you have brand evidence or representative copy.",
+      "prompt": "Use $dazzler-frontend to derive a usable design system from this existing site and its brand files.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Separate brand seeds from accessible roles, verify licensed font coverage, and record reusable decisions.",
+      "expect": "Traceable observations, resolved tokens and visible conflicts.",
+      "tips": "Observed frequency is evidence, not permission to lock a brand value.",
+      "helpers": [
+        {
+          "script": "project.py",
+          "subcommand": "brand"
+        }
+      ],
+      "templates": [],
+      "references": [
+        "design-studio.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "Traceable observations, resolved tokens and visible conflicts."
+      ],
+      "limitations": [
+        "Observed frequency is evidence, not permission to lock a brand value."
+      ]
+    },
+    {
+      "id": "B2",
+      "category": "brand",
+      "title": "Choose fonts for multilingual copy",
+      "goal": "Choose and demonstrate a font pairing for this project using the actual multilingual copy.",
+      "whenToUse": "When you have brand evidence or representative copy.",
+      "prompt": "Use $dazzler-frontend to choose and demonstrate a font pairing for this project using the actual multilingual copy.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "A licensed shortlist checked for coverage, weights, italics and layout.",
+      "tips": "Check all required scripts; use a suitable available fallback when the compact profile lacks a face.",
+      "helpers": [
+        {
+          "script": "fonts.py",
+          "subcommand": "recommend"
+        }
+      ],
+      "templates": [],
+      "references": [
+        "typography.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "A licensed shortlist checked for coverage, weights, italics and layout."
+      ],
+      "limitations": [
+        "Check all required scripts; use a suitable available fallback when the compact profile lacks a face."
+      ]
+    },
+    {
+      "id": "B3",
+      "category": "brand",
+      "title": "Expand a locked palette",
+      "goal": "Expand these required brand colors into a coherent light and dark interface palette.",
+      "whenToUse": "When you have brand evidence or representative copy.",
+      "prompt": "Use $dazzler-frontend to expand these required brand colors into a coherent light and dark interface palette.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "Role-based colors with measured contrast and unresolved locks called out.",
+      "tips": "Do not silently change required colors or equate harmony with readability.",
+      "helpers": [
+        {
+          "script": "studio.mjs",
+          "subcommand": "tokens"
+        }
+      ],
+      "templates": [],
+      "references": [
+        "color-workflow.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "Role-based colors with measured contrast and unresolved locks called out."
+      ],
+      "limitations": [
+        "Do not silently change required colors or equate harmony with readability."
+      ]
+    },
+    {
+      "id": "I1",
+      "category": "illustrations",
+      "title": "Make an interactive visual guide",
+      "goal": "Turn this image or SVG into an accessible interactive explainer.",
+      "whenToUse": "When you have authorized artwork and useful region descriptions.",
+      "prompt": "Use $dazzler-frontend to turn this image or SVG into an accessible interactive explainer.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "Named hotspots, keyboard controls, descriptions and a text equivalent.",
+      "tips": "Use supplied or authorized artwork; verify region coordinates and the target framework.",
+      "helpers": [
+        {
+          "script": "hotspots.mjs",
+          "subcommand": null
+        }
+      ],
+      "templates": [],
+      "references": [
+        "interactive-illustrations.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "Named hotspots, keyboard controls, descriptions and a text equivalent."
+      ],
+      "limitations": [
+        "Use supplied or authorized artwork; verify region coordinates and the target framework."
+      ]
+    },
+    {
+      "id": "A1",
+      "category": "audits",
+      "title": "Audit a design without changing it",
+      "goal": "Review this interface for readability, accessibility and design quality without changing any files.",
+      "whenToUse": "When you have an existing interface or a concrete design brief.",
+      "prompt": "Use $dazzler-frontend to review this interface for readability, accessibility and design quality without changing any files.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "Prioritized findings with rendered evidence and clearly separated aesthetic judgments.",
+      "tips": "This is not an AI-authorship detector or complete accessibility certification.",
+      "helpers": [
+        {
+          "script": "browser.cjs",
+          "subcommand": "inspect"
+        }
+      ],
+      "templates": [],
+      "references": [
+        "design-audit.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "Prioritized findings with rendered evidence and clearly separated aesthetic judgments."
+      ],
+      "limitations": [
+        "This is not an AI-authorship detector or complete accessibility certification."
+      ]
+    },
+    {
+      "id": "A2",
+      "category": "audits",
+      "title": "Stress-test a responsive layout",
+      "goal": "Test this UI with long names, large values, missing images, empty data and error states.",
+      "whenToUse": "When you have an existing interface or a concrete design brief.",
+      "prompt": "Use $dazzler-frontend to test this UI with long names, large values, missing images, empty data and error states.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "Wide/narrow evidence, applicable scenario results and concrete repairs to recommend.",
+      "tips": "Absent targets mean not applicable; DOM simulations do not prove backend recovery.",
+      "helpers": [
+        {
+          "script": "browser.cjs",
+          "subcommand": "stress"
+        }
+      ],
+      "templates": [],
+      "references": [
+        "design-studio.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "Wide/narrow evidence, applicable scenario results and concrete repairs to recommend."
+      ],
+      "limitations": [
+        "Absent targets mean not applicable; DOM simulations do not prove backend recovery."
+      ]
+    },
+    {
+      "id": "R1",
+      "category": "iteration",
+      "title": "Make a reversible CSS refinement",
+      "goal": "Refine this CSS file and keep a precise way to revert only this change.",
+      "whenToUse": "When you have an existing interface or a concrete design brief.",
+      "prompt": "Use $dazzler-frontend to refine this CSS file and keep a precise way to revert only this change.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "A bounded single-file plan, validated application and a reversible change record.",
+      "tips": "Reject intervening edits; use Git for coordinated multi-file changes.",
+      "helpers": [
+        {
+          "script": "project.py",
+          "subcommand": "plan"
+        }
+      ],
+      "templates": [],
+      "references": [
+        "design-studio.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "A bounded single-file plan, validated application and a reversible change record."
+      ],
+      "limitations": [
+        "Reject intervening edits; use Git for coordinated multi-file changes."
+      ]
+    },
+    {
+      "id": "P1",
+      "category": "progressive",
+      "title": "Improve a pricing page",
+      "goal": "Make this pricing page easier to compare and more persuasive while preserving its prices and terms.",
+      "whenToUse": "When you have an existing interface or a concrete design brief.",
+      "prompt": "Use $dazzler-frontend to make this pricing page easier to compare and more persuasive while preserving its prices and terms.",
+      "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
+      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "expect": "Clear plan differences, an obvious next action and verified responsive behavior.",
+      "tips": "Start automatically; offer density, tone or palette controls only if I ask.",
+      "helpers": [
+        {
+          "script": "browser.cjs",
+          "subcommand": "inspect"
+        }
+      ],
+      "templates": [
+        "html-business"
+      ],
+      "references": [
+        "design-controls.md"
+      ],
+      "hostCapabilities": [
+        "filesystem",
+        "browser-inspection"
+      ],
+      "outputs": [
+        "Clear plan differences, an obvious next action and verified responsive behavior."
+      ],
+      "limitations": [
+        "Start automatically; offer density, tone or palette controls only if I ask."
+      ]
+    }
+  ]
+}

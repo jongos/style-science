@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "layouts": [
+    {
+      "id": "editorial-feature",
+      "tasks": [
+        "article",
+        "essay",
+        "journalism"
+      ],
+      "content": [
+        "headline",
+        "body"
+      ],
+      "readingOrder": "Lead, standfirst, feature, supporting evidence",
+      "density": "Comfortable reading measure with a generous headline and a quiet supporting column",
+      "caution": "Do not fragment a continuous argument into cards",
+      "responsive": "At 48rem and below use one column in DOM reading order; keep tables in labelled scroll regions. Test actual content at 320px and 200% text.",
+      "css": ".dazzler-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(12rem,1fr);gap:var(--space-6,1.5rem)}.dazzler-layout>*{min-width:0}@media(max-width:48rem){.dazzler-layout{grid-template-columns:minmax(0,1fr)}}"
+    },
+    {
+      "id": "split-narrative",
+      "tasks": [
+        "story",
+        "portfolio",
+        "case-study"
+      ],
+      "content": [
+        "narrative",
+        "media"
+      ],
+      "readingOrder": "Narrative first, related media second",
+      "density": "Two complementary regions, generous space between milestones",
+      "caution": "Do not split unrelated material or reverse reading order with CSS",
+      "responsive": "At 48rem and below use one column in DOM reading order; keep tables in labelled scroll regions. Test actual content at 320px and 200% text.",
+      "css": ".dazzler-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-6,1.5rem)}.dazzler-layout>*{min-width:0}@media(max-width:48rem){.dazzler-layout{grid-template-columns:minmax(0,1fr)}}"
+    },
+    {
+      "id": "list-detail",
+      "tasks": [
+        "inbox",
+        "directory",
+        "search"
+      ],
+      "content": [
+        "items",
+        "detail"
+      ],
+      "readingOrder": "Search and list, selected item, actions",
+      "density": "Compact scanning column beside a flexible detail pane",
+      "caution": "Keep selection and return-to-list clear on small screens",
+      "responsive": "At 48rem and below use one column in DOM reading order; keep tables in labelled scroll regions. Test actual content at 320px and 200% text.",
+      "css": ".dazzler-layout{display:grid;grid-template-columns:minmax(14rem,1fr) minmax(0,2fr);gap:var(--space-6,1.5rem)}.dazzler-layout>*{min-width:0}@media(max-width:48rem){.dazzler-layout{grid-template-columns:minmax(0,1fr)}}"
+    },
+    {
+      "id": "dense-workspace",
+      "tasks": [
+        "operations",
+        "support",
+        "admin"
+      ],
+      "content": [
+        "records",
+        "actions"
+      ],
+      "readingOrder": "Task controls, active records, contextual detail",
+      "density": "High information density with explicit groups and stable alignment",
+      "caution": "Density never justifies tiny text, hidden controls or excessive simultaneous panels",
+      "responsive": "At 48rem and below use one column in DOM reading order; keep tables in labelled scroll regions. Test actual content at 320px and 200% text.",
+      "css": ".dazzler-layout{display:grid;grid-template-columns:minmax(0,3fr) minmax(14rem,1fr);gap:var(--space-6,1.5rem)}.dazzler-layout>*{min-width:0}@media(max-width:48rem){.dazzler-layout{grid-template-columns:minmax(0,1fr)}}"
+    },
+    {
+      "id": "analytic-report",
+      "tasks": [
+        "analysis",
+        "metrics",
+        "report"
+      ],
+      "content": [
+        "metrics",
+        "evidence"
+      ],
+      "readingOrder": "Question, key result, chart, source table, interpretation",
+      "density": "Use a hierarchy of evidence rather than equally weighted metric cards",
+      "caution": "Keep units, uncertainty, missing data and table alternatives",
+      "responsive": "At 48rem and below use one column in DOM reading order; keep tables in labelled scroll regions. Test actual content at 320px and 200% text.",
+      "css": ".dazzler-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-6,1.5rem)}.dazzler-layout>*{min-width:0}@media(max-width:48rem){.dazzler-layout{grid-template-columns:minmax(0,1fr)}}"
+    },
+    {
+      "id": "focused-form",
+      "tasks": [
+        "apply",
+        "checkout",
+        "registration"
+      ],
+      "content": [
+        "fields",
+        "submit"
+      ],
+      "readingOrder": "Purpose, grouped fields, validation, submit and recovery",
+      "density": "One readable form column with optional supporting explanation",
+      "caution": "Do not hide required fields to simplify the composition",
+      "responsive": "At 48rem and below use one column in DOM reading order; keep tables in labelled scroll regions. Test actual content at 320px and 200% text.",
+      "css": ".dazzler-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(12rem,1fr);gap:var(--space-6,1.5rem)}.dazzler-layout>*{min-width:0}@media(max-width:48rem){.dazzler-layout{grid-template-columns:minmax(0,1fr)}}"
+    },
+    {
+      "id": "catalog-menu",
+      "tasks": [
+        "catalog",
+        "menu",
+        "inventory"
+      ],
+      "content": [
+        "items",
+        "categories"
+      ],
+      "readingOrder": "Categories, comparable items, details and ordering controls",
+      "density": "Intentional repeatable rows or tiles support comparison",
+      "caution": "Do not vary geometry merely to appear original; retain prices and dietary details",
+      "responsive": "At 48rem and below use one column in DOM reading order; keep tables in labelled scroll regions. Test actual content at 320px and 200% text.",
+      "css": ".dazzler-layout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6,1.5rem)}.dazzler-layout>*{min-width:0}@media(max-width:48rem){.dazzler-layout{grid-template-columns:minmax(0,1fr)}}"
+    },
+    {
+      "id": "poster-event",
+      "tasks": [
+        "event",
+        "invitation",
+        "announcement"
+      ],
+      "content": [
+        "title",
+        "date",
+        "action"
+      ],
+      "readingOrder": "Event identity, date/place, details, action",
+      "density": "Strong display hierarchy and concise grouped practical information",
+      "caution": "Do not let decoration compete with dates, location or action",
+      "responsive": "At 48rem and below use one column in DOM reading order; keep tables in labelled scroll regions. Test actual content at 320px and 200% text.",
+      "css": ".dazzler-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-6,1.5rem)}.dazzler-layout>*{min-width:0}@media(max-width:48rem){.dazzler-layout{grid-template-columns:minmax(0,1fr)}}"
+    }
+  ]
+}

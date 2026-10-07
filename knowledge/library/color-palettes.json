@@ -1,0 +1,1415 @@
+{
+  "source_commit": "a306210b7240e183366998ce39fbe7543cc09b41",
+  "license": "MIT; see hue3-LICENSE.txt",
+  "note": "Editorial starting points, not accessibility-certified tokens. Mood associations are contextual.",
+  "palettes": [
+    {
+      "id": "BLD-01",
+      "name": "Ignition Red (Complementary)",
+      "mood": "bold",
+      "colors": {
+        "primary": "#D82830",
+        "secondary": "#1A1A1E",
+        "accent": "#F0C830",
+        "background": "#FAF5F5",
+        "surface": "#F4E8E8",
+        "text": "#1A0808",
+        "border": "#D8B8B8"
+      },
+      "atmosphere": "A Formula 1 starting grid, engines roaring, red lights about to go out",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/bold.md"
+    },
+    {
+      "id": "BLD-02",
+      "name": "Electric Orange (Modified Triadic)",
+      "mood": "bold",
+      "colors": {
+        "primary": "#E86820",
+        "secondary": "#181820",
+        "accent": "#28B0D8",
+        "background": "#FEF8F4",
+        "surface": "#F8EEE4",
+        "text": "#1A1008",
+        "border": "#D8C4A8"
+      },
+      "atmosphere": "A Nike campaign billboard — bold orange cutting across a dark sky, electric and unstoppable",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/bold.md"
+    },
+    {
+      "id": "BLD-03",
+      "name": "Stadium Roar (Split-Complementary)",
+      "mood": "bold",
+      "colors": {
+        "primary": "#1848A0",
+        "secondary": "#E83838",
+        "accent": "#F8F0E0",
+        "background": "#F2F4F8",
+        "surface": "#E4E8F0",
+        "text": "#0C1428",
+        "border": "#A8B4C8"
+      },
+      "atmosphere": "A packed stadium at night, spotlights blazing, the crowd on their feet",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/bold.md"
+    },
+    {
+      "id": "BLD-04",
+      "name": "Molten Core (Warm Analogous)",
+      "mood": "bold",
+      "colors": {
+        "primary": "#C83020",
+        "secondary": "#E88020",
+        "accent": "#F8C030",
+        "background": "#FDF6F2",
+        "surface": "#F8ECE0",
+        "text": "#2A0C04",
+        "border": "#D8B898"
+      },
+      "atmosphere": "Molten steel pouring in a foundry, sparks flying, the heat of raw creation",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/bold.md"
+    },
+    {
+      "id": "BLD-05",
+      "name": "Neon Pulse (Cool-Warm Contrast)",
+      "mood": "bold",
+      "colors": {
+        "primary": "#0C0C14",
+        "secondary": "#E04080",
+        "accent": "#30E8C0",
+        "background": "#08080E",
+        "surface": "#12121C",
+        "text": "#E8E0F0",
+        "border": "#282838"
+      },
+      "atmosphere": "A music festival at midnight, bass drops, laser beams cutting through fog",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/bold.md"
+    },
+    {
+      "id": "BLD-06",
+      "name": "Champion Gold (Triadic)",
+      "mood": "bold",
+      "colors": {
+        "primary": "#D8A020",
+        "secondary": "#1E8848",
+        "accent": "#C83028",
+        "background": "#FBF8F0",
+        "surface": "#F4ECDA",
+        "text": "#1E1408",
+        "border": "#D8C890"
+      },
+      "atmosphere": "A championship podium, gold confetti raining down, the roar of the crowd",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/bold.md"
+    },
+    {
+      "id": "BLD-07",
+      "name": "Thunder Violet (Modified Triadic)",
+      "mood": "bold",
+      "colors": {
+        "primary": "#5828A0",
+        "secondary": "#E87830",
+        "accent": "#20C080",
+        "background": "#F2EEF8",
+        "surface": "#E4DEF0",
+        "text": "#140E20",
+        "border": "#B8A8D0"
+      },
+      "atmosphere": "A violet thunderstorm on the horizon, lightning cracking in orange, the sky electric",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/bold.md"
+    },
+    {
+      "id": "BLD-08",
+      "name": "Adrenaline (Analogous)",
+      "mood": "bold",
+      "colors": {
+        "primary": "#D82050",
+        "secondary": "#E04888",
+        "accent": "#B81878",
+        "background": "#FDF5F8",
+        "surface": "#F8E8EE",
+        "text": "#280810",
+        "border": "#E0A8B8"
+      },
+      "atmosphere": "A heartbeat monitor spiking, pure adrenaline surge, red vision at full intensity",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/bold.md"
+    },
+    {
+      "id": "CLM-01",
+      "name": "Morning Mist (Analogous)",
+      "mood": "calm",
+      "colors": {
+        "primary": "#B8D0E0",
+        "secondary": "#94B8D0",
+        "accent": "#6A98B8",
+        "background": "#F4F8FA",
+        "surface": "#E8F0F5",
+        "text": "#1A2C38",
+        "border": "#C8D8E4"
+      },
+      "atmosphere": "A mountain lake at dawn, mist slowly lifting, the world still half-asleep",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/calm.md"
+    },
+    {
+      "id": "CLM-02",
+      "name": "Lavender Fields (Analogous)",
+      "mood": "calm",
+      "colors": {
+        "primary": "#C8BCD8",
+        "secondary": "#B0A8C8",
+        "accent": "#8A80A8",
+        "background": "#F8F6FC",
+        "surface": "#F0EDF6",
+        "text": "#201830",
+        "border": "#D4CCE0"
+      },
+      "atmosphere": "An endless lavender field under a soft, overcast sky, the scent drifting on a gentle breeze",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/calm.md"
+    },
+    {
+      "id": "CLM-03",
+      "name": "Seafoam Breath (Split-Complementary)",
+      "mood": "calm",
+      "colors": {
+        "primary": "#A8D4CC",
+        "secondary": "#C0D8D4",
+        "accent": "#D0B8C0",
+        "background": "#F5FAF8",
+        "surface": "#EAF2F0",
+        "text": "#1A2826",
+        "border": "#BCD0CC"
+      },
+      "atmosphere": "A seaside yoga studio at sunrise, soft breeze, the sound of gentle waves",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/calm.md"
+    },
+    {
+      "id": "CLM-04",
+      "name": "Cloud Linen (Cool-Warm Contrast)",
+      "mood": "calm",
+      "colors": {
+        "primary": "#E0DCD4",
+        "secondary": "#B8C8D0",
+        "accent": "#8AA0A8",
+        "background": "#F8F7F5",
+        "surface": "#F0EEEA",
+        "text": "#1E2428",
+        "border": "#CCD4D8"
+      },
+      "atmosphere": "A minimalist spa reception, linen curtains filtering soft daylight, a cup of chamomile tea",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/calm.md"
+    },
+    {
+      "id": "CLM-05",
+      "name": "Silent Snow (Monochromatic)",
+      "mood": "calm",
+      "colors": {
+        "primary": "#D8DEE4",
+        "secondary": "#B0BCC8",
+        "accent": "#7890A0",
+        "background": "#F6F8FA",
+        "surface": "#ECF0F4",
+        "text": "#1A2230",
+        "border": "#C4CED8"
+      },
+      "atmosphere": "Fresh snowfall muffling all sound, the world reduced to whispers of blue and white",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/calm.md"
+    },
+    {
+      "id": "CLM-06",
+      "name": "Zen Garden (Modified Triadic)",
+      "mood": "calm",
+      "colors": {
+        "primary": "#C8D4C4",
+        "secondary": "#B8C0D0",
+        "accent": "#D0C4B4",
+        "background": "#F6F8F6",
+        "surface": "#EDF0EC",
+        "text": "#1E2820",
+        "border": "#C0CCC0"
+      },
+      "atmosphere": "A raked gravel zen garden, three mossy stones, no sound but wind through bamboo",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/calm.md"
+    },
+    {
+      "id": "CLM-07",
+      "name": "Herbal Tea (Warm Analogous)",
+      "mood": "calm",
+      "colors": {
+        "primary": "#D8D0C0",
+        "secondary": "#C8C0A8",
+        "accent": "#A89880",
+        "background": "#FAF8F4",
+        "surface": "#F2EEE6",
+        "text": "#201C14",
+        "border": "#D4CCC0"
+      },
+      "atmosphere": "Sipping herbal tea in a sunlit room, steam curling upward, unhurried afternoon silence",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/calm.md"
+    },
+    {
+      "id": "CLM-08",
+      "name": "Tide Pool (Triadic)",
+      "mood": "calm",
+      "colors": {
+        "primary": "#A8C8C8",
+        "secondary": "#C8B8C8",
+        "accent": "#C8C8A8",
+        "background": "#F5F8F8",
+        "surface": "#ECF0F0",
+        "text": "#1A2424",
+        "border": "#B8CCCC"
+      },
+      "atmosphere": "A shallow tide pool at low tide, soft colors beneath still water, small creatures drifting",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/calm.md"
+    },
+    {
+      "id": "COZ-01",
+      "name": "Fireside (Warm Analogous)",
+      "mood": "cozy",
+      "colors": {
+        "primary": "#BE9872",
+        "secondary": "#8A7260",
+        "accent": "#C86840",
+        "background": "#F8F3ED",
+        "surface": "#EDE5DA",
+        "text": "#2A2018",
+        "border": "#D2C2AD"
+      },
+      "atmosphere": "An armchair by the fireplace, a wool blanket, crackling logs, and a good book",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/cozy.md"
+    },
+    {
+      "id": "COZ-02",
+      "name": "Café Latte (Monochromatic)",
+      "mood": "cozy",
+      "colors": {
+        "primary": "#E8DCD0",
+        "secondary": "#C4A88E",
+        "accent": "#8A7060",
+        "background": "#FAF7F4",
+        "surface": "#F2EDE6",
+        "text": "#2E2218",
+        "border": "#DDD0C2"
+      },
+      "atmosphere": "A rainy afternoon in a neighborhood café, latte art in a handmade ceramic cup",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/cozy.md"
+    },
+    {
+      "id": "COZ-03",
+      "name": "Autumn Walk (Modified Triadic)",
+      "mood": "cozy",
+      "colors": {
+        "primary": "#B88848",
+        "secondary": "#6A8A70",
+        "accent": "#A84830",
+        "background": "#F8F4EE",
+        "surface": "#F0E8DA",
+        "text": "#221A0E",
+        "border": "#D4C4A8"
+      },
+      "atmosphere": "Crunching through fallen leaves on a forest path, golden hour filtering through maple canopy",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/cozy.md"
+    },
+    {
+      "id": "COZ-04",
+      "name": "Knit Sweater (Cool-Warm Contrast)",
+      "mood": "cozy",
+      "colors": {
+        "primary": "#E8D8C4",
+        "secondary": "#A08878",
+        "accent": "#8A5040",
+        "background": "#FAF6F0",
+        "surface": "#F2EADC",
+        "text": "#241A12",
+        "border": "#D8C8B4"
+      },
+      "atmosphere": "A hand-knit cable sweater, warm cinnamon tea, a foggy window on a winter morning",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/cozy.md"
+    },
+    {
+      "id": "COZ-05",
+      "name": "Candlelit Dinner (Split-Complementary)",
+      "mood": "cozy",
+      "colors": {
+        "primary": "#2A1E1A",
+        "secondary": "#C89050",
+        "accent": "#883830",
+        "background": "#1E1614",
+        "surface": "#2C2220",
+        "text": "#F0E0D0",
+        "border": "#483830"
+      },
+      "atmosphere": "An intimate dinner at a candlelit table, wine glasses glowing, warm laughter filling the room",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/cozy.md"
+    },
+    {
+      "id": "COZ-06",
+      "name": "Spice Market (Modified Triadic)",
+      "mood": "cozy",
+      "colors": {
+        "primary": "#B07840",
+        "secondary": "#7A6848",
+        "accent": "#C04828",
+        "background": "#F8F2EA",
+        "surface": "#F0E4D4",
+        "text": "#201408",
+        "border": "#D0B898"
+      },
+      "atmosphere": "A Middle Eastern spice bazaar, copper bowls of cinnamon, nutmeg, and paprika, warm lantern light",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/cozy.md"
+    },
+    {
+      "id": "COZ-07",
+      "name": "Quilted Blanket (Triadic)",
+      "mood": "cozy",
+      "colors": {
+        "primary": "#C8A880",
+        "secondary": "#808868",
+        "accent": "#A87080",
+        "background": "#FAF6F0",
+        "surface": "#F0E8DA",
+        "text": "#1E1A10",
+        "border": "#D4C4A8"
+      },
+      "atmosphere": "Wrapped in a handmade quilt, patches of tan, sage, and berry, every stitch a memory",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/cozy.md"
+    },
+    {
+      "id": "COZ-08",
+      "name": "Maple Syrup (Analogous)",
+      "mood": "cozy",
+      "colors": {
+        "primary": "#D0A058",
+        "secondary": "#B88840",
+        "accent": "#986830",
+        "background": "#FAF4EA",
+        "surface": "#F2E8D4",
+        "text": "#1E1608",
+        "border": "#D8C498"
+      },
+      "atmosphere": "Sunday morning pancakes, maple syrup pooling in golden rivulets, butter melting slowly",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/cozy.md"
+    },
+    {
+      "id": "DRM-01",
+      "name": "Cyberpunk City (Split-Complementary)",
+      "mood": "dramatic",
+      "colors": {
+        "primary": "#101020",
+        "secondary": "#30E0B8",
+        "accent": "#E04888",
+        "background": "#0A0A14",
+        "surface": "#101020",
+        "text": "#B8E8D8",
+        "border": "#1A2828"
+      },
+      "atmosphere": "Rain-slicked streets of a neon-lit megacity, holographic ads flickering above",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/dramatic.md"
+    },
+    {
+      "id": "DRM-02",
+      "name": "Terminal Hacker (Analogous)",
+      "mood": "dramatic",
+      "colors": {
+        "primary": "#0D1117",
+        "secondary": "#30363D",
+        "accent": "#3FB950",
+        "background": "#010409",
+        "surface": "#0D1117",
+        "text": "#C9D1D9",
+        "border": "#21262D"
+      },
+      "atmosphere": "A late-night terminal session, green text scrolling, a successful exploit message",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/dramatic.md"
+    },
+    {
+      "id": "DRM-03",
+      "name": "Violet Storm (Modified Triadic)",
+      "mood": "dramatic",
+      "colors": {
+        "primary": "#0C0818",
+        "secondary": "#6E54A0",
+        "accent": "#C8A850",
+        "background": "#080610",
+        "surface": "#14101E",
+        "text": "#D8D0E8",
+        "border": "#2A2040"
+      },
+      "atmosphere": "A thunderstorm over a gothic cathedral, lightning illuminating stained glass in purple and gold",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/dramatic.md"
+    },
+    {
+      "id": "DRM-04",
+      "name": "Blood Moon (Warm-Cool Contrast)",
+      "mood": "dramatic",
+      "colors": {
+        "primary": "#120808",
+        "secondary": "#882020",
+        "accent": "#E84030",
+        "background": "#0A0404",
+        "surface": "#1A0C0C",
+        "text": "#E8D0D0",
+        "border": "#381818"
+      },
+      "atmosphere": "A blood moon rising over a dark landscape, everything bathed in ominous red",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/dramatic.md"
+    },
+    {
+      "id": "DRM-05",
+      "name": "80s Neon (Modified Triadic)",
+      "mood": "dramatic",
+      "colors": {
+        "primary": "#D860A0",
+        "secondary": "#48C878",
+        "accent": "#40C8D8",
+        "background": "#0E0A14",
+        "surface": "#181420",
+        "text": "#F0E0F0",
+        "border": "#2E2840"
+      },
+      "atmosphere": "An 80s arcade, synthesizer bass pumping, neon tubes buzzing in the dark",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/dramatic.md"
+    },
+    {
+      "id": "DRM-06",
+      "name": "Noir Film (Monochromatic)",
+      "mood": "dramatic",
+      "colors": {
+        "primary": "#0A0A0E",
+        "secondary": "#28283C",
+        "accent": "#C8C8E0",
+        "background": "#060608",
+        "surface": "#101018",
+        "text": "#C0C0D0",
+        "border": "#1E1E30"
+      },
+      "atmosphere": "A film noir detective scene, venetian blind shadows slicing across a silver cigarette case",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/dramatic.md"
+    },
+    {
+      "id": "DRM-07",
+      "name": "Toxic Waste (Split-Complementary)",
+      "mood": "dramatic",
+      "colors": {
+        "primary": "#0C1008",
+        "secondary": "#58D030",
+        "accent": "#D030A0",
+        "background": "#080C06",
+        "surface": "#141810",
+        "text": "#C0E0B0",
+        "border": "#1E2818"
+      },
+      "atmosphere": "A post-apocalyptic wasteland, glowing green puddles, hazard signs in acid pink",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/dramatic.md"
+    },
+    {
+      "id": "DRM-08",
+      "name": "Eclipse (Triadic)",
+      "mood": "dramatic",
+      "colors": {
+        "primary": "#080410",
+        "secondary": "#C84020",
+        "accent": "#E8B030",
+        "background": "#040208",
+        "surface": "#0C0818",
+        "text": "#E0D0C0",
+        "border": "#201020"
+      },
+      "atmosphere": "A total solar eclipse, the corona blazing red and gold against the absolute void of the moon's shadow",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/dramatic.md"
+    },
+    {
+      "id": "ERT-01",
+      "name": "Forest Floor (Analogous)",
+      "mood": "earthy",
+      "colors": {
+        "primary": "#5E7E5E",
+        "secondary": "#A2B89A",
+        "accent": "#C8956A",
+        "background": "#F5F7F4",
+        "surface": "#E8EDE5",
+        "text": "#1E2B1E",
+        "border": "#BFCAB8"
+      },
+      "atmosphere": "A broadleaf forest after the rain, warm dappled sunlight filtering through the canopy",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/earthy.md"
+    },
+    {
+      "id": "ERT-02",
+      "name": "Terracotta Garden (Warm Analogous)",
+      "mood": "earthy",
+      "colors": {
+        "primary": "#A08B76",
+        "secondary": "#8A9E7B",
+        "accent": "#C87848",
+        "background": "#F9F6F2",
+        "surface": "#F0EBE3",
+        "text": "#2E261E",
+        "border": "#D0C4B4"
+      },
+      "atmosphere": "A terracotta-potted herb garden on a sun-warmed stone patio",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/earthy.md"
+    },
+    {
+      "id": "ERT-03",
+      "name": "Deep Ocean (Analogous)",
+      "mood": "earthy",
+      "colors": {
+        "primary": "#2B5C6E",
+        "secondary": "#6A9BAD",
+        "accent": "#B5D5D8",
+        "background": "#F2F7F8",
+        "surface": "#E4EEF0",
+        "text": "#112530",
+        "border": "#ACC5CC"
+      },
+      "atmosphere": "Looking upward from the deep sea, light rippling through translucent waves",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/earthy.md"
+    },
+    {
+      "id": "ERT-04",
+      "name": "Desert Dusk (Modified Triadic)",
+      "mood": "earthy",
+      "colors": {
+        "primary": "#C2A083",
+        "secondary": "#8C6B78",
+        "accent": "#5E7B82",
+        "background": "#FAF6F1",
+        "surface": "#F0E8DE",
+        "text": "#302418",
+        "border": "#D6C8B6"
+      },
+      "atmosphere": "Dusk over the Sahara, the fleeting moment when the sky shifts from amber to indigo",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/earthy.md"
+    },
+    {
+      "id": "ERT-05",
+      "name": "Wildflower Meadow (Split-Complementary)",
+      "mood": "earthy",
+      "colors": {
+        "primary": "#7A9B5A",
+        "secondary": "#E8C86A",
+        "accent": "#C47B8A",
+        "background": "#F7F9F3",
+        "surface": "#EDF2E5",
+        "text": "#1E2814",
+        "border": "#C2D0A8"
+      },
+      "atmosphere": "Early summer countryside, wildflowers swaying gently in the breeze",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/earthy.md"
+    },
+    {
+      "id": "ERT-06",
+      "name": "Mushroom Forage (Monochromatic)",
+      "mood": "earthy",
+      "colors": {
+        "primary": "#A89888",
+        "secondary": "#887868",
+        "accent": "#685848",
+        "background": "#F8F4F0",
+        "surface": "#EDE6DE",
+        "text": "#201A14",
+        "border": "#C8BAA8"
+      },
+      "atmosphere": "Foraging after rain, mushrooms pushing through leaf litter, the rich smell of damp earth",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/earthy.md"
+    },
+    {
+      "id": "ERT-07",
+      "name": "River Stone (Triadic)",
+      "mood": "earthy",
+      "colors": {
+        "primary": "#808878",
+        "secondary": "#887878",
+        "accent": "#787888",
+        "background": "#F4F6F4",
+        "surface": "#E8ECE8",
+        "text": "#1A1C1A",
+        "border": "#B8BCB4"
+      },
+      "atmosphere": "A dry riverbed, smooth stones in three barely-different tones, geological patience",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/earthy.md"
+    },
+    {
+      "id": "ERT-08",
+      "name": "Harvest Table (Cool-Warm Contrast)",
+      "mood": "earthy",
+      "colors": {
+        "primary": "#C8A878",
+        "secondary": "#7898A0",
+        "accent": "#A86040",
+        "background": "#FAF6F0",
+        "surface": "#F2E8DA",
+        "text": "#221A10",
+        "border": "#D8C8A8"
+      },
+      "atmosphere": "A farm-to-table dinner at dusk, wooden platters, ceramic pitchers of water, brick hearth glowing",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/earthy.md"
+    },
+    {
+      "id": "JPN-01",
+      "name": "Wabi-sabi (Analogous)",
+      "mood": "japanese",
+      "colors": {
+        "primary": "#B5ADA2",
+        "secondary": "#8A8075",
+        "accent": "#5A5047",
+        "background": "#F6F4F0",
+        "surface": "#ECE8E2",
+        "text": "#2D2924",
+        "border": "#CBC5BB"
+      },
+      "atmosphere": "A cracked Kintsugi bowl on a weathered wooden tray, autumn light through paper screens",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/japanese.md"
+    },
+    {
+      "id": "JPN-02",
+      "name": "Sakura Stroll (Analogous)",
+      "mood": "japanese",
+      "colors": {
+        "primary": "#F2D5DB",
+        "secondary": "#C8A0AB",
+        "accent": "#7A5565",
+        "background": "#FDF7F8",
+        "surface": "#F8EFF1",
+        "text": "#382028",
+        "border": "#E0C8CE"
+      },
+      "atmosphere": "Walking under a canopy of sakura in full bloom, petals drifting onto a quiet canal",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/japanese.md"
+    },
+    {
+      "id": "JPN-03",
+      "name": "Matcha & Wagashi (Split-Complementary)",
+      "mood": "japanese",
+      "colors": {
+        "primary": "#7C9A62",
+        "secondary": "#E5D8C2",
+        "accent": "#B85C5C",
+        "background": "#F8F9F3",
+        "surface": "#EFF2E7",
+        "text": "#1E2A15",
+        "border": "#C0D0A8"
+      },
+      "atmosphere": "Whisking matcha in a chawan, a delicate wagashi beside it, the scent of tatami",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/japanese.md"
+    },
+    {
+      "id": "JPN-04",
+      "name": "Ukiyo-e (Modified Triadic)",
+      "mood": "japanese",
+      "colors": {
+        "primary": "#2C5A7C",
+        "secondary": "#BA5B4C",
+        "accent": "#D4B85A",
+        "background": "#F2F4F6",
+        "surface": "#E0E6EC",
+        "text": "#0E1820",
+        "border": "#A0B0C0"
+      },
+      "atmosphere": "Hokusai's Great Wave — deep indigo sea, white foam, a golden sky behind Fuji",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/japanese.md"
+    },
+    {
+      "id": "JPN-05",
+      "name": "Anime Neon (Cool-Warm Contrast)",
+      "mood": "japanese",
+      "colors": {
+        "primary": "#0E1028",
+        "secondary": "#4888E0",
+        "accent": "#E85080",
+        "background": "#0A0C1E",
+        "surface": "#141830",
+        "text": "#D0D8F0",
+        "border": "#202848"
+      },
+      "atmosphere": "Akihabara at night, anime billboards glowing, the electric pulse of Tokyo's otaku culture",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/japanese.md"
+    },
+    {
+      "id": "JPN-06",
+      "name": "Momiji (Modified Triadic)",
+      "mood": "japanese",
+      "colors": {
+        "primary": "#B84828",
+        "secondary": "#D4A848",
+        "accent": "#486838",
+        "background": "#FAF4F0",
+        "surface": "#F2E8DE",
+        "text": "#1E1008",
+        "border": "#D4B89C"
+      },
+      "atmosphere": "Kyoto in November, fiery momiji reflecting in a temple pond, golden ginkgo leaves falling",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/japanese.md"
+    },
+    {
+      "id": "JPN-07",
+      "name": "Torii (Complementary)",
+      "mood": "japanese",
+      "colors": {
+        "primary": "#C03020",
+        "secondary": "#F0E8D8",
+        "accent": "#384030",
+        "background": "#FAF6F0",
+        "surface": "#F4ECE0",
+        "text": "#1A0808",
+        "border": "#D8C0A8"
+      },
+      "atmosphere": "A vermillion torii gate framing a cedar forest, shimenawa rope fluttering in the breeze",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/japanese.md"
+    },
+    {
+      "id": "JPN-08",
+      "name": "Shibori (Analogous)",
+      "mood": "japanese",
+      "colors": {
+        "primary": "#2A4878",
+        "secondary": "#4868A0",
+        "accent": "#88A8D0",
+        "background": "#F0F2F6",
+        "surface": "#E0E6EE",
+        "text": "#0E1420",
+        "border": "#A0B0C8"
+      },
+      "atmosphere": "Shibori cloth drying in the sun, indigo in three depths, the ancient art of resist-dyeing",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/japanese.md"
+    },
+    {
+      "id": "LUX-01",
+      "name": "Black Tie (Complementary)",
+      "mood": "luxurious",
+      "colors": {
+        "primary": "#141418",
+        "secondary": "#C8A850",
+        "accent": "#F0E8D0",
+        "background": "#0C0C10",
+        "surface": "#1A1A20",
+        "text": "#E8E0D0",
+        "border": "#2A2A34"
+      },
+      "atmosphere": "A black-tie gala, gold chandeliers reflecting on polished marble, a string quartet playing",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/luxurious.md"
+    },
+    {
+      "id": "LUX-02",
+      "name": "Velvet Burgundy (Analogous)",
+      "mood": "luxurious",
+      "colors": {
+        "primary": "#2E1018",
+        "secondary": "#6A2838",
+        "accent": "#D4A870",
+        "background": "#1A0A10",
+        "surface": "#281420",
+        "text": "#F0DDE0",
+        "border": "#482030"
+      },
+      "atmosphere": "A private wine cellar, candlelight dancing on aged bottles, velvet upholstery",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/luxurious.md"
+    },
+    {
+      "id": "LUX-03",
+      "name": "Midnight Sapphire (Modified Triadic)",
+      "mood": "luxurious",
+      "colors": {
+        "primary": "#101830",
+        "secondary": "#2848A0",
+        "accent": "#D0A840",
+        "background": "#08101E",
+        "surface": "#141E38",
+        "text": "#D0D8F0",
+        "border": "#203060"
+      },
+      "atmosphere": "A moonlit palace hall, sapphire stained glass casting deep blue light on gilded frames",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/luxurious.md"
+    },
+    {
+      "id": "LUX-04",
+      "name": "Emerald Club (Split-Complementary)",
+      "mood": "luxurious",
+      "colors": {
+        "primary": "#0C2018",
+        "secondary": "#28684A",
+        "accent": "#C8A048",
+        "background": "#081410",
+        "surface": "#101E18",
+        "text": "#D0E0D4",
+        "border": "#1E3828"
+      },
+      "atmosphere": "A members-only club, emerald leather armchairs, brass reading lamps, the scent of old wood",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/luxurious.md"
+    },
+    {
+      "id": "LUX-05",
+      "name": "Silk & Smoke (Cool-Warm Contrast)",
+      "mood": "luxurious",
+      "colors": {
+        "primary": "#E0D8CE",
+        "secondary": "#8A8078",
+        "accent": "#484038",
+        "background": "#F8F6F2",
+        "surface": "#EDE8E2",
+        "text": "#1E1C18",
+        "border": "#C8C0B8"
+      },
+      "atmosphere": "A Celine runway show, models in cream and charcoal, the silence louder than applause",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/luxurious.md"
+    },
+    {
+      "id": "LUX-06",
+      "name": "Amethyst Vault (Triadic)",
+      "mood": "luxurious",
+      "colors": {
+        "primary": "#181028",
+        "secondary": "#684898",
+        "accent": "#D8B060",
+        "background": "#0E0A18",
+        "surface": "#181028",
+        "text": "#D8D0E8",
+        "border": "#282040"
+      },
+      "atmosphere": "A private vault room, amethyst gemstones gleaming under warm gold display lights",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/luxurious.md"
+    },
+    {
+      "id": "LUX-07",
+      "name": "Onyx & Ivory (Warm-Cool Contrast)",
+      "mood": "luxurious",
+      "colors": {
+        "primary": "#1A1818",
+        "secondary": "#3A3434",
+        "accent": "#F0E8D4",
+        "background": "#101010",
+        "surface": "#1E1C1C",
+        "text": "#E8E0D4",
+        "border": "#3A3434"
+      },
+      "atmosphere": "An Hermès boutique, onyx displays, ivory silk scarves folded with surgical precision",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/luxurious.md"
+    },
+    {
+      "id": "LUX-08",
+      "name": "Cognac Library (Analogous)",
+      "mood": "luxurious",
+      "colors": {
+        "primary": "#1E1410",
+        "secondary": "#6A4028",
+        "accent": "#B87838",
+        "background": "#141010",
+        "surface": "#221814",
+        "text": "#E8D8C8",
+        "border": "#3A2A1E"
+      },
+      "atmosphere": "A mahogany-paneled library, cognac in a crystal snifter, the warm glow of a banker's lamp",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/luxurious.md"
+    },
+    {
+      "id": "MIN-01",
+      "name": "Paper & Ink (Monochromatic)",
+      "mood": "minimal",
+      "colors": {
+        "primary": "#F8F8F6",
+        "secondary": "#C0BEB8",
+        "accent": "#2A2826",
+        "background": "#FAFAF8",
+        "surface": "#F2F2F0",
+        "text": "#1A1A18",
+        "border": "#D8D6D2"
+      },
+      "atmosphere": "A blank Moleskine notebook, a fresh ink pen, the first stroke on an empty page",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/minimal.md"
+    },
+    {
+      "id": "MIN-02",
+      "name": "Concrete & Glass (Cool Monochromatic)",
+      "mood": "minimal",
+      "colors": {
+        "primary": "#F0F2F4",
+        "secondary": "#B0B8C0",
+        "accent": "#3868A0",
+        "background": "#F6F8FA",
+        "surface": "#ECEEF2",
+        "text": "#141820",
+        "border": "#CCD2D8"
+      },
+      "atmosphere": "A Tadao Ando building — raw concrete, clean glass, a single shaft of blue sky visible",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/minimal.md"
+    },
+    {
+      "id": "MIN-03",
+      "name": "Warm Void (Warm Monochromatic)",
+      "mood": "minimal",
+      "colors": {
+        "primary": "#F2ECE2",
+        "secondary": "#C0B2A0",
+        "accent": "#887A68",
+        "background": "#FAF8F4",
+        "surface": "#F0ECE4",
+        "text": "#1E1810",
+        "border": "#D4CCC0"
+      },
+      "atmosphere": "A Japanese ryokan room — tatami, shoji screens, nothing unnecessary, everything perfect",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/minimal.md"
+    },
+    {
+      "id": "MIN-04",
+      "name": "One Red Dot (Neutral + Accent)",
+      "mood": "minimal",
+      "colors": {
+        "primary": "#F6F6F6",
+        "secondary": "#A0A0A0",
+        "accent": "#D83030",
+        "background": "#FAFAFA",
+        "surface": "#F0F0F0",
+        "text": "#1A1A1A",
+        "border": "#D0D0D0"
+      },
+      "atmosphere": "A white gallery wall, a single red sculpture in the center, all eyes drawn to it",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/minimal.md"
+    },
+    {
+      "id": "MIN-05",
+      "name": "Fog (Cool-Warm Contrast)",
+      "mood": "minimal",
+      "colors": {
+        "primary": "#E8E8E4",
+        "secondary": "#A8A8A0",
+        "accent": "#606058",
+        "background": "#F4F4F2",
+        "surface": "#ECECEA",
+        "text": "#1E1E1C",
+        "border": "#CCCCC8"
+      },
+      "atmosphere": "A foggy morning, everything softened to silhouettes, the world pared to its essence",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/minimal.md"
+    },
+    {
+      "id": "MIN-06",
+      "name": "One Blue Line (Neutral + Accent)",
+      "mood": "minimal",
+      "colors": {
+        "primary": "#F4F4F4",
+        "secondary": "#909090",
+        "accent": "#2868B0",
+        "background": "#FAFAFA",
+        "surface": "#EEEEEE",
+        "text": "#1A1A1A",
+        "border": "#CCCCCC"
+      },
+      "atmosphere": "A Dieter Rams product — white body, gray controls, one perfect blue indicator light",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/minimal.md"
+    },
+    {
+      "id": "MIN-07",
+      "name": "Tatami (Warm Analogous)",
+      "mood": "minimal",
+      "colors": {
+        "primary": "#EDE8D8",
+        "secondary": "#D4CAB4",
+        "accent": "#B0A48C",
+        "background": "#F8F6F0",
+        "surface": "#F0ECE2",
+        "text": "#1C1A14",
+        "border": "#D0C8B8"
+      },
+      "atmosphere": "A traditional Japanese room, tatami floor, rice paper screens, one bamboo vase — nothing superfluous",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/minimal.md"
+    },
+    {
+      "id": "MIN-08",
+      "name": "Swiss Grid (Split-Complementary)",
+      "mood": "minimal",
+      "colors": {
+        "primary": "#F0F0F0",
+        "secondary": "#2A2A2A",
+        "accent": "#E03020",
+        "background": "#F8F8F8",
+        "surface": "#ECECEC",
+        "text": "#1A1A1A",
+        "border": "#D0D0D0"
+      },
+      "atmosphere": "A 1960s Swiss poster — Helvetica type, black grid, one red circle, absolute precision",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/minimal.md"
+    },
+    {
+      "id": "PLY-01",
+      "name": "Candy Pop (Triadic)",
+      "mood": "playful",
+      "colors": {
+        "primary": "#E8507A",
+        "secondary": "#2DBCA8",
+        "accent": "#F0C242",
+        "background": "#FFF6F8",
+        "surface": "#FFE8ED",
+        "text": "#2A1018",
+        "border": "#F0B8C5"
+      },
+      "atmosphere": "A candy store window, rows of bright sweets in every color imaginable",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/playful.md"
+    },
+    {
+      "id": "PLY-02",
+      "name": "Building Blocks (Modified Triadic)",
+      "mood": "playful",
+      "colors": {
+        "primary": "#D84040",
+        "secondary": "#2888D0",
+        "accent": "#F0C020",
+        "background": "#FFF8F5",
+        "surface": "#F8F0E8",
+        "text": "#1A1010",
+        "border": "#E0C8C0"
+      },
+      "atmosphere": "A child's playroom floor scattered with LEGO bricks, imagination at full throttle",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/playful.md"
+    },
+    {
+      "id": "PLY-03",
+      "name": "Electric Gradient (Analogous)",
+      "mood": "playful",
+      "colors": {
+        "primary": "#6878E0",
+        "secondary": "#8B5EAA",
+        "accent": "#D880C8",
+        "background": "#F5F4FA",
+        "surface": "#EEECF8",
+        "text": "#1A1230",
+        "border": "#C0B8D8"
+      },
+      "atmosphere": "An Instagram story with gradient overlays, Gen-Z aesthetics, digital creativity",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/playful.md"
+    },
+    {
+      "id": "PLY-04",
+      "name": "Tropical Fiesta (Split-Complementary)",
+      "mood": "playful",
+      "colors": {
+        "primary": "#E87830",
+        "secondary": "#20A888",
+        "accent": "#E83878",
+        "background": "#FEF8F2",
+        "surface": "#F8EEE2",
+        "text": "#1C1008",
+        "border": "#D8C4A4"
+      },
+      "atmosphere": "A Caribbean beach party, steel drums playing, fruit cocktails in hand",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/playful.md"
+    },
+    {
+      "id": "PLY-05",
+      "name": "Pixel Game (Cool-Warm Contrast)",
+      "mood": "playful",
+      "colors": {
+        "primary": "#2A5A38",
+        "secondary": "#80A830",
+        "accent": "#C8D850",
+        "background": "#E0EED4",
+        "surface": "#C8DEB0",
+        "text": "#102010",
+        "border": "#88B860"
+      },
+      "atmosphere": "A retro 8-bit game world, coins collected, level-up sound effects ringing",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/playful.md"
+    },
+    {
+      "id": "PLY-06",
+      "name": "Confetti (Modified Triadic)",
+      "mood": "playful",
+      "colors": {
+        "primary": "#E868D0",
+        "secondary": "#58D898",
+        "accent": "#D8B840",
+        "background": "#FFF5FC",
+        "surface": "#F8E8F4",
+        "text": "#281028",
+        "border": "#E0B8D4"
+      },
+      "atmosphere": "A surprise birthday party, confetti cannons firing, streamers everywhere",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/playful.md"
+    },
+    {
+      "id": "PLY-07",
+      "name": "Ice Cream Parlor (Warm Analogous)",
+      "mood": "playful",
+      "colors": {
+        "primary": "#E88898",
+        "secondary": "#F0B878",
+        "accent": "#F0D060",
+        "background": "#FFF8F5",
+        "surface": "#F8F0E8",
+        "text": "#281010",
+        "border": "#E8C8B8"
+      },
+      "atmosphere": "A vintage ice cream parlor, three scoops in a waffle cone, sprinkles everywhere",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/playful.md"
+    },
+    {
+      "id": "PLY-08",
+      "name": "Crayon Box (Complementary)",
+      "mood": "playful",
+      "colors": {
+        "primary": "#3890D0",
+        "secondary": "#D09038",
+        "accent": "#D04848",
+        "background": "#F0F6FA",
+        "surface": "#E4EEF6",
+        "text": "#0E1828",
+        "border": "#A8C0D8"
+      },
+      "atmosphere": "A child's art desk, crayons scattered, a drawing of the sun and ocean pinned to the fridge",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/playful.md"
+    },
+    {
+      "id": "PRO-01",
+      "name": "Blue Chip (Analogous)",
+      "mood": "professional",
+      "colors": {
+        "primary": "#2D4872",
+        "secondary": "#4E6A88",
+        "accent": "#B89868",
+        "background": "#F4F5F7",
+        "surface": "#E6EAF0",
+        "text": "#141A26",
+        "border": "#AEB8C8"
+      },
+      "atmosphere": "A financial services landing page — blue conveys trust, tan humanizes the brand",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/professional.md"
+    },
+    {
+      "id": "PRO-02",
+      "name": "Boardroom (Cool-Warm Contrast)",
+      "mood": "professional",
+      "colors": {
+        "primary": "#F4F4F6",
+        "secondary": "#384860",
+        "accent": "#2878B8",
+        "background": "#FAFAFE",
+        "surface": "#EEEFF2",
+        "text": "#141820",
+        "border": "#D0D4DA"
+      },
+      "atmosphere": "A crisp white boardroom, navy folders on the table, a decisive click on the blue button",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/professional.md"
+    },
+    {
+      "id": "PRO-03",
+      "name": "Iron & Ink (Monochromatic)",
+      "mood": "professional",
+      "colors": {
+        "primary": "#484C54",
+        "secondary": "#6A7080",
+        "accent": "#3878A8",
+        "background": "#F2F3F5",
+        "surface": "#E4E6EA",
+        "text": "#14161A",
+        "border": "#B8BCC4"
+      },
+      "atmosphere": "A Bloomberg terminal — data-dense, zero-waste design, every pixel earns its place",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/professional.md"
+    },
+    {
+      "id": "PRO-04",
+      "name": "Legal Brief (Split-Complementary)",
+      "mood": "professional",
+      "colors": {
+        "primary": "#1E3048",
+        "secondary": "#8A9EB0",
+        "accent": "#A87830",
+        "background": "#F4F6F8",
+        "surface": "#E8ECF0",
+        "text": "#0E1820",
+        "border": "#B0B8C8"
+      },
+      "atmosphere": "A law firm's mahogany-and-navy reception, gold lettering on frosted glass",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/professional.md"
+    },
+    {
+      "id": "PRO-05",
+      "name": "SaaS Dashboard (Modified Triadic)",
+      "mood": "professional",
+      "colors": {
+        "primary": "#F7F5FA",
+        "secondary": "#5850D8",
+        "accent": "#E86058",
+        "background": "#FAFAFE",
+        "surface": "#F0EEF8",
+        "text": "#1A1640",
+        "border": "#D8D4E8"
+      },
+      "atmosphere": "A Silicon Valley SaaS landing page, clean white base paired with a confident purple brand",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/professional.md"
+    },
+    {
+      "id": "PRO-06",
+      "name": "Healthcare (Triadic)",
+      "mood": "professional",
+      "colors": {
+        "primary": "#F0F6F8",
+        "secondary": "#2080A8",
+        "accent": "#30A068",
+        "background": "#F8FAFE",
+        "surface": "#EDF2F6",
+        "text": "#0E1E28",
+        "border": "#C8D8E0"
+      },
+      "atmosphere": "A modern hospital lobby, clean surfaces, teal wayfinding signs, green accents signaling health",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/professional.md"
+    },
+    {
+      "id": "PRO-07",
+      "name": "Fintech (Cool-Warm Contrast)",
+      "mood": "professional",
+      "colors": {
+        "primary": "#0C1828",
+        "secondary": "#1858A0",
+        "accent": "#20C878",
+        "background": "#080E18",
+        "surface": "#101E30",
+        "text": "#D0D8E8",
+        "border": "#1E3050"
+      },
+      "atmosphere": "A Bloomberg-style trading dashboard at 4am, numbers streaming, green for up",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/professional.md"
+    },
+    {
+      "id": "PRO-08",
+      "name": "Consulting (Warm Analogous)",
+      "mood": "professional",
+      "colors": {
+        "primary": "#F4F0EA",
+        "secondary": "#4A5060",
+        "accent": "#B08840",
+        "background": "#FAFAF6",
+        "surface": "#F0ECE4",
+        "text": "#14161C",
+        "border": "#D0C8BA"
+      },
+      "atmosphere": "A McKinsey slide deck, cream paper, charcoal text, gold accent lines — restrained authority",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/professional.md"
+    },
+    {
+      "id": "ROM-01",
+      "name": "Rose Petal (Analogous)",
+      "mood": "romantic",
+      "colors": {
+        "primary": "#F0D0D8",
+        "secondary": "#E8B8C4",
+        "accent": "#C8889A",
+        "background": "#FDF8F9",
+        "surface": "#F8F0F2",
+        "text": "#382028",
+        "border": "#E4CCD4"
+      },
+      "atmosphere": "A bouquet of garden roses at golden hour, petals still damp with morning dew",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/romantic.md"
+    },
+    {
+      "id": "ROM-02",
+      "name": "Champagne Toast (Warm Analogous)",
+      "mood": "romantic",
+      "colors": {
+        "primary": "#F0E4D0",
+        "secondary": "#E8D0B8",
+        "accent": "#D4A890",
+        "background": "#FDF9F4",
+        "surface": "#F8F2EA",
+        "text": "#302018",
+        "border": "#E0D4C4"
+      },
+      "atmosphere": "Clinking champagne glasses at sunset, golden light streaming through sheer curtains",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/romantic.md"
+    },
+    {
+      "id": "ROM-03",
+      "name": "Wisteria Dream (Split-Complementary)",
+      "mood": "romantic",
+      "colors": {
+        "primary": "#D4C0E0",
+        "secondary": "#E0D4C8",
+        "accent": "#B898B0",
+        "background": "#FAF8FC",
+        "surface": "#F2EFF6",
+        "text": "#1E1428",
+        "border": "#D0C4D8"
+      },
+      "atmosphere": "Walking through a wisteria tunnel in spring, purple blossoms cascading like a curtain",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/romantic.md"
+    },
+    {
+      "id": "ROM-04",
+      "name": "Love Letter (Cool-Warm Contrast)",
+      "mood": "romantic",
+      "colors": {
+        "primary": "#E8C8C8",
+        "secondary": "#C8D4D8",
+        "accent": "#C09088",
+        "background": "#FDF8F8",
+        "surface": "#F6F0F0",
+        "text": "#2C1E1E",
+        "border": "#DCD0D0"
+      },
+      "atmosphere": "A love letter on cream paper, sealed with wax, a dried flower pressed between the pages",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/romantic.md"
+    },
+    {
+      "id": "ROM-05",
+      "name": "Garden Wedding (Modified Triadic)",
+      "mood": "romantic",
+      "colors": {
+        "primary": "#F0E8E0",
+        "secondary": "#C8D8C0",
+        "accent": "#D8A8A0",
+        "background": "#FCFAF8",
+        "surface": "#F6F2EE",
+        "text": "#282018",
+        "border": "#DDD4CC"
+      },
+      "atmosphere": "An outdoor garden wedding at dusk, fairy lights twinkling, peonies and sage on every table",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/romantic.md"
+    },
+    {
+      "id": "ROM-06",
+      "name": "Ballet Slipper (Monochromatic)",
+      "mood": "romantic",
+      "colors": {
+        "primary": "#F0D8D8",
+        "secondary": "#E0B8B8",
+        "accent": "#C89090",
+        "background": "#FDF8F8",
+        "surface": "#F8F0F0",
+        "text": "#301818",
+        "border": "#E0C8C8"
+      },
+      "atmosphere": "A ballet studio at morning practice, pale pink ribbons, the quiet thud of pointe shoes on rosin",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/romantic.md"
+    },
+    {
+      "id": "ROM-07",
+      "name": "Sunset Vow (Triadic)",
+      "mood": "romantic",
+      "colors": {
+        "primary": "#F0D8C0",
+        "secondary": "#C0D8E8",
+        "accent": "#D4C8E0",
+        "background": "#FDF9F5",
+        "surface": "#F8F2EC",
+        "text": "#28201A",
+        "border": "#E0D4C8"
+      },
+      "atmosphere": "Exchanging vows at sunset, the sky painted in peach, blue, and lilac, tears of joy",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/romantic.md"
+    },
+    {
+      "id": "ROM-08",
+      "name": "Pearl Necklace (Cool-Warm Contrast)",
+      "mood": "romantic",
+      "colors": {
+        "primary": "#E8E0E0",
+        "secondary": "#D0C0B0",
+        "accent": "#B8A0B8",
+        "background": "#FAF8F8",
+        "surface": "#F4F0F0",
+        "text": "#201818",
+        "border": "#DCD4D4"
+      },
+      "atmosphere": "A string of pearls on a vanity, a silk ribbon bookmark, dried orchids in a love letter",
+      "source": "https://github.com/ktzzypo938/hue3/blob/a306210b7240e183366998ce39fbe7543cc09b41/references/romantic.md"
+    }
+  ]
+}

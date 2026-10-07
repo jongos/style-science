@@ -1,0 +1,462 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "agent-workflows.md",
+      "file": "library/agent-workflows.md",
+      "sha256": "2516ea9103e65b746922d59bcde1b4dd3c74464332846341a33ba9acf0e54c3c",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/agent-workflows.md"
+    },
+    {
+      "id": "art-direction.md",
+      "file": "library/art-direction.md",
+      "sha256": "234975ca05905ade537c0eaa963a2a79977ba84409afd6acc06a9dccbe629405",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/art-direction.md"
+    },
+    {
+      "id": "asset-catalog.json",
+      "file": "library/asset-catalog.json",
+      "sha256": "3f5dbf62069992f986a55b45b62a6e72ccdc6d61bfc249775bae05713f50e6e7",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/asset-catalog.json"
+    },
+    {
+      "id": "automatic-workflow.md",
+      "file": "library/automatic-workflow.md",
+      "sha256": "c03a2e7ae80c1ee815702054941f8fe8dda40ec522b1c7308bcfe24d11fc1abf",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/automatic-workflow.md"
+    },
+    {
+      "id": "bolder-LICENSE.txt",
+      "file": "library/bolder-LICENSE.txt",
+      "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/bolder-LICENSE.txt"
+    },
+    {
+      "id": "bolder-provenance.json",
+      "file": "library/bolder-provenance.json",
+      "sha256": "7183655e768f2779fbc7a381b72edb7a558816ab982f17ac61b0362331b5df23",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/bolder-provenance.json"
+    },
+    {
+      "id": "color-palettes.json",
+      "file": "library/color-palettes.json",
+      "sha256": "50f2b6176886721743a16945259a966dcc8ac0a7ada17a582a9ca371a0e7640e",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/color-palettes.json"
+    },
+    {
+      "id": "color-relationships.json",
+      "file": "library/color-relationships.json",
+      "sha256": "fcf996fd02f5da3889927cbd466d27509cf857efffe214073cfa1fbb3960cc0f",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/color-relationships.json"
+    },
+    {
+      "id": "color-workflow.md",
+      "file": "library/color-workflow.md",
+      "sha256": "9e52f197bed2d95807fac25e734d14638e7fdf075e2b7edd7f3e842fc6017907",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/color-workflow.md"
+    },
+    {
+      "id": "composition-rules.json",
+      "file": "library/composition-rules.json",
+      "sha256": "b91cdae1b95c057af6fa79ae53c0175b4f44cfa48b14effae8f2dc04f1153279",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/composition-rules.json"
+    },
+    {
+      "id": "composition.md",
+      "file": "library/composition.md",
+      "sha256": "083963f09f0c67cf4836497ee5b1e39ebe95e01332293df6934e56d1a2372b3a",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/composition.md"
+    },
+    {
+      "id": "delivery-gates.md",
+      "file": "library/delivery-gates.md",
+      "sha256": "f4ac6430ade349cb5b7d951a8426907cb1dacd4f760ffdbbd1c4dc39b51ceaa0",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/delivery-gates.md"
+    },
+    {
+      "id": "design-audit.md",
+      "file": "library/design-audit.md",
+      "sha256": "868f0ceab055f70329668b70215015e7149a0d29576a4322f18ca26038c4b887",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/design-audit.md"
+    },
+    {
+      "id": "design-controls.md",
+      "file": "library/design-controls.md",
+      "sha256": "c41eecd70330fa0112e323dea6a346a27d7444025b39d1d390280724d62de2cb",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/design-controls.md"
+    },
+    {
+      "id": "design-handoff.md",
+      "file": "library/design-handoff.md",
+      "sha256": "934d6d0faa7b41c177869e9d7f707d0ba0557c4dd6898b6dd23e90d05d2d16f1",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/design-handoff.md"
+    },
+    {
+      "id": "design-philosophy.md",
+      "file": "library/design-philosophy.md",
+      "sha256": "4660b50bd53f3a3bf8817871a20dd15524ca00a1ebf480627b899f006776cd0e",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/design-philosophy.md"
+    },
+    {
+      "id": "design-record.md",
+      "file": "library/design-record.md",
+      "sha256": "8d2e5d19e59d7644dacb08ae7c0ad34672bc681d027085ebd553b10c34c271d9",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/design-record.md"
+    },
+    {
+      "id": "design-studio.md",
+      "file": "library/design-studio.md",
+      "sha256": "7cef63391043bc82d9b62649b942749d46a43805910bc669aac6eb9b1c50c55f",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/design-studio.md"
+    },
+    {
+      "id": "deslop-LICENSE.txt",
+      "file": "library/deslop-LICENSE.txt",
+      "sha256": "a6735e3815503be2fc1ae4813758cb3d0c24a5309df508309ce180cf5a4ead58",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/deslop-LICENSE.txt"
+    },
+    {
+      "id": "deslop-provenance.json",
+      "file": "library/deslop-provenance.json",
+      "sha256": "c912fad300cf9be29d7ab496af3d5d2555c610d271128a1b6e78931e33ac5903",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/deslop-provenance.json"
+    },
+    {
+      "id": "deslop.md",
+      "file": "library/deslop.md",
+      "sha256": "42911b0360f2f968d9775ff2b94f4ef0283f4063932eeb56ccfe1ab482f5c6fc",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/deslop.md"
+    },
+    {
+      "id": "document-archetypes.md",
+      "file": "library/document-archetypes.md",
+      "sha256": "a63d829ec0b54162e678096c6ee3d57a3967f1fc63548ae34b8072b237bb5f62",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/document-archetypes.md"
+    },
+    {
+      "id": "document-design-space.md",
+      "file": "library/document-design-space.md",
+      "sha256": "4c6d5f9d40645c903575fcc80610c71bb17af4f530d4e1cf88fdb9bc817b9b03",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/document-design-space.md"
+    },
+    {
+      "id": "document-design.md",
+      "file": "library/document-design.md",
+      "sha256": "2e4272186ecf286d9e3c02e7e7950aa2b50efdb4064f8354f9568d8b2f6e0e38",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/document-design.md"
+    },
+    {
+      "id": "editorial-craft.md",
+      "file": "library/editorial-craft.md",
+      "sha256": "be1ba462f0745352452cb1294d68494f41710a6017adfbd1fbad06bb5101110f",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/editorial-craft.md"
+    },
+    {
+      "id": "editorial-LICENSE.txt",
+      "file": "library/editorial-LICENSE.txt",
+      "sha256": "b7a7fe370cc4c9e974528c7cea7841cf8ac886bc9ed947edb11b289441fba4a8",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/editorial-LICENSE.txt"
+    },
+    {
+      "id": "editorial-provenance.json",
+      "file": "library/editorial-provenance.json",
+      "sha256": "62c94ea2a441ca8117baceefc270f974c405c8685740faec4e640bcb8778608f",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/editorial-provenance.json"
+    },
+    {
+      "id": "evaluations.md",
+      "file": "library/evaluations.md",
+      "sha256": "68350fe3dee742514b0fbcef54597e476e800642e6f2d948bc7050c29af76150",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/evaluations.md"
+    },
+    {
+      "id": "font-catalog.json",
+      "file": "library/font-catalog.json",
+      "sha256": "28d762998a56ada70106cc243e5c78f38613af6c5a83e159525d26aea0a22587",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/font-catalog.json"
+    },
+    {
+      "id": "font-catalog.md",
+      "file": "library/font-catalog.md",
+      "sha256": "3cbfad8bd00e5a2372e84a77144c5b3c9088a35868f9c91d6991fc706f3e72e2",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/font-catalog.md"
+    },
+    {
+      "id": "font-families.json",
+      "file": "library/font-families.json",
+      "sha256": "59966391956e4c31b9cb2a685b47b65f1da9087fb7ee5dcbc5bde0dd4409e370",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/font-families.json"
+    },
+    {
+      "id": "frontend-engineering.md",
+      "file": "library/frontend-engineering.md",
+      "sha256": "e8de349be4b9259499904d86a477eaa98f901cf62836bcc7e195f1a07965038a",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/frontend-engineering.md"
+    },
+    {
+      "id": "host-routing.md",
+      "file": "library/host-routing.md",
+      "sha256": "bbe5f1208bbd04c6747a13d9f8b7b3ec6ad45ec6eb5c57f348ecd5f76f5ca9ec",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/host-routing.md"
+    },
+    {
+      "id": "hue3-LICENSE.txt",
+      "file": "library/hue3-LICENSE.txt",
+      "sha256": "4f40a8c5fb006c879297e9a497e1d86fdbe9daf036aed61bad44920181fb7d9f",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/hue3-LICENSE.txt"
+    },
+    {
+      "id": "import-boundaries.md",
+      "file": "library/import-boundaries.md",
+      "sha256": "e6fab9c07faf1fc0533333f2206f9cb337ea7d60970cf8a96dfb90bce7133116",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/import-boundaries.md"
+    },
+    {
+      "id": "input-boundaries.md",
+      "file": "library/input-boundaries.md",
+      "sha256": "4d62ded1251932a11e8edb3420d3f4ee85ad53f04767986ffb161f3950efb4a7",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/input-boundaries.md"
+    },
+    {
+      "id": "interactive-illustrations.md",
+      "file": "library/interactive-illustrations.md",
+      "sha256": "a33129a5ee26ede7b530e27cbf7088d93f8f763c6b4b731c585074012ec964ef",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/interactive-illustrations.md"
+    },
+    {
+      "id": "interface-craft.md",
+      "file": "library/interface-craft.md",
+      "sha256": "d7d6e05df18f56e42149cc6aaf07583c0517afcd6a938af0832421b5a07ed88c",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/interface-craft.md"
+    },
+    {
+      "id": "layouts.json",
+      "file": "library/layouts.json",
+      "sha256": "7180e032897fb6893ab14237b59e181bab242653d25d34f2dc2ff4b3f9fe7af0",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/layouts.json"
+    },
+    {
+      "id": "local-runtime.md",
+      "file": "library/local-runtime.md",
+      "sha256": "49ba1ca0539c4f564d939d78afa4a0d1722faba80ea114c2e5d16ce3ebdbe0d7",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/local-runtime.md"
+    },
+    {
+      "id": "persistent-systems.md",
+      "file": "library/persistent-systems.md",
+      "sha256": "9ffc9d9b1a69749db86e7166c81e6d4a2375899f83a83d2c0f10aceeac536300",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/persistent-systems.md"
+    },
+    {
+      "id": "starters-audits.md",
+      "file": "library/starters-audits.md",
+      "sha256": "95c51c8015780e97c287136d1cd7ce6f2e46c758a403eabb33f3003074f28212",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/starters-audits.md"
+    },
+    {
+      "id": "starters-brand.md",
+      "file": "library/starters-brand.md",
+      "sha256": "459e616b8e703391543a96b6c5d8b2b78bf0725aa6f8a351214a548ee1ae4696",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/starters-brand.md"
+    },
+    {
+      "id": "starters-data-charts.md",
+      "file": "library/starters-data-charts.md",
+      "sha256": "8cf3ee8aaf9734faf4b3d3de82b06214ef18ba5ce7b54e53679d8da49e4a8d75",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/starters-data-charts.md"
+    },
+    {
+      "id": "starters-documents.md",
+      "file": "library/starters-documents.md",
+      "sha256": "0dc6875c755d6d59b679dc0019e318a38b02baf6d2a467da8f9545d1a9bf5e06",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/starters-documents.md"
+    },
+    {
+      "id": "starters-illustrations.md",
+      "file": "library/starters-illustrations.md",
+      "sha256": "5168695da81b18c300135606e4a18728333fa6229cab768ba9acdedde145afc3",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/starters-illustrations.md"
+    },
+    {
+      "id": "starters-iteration.md",
+      "file": "library/starters-iteration.md",
+      "sha256": "0b6a5669da37e9e49d7ca1aa297d235c2c64b718a5ac29f054e160e06337322d",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/starters-iteration.md"
+    },
+    {
+      "id": "starters-progressive.md",
+      "file": "library/starters-progressive.md",
+      "sha256": "871f1cf79a61dd1fab8c8d6ee7029adbc4e203d86d1a90de2635d8257a9ad8f6",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/starters-progressive.md"
+    },
+    {
+      "id": "starters-slides.md",
+      "file": "library/starters-slides.md",
+      "sha256": "35644f06ac57ccd66946b8b4d82ccfbe0b78311198c72b5723b11bb774ee95e5",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/starters-slides.md"
+    },
+    {
+      "id": "starters-websites.md",
+      "file": "library/starters-websites.md",
+      "sha256": "747104d15882d011bec3c6006da21885c25baa44ec2c9c2241585efe0c597d95",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/starters-websites.md"
+    },
+    {
+      "id": "starters.json",
+      "file": "library/starters.json",
+      "sha256": "cae207c9eaf032ad08d9e305d254cf269859d2ea1b3d6a8d88bd95779f90d444",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/starters.json"
+    },
+    {
+      "id": "starters.md",
+      "file": "library/starters.md",
+      "sha256": "38f9c7aa5e8730cf95f99f1e63386825ecbaf90e2bc486d52d8d31d854b52d0a",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/starters.md"
+    },
+    {
+      "id": "templates.md",
+      "file": "library/templates.md",
+      "sha256": "2293f32a710ffb783720c45a48999dd10bfb51f7f5d3879858ea2af021d5ba1d",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/templates.md"
+    },
+    {
+      "id": "title-case.json",
+      "file": "library/title-case.json",
+      "sha256": "d337c0d6e2aa7d55e35527715c38f13ae5cc7d17ea18e8026d1f83e9b202381a",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/title-case.json"
+    },
+    {
+      "id": "typography.md",
+      "file": "library/typography.md",
+      "sha256": "f4b9ef0657debeac2d75de39af507bb69577327afd0cdeb4bc88d20e27067291",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/typography.md"
+    },
+    {
+      "id": "visualization.md",
+      "file": "library/visualization.md",
+      "sha256": "11a23d0b1d8557780c20e46b6cbd15ff12af1a18ed1d91ce61606dd64b3ffd34",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/visualization.md"
+    },
+    {
+      "id": "web-design-space.md",
+      "file": "library/web-design-space.md",
+      "sha256": "c10b6ee8f2ea6f23969fd13d9a0a76bace10eb27deaf65c1ff71c6053ac1bd32",
+      "kind": "mixed-guidance-unreviewed",
+      "status": "preserved-not-atomically-formalized",
+      "source": "Dazzler references/web-design-space.md"
+    }
+  ],
+  "policy": "Imported guidance is not a validated law. Curate atomic executable entries separately."
+}

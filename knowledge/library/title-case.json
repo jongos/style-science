@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "style": "ap-like-protected",
+  "smallWords": ["a", "an", "the", "and", "but", "or", "for", "nor", "so", "yet", "at", "by", "in", "of", "off", "on", "out", "per", "to", "up", "via", "as"],
+  "phrasalPairs": ["set up", "sign in", "sign out", "log in", "log out", "back up"],
+  "notes": "Conservative English heading helper, not full grammatical AP editing. Preserve existing capitals, quoted/code spans, names and identifiers. Sentence mode preserves authored text. Review ambiguous phrases."
+}

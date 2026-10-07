@@ -1,0 +1,24 @@
+{
+  "discovery": "https://mcpmarket.com/tools/skills/design-boldness-impact",
+  "unavailableListedSource": "https://github.com/mohammedamineelgalai/impeccable/tree/20d200680fbe08fc72869221b7e9eefb3179662c/.claude/skills/bolder",
+  "reviewedRepository": "https://github.com/pbakaus/impeccable",
+  "commit": "2a26f1c50b9c4f86d10c0fec8f74cf523a2236e7",
+  "reviewed": "2026-10-06",
+  "author": "Paul Bakaus",
+  "license": "Apache-2.0",
+  "licenseFile": "bolder-LICENSE.txt",
+  "sourceSha256Lf": {
+    "skill/reference/bolder.md": "a4e4d986f74ef5f3c8218dfcfd5b04fe103b47182cf1e16aeb979e5703d5cd87",
+    "LICENSE": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
+  },
+  "adaptedFiles": [
+    "references/composition.md"
+  ],
+  "changes": [
+    "Existing Dazzler rules take precedence",
+    "Document and adjacent-page review added",
+    "No mandatory questionnaire or follow-up skill",
+    "No extreme ratios, saturation defaults or style bans"
+  ],
+  "noticeReview": "Upstream NOTICE.md covers unrelated iOS/Android references; neither those files nor their material is imported."
+}

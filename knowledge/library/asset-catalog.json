@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "arrow-right",
+      "kind": "icon",
+      "path": "assets/graphics/arrow-right.svg",
+      "tags": [
+        "clean",
+        "practical",
+        "outline"
+      ],
+      "grid": 24,
+      "stroke": 1.75,
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "73890bb9969b10ab6fb44f2a54cadbed157bc1e8047a2a38b6741b8d5f865a60",
+      "usage": "Use currentColor; add a control label or aria-label when meaningful. Decorative images use empty alt. Settings icon requires --icon-surface to match the background."
+    },
+    {
+      "id": "check",
+      "kind": "icon",
+      "path": "assets/graphics/check.svg",
+      "tags": [
+        "clean",
+        "practical",
+        "outline"
+      ],
+      "grid": 24,
+      "stroke": 1.75,
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "4006f7802151034b8d4392f839a285d0f0939a279aec70df5014acc0d0200009",
+      "usage": "Use currentColor; add a control label or aria-label when meaningful. Decorative images use empty alt. Settings icon requires --icon-surface to match the background."
+    },
+    {
+      "id": "close",
+      "kind": "icon",
+      "path": "assets/graphics/close.svg",
+      "tags": [
+        "clean",
+        "practical",
+        "outline"
+      ],
+      "grid": 24,
+      "stroke": 1.75,
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "d2542da0690fdff1b09ea931c7e48a671b7030c3b66125efa355062a9c8201d5",
+      "usage": "Use currentColor; add a control label or aria-label when meaningful. Decorative images use empty alt. Settings icon requires --icon-surface to match the background."
+    },
+    {
+      "id": "search",
+      "kind": "icon",
+      "path": "assets/graphics/search.svg",
+      "tags": [
+        "clean",
+        "practical",
+        "outline"
+      ],
+      "grid": 24,
+      "stroke": 1.75,
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "eb377ad839a77b120cd8962bd907f980ddc7db1fa9103f10464d2f1fa3d7942f",
+      "usage": "Use currentColor; add a control label or aria-label when meaningful. Decorative images use empty alt. Settings icon requires --icon-surface to match the background."
+    },
+    {
+      "id": "menu",
+      "kind": "icon",
+      "path": "assets/graphics/menu.svg",
+      "tags": [
+        "clean",
+        "practical",
+        "outline"
+      ],
+      "grid": 24,
+      "stroke": 1.75,
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "d1c053711237877a700423b79999f855bbc6bd6ee01c5836b1166a1afbab68b1",
+      "usage": "Use currentColor; add a control label or aria-label when meaningful. Decorative images use empty alt. Settings icon requires --icon-surface to match the background."
+    },
+    {
+      "id": "plus",
+      "kind": "icon",
+      "path": "assets/graphics/plus.svg",
+      "tags": [
+        "clean",
+        "practical",
+        "outline"
+      ],
+      "grid": 24,
+      "stroke": 1.75,
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "e4f677c81847a24552aa5c1d1d5b9a9c7a2c2ca556a5d5c9a23700389b990e5b",
+      "usage": "Use currentColor; add a control label or aria-label when meaningful. Decorative images use empty alt. Settings icon requires --icon-surface to match the background."
+    },
+    {
+      "id": "download",
+      "kind": "icon",
+      "path": "assets/graphics/download.svg",
+      "tags": [
+        "clean",
+        "practical",
+        "outline"
+      ],
+      "grid": 24,
+      "stroke": 1.75,
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "6a281d4547ae688558cffadfa8ed40da253bbbc02acbf154ff9863959b72ddbe",
+      "usage": "Use currentColor; add a control label or aria-label when meaningful. Decorative images use empty alt. Settings icon requires --icon-surface to match the background."
+    },
+    {
+      "id": "document",
+      "kind": "icon",
+      "path": "assets/graphics/document.svg",
+      "tags": [
+        "clean",
+        "practical",
+        "outline"
+      ],
+      "grid": 24,
+      "stroke": 1.75,
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "55aa85a6ad816f2e28238cf134241ecc65c18e1e4b254d72ce4092cb6f9eb447",
+      "usage": "Use currentColor; add a control label or aria-label when meaningful. Decorative images use empty alt. Settings icon requires --icon-surface to match the background."
+    },
+    {
+      "id": "calendar",
+      "kind": "icon",
+      "path": "assets/graphics/calendar.svg",
+      "tags": [
+        "clean",
+        "practical",
+        "outline"
+      ],
+      "grid": 24,
+      "stroke": 1.75,
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "eecdf947936f91002208e477b52dba795a79b64b4105cec334110a185a4acb12",
+      "usage": "Use currentColor; add a control label or aria-label when meaningful. Decorative images use empty alt. Settings icon requires --icon-surface to match the background."
+    },
+    {
+      "id": "info",
+      "kind": "icon",
+      "path": "assets/graphics/info.svg",
+      "tags": [
+        "clean",
+        "practical",
+        "outline"
+      ],
+      "grid": 24,
+      "stroke": 1.75,
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "b4498122ce6fc465a6b5682d1c02874df0552fc18abd51caf0bda2ecab0ba7cb",
+      "usage": "Use currentColor; add a control label or aria-label when meaningful. Decorative images use empty alt. Settings icon requires --icon-surface to match the background."
+    },
+    {
+      "id": "warning",
+      "kind": "icon",
+      "path": "assets/graphics/warning.svg",
+      "tags": [
+        "clean",
+        "practical",
+        "outline"
+      ],
+      "grid": 24,
+      "stroke": 1.75,
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "4993f82fb513a1b3df6fbd872e4b24aff3ae2b30f660cb23e63c13f2124feea3",
+      "usage": "Use currentColor; add a control label or aria-label when meaningful. Decorative images use empty alt. Settings icon requires --icon-surface to match the background."
+    },
+    {
+      "id": "settings",
+      "kind": "icon",
+      "path": "assets/graphics/settings.svg",
+      "tags": [
+        "clean",
+        "practical",
+        "outline"
+      ],
+      "grid": 24,
+      "stroke": 1.75,
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "785053bf306d8dc2f039f5198c4f422ab16836140ab4217b019fdda742868dc0",
+      "usage": "Use currentColor; add a control label or aria-label when meaningful. Decorative images use empty alt. Settings icon requires --icon-surface to match the background."
+    },
+    {
+      "id": "empty-library",
+      "kind": "illustration",
+      "path": "assets/graphics/empty-library.svg",
+      "tags": [
+        "friendly",
+        "geometric",
+        "colorful"
+      ],
+      "grid": [
+        320,
+        240
+      ],
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "bb8c0d19c877e0fab935906a1de9778ec3a51c9c620c5d85a7f124bcd8dce916",
+      "usage": "Support an explanatory heading and action; do not use illustration alone to communicate status."
+    },
+    {
+      "id": "connection",
+      "kind": "illustration",
+      "path": "assets/graphics/connection.svg",
+      "tags": [
+        "friendly",
+        "geometric",
+        "colorful"
+      ],
+      "grid": [
+        320,
+        240
+      ],
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "83bbe5a2d1c53b3cd5310004afaf40b5cc893afd1882f4490fdb380cf4d24bff",
+      "usage": "Support an explanatory heading and action; do not use illustration alone to communicate status."
+    },
+    {
+      "id": "new-project",
+      "kind": "illustration",
+      "path": "assets/graphics/new-project.svg",
+      "tags": [
+        "friendly",
+        "geometric",
+        "colorful"
+      ],
+      "grid": [
+        320,
+        240
+      ],
+      "license": "Apache-2.0",
+      "creator": "Jon Gosier / Dazzler",
+      "source": "Original Dazzler SVG artwork",
+      "sha256": "48f589dbb4df7a6aa89aac2e56756bfed7918d4bde641e9540b107c2a40b50c9",
+      "usage": "Support an explanatory heading and action; do not use illustration alone to communicate status."
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Preserve exact upstream snapshot bytes, including their original line endings.
+knowledge/library/* -text whitespace=cr-at-eol

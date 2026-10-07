@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/petergyang/no-ai-slop",
+  "commit": "000650b156983f5159695b441477f4e63b25dc85",
+  "reviewed": "2026-10-06",
+  "copyright": "Copyright (c) 2026 Peter Yang",
+  "license": "MIT",
+  "licenseFile": "editorial-LICENSE.txt",
+  "sourceSha256Lf": {
+    "skills/no-ai-slop/SKILL.md": "992b365f51a2f62cf4c1c5ed22049a9ee551dfea677550c1a72b371c0ceadd62",
+    "skills/no-ai-slop/eval.md": "8ad8d83ed1abe7fc054ad74966bfca64fc182bc71f59d701b24b962c39d11ad7",
+    "LICENSE": "b7a7fe370cc4c9e974528c7cea7841cf8ac886bc9ed947edb11b289441fba4a8"
+  },
+  "adaptedFiles": [
+    "references/editorial-craft.md",
+    "evals/editorial-cases.json"
+  ],
+  "changes": [
+    "Design direction takes priority over editorial preferences",
+    "Preserve protected facts, scope and meaningful emphasis",
+    "Contextual candidates replace word bans and punctuation quotas",
+    "No mandatory questionnaire, standalone edit report or runtime dependency"
+  ]
+}

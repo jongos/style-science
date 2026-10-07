@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Structural starting points for agent-authored continuous exploration, not aesthetic guarantees or preset limits.",
+  "coordinateSpace": "HSL or HSV hue, explicitly identified; these numeric angles must not be relabeled as OKLCH hues.",
+  "wrapDegrees": "((h + offset) % 360 + 360) % 360",
+  "relationships": {
+    "complementary": {
+      "offsetsDegrees": [
+        0,
+        180
+      ]
+    },
+    "analogous": {
+      "offsetFormula": [
+        0,
+        "-delta",
+        "delta"
+      ],
+      "deltaDegrees": [
+        20,
+        60
+      ]
+    },
+    "splitComplementary": {
+      "offsetFormula": [
+        0,
+        "180-delta",
+        "180+delta"
+      ],
+      "exampleDeltaDegrees": 30
+    },
+    "triadic": {
+      "offsetsDegrees": [
+        0,
+        120,
+        240
+      ]
+    },
+    "squareTetrad": {
+      "offsetsDegrees": [
+        0,
+        90,
+        180,
+        270
+      ]
+    },
+    "rectangularTetrad": {
+      "offsetFormula": [
+        0,
+        "delta",
+        180,
+        "180+delta"
+      ],
+      "deltaDomain": "0 < delta < 180; delta=90 is the square special case"
+    },
+    "monochromatic": {
+      "fixed": [
+        "hue",
+        "saturation"
+      ],
+      "vary": "HSL lightness or HSV value",
+      "exampleStepPercentagePoints": [
+        10,
+        15
+      ],
+      "constraint": "Bound to 0..100; do not confuse a percentage-point step with a relative percent change."
+    }
+  },
+  "perceptualCorrection": [
+    "Convert actual colors into OKLCH; do not carry HSL hue numbers across spaces.",
+    "Explore lightness, chroma, hue offsets and area independently; equal HSL lightness is not equal perceived lightness.",
+    "Bound chroma against the output gamut at each lightness and hue, then remeasure quantized exported colors.",
+    "Preserve supplied locked colors. For achromatic colors, hue is undefined; record an inferred exploration anchor separately.",
+    "Report raw angles and raw colors alongside adjusted colors and actual coordinates when explaining a requested mathematical palette."
+  ],
+  "accessibility": {
+    "srgbLinearization": "For normalized sRGB channel c: c/12.92 if c<=0.04045, otherwise ((c+0.055)/1.055)^2.4",
+    "relativeLuminance": "Y=0.2126*Rlin+0.7152*Glin+0.0722*Blin",
+    "contrastRatio": "(max(Y1,Y2)+0.05)/(min(Y1,Y2)+0.05)",
+    "constraint": "Measure actual functional adjacency after compositing. OKLCH L, HSL L and HSV V are not WCAG relative luminance."
+  },
+  "interaction": "Use a supplied base or infer one from the prompt. Do not require a base-color question. Preserve approved colors during refinements.",
+  "sources": [
+    {
+      "url": "https://www.reddit.com/r/graphic_design/comments/18pcb6x/color_wheel_confuses_me/",
+      "role": "Community problem context; not a technical authority"
+    },
+    {
+      "url": "https://graphicdesign.stackexchange.com/questions/163028/color-theory-math",
+      "role": "Community discussion of geometry versus contextual judgment; not normative"
+    },
+    {
+      "url": "https://www.w3.org/TR/css-color-4/",
+      "role": "Color-space definitions and conversion foundation"
+    },
+    {
+      "url": "https://bottosson.github.io/posts/oklab/",
+      "role": "Original perceptual-space research"
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "role": "Contrast requirements and luminance math"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "registryVersion": "1.0.0",
+  "rules": [
+    {
+      "id": "repeated-card-geometry",
+      "thresholds": {
+        "minimum": 4,
+        "maximumVariation": 0.12
+      },
+      "rationale": "Several sibling surfaces have nearly identical geometry. Consider whether comparison or task scanning explains the repetition.",
+      "contextExceptions": [
+        "catalog-menu",
+        "dense-workspace",
+        "list-detail"
+      ],
+      "source": "Original Dazzler measured heuristic; Apache-2.0"
+    },
+    {
+      "id": "repetitive-section-rhythm",
+      "thresholds": {
+        "minimum": 4,
+        "maximumVariation": 0.12,
+        "minimumSharedPadding": 0.8
+      },
+      "rationale": "Repeated section heights and padding may flatten the narrative rhythm.",
+      "contextExceptions": [
+        "catalog-menu",
+        "dense-workspace"
+      ],
+      "source": "Original Dazzler measured heuristic; Apache-2.0"
+    },
+    {
+      "id": "flattened-type-hierarchy",
+      "thresholds": {
+        "minimumHeadings": 3,
+        "minimumBody": 3,
+        "maximumRatio": 1.2,
+        "maximumWeightDifference": 100
+      },
+      "rationale": "Section headings have little size or weight distinction from body copy.",
+      "contextExceptions": [
+        "dense-workspace"
+      ],
+      "source": "Original Dazzler measured heuristic; Apache-2.0"
+    },
+    {
+      "id": "pervasive-chrome",
+      "thresholds": {
+        "minimum": 6,
+        "minimumSharedStyle": 0.8
+      },
+      "rationale": "Most measured surfaces repeat both rounded corners and shadows; check whether the grouping earns that chrome.",
+      "contextExceptions": [
+        "catalog-menu",
+        "dense-workspace"
+      ],
+      "source": "Original Dazzler measured heuristic; Apache-2.0"
+    },
+    {
+      "id": "pervasive-decoration",
+      "thresholds": {
+        "minimum": 4,
+        "minimumGradientShare": 0.75
+      },
+      "rationale": "Gradient backgrounds recur across most sections and may compete with the content.",
+      "contextExceptions": [],
+      "source": "Original Dazzler measured heuristic; Apache-2.0"
+    }
+  ]
+}

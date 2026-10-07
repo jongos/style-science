@@ -1,0 +1,1029 @@
+{
+  "schemaVersion": 1,
+  "version": "0.1.0",
+  "meaning": "Traceable knowledge-reference graph, not a universal representation of design artifacts or proof of causal relationships.",
+  "nodes": [
+    {
+      "id": "agent-workflows.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/agent-workflows.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "art-direction.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/art-direction.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "asset-catalog.json",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/asset-catalog.json",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "automatic-workflow.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/automatic-workflow.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "bolder-LICENSE.txt",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/bolder-LICENSE.txt",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "bolder-provenance.json",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/bolder-provenance.json",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "color-palettes.json",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/color-palettes.json",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "color-relationships.json",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/color-relationships.json",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "color-workflow.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/color-workflow.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "composition-rules.json",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/composition-rules.json",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "composition.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/composition.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "delivery-gates.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/delivery-gates.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "design-audit.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/design-audit.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "design-controls.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/design-controls.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "design-handoff.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/design-handoff.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "design-philosophy.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/design-philosophy.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "design-record.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/design-record.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "design-studio.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/design-studio.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "deslop-LICENSE.txt",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/deslop-LICENSE.txt",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "deslop-provenance.json",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/deslop-provenance.json",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "deslop.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/deslop.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "document-archetypes.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/document-archetypes.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "document-design-space.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/document-design-space.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "document-design.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/document-design.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "editorial-craft.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/editorial-craft.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "editorial-LICENSE.txt",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/editorial-LICENSE.txt",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "editorial-provenance.json",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/editorial-provenance.json",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "evaluations.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/evaluations.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "font-catalog.json",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/font-catalog.json",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "font-catalog.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/font-catalog.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "font-families.json",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/font-families.json",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "frontend-engineering.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/frontend-engineering.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "host-routing.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/host-routing.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "hue3-LICENSE.txt",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/hue3-LICENSE.txt",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "import-boundaries.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/import-boundaries.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "input-boundaries.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/input-boundaries.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "interactive-illustrations.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/interactive-illustrations.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "interface-craft.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/interface-craft.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "layouts.json",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/layouts.json",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "local-runtime.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/local-runtime.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "persistent-systems.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/persistent-systems.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "starters-audits.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/starters-audits.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "starters-brand.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/starters-brand.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "starters-data-charts.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/starters-data-charts.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "starters-documents.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/starters-documents.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "starters-illustrations.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/starters-illustrations.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "starters-iteration.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/starters-iteration.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "starters-progressive.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/starters-progressive.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "starters-slides.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/starters-slides.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "starters-websites.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/starters-websites.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "starters.json",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/starters.json",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "starters.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/starters.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "templates.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/templates.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "title-case.json",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/title-case.json",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "typography.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/typography.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "visualization.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/visualization.md",
+      "status": "preserved-not-atomically-formalized"
+    },
+    {
+      "id": "web-design-space.md",
+      "kind": "mixed-guidance-unreviewed",
+      "source": "library/web-design-space.md",
+      "status": "preserved-not-atomically-formalized"
+    }
+  ],
+  "edges": [
+    {
+      "from": "art-direction.md",
+      "to": "design-philosophy.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "art-direction.md",
+      "to": "design-studio.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "art-direction.md",
+      "to": "deslop.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "art-direction.md",
+      "to": "document-design-space.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "art-direction.md",
+      "to": "document-design.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "art-direction.md",
+      "to": "interactive-illustrations.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "art-direction.md",
+      "to": "typography.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "art-direction.md",
+      "to": "visualization.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "agent-workflows.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "art-direction.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "color-workflow.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "composition.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "composition.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "delivery-gates.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "design-audit.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "design-record.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "deslop.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "document-design.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "editorial-craft.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "frontend-engineering.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "interface-craft.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "persistent-systems.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "automatic-workflow.md",
+      "to": "typography.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "color-workflow.md",
+      "to": "color-palettes.json",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "color-workflow.md",
+      "to": "color-relationships.json",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "color-workflow.md",
+      "to": "hue3-LICENSE.txt",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "color-workflow.md",
+      "to": "typography.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "composition.md",
+      "to": "agent-workflows.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "composition.md",
+      "to": "bolder-LICENSE.txt",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "composition.md",
+      "to": "bolder-provenance.json",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "delivery-gates.md",
+      "to": "art-direction.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "delivery-gates.md",
+      "to": "document-design.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "delivery-gates.md",
+      "to": "editorial-craft.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-audit.md",
+      "to": "composition.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-audit.md",
+      "to": "delivery-gates.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-audit.md",
+      "to": "deslop-LICENSE.txt",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-audit.md",
+      "to": "document-design.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-audit.md",
+      "to": "editorial-craft.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-controls.md",
+      "to": "art-direction.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-controls.md",
+      "to": "automatic-workflow.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-controls.md",
+      "to": "composition.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-controls.md",
+      "to": "design-handoff.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-handoff.md",
+      "to": "design-controls.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-handoff.md",
+      "to": "design-studio.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-handoff.md",
+      "to": "persistent-systems.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-philosophy.md",
+      "to": "art-direction.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-philosophy.md",
+      "to": "delivery-gates.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-philosophy.md",
+      "to": "document-design.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-record.md",
+      "to": "deslop-LICENSE.txt",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-record.md",
+      "to": "persistent-systems.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-studio.md",
+      "to": "import-boundaries.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-studio.md",
+      "to": "persistent-systems.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "design-studio.md",
+      "to": "visualization.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "deslop.md",
+      "to": "color-workflow.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "deslop.md",
+      "to": "design-audit.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "deslop.md",
+      "to": "design-record.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "deslop.md",
+      "to": "deslop-LICENSE.txt",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "deslop.md",
+      "to": "interface-craft.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "deslop.md",
+      "to": "typography.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "document-design-space.md",
+      "to": "art-direction.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "document-design.md",
+      "to": "delivery-gates.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "document-design.md",
+      "to": "document-archetypes.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "document-design.md",
+      "to": "document-design-space.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "editorial-craft.md",
+      "to": "delivery-gates.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "editorial-craft.md",
+      "to": "document-design.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "editorial-craft.md",
+      "to": "editorial-LICENSE.txt",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "host-routing.md",
+      "to": "delivery-gates.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "host-routing.md",
+      "to": "design-handoff.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "host-routing.md",
+      "to": "document-design.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "interface-craft.md",
+      "to": "color-workflow.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "interface-craft.md",
+      "to": "deslop-LICENSE.txt",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "interface-craft.md",
+      "to": "typography.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "persistent-systems.md",
+      "to": "design-philosophy.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-audits.md",
+      "to": "design-audit.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-audits.md",
+      "to": "design-studio.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-brand.md",
+      "to": "color-workflow.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-brand.md",
+      "to": "design-studio.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-brand.md",
+      "to": "typography.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-data-charts.md",
+      "to": "visualization.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-documents.md",
+      "to": "design-studio.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-documents.md",
+      "to": "typography.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-illustrations.md",
+      "to": "interactive-illustrations.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-iteration.md",
+      "to": "design-studio.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-progressive.md",
+      "to": "design-controls.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-slides.md",
+      "to": "design-studio.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-slides.md",
+      "to": "visualization.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-websites.md",
+      "to": "color-workflow.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-websites.md",
+      "to": "design-controls.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-websites.md",
+      "to": "design-handoff.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters-websites.md",
+      "to": "design-studio.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-audits.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-audits.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-brand.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-brand.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-brand.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-data-charts.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-data-charts.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-documents.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-documents.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-documents.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-illustrations.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-iteration.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-progressive.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-slides.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-slides.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-websites.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-websites.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-websites.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "starters.md",
+      "to": "starters-websites.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "typography.md",
+      "to": "font-catalog.json",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "typography.md",
+      "to": "font-catalog.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "typography.md",
+      "to": "persistent-systems.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    },
+    {
+      "from": "visualization.md",
+      "to": "interactive-illustrations.md",
+      "relation": "references",
+      "evidence": "literal source link"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "version": "0.1.0",
+  "entries": [
+    {
+      "id": "viewport-overflow",
+      "version": "0.1.0",
+      "kind": "technical-requirement",
+      "scope": [
+        "html"
+      ],
+      "executable": {
+        "javascript": "engine.mjs",
+        "python": "gdc.py",
+        "check": "viewport-overflow"
+      },
+      "formula": "max(0,scrollWidth-clientWidth)==0",
+      "evidence": {
+        "status": "reference-computation",
+        "sources": [],
+        "authority": "Declared task contract, not a scientific design law"
+      },
+      "limitations": [
+        "Horizontal document overflow only; local clipping and intentional scroll regions need separate review."
+      ],
+      "tests": [
+        "test.mjs"
+      ],
+      "exceptions": "Modify the declared task contract explicitly; cannot waive by candidate score."
+    },
+    {
+      "id": "visible-text",
+      "version": "0.1.0",
+      "kind": "technical-requirement",
+      "scope": [
+        "html"
+      ],
+      "executable": {
+        "javascript": "engine.mjs",
+        "python": "gdc.py",
+        "check": "visible-text"
+      },
+      "formula": "visible && normalize(requiredText) is substring of normalize(innerText)",
+      "evidence": {
+        "status": "reference-computation",
+        "sources": [],
+        "authority": "Declared task contract, not a scientific design law"
+      },
+      "limitations": [
+        "Presence and layout visibility only, not semantic correctness, occlusion or reading order."
+      ],
+      "tests": [
+        "test.mjs"
+      ],
+      "exceptions": "Modify the declared task contract explicitly; cannot waive by candidate score."
+    },
+    {
+      "id": "text-contrast",
+      "version": "0.1.0",
+      "kind": "standard-derived",
+      "scope": [
+        "html"
+      ],
+      "executable": {
+        "javascript": "engine.mjs",
+        "python": "gdc.py",
+        "check": "text-contrast"
+      },
+      "formula": "(max(Y1,Y2)+0.05)/(min(Y1,Y2)+0.05) >= declared minRatio",
+      "evidence": {
+        "status": "reference-computation",
+        "sources": [
+          "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+        ],
+        "authority": "WCAG formula"
+      },
+      "limitations": [
+        "Declared opaque sRGB pairs only. Threshold applicability comes from task requirements; not full compliance."
+      ],
+      "tests": [
+        "test.mjs"
+      ],
+      "exceptions": "Modify the declared task contract explicitly; cannot waive by candidate score."
+    },
+    {
+      "id": "style-equals",
+      "version": "0.1.0",
+      "kind": "technical-requirement",
+      "scope": [
+        "html"
+      ],
+      "executable": {
+        "javascript": "engine.mjs",
+        "python": "gdc.py",
+        "check": "style-equals"
+      },
+      "formula": "computedStyle[property] === expected",
+      "evidence": {
+        "status": "reference-computation",
+        "sources": [],
+        "authority": "Declared task contract, not a scientific design law"
+      },
+      "limitations": [
+        "Explicit task lock only; not a universal design preference."
+      ],
+      "tests": [
+        "test.mjs"
+      ],
+      "exceptions": "Modify the declared task contract explicitly; cannot waive by candidate score."
+    },
+    {
+      "id": "portable-benefit",
+      "version": "0.1.0",
+      "kind": "hypothesis",
+      "scope": [
+        "html"
+      ],
+      "executable": null,
+      "statement": "Frozen executable knowledge improves output beyond a compute-matched host critique loop.",
+      "evidence": {
+        "status": "untested",
+        "sources": []
+      },
+      "limitations": [
+        "No empirical result; not a ranking objective."
+      ],
+      "tests": []
+    },
+    {
+      "id": "perceived-diversity",
+      "version": "0.1.0",
+      "kind": "hypothesis",
+      "scope": [
+        "html"
+      ],
+      "executable": null,
+      "statement": "Future descriptor distance agrees with held-out human difference judgments.",
+      "evidence": {
+        "status": "untested",
+        "sources": []
+      },
+      "limitations": [
+        "No empirical result; not a ranking objective."
+      ],
+      "tests": []
+    }
+  ],
+  "relations": [
+    {
+      "from": "viewport-overflow",
+      "relation": "contributes-measurement-to",
+      "to": "portable-benefit"
+    },
+    {
+      "from": "visible-text",
+      "relation": "contributes-measurement-to",
+      "to": "portable-benefit"
+    },
+    {
+      "from": "text-contrast",
+      "relation": "contributes-measurement-to",
+      "to": "portable-benefit"
+    },
+    {
+      "from": "style-equals",
+      "relation": "contributes-measurement-to",
+      "to": "portable-benefit"
+    }
+  ],
+  "generation": "Host-provided; the package does not claim a learned generator."
+}

@@ -1,0 +1,141 @@
+{
+  "creator": "Samuel Berthe (samber)",
+  "source": "https://github.com/samber/cc-skills",
+  "scope": "skills/frontend-design-deslop only; root license retrieved solely to retain the applicable MIT notice",
+  "commit": "f866b800353719270a9ea101a41c5e2a2618d460",
+  "upstream_skill_version": "1.2.2",
+  "license": "MIT",
+  "license_file": "deslop-LICENSE.txt",
+  "license_sha256": "a6735e3815503be2fc1ae4813758cb3d0c24a5309df508309ce180cf5a4ead58",
+  "integration": "Adapted guidance; original source files are not installed as a competing skill.",
+  "source_inventory": [
+    {
+      "path": "skills/frontend-design-deslop/evals/evals.json",
+      "sha256": "198820d59b6bc7fb2636274783e7b1b90c320e59955d4839f57163da1c3c3056"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/accessibility.md",
+      "sha256": "3b70c3be5b750d1ba8f6f6fb080716d35fb0c856435463244a1b8a8e50e9ad21"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/adapters.md",
+      "sha256": "87aef721acf570bb321f30e969e911e6a750d4a08be7191fb25969cabed48089"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/aesthetics-library.md",
+      "sha256": "d227d450bd74026d2e0efeecaacbc6da672995d4b7a53caaf9ccae79fb0766d2"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/artifact-types.md",
+      "sha256": "240aed8c5082afa4c4d0e55cc1f3779e928aa55a4ab395b2612f41d10295123f"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/catalogs.md",
+      "sha256": "b148619f5f1729f11a32f71c1165035702abffb3fa862d371b8a4a4611fb195f"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/color-oklch.md",
+      "sha256": "4d5c958781aeec2059b4a6dbf0a3d8de8a4b6d04dbff0b629106ab1039eb29b6"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/components.md",
+      "sha256": "a36e189d7569ac1e9f12bff653fd618046ccf9c06f6274453292c3473d42cbd8"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/dark-mode.md",
+      "sha256": "14ccc335640b1ebecb4ca7c4dd1c78590eb20b87785b4a020ca85ee6153c313f"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/design-md.md",
+      "sha256": "50a76de914e975ae33862e79a1547694054c93d23ccaa28c0d1517d91e4508fd"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/design-theory.md",
+      "sha256": "0809e9bfc0b88ab810e699d774d956af47727f78af0b0a99644da21c3be3e262"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/discovery.md",
+      "sha256": "249efacc367a8b2a0414d65e73a9944271add545d54529f208765687c79b699e"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/divergence.md",
+      "sha256": "bc6befd24d55b79ded61e88619b34d23b2c1a801b732ff924f47db6eddbd5737"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/iconography.md",
+      "sha256": "d431d8f26afe8e34b5f448618e20d96fb7ec4f546272577e255319230e1f2f27"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/imagery.md",
+      "sha256": "857767bb5008969053c014950262e368faf63d0343c59e91c6c058a5f80a08c6"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/layout.md",
+      "sha256": "edb69bf64ec126ec820f73c104ec0c364a22792cfc89b052272556f01c00fac7"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/motion.md",
+      "sha256": "2b0fafa7055f04cd4ad776f411c263f0bcab25e3a5f9bf0cd7ebc1fe39c00bd5"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/slop-checklist.md",
+      "sha256": "a84f39fafe014e290fdb3c1836a0ce5ad9390cd52c29fb5fc528abd7bb4a9054"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/token-core.css",
+      "sha256": "2fd1243e7c77c71a820fe7ec4ab209c02a985a391d53b721bd4b804e8415e771"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/token-sets.md",
+      "sha256": "8316313cd1b64abc4cc81ad684096ad1d65a9c7e16f33a3ce2d90b0a3d14ef2b"
+    },
+    {
+      "path": "skills/frontend-design-deslop/references/typography.md",
+      "sha256": "26d68bd065023e07e2f2d976c51e05ea0c8ad9f83df41523dfe43f5e7900dfa4"
+    },
+    {
+      "path": "skills/frontend-design-deslop/SKILL.md",
+      "sha256": "653c74f73b2961133871cb0c1e7a18923032bb4090a1d942f16725c4997bd345"
+    }
+  ],
+  "mapping": {
+    "deslop.md": [
+      "SKILL.md",
+      "references/discovery.md",
+      "references/artifact-types.md",
+      "references/design-theory.md",
+      "references/divergence.md",
+      "references/aesthetics-library.md",
+      "references/catalogs.md"
+    ],
+    "design-record.md": [
+      "references/design-md.md",
+      "references/adapters.md"
+    ],
+    "interface-craft.md": [
+      "references/layout.md",
+      "references/components.md",
+      "references/motion.md",
+      "references/iconography.md",
+      "references/imagery.md",
+      "references/dark-mode.md",
+      "references/accessibility.md"
+    ],
+    "design-audit.md": [
+      "references/slop-checklist.md",
+      "references/divergence.md"
+    ],
+    "../evals/deslop-cases.json": [
+      "evals/evals.json"
+    ]
+  },
+  "reconciled_with_existing_workflows": [
+    "references/typography.md",
+    "references/color-oklch.md"
+  ],
+  "not_imported": [
+    "references/token-core.css",
+    "references/token-sets.md"
+  ],
+  "not_imported_reason": "Fixed token presets are replaced by the existing licensed font selection and measured color engine; no unvalidated preset or external CSS dependency is installed."
+}
