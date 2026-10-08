@@ -33,6 +33,30 @@ For example, a brief might require a heading to appear on desktop and mobile, me
 
 GDC-0 is an early engineering prototype. It is not a trained generator or a validated model of design quality. No human study has been run. Its current value is a concrete, inspectable starting point for testing requirements and developing the research.
 
+## What could you use it for?
+
+Think of **Generative Design Canvas (GDC)** as a shared record of what a design must do, what you observed, and why a decision is justified. Your person, agent or application still creates the design. GDC helps check the reasoning around it.
+
+### For people
+
+**Turn a vague review into an actionable brief.** A designer and developer are reviewing a checkout page. Alongside questions of taste, they declare concrete requirements: the price must be visible, the purchase label must meet a contrast threshold, and the page must not overflow on mobile. GDC checks captured observations and identifies which requirements pass, fail or still lack evidence. The team gets specific things to investigate instead of another round of "make it cleaner." Start with the [example plan](examples/plan.json).
+
+**Compare a redesign without hiding its tradeoffs.** A product team tests a denser dashboard. People finish a lookup faster, but make more mistakes. Supply your measured results, uncertainty bounds and meaningful-effect thresholds to the [outcome canvas](evaluation/CANVAS.md). It reports the outcomes separately rather than compressing them into one flattering score. You still collect the evidence and decide which tradeoffs are acceptable; GDC does not run the user study for you.
+
+### For agents
+
+**Explore freely, then check the requirements.** A design agent starts with a brief and adapts an idea from the [1,000 recipe starting points](guides/recipes/README.md). After generating and rendering alternatives, it collects observations and uses `filterCandidates` to retain those whose declared checks pass. Failed checks can guide the agent's next revision; unknown results call for more evidence. GDC supplies the checks, not the generator or repair loop. A passing candidate still needs design review: a model-selected recipe is not proof of beauty.
+
+**Stop reusing evidence after an input changes.** An agent revises a palette or typography dependency, but still holds observations from the old revision. The experimental `reviewWithDependencies` helper ([JavaScript](reasoning.mjs), [Python](reasoning.py)) compares current dependency revisions with those recorded alongside the observations. A mismatch blocks advice as unknown rather than treating an old pass as current evidence. The host must track those dependencies and capture new observations; the helper does not discover changes automatically and is not release-qualified.
+
+### For software systems
+
+**Catch declared UI regressions before delivery.** A component-library pipeline renders a checkout, navigation bar or pricing table at its supported viewports. Its host-supplied browser adapter captures observations, and the core verifier checks requirements such as overflow, declared text visibility, contrast and exact computed-style locks. A nonzero verification exit code can stop that pipeline's delivery step. This complements existing tests; it is not a complete accessibility audit, visual-diff service or assessment of task usability.
+
+**Share verification across tools without sharing a renderer.** A web builder uses the JavaScript engine while a Python service evaluates saved plans and snapshots. Both can use the same verification contract and report pass, fail or unknown for the supported checks. Keep your framework, design system and approval workflow; integrate the [core engines](#integrate-with-your-tools) where you need inspectable evidence. Verification works locally without Jev or another model call. Documents, slides and other media still need their own native instruments; an HTML check cannot certify Word pagination.
+
+Across these uses, the pattern is the same: **declare the requirement, create the design, collect the evidence, evaluate it, then decide what to change.** GDC makes the declared checks repeatable without pretending that everything worth judging can be reduced to them.
+
 ## Try it
 
 Clone the repository and enter its directory:

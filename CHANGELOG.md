@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased - Practical GDC Use Cases
+
+- Added six README workflows for people, agents and software systems: actionable reviews, outcome comparisons, candidate filtering, experimental dependency checks, UI regression gates and cross-runtime integration. Each distinguishes host responsibilities and measured conformance from aesthetic judgment. Documentation only; runtime behavior is unchanged.
+
 ## Unreleased - Reproducible Recipe Source
 
 - Hosted Linux exposed last-bit contrast recomputation differences in the newly enabled study tests. Portable reproduction now hashes candidate inputs and exact threshold decisions separately from derived ratios, whose arithmetic is checked within machine-roundoff bounds. Raw source hashes and strict contrast gates remain unchanged; added drift-rejection checks. This corrects tests, not study results or runtime decisions.
