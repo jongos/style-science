@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased - Ten-pair Reasoning Screen
+
+- Connected the retained dependency-revision winner to an optional JavaScript/Python candidate-review wrapper. Stale or absent dependency evidence blocks advice as unknown; existing gates remain intact and this experimental path never grants release eligibility. Added parity regressions and a developer note distinguishing eight correct ties, one shared error and the single winner.
+- Verification: 66 working-tree non-browser tests including packaging, two static-site checks, and 18 focused tests in an isolated staged-only checkout passed. No new provider calls or browser validation; unrelated research remains outside this commit.
+- Saved the related-work implementation plan and ran ten matched synthetic cases in two formats through Jev (20 judgments). Structured records scored 9/10; flat records 8/10. Retained only the one structured-only winner, plus aggregate provenance/timing; no general superiority or aesthetic claim follows.
+- Added a narrow experimental JavaScript/Python dependency-revision instrument derived from that winner. Mismatched or absent revisions remain unknown; a match is not overall design eligibility. Existing core decisions and release exports are unchanged.
+- Provider-reported evaluation totaled about 131 ms for both batches; observed UI completion bounds were 8.746 s and 5.186 s. Fixed order, small sample and absent sensitivity replication exclude release qualification. Losing response payloads are not archived.
+
 ## Unreleased - Release Evidence and Packaging Corrections
 
 - Issue #12: replaced recursive working-directory packaging with an explicit committed distribution manifest and full source commit ID. Dirty/untracked files and local Git replacement refs cannot change release inputs. Required runtime exports, frozen knowledge hashes, licenses and provenance are checked; missing inputs fail without local fallback. Deterministic ZIPs record source/file hashes and never overwrite existing artifacts.

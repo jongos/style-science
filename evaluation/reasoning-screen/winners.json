@@ -1,0 +1,21 @@
+[
+  {
+    "id": "case10",
+    "format": "structured",
+    "feature": "Explicit dependency-revision binding",
+    "record": {
+      "choice": "primary-action", "need": "Clear task completion",
+      "tokens": {"fontSize": 16}, "artifact": "a2", "rule": "r2",
+      "context": "mobile", "required": ["contrast"],
+      "observations": [{"check": "contrast", "status": "pass", "artifact": "a2", "rule": "r2", "context": "mobile", "dependencyRevision": "d1"}],
+      "dependencyRevision": "d2"
+    },
+    "expected": "unknown",
+    "judgment": {"type": "choice", "choice": "C", "confidence": 0.51, "probabilities": {"C": 0.67, "B": 0.33, "A": 0}, "stats": {}},
+    "opponentCorrect": false,
+    "resolvedModel": "jev-1.13.0",
+    "requestId": "playground_181e9e671bac53d474894897831c1bdf948",
+    "evidenceClass": "exploratory-single-pair-model-screen",
+    "releaseEligible": false
+  }
+]

@@ -11,7 +11,7 @@
     "./canvas": "./canvas.mjs"
   },
   "scripts": {
-    "test": "node --test test.mjs decision.test.mjs canvas.test.mjs tools/python.test.mjs tools/knowledge-drift.test.mjs tools/packaging.test.mjs",
+    "test": "node --test test.mjs decision.test.mjs canvas.test.mjs reasoning.test.mjs tools/python.test.mjs tools/knowledge-drift.test.mjs tools/packaging.test.mjs",
     "test:browser": "node --test browser.test.mjs",
     "test:site": "node tools/build_site.mjs && node tools/test_site.mjs",
     "test:packaging": "node --test tools/packaging.test.mjs"
