@@ -9,6 +9,11 @@ import {decodeVote,classify} from './selection.mjs';
 import {expandedCandidate,signature,nextBatch} from './continue-study.mjs';
 const root=new URL('./',import.meta.url);
 const load=async p=>JSON.parse(await readFile(new URL(p,root)));
+const inputHash=records=>createHash('sha256').update(JSON.stringify(records.map(c=>{
+  const {ratios,...checks}=c.checks;
+  return {...c,checks};
+}),null,2)+'\n').digest('hex');
+const sameComputedRatio=(a,b)=>Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a-b)<=8*Number.EPSILON*Math.max(1,Math.abs(a),Math.abs(b));
 
 test('published source preserves every historical downstream input hash',async()=>{
   const manifest=await load('source-manifest.json');
@@ -20,12 +25,17 @@ test('published source preserves every historical downstream input hash',async()
   }
 });
 
-test('generator reproduces 1000 unique frozen combinations without writing files',async()=>{
-  const c=makeCandidates(), m=await load('manifest.json');
+test('generator reproduces frozen inputs without requiring cross-platform pow bits',async()=>{
+  const c=makeCandidates();
   assert.equal(c.length,1000);
   assert.equal(new Set(c.map(x=>JSON.stringify(x.factors))).size,1000);
   assert.equal(new Set(c.map(x=>x.id)).size,1000);
-  assert.equal(createHash('sha256').update(JSON.stringify(c,null,2)+'\n').digest('hex'),m.candidateSha256);
+  assert.equal(inputHash(c),'64e739e437f22d5d02435807f0720016d9cde05fbe78aaa79a91d59846c6cbe3');
+  const changed=structuredClone(c);changed[0].numeric.bodyPx++;
+  assert.notEqual(inputHash(changed),inputHash(c));
+  assert.ok(sameComputedRatio(5.956965681925274,5.956965681925276));
+  assert.ok(!sameComputedRatio(5.956965681925274,5.956966));
+  assert.ok(!sameComputedRatio(NaN,NaN));
 });
 
 test('majority selection never overrides technical failures or missing evidence',()=>{
@@ -58,9 +68,12 @@ test('all retained records are evidenced winners and match aggregate counts',asy
     assert.equal(result.winnerVotes,s.winnerVotes);
     assert.equal(result.stable,s.stable);
     assert.equal(c.checks.renderedStatus,'not-run');
-    assert.equal(c.checks.ratios.body,contrast(c.palette.text,c.palette.background));
-    assert.equal(c.checks.ratios.surface,contrast(c.palette.text,c.palette.surface));
-    assert.equal(c.checks.ratios.onAccent,contrast(c.palette.accentText,c.palette.accent));
+    const computed={body:contrast(c.palette.text,c.palette.background),surface:contrast(c.palette.text,c.palette.surface),onAccent:contrast(c.palette.accentText,c.palette.accent),accent:contrast(c.palette.accent,c.palette.background)};
+    for(const [key,value] of Object.entries(computed)) assert.ok(sameComputedRatio(c.checks.ratios[key],value),`${c.id}: ${key} recomputation drift`);
+    assert.equal(c.checks.bodyContrastPass,computed.body>=4.5&&computed.surface>=4.5);
+    assert.equal(c.checks.accentTextPass,computed.onAccent>=4.5);
+    assert.equal(c.checks.accentAsSmallTextAllowed,computed.accent>=4.5);
+    assert.ok(computed.body>=4.5&&computed.surface>=4.5&&computed.onAccent>=4.5);
     assert.ok(c.checks.ratios.body>=4.5&&c.checks.ratios.surface>=4.5&&c.checks.ratios.onAccent>=4.5);
     assert.equal(s.referenceIds.length,50);
     assert.ok(c.prompt.length>100);

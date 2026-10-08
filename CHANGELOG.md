@@ -2,6 +2,8 @@
 
 ## Unreleased - Reproducible Recipe Source
 
+- Hosted Linux exposed last-bit contrast recomputation differences in the newly enabled study tests. Portable reproduction now hashes candidate inputs and exact threshold decisions separately from derived ratios, whose arithmetic is checked within machine-roundoff bounds. Raw source hashes and strict contrast gates remain unchanged; added drift-rejection checks. This corrects tests, not study results or runtime decisions.
+
 - Post-publication verification: Dazzler's importer reproduced all 1,002 content files byte-for-byte from clean source commit `b29504a`; only provenance changes. Recorded the exact consumer revision and importer hash. Dazzler migration and its separately approved gallery refresh continue in its own checkout.
 
 - Published the retained recipe study and guides for Style Science #20 / Dazzler #41. All ten downstream source hashes, including the 1,000-winner dataset, are unchanged; historical unpublished provenance is not retroactively certified.

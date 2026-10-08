@@ -49,3 +49,17 @@ clean clone: the index, 1,000 details and license. Only newly generated provenan
 differs, correctly reporting committed source rather than a modified working tree.
 See [the verification record](downstream-import-verification.json) for the exact
 importer revision and hash. The consumer checkout was not changed by this check.
+
+## Cross-platform reproduction
+
+The first hosted Linux run exposed last-bit differences in `Math.pow` contrast
+recomputation (for example 5.956965681925274 versus 5.956965681925276). Committed
+file hashes still matched. The original manifest's candidate hash records the
+original serialized bytes, not portable floating-point regeneration.
+
+The reproduction test now hashes every candidate field except `checks.ratios`,
+including all inputs and threshold decisions, and independently checks recomputed
+ratios within eight scaled machine epsilons. Both recorded and recomputed values
+must still satisfy the exact 4.5 threshold, with no rounding or epsilon allowance
+at that gate. Meaningful numeric drift fails. No stored recipe, original manifest,
+study protocol, runtime arithmetic or source hash was changed by this test repair.
