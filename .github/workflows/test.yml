@@ -5,26 +5,32 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
+        python: ['3.10', '3.x']
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: ${{ matrix.python }}
       - run: python --version
       - run: npm test
       - run: python tools/build_knowledge_graph.py
       - run: git diff --exit-code knowledge/graph.json
       - run: python tools/build_package.py --revision "${{ github.sha }}" --output dist/ci-package
-  browser:
+  site-static:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
-      - run: npm install --no-save --ignore-scripts --package-lock=false playwright@1.63.0 axe-core@4.13.0
-      - run: npx playwright install --with-deps chromium
-      - run: node --test browser.test.mjs
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.10'
       - run: node tools/build_site.mjs
-      - run: node tools/test_site.mjs
+      - run: node --check site/app.js
+      - run: python tools/test_site_static.py
