@@ -230,7 +230,7 @@ export function filterCandidates(plan, candidates) {
   };
 }
 if (
-  process.argv[1] &&
+  typeof process !== "undefined" && process.argv[1] &&
   import.meta.url === pathToFileURL(process.argv[1]).href
 ) {
   try {

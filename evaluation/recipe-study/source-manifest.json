@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "scope": "Original source bytes recorded by Dazzler 0.28.x; not proof of publication at that historical release",
+  "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+  "files": {
+    "evaluation/recipe-study/winners.json": "686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+    "evaluation/recipe-study/summary.json": "b9c8cf8fd73d55e5c6ec804b6e60214f231f55d2ea31f3a9a8e1dc8b08e42f28",
+    "evaluation/recipe-study/README.md": "ec0cea3f9863bff21f0bf55a60a54c44e935b9f30a91db8584bfb3fab348ea82",
+    "guides/recipes/README.md": "aa0391a2abbd6a47d946820841bb1fc9c15cf8432f91ec7de9c03f471deb4125",
+    "guides/recipes/editorial.md": "581c7d9d9c43fa0091d43995c420ac60d3e7bedfcecb22e9b8c87ae63d3b9776",
+    "guides/recipes/commerce.md": "fff559eed3b70226d73527d0b26081aefd077462043ea5b11330d0dab21fb374",
+    "guides/recipes/culture.md": "0c4275da12f752154016d4588151d5d4becf86fd4c28063638224e893cc77703",
+    "guides/recipes/information.md": "7043a858cbba6b7baeb64fa5e0169d1fe86f36fd8327e4c4c6f476b706643d3b",
+    "guides/recipes/software.md": "28d6ad41ac37f231187a1231c7c253a1c9fb4a067b6c2c94a1e30993460cc106",
+    "LICENSE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+  }
+}

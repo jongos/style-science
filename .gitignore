@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 node_modules/
 dist/
+evaluation/recipe-study/candidates.json
+evaluation/recipe-study/requests/
+evaluation/recipe-study/responses/

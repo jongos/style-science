@@ -1,0 +1,14 @@
+{
+  "candidateCount": 1000,
+  "corpusCount": 300,
+  "judgments": 3000,
+  "batches": 20,
+  "questionsPerBatch": 150,
+  "decision": "Token-compliant and at least two of three winner votes",
+  "referenceAssignment": "Six blocks of 50 URL references, cyclically assigned to batches; references are clues, not inspected outcomes",
+  "protocolSha256": "a39bf9266e2802e2ddff3488701d4fc2abf4efa30f9231ab12c57bf8a17595c1",
+  "websiteContentArchived": false,
+  "renderedEvaluation": false,
+  "judgeInput": "text-only",
+  "retention": "winner-only"
+}

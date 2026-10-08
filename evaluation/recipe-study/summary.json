@@ -1,0 +1,280 @@
+{
+  "study": "recipe-study-2026-10-07",
+  "model": "jev-1.13.0",
+  "tested": 2318,
+  "winners": 1000,
+  "losers": 1318,
+  "unanimousWinners": 915,
+  "splitWinners": 85,
+  "unanimousLosers": 1215,
+  "splitLosers": 103,
+  "technicalFailures": 0,
+  "judgments": 6954,
+  "batches": 49,
+  "usage": {
+    "input_tokens": 1364039,
+    "output_tokens": 236583
+  },
+  "byContext": {
+    "editorial": {
+      "tested": 464,
+      "winners": 243,
+      "losers": 221
+    },
+    "commerce": {
+      "tested": 464,
+      "winners": 189,
+      "losers": 275
+    },
+    "culture": {
+      "tested": 463,
+      "winners": 313,
+      "losers": 150
+    },
+    "information": {
+      "tested": 463,
+      "winners": 211,
+      "losers": 252
+    },
+    "software": {
+      "tested": 464,
+      "winners": 44,
+      "losers": 420
+    }
+  },
+  "referenceUrls": 300,
+  "distinctReferenceDomains": 300,
+  "sourceDirectory": "https://siiimple.com/",
+  "websiteArchivesSaved": 0,
+  "renderedCandidatesTested": 0,
+  "humanParticipants": 0,
+  "limitations": [
+    "Winners and losers are speculative recipe recommendations, not measured beauty.",
+    "Jev is text-only; no screenshot judgment or live target-site comparison occurred.",
+    "Reference evidence is gallery inclusion, category and URL only; current appearance and availability are unverified.",
+    "Single minimalist directory, nonrandom sample, unequal category coverage and unknown shared design families.",
+    "Three presentations of one model are correlated; majority voting is a chosen heuristic.",
+    "Context, numerical settings and prompt ordering are confounded; factor-level effects are not causal.",
+    "Losers and mixed-batch data are discarded per user instruction; full outcome audit is deliberately unavailable.",
+    "Continuation stops at 1000 winners; acceptance fractions are descriptive of a winner-targeted search, not unbiased aesthetic success estimates."
+  ],
+  "transportNotes": [
+    "Initial verbose batch rejected with max_tokens_exceeded; no judgments returned. Requests compacted without changing recipes or rubric.",
+    "One clipboard timeout recovered from the completed response, not rerun."
+  ],
+  "retention": "Winning recipes and their three judgments only; aggregate loser counts, no loser catalog",
+  "expansion": {
+    "targetWinners": 1000,
+    "initialTested": 1000,
+    "initialWinners": 413,
+    "initialJudgments": 3000,
+    "protocolHash": "7a86400c41c5bff8021a9138449e8ea03cd1954748a3a5814ec630bebc85205f",
+    "generatorHash": "337c96887c7effbcbc7b8c0c746bdc4435545b433a987e85e7b3cb5a8d1c74a6",
+    "requestHash": "00062bb181bbe19168dc524128781ed80fd8911fe581dbf8b256388c58433464",
+    "batches": [
+      {
+        "batch": 20,
+        "attempts": 50,
+        "winners": 21,
+        "inputHash": "4531b5e28e6217599d612bd35b1755857a27f8e148c66b6ceec4f7a28c48c016",
+        "judgments": 150
+      },
+      {
+        "batch": 21,
+        "attempts": 50,
+        "winners": 16,
+        "inputHash": "186dd14cd618b9458233c66f997bdf1c7868f6a7589d3693975368d84036de06",
+        "judgments": 150
+      },
+      {
+        "batch": 22,
+        "attempts": 50,
+        "winners": 25,
+        "inputHash": "069bd9f1b674e709b75c5d3221f5e7bdecb006eed8a9808fcb84fd778f005d1a",
+        "judgments": 150
+      },
+      {
+        "batch": 23,
+        "attempts": 50,
+        "winners": 25,
+        "inputHash": "45a5b547a906b93f9edbfb596077ed073e93f172f3df0608af65cd13e6d91661",
+        "judgments": 150
+      },
+      {
+        "batch": 24,
+        "attempts": 50,
+        "winners": 20,
+        "inputHash": "381039241ec6601cde26a2823dbf8315b3a79356ed247b13631b918c4c93e79a",
+        "judgments": 150
+      },
+      {
+        "batch": 25,
+        "attempts": 50,
+        "winners": 17,
+        "inputHash": "99dccacde413bfb57a47c65c1994427fab0002fc860bf23e8394de04e0a2155a",
+        "judgments": 150
+      },
+      {
+        "batch": 26,
+        "attempts": 50,
+        "winners": 26,
+        "inputHash": "3bc65092881928b31fdb781fa7b98cc3c6c5aa6b52adc800c3cfe7e85cb4bf75",
+        "judgments": 150
+      },
+      {
+        "batch": 27,
+        "attempts": 50,
+        "winners": 21,
+        "inputHash": "8847d49b05ddf9dc5aa949cbed7e40d3df8417a71d40022e58c40d1a04f7a1e1",
+        "judgments": 150
+      },
+      {
+        "batch": 28,
+        "attempts": 50,
+        "winners": 20,
+        "inputHash": "153f8d872c7f20fdd7d45262c5682a2a3c9debf189d82db6d027e6fef46ce8fe",
+        "judgments": 150
+      },
+      {
+        "batch": 29,
+        "attempts": 50,
+        "winners": 24,
+        "inputHash": "7ba0190e934cb1b8b6c771a8aef3d654ca6838331e99568ca71a2cc2d5597849",
+        "judgments": 150
+      },
+      {
+        "batch": 30,
+        "attempts": 50,
+        "winners": 22,
+        "inputHash": "8abb0a520e4b581d13432d58da51e5e656bb4e1a712247da21f90709c144c4a1",
+        "judgments": 150
+      },
+      {
+        "batch": 31,
+        "attempts": 50,
+        "winners": 19,
+        "inputHash": "a92514498f16129dd1536716fcf2cbf96f93ca1a5b94811829a8854690b964eb",
+        "judgments": 150
+      },
+      {
+        "batch": 32,
+        "attempts": 50,
+        "winners": 25,
+        "inputHash": "7c5d0b5d1e097ecd6a66e3c7db6986ac1c52ccf7bb06e9dc9b84a44774741963",
+        "judgments": 150
+      },
+      {
+        "batch": 33,
+        "attempts": 50,
+        "winners": 25,
+        "inputHash": "5b058975b4b1c3196f0d48506d0e74e44df8f3cd9589f1a77903a5dc1faf431c",
+        "judgments": 150
+      },
+      {
+        "batch": 34,
+        "attempts": 50,
+        "winners": 15,
+        "inputHash": "5413c4d70656da3f34f78024ec52a54cf3c8d0d77574e03b797facc3e774086a",
+        "judgments": 150
+      },
+      {
+        "batch": 35,
+        "attempts": 50,
+        "winners": 17,
+        "inputHash": "5e24210e8735b59bcf44e76d746a4d088f743ec0f4663a229bacd13d05658cbd",
+        "judgments": 150
+      },
+      {
+        "batch": 36,
+        "attempts": 50,
+        "winners": 26,
+        "inputHash": "bf9c3237c4d7b16379815bebe04fb8127a4b6a2ca9f22a452401d3096f7d2c94",
+        "judgments": 150
+      },
+      {
+        "batch": 37,
+        "attempts": 50,
+        "winners": 23,
+        "inputHash": "a474235eb6eb9a7cb8d87ecd968794bfc2f2351e26275d26fb84db25ce71e62d",
+        "judgments": 150
+      },
+      {
+        "batch": 38,
+        "attempts": 50,
+        "winners": 26,
+        "inputHash": "d655b94ea0e7af27cacb73b5ca38e6a51e995ccd93a0e881b2763e889d19a53a",
+        "judgments": 150
+      },
+      {
+        "batch": 39,
+        "attempts": 50,
+        "winners": 21,
+        "inputHash": "e45d566d64e5d8f6d876a121fa4f304c112c392766266920c327b000bb85a273",
+        "judgments": 150
+      },
+      {
+        "batch": 40,
+        "attempts": 50,
+        "winners": 16,
+        "inputHash": "0bc54d56d392aa7b8495beb5ddccb091e6ee36c436037d808dd25772afa7cd8e",
+        "judgments": 150
+      },
+      {
+        "batch": 41,
+        "attempts": 50,
+        "winners": 27,
+        "inputHash": "ba6d886bd4c0cc54ce5aab371876ad7afabc7a39e120fd8a9474ebecb095d67b",
+        "judgments": 150
+      },
+      {
+        "batch": 42,
+        "attempts": 50,
+        "winners": 27,
+        "inputHash": "28596408002f929c76b7efcb767b2653a6de325a700de4a50ec3d68216a4167b",
+        "judgments": 150
+      },
+      {
+        "batch": 43,
+        "attempts": 50,
+        "winners": 22,
+        "inputHash": "e84a5ce7d073523009eb48604b184d3914a231442ee0e98c91cab1eccc6e5998",
+        "judgments": 150
+      },
+      {
+        "batch": 44,
+        "attempts": 50,
+        "winners": 26,
+        "inputHash": "c1f7e5d07ab5b49265d0f89404abc79ec253d03cf5ca152f6510e3ccee4cd5e5",
+        "judgments": 150
+      },
+      {
+        "batch": 45,
+        "attempts": 35,
+        "winners": 16,
+        "inputHash": "1a1f8114d2b8e7fcb1726affa7f42b78a209294ea3aa33b37b904e0d07962867",
+        "judgments": 105
+      },
+      {
+        "batch": 46,
+        "attempts": 19,
+        "winners": 9,
+        "inputHash": "759705c2aff540ebb5f73476023fffe805cf07f71eafc4ed46e1270fb92f37aa",
+        "judgments": 57
+      },
+      {
+        "batch": 47,
+        "attempts": 10,
+        "winners": 6,
+        "inputHash": "a6acce1f7c11ed8281a0950018c25b5ef52678ac0f14ea19f0cb553203027edf",
+        "judgments": 30
+      },
+      {
+        "batch": 48,
+        "attempts": 4,
+        "winners": 4,
+        "inputHash": "611246a63ea3903824c700ba7811330e6f01aa13ac211aec55876d156c7f2c6a",
+        "judgments": 12
+      }
+    ]
+  }
+}

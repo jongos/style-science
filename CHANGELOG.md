@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased - Reproducible Recipe Source
+
+- Published the retained recipe study and guides for Style Science #20 / Dazzler #41. All ten downstream source hashes, including the 1,000-winner dataset, are unchanged; historical unpublished provenance is not retroactively certified.
+- Added a source hash manifest and regression, plus clean-checkout migration guidance and customer-confirmed permission qualifications. Retained the study's existing process-free import guard and tests; numerical verification behavior is unchanged. Rejected outputs, unrelated research, local logs and configuration remain excluded.
+- Validation: all 38 tests in the isolated staged-only non-browser suite passed, including packaging, core, cross-runtime and eight recipe checks. All ten historical source hashes match. Downstream re-import must reproduce the index and every recipe detail before adoption. Dazzler gallery freshness remains a separate release gate; no browser or provider calls are part of this repair.
+
 ## Unreleased - Ten-pair Reasoning Screen
 
 - Connected the retained dependency-revision winner to an optional JavaScript/Python candidate-review wrapper. Stale or absent dependency evidence blocks advice as unknown; existing gates remain intact and this experimental path never grants release eligibility. Added parity regressions and a developer note distinguishing eight correct ties, one shared error and the single winner.
