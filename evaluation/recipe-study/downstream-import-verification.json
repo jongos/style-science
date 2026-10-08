@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-10-08",
+  "sourceCommit": "b29504abf762a43ce4e2819372eb0342243e4c54",
+  "sourceRemoteMainVerified": true,
+  "consumerRepository": "https://github.com/jongos/Dazzler",
+  "consumerCommit": "96665da331717ef85af1bd12a7a86fa35ea9ddd0",
+  "consumerCommitPublication": "local commit at verification time",
+  "importerPath": "tools/import_recipes.py",
+  "importerSha256": "b433072448dd708dfc0d86d22cffd4f30c233cfa702ad014d8dc9c2b6c38de73",
+  "method": "Clean clone of committed source; existing consumer importer with only DEST redirected to a new temporary directory; compare output bytes to consumer checkout",
+  "byteIdenticalContentFiles": 1002,
+  "recipeDetails": 1000,
+  "otherIdenticalFiles": ["index.json", "LICENSE.txt"],
+  "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+  "indexSha256": "90a4143f14a7240afe82b3dc05dad91a142c5490416b9e3b701c8767df83a618",
+  "generatedSourceWorkingTreeModified": false,
+  "consumerFilesModified": false,
+  "excludedFromByteEquality": ["provenance.json"],
+  "limitations": [
+    "Provenance intentionally changes to identify the published source commit",
+    "This record does not certify Dazzler gallery freshness or release readiness",
+    "Customer-confirmed model-output permission is not independent legal verification",
+    "No browser validation or new model judgments"
+  ]
+}

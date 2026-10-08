@@ -42,3 +42,10 @@ normal non-browser suite, including packaging, JavaScript/Python parity and eigh
 recipe regressions. The manifest test reproduced all ten historical input hashes.
 The active research tree was not used as the release source. Browser-only behavior
 was not tested; these checks do not certify aesthetic quality or remote CI status.
+
+After pushing source commit `b29504abf762a43ce4e2819372eb0342243e4c54`, the
+existing Dazzler importer reproduced all 1,002 content files byte-for-byte from a
+clean clone: the index, 1,000 details and license. Only newly generated provenance
+differs, correctly reporting committed source rather than a modified working tree.
+See [the verification record](downstream-import-verification.json) for the exact
+importer revision and hash. The consumer checkout was not changed by this check.
