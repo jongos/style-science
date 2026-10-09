@@ -37,7 +37,8 @@ class PackagingTests(unittest.TestCase):
         self.revision = self.commit()
 
     def git(self, *args):
-        run = subprocess.run(["git", "-C", str(self.root), "-c", "core.autocrlf=false", "-c", "commit.gpgsign=false", "-c", "core.hooksPath=disabled-hooks", "-c", "user.name=Synthetic Test", "-c", "user.email=synthetic@example.invalid", *args], capture_output=True, check=True)
+        # Detached maintenance must not race cleanup of disposable fixture repos.
+        run = subprocess.run(["git", "-C", str(self.root), "-c", "gc.auto=0", "-c", "maintenance.auto=false", "-c", "gc.autoDetach=false", "-c", "core.autocrlf=false", "-c", "commit.gpgsign=false", "-c", "core.hooksPath=disabled-hooks", "-c", "user.name=Synthetic Test", "-c", "user.email=synthetic@example.invalid", *args], capture_output=True, check=True)
         return run.stdout.decode("utf-8").strip()
 
     def write(self, path, data):
@@ -57,6 +58,9 @@ class PackagingTests(unittest.TestCase):
         return Path(self.directory.name) / name
 
     def test_dirty_worktree_and_unlisted_committed_files_cannot_leak(self):
+        self.assertEqual(self.git("config", "--get", "gc.auto"), "0")
+        self.assertEqual(self.git("config", "--get", "maintenance.auto"), "false")
+        self.assertEqual(self.git("config", "--get", "gc.autoDetach"), "false")
         self.write("committed-but-unlisted.log", "SYNTHETIC UNLISTED\n")
         revision = self.commit()
         original = (self.root / "engine.mjs").read_bytes()

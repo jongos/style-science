@@ -2,6 +2,8 @@
 
 ## Unreleased - Backlog Release Foundation
 
+- Follow-up CI diagnosis: Ubuntu failed while deleting a synthetic Git fixture because its object directory changed during cleanup. Disabled automatic/detached Git maintenance only for fixture commands and asserted those settings; no cleanup error is suppressed. The optional remote host-rendered run passed using existing Chrome.
+
 - Aligned supported exports with the distribution manifest; split core and experimental tests. Packaging fixtures now validate actual public exports rather than a hand-maintained subset.
 - Hardened consumer fallback against malformed metadata in JS/Python. Retained Unicode decision parity and line-ending-aware drift corrections.
 - Decision 0.3.0 adds a provider-qualified, data-driven identity policy. New contracts bind its hash; bare model digests no longer qualify. Legacy Jev evidence is preserved without pretending to authenticate it.
