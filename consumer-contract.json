@@ -1,0 +1,13 @@
+{
+  "contractVersion": "1.0.0",
+  "profile": "gdc-core",
+  "runtimes": {"nodeMinimum": 22, "pythonMinimum": "3.10"},
+  "schemas": {"plan": 1},
+  "modules": {
+    "core": {"version": "0.1.0", "files": ["engine.mjs", "gdc.py"], "checks": ["viewport-overflow", "visible-text", "text-contrast", "style-equals"]},
+    "decision": {"version": "0.3.0", "files": ["decision.mjs", "decision.py", "model-identity-policy.json"], "checks": ["model-choice"]},
+    "canvas": {"version": "0.1.0", "files": ["canvas.mjs", "canvas.py"], "checks": ["bounded-effect"]}
+  },
+  "unsupported": ["aesthetic-quality", "human-preference", "word-pagination", "complete-accessibility"],
+  "optionalResearch": ["language", "relations", "retrieval", "rendered-inspection", "docx"]
+}

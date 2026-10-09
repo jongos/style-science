@@ -11,7 +11,7 @@ const plan = JSON.parse(
   await readFile(new URL("examples/plan.json", import.meta.url), "utf8"),
 );
 test("framework-neutral rendered observations detect actual pass, fail, and unsupported coverage", async () => {
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH || undefined });
   try {
     const page = await browser.newPage();
     const snapshots = [];

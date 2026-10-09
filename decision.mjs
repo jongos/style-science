@@ -1,33 +1,41 @@
 import { createHash } from 'node:crypto';
+import {readFileSync} from 'node:fs';
 import { verify } from './engine.mjs';
 
-export const decisionVersion = '0.2.0';
+export const decisionVersion = '0.3.0';
 const variants = ['baseline', 'reordered', 'relabeled'];
 const plain = x => x && typeof x === 'object' && !Array.isArray(x);
-const nonempty = x => typeof x === 'string' && x.trim().length > 0;
+const scalarText = x => typeof x === 'string' && !/[\uD800-\uDFFF]/u.test(x);
+const nonempty = x => scalarText(x) && x.trim().length > 0;
+const codePointOrder = (a,b) => {
+  const left=Array.from(a,x=>x.codePointAt(0)),right=Array.from(b,x=>x.codePointAt(0));
+  for(let i=0;i<Math.min(left.length,right.length);i++) if(left[i]!==right[i]) return left[i]-right[i];
+  return left.length-right.length;
+};
 const canonical = x => Array.isArray(x) ? `[${x.map(canonical).join(',')}]`
-  : plain(x) ? `{${Object.keys(x).sort().map(k => `${JSON.stringify(k)}:${canonical(x[k])}`).join(',')}}` : JSON.stringify(x);
+  : plain(x) ? `{${Object.keys(x).sort(codePointOrder).map(k => `${JSON.stringify(k)}:${canonical(x[k])}`).join(',')}}` : JSON.stringify(x);
 const sameSet = (a,b) => a.length === b.length && new Set(a).size === a.length && a.every(x=>b.includes(x));
-// Closed policy: exact Jev releases or content digests, never arbitrary aliases.
-const pinnedModel = x => typeof x === 'string' && x===x.trim() && /^(?:jev-(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)|sha256:[a-f0-9]{64})$/.test(x);
+const identityPolicy = JSON.parse(readFileSync(new URL('./model-identity-policy.json',import.meta.url),'utf8'));
+const identityPolicyHash = createHash('sha256').update(canonical(identityPolicy)).digest('hex');
+const pinnedModel = (model,provider) => typeof model==='string' && model===model.trim() && Object.hasOwn(identityPolicy.providers,provider) && new RegExp(`^(?:${identityPolicy.providers[provider].pattern})$`).test(model);
 
 function validateContract(c) {
-  if (!plain(c) || !sameSet(Object.keys(c), ['id','context','requiredContext','options','abstainOptions']) || !nonempty(c.id)) throw Error('Invalid decision contract');
-  if (!plain(c.context) || Object.values(c.context).some(x=>x !== null && typeof x !== 'string')) throw Error('Context values must be text or null');
+  if (!plain(c) || !sameSet(Object.keys(c).filter(k=>k!=='identityPolicy'), ['id','context','requiredContext','options','abstainOptions']) || !nonempty(c.id) || (Object.hasOwn(c,'identityPolicy') && c.identityPolicy!==identityPolicy.version)) throw Error('Invalid decision contract');
+  if (!plain(c.context) || !Object.keys(c.context).every(scalarText) || Object.values(c.context).some(x=>x !== null && !scalarText(x))) throw Error('Context values must be text or null');
   if (!Array.isArray(c.requiredContext) || !c.requiredContext.length || !c.requiredContext.every(nonempty) || new Set(c.requiredContext).size !== c.requiredContext.length) throw Error('Declare unique required context fields');
   if (!plain(c.options) || Object.keys(c.options).length < 2 || !Object.keys(c.options).every(nonempty) || !Object.values(c.options).every(nonempty)) throw Error('Declare at least two described options');
-  if (!Array.isArray(c.abstainOptions) || !c.abstainOptions.length || !sameSet(c.abstainOptions,[...new Set(c.abstainOptions)]) || !c.abstainOptions.every(x=>Object.hasOwn(c.options,x)) || c.abstainOptions.length === Object.keys(c.options).length) throw Error('Declare abstention and substantive options');
+  if (!Array.isArray(c.abstainOptions) || !c.abstainOptions.length || !c.abstainOptions.every(nonempty) || !sameSet(c.abstainOptions,[...new Set(c.abstainOptions)]) || !c.abstainOptions.every(x=>Object.hasOwn(c.options,x)) || c.abstainOptions.length === Object.keys(c.options).length) throw Error('Declare abstention and substantive options');
 }
 
 export function decisionFingerprint(contract) {
   validateContract(contract);
-  return createHash('sha256').update(canonical(contract)).digest('hex');
+  return createHash('sha256').update(canonical(contract.identityPolicy ? {...contract,identityPolicyHash} : contract)).digest('hex');
 }
 
 // Advisory only: repetition measures sensitivity, not independent corroboration.
 export function assessChoice(contract, observations) {
   const contractHash = decisionFingerprint(contract);
-  const base = { decisionVersion, contractHash, evidenceClass:'model-prediction', automaticAction:false, releaseEligible:false, evidenceScope:'exploratory' };
+  const base = { decisionVersion, contractHash, identityPolicyVersion:identityPolicy.version, identityPolicyHash, evidenceClass:'model-prediction', automaticAction:false, releaseEligible:false, evidenceScope:'exploratory' };
   const missing = contract.requiredContext.filter(k=>!Object.hasOwn(contract.context,k) || !nonempty(contract.context[k]));
   if (missing.length) return {...base,status:'needs-context',missing};
   if (!Array.isArray(observations)) throw Error('Observations must be an array');
@@ -35,17 +43,18 @@ export function assessChoice(contract, observations) {
   if (observations.length !== variants.length || !sameSet(observations.map(o=>o?.variant), variants)) return {...base,status:'needs-observations'};
   if (observations.some(o=>o.contractHash !== contractHash)) return {...base,status:'stale'};
   const modelIdentities = observations.map(o=>{
-    for (const key of ['model','resolvedModel','requestedModel']) {
+    for (const key of ['model','resolvedModel','requestedModel','provider']) {
       if (o[key] !== undefined && o[key] !== null && typeof o[key] !== 'string') throw Error('Model identities must be text or null');
     }
     // An explicitly missing resolution must not fall back to a legacy value.
     const resolvedModel = (Object.hasOwn(o,'resolvedModel') ? o.resolvedModel : o.model) ?? null;
-    return {variant:o.variant,requestedModel:o.requestedModel ?? null,resolvedModel,
-      identityStatus:!nonempty(resolvedModel)?'missing':pinnedModel(resolvedModel)?'pinned':'unpinned'};
+    const provider = o.provider ?? (contract.identityPolicy ? null : 'typesafe');
+    return {variant:o.variant,requestedModel:o.requestedModel ?? null,resolvedModel,provider,
+      identityStatus:!nonempty(resolvedModel)?'missing':pinnedModel(resolvedModel,provider) && (contract.identityPolicy || provider==='typesafe')?'pinned':'unpinned'};
   });
   base.modelIdentities = modelIdentities;
   if (modelIdentities.some(o=>o.identityStatus==='missing')) return {...base,status:'needs-model',modelIdentityStatus:'missing'};
-  if (new Set(modelIdentities.map(o=>o.resolvedModel)).size !== 1) return {...base,status:'model-mismatch',modelIdentityStatus:'mixed'};
+  if (new Set(modelIdentities.map(o=>JSON.stringify([o.provider,o.resolvedModel]))).size !== 1) return {...base,status:'model-mismatch',modelIdentityStatus:'mixed'};
   const modelIdentityStatus = modelIdentities[0].identityStatus;
   const normalized = observations.map(o=>{
     const a=o.answer, map=o.optionMap;

@@ -17,6 +17,8 @@ Oversized typography introduces the argument. Eight numbered commitments establi
 
 ## Delivery
 
+The GitHub README uses native Markdown hierarchy, a screenshot of the actual study (Structure 35, Expression 80), a short audience table and collapsible technical detail. No custom CSS, simulated badges or aesthetic-performance claims. Keep research qualifications visible beside the opening and preserve the detailed limitations inside the measurement section.
+
 The chart now retains the original ink backdrop (#20211d), muted grid and monochrome paper-colored marks. The specimen palette still responds to the sliders; chart colors do not. Filled/hollow nodes, connection weight, position and depth supply hierarchy without categorical hues.
 
 Derived depth is Expression / 100 multiplied by (1 - Structure / 100), displayed on a 0-100 scale. Stable sinusoidal node ranks vary radius and radial displacement, with near nodes painted last. These are bounded 2D depth cues, not a physical camera or an empirical aesthetic metric. Zero expression or full structure preserves a flat field. No third control is introduced; the prompt records the derived value.

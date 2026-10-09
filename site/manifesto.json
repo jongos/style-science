@@ -1,7 +1,8 @@
 {
   "title": "Design Deserves Better Questions.",
   "introduction": "We can now produce a thousand designs before we have understood the need for one. Speed has changed. Responsibility has not.",
-  "position": "Style Science is an effort to make design knowledge explicit: something we can examine, test, share and improve. We want machines to work with the reasons behind a design, rather than merely reproduce its appearance.",
+  "position": "Style Science is an open, evidence-aware framework for design reasoning: helping AI agents express, test and revise design decisions in service of human needs. It complements design thinking. Style is our language; reasoning connects its choices to human needs. Our aim is to support human judgment, not replace it.",
+  "researchAcknowledgment": "Our research direction is informed by Penrose, Scout, C-K design theory, Design Model, AgentsORG / DESIGN, design-pact and the Design Tokens Community Group. We study their ideas, credit their contributions and test what we can build upon. This does not imply affiliation, endorsement or implemented compatibility.",
   "principles": [
     {
       "title": "Begin With the Life It Enters.",

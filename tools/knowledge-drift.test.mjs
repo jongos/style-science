@@ -24,3 +24,19 @@ test('frozen import provenance matches the inventory',async()=>{
   assert.equal(createHash('sha256').update(inventory).digest('hex'),provenance.inventorySha256);
   assert.equal(provenance.sourceRevision,null);
 });
+
+test('drift separates CRLF-only changes without weakening byte provenance',async()=>{
+  const root=await mkdtemp(path.join(tmpdir(),'gdc-eol-'));
+  try {
+    await mkdir(path.join(root,'references')); await mkdir(path.join(root,'snapshot'));
+    await writeFile(path.join(root,'references','a.md'),'one\ntwo\n');
+    await writeFile(path.join(root,'snapshot','a.md'),'one\r\ntwo\r\n');
+    const sha256=createHash('sha256').update('one\r\ntwo\r\n').digest('hex');
+    const entries=[{id:'a',source:'Dazzler references/a.md',file:'a.md',sha256}];
+    const rows=await compareKnowledge(root,entries,{snapshotRoot:path.join(root,'snapshot')});
+    assert.equal(rows[0].status,'eol-only'); assert.notEqual(rows[0].sourceSha256,rows[0].snapshotSha256);
+    await writeFile(path.join(root,'references','a.md'),'one\nchanged\n');
+    assert.equal((await compareKnowledge(root,entries,{snapshotRoot:path.join(root,'snapshot')}))[0].status,'different');
+    await assert.rejects(compareKnowledge(root,entries,{snapshotRoot:path.join(root,'absent')}),/Cannot read frozen snapshot/);
+  } finally {await rm(root,{recursive:true,force:true});}
+});

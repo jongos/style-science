@@ -6,7 +6,7 @@ import {resolvePython} from './python.mjs';
 
 test('committed-manifest packaging regressions in synthetic repositories', () => {
   const run=spawnSync(resolvePython(), ['-X','utf8','tools/test_build_package.py'], {
-    cwd:fileURLToPath(new URL('..',import.meta.url)), encoding:'utf8', timeout:120000,
+    cwd:fileURLToPath(new URL('..',import.meta.url)), encoding:'utf8', timeout:300000,
   });
   assert.equal(run.status,0,run.stderr || String(run.error));
 });

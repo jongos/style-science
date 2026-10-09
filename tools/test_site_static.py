@@ -56,7 +56,7 @@ class StaticSiteTests(unittest.TestCase):
             for key in ('title', 'body'):
                 self.assertIn(principle[key], text)
                 self.assertIn(principle[key], markdown)
-        for key in ('introduction', 'position', 'closing', 'pledge'):
+        for key in ('introduction', 'position', 'researchAcknowledgment', 'closing', 'pledge'):
             self.assertIn(manifesto[key], text)
             self.assertIn(manifesto[key], markdown)
         self.assertTrue(any(tag == 'html' and a.get('lang') == 'en' for tag, a in page.tags))
@@ -68,6 +68,8 @@ class StaticSiteTests(unittest.TestCase):
         self.assertEqual(sum('data-value' in a for _, a in page.tags), 8)
         self.assertIn('sample-prompt', page.ids)
         self.assertTrue((SITE / 'fonts/LICENSE.txt').read_text(encoding='utf-8').strip())
+        self.assertEqual((SITE / 'related-work.md').read_text(encoding='utf-8'),
+                         (SITE.parent / 'RELATED-WORK.md').read_text(encoding='utf-8'))
 
     def test_broken_references_and_duplicate_ids_fail(self):
         for source in ('<a href="#missing">x</a>', '<script src="missing-static-fixture.js"></script>',

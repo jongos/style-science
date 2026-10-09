@@ -25,8 +25,11 @@ class PackagingTests(unittest.TestCase):
         self.paths = json.loads((ROOT / "distribution.json").read_text(encoding="utf-8"))["files"]
         for path in self.paths:
             self.write(path, f"Synthetic committed fixture: {path}\n")
+        for path in ('consumer-contract.json', 'consumer.mjs', 'consumer.py', 'engine.mjs', 'gdc.py', 'decision.mjs', 'decision.py', 'canvas.mjs', 'canvas.py', 'model-identity-policy.json', 'html.mjs'):
+            self.write(path, (ROOT / path).read_text(encoding='utf-8'))
         self.write_json("distribution.json", dict(schemaVersion=1, files=self.paths))
-        self.write_json("package.json", {"version": "0.3.0", "exports": {".": "./engine.mjs", "./html": "./html.mjs", "./decision": "./decision.mjs", "./canvas": "./canvas.mjs"}})
+        package = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))
+        self.write_json("package.json", {"version": package["version"], "exports": package["exports"]})
         entries = [{"file": p.removeprefix("knowledge/"), "sha256": hashlib.sha256((self.root / p).read_bytes()).hexdigest()} for p in self.paths if p.startswith("knowledge/library/")]
         self.write_json("knowledge/inventory.json", dict(schemaVersion=1, entries=entries))
         inventory_hash = hashlib.sha256((self.root / "knowledge/inventory.json").read_bytes()).hexdigest()
@@ -160,6 +163,29 @@ class PackagingTests(unittest.TestCase):
             self.assertIn("knowledge/" + entry["file"], self.paths)
         for excluded in ("debug.log", ".env.local", "language.mjs", "relation-measures.mjs", "evaluation/recipe-study/winners.json"):
             self.assertNotIn(excluded, self.paths)
+
+    def test_consumers_load_and_validate_the_packaged_artifact(self):
+        manifest = build(self.root, self.revision, self.output())
+        with zipfile.ZipFile(self.output() / manifest['archive']) as bundle:
+            bundle.extractall(self.output('extracted'))
+        artifact = self.output('extracted') / 'style-science'
+        expected = self.output('trusted.json')
+        expected.write_text(json.dumps(manifest), encoding='utf-8')
+        js = "import {readFile} from 'node:fs/promises'; import {inspectDistribution,negotiate} from './consumer.mjs'; const pkg=JSON.parse(await readFile('package.json','utf8')); for(const target of Object.values(pkg.exports)) await import(target); const p=JSON.parse(await readFile(process.argv[1],'utf8')); const i=await inspectDistribution('.',p); console.log(JSON.stringify([i,negotiate(i,{contractVersion:'1.0.0',planSchema:1,modules:['core','docx'],checks:['viewport-overflow','word-pagination','novel']}),negotiate(i,{contractVersion:'2.0.0',planSchema:1})]));"
+        py = "import json,sys; from consumer import inspect_distribution,negotiate; import gdc,decision,canvas; p=json.load(open(sys.argv[1])); i=inspect_distribution('.',p); print(json.dumps([i,negotiate(i,dict(contractVersion='1.0.0',planSchema=1,modules=['core','docx'],checks=['viewport-overflow','word-pagination','novel'])),negotiate(i,dict(contractVersion='2.0.0',planSchema=1))]))"
+        def reports():
+            left = subprocess.run(['node', '--input-type=module', '-e', js, str(expected)], cwd=artifact, capture_output=True, check=True)
+            right = subprocess.run([sys.executable, '-c', py, str(expected)], cwd=artifact, capture_output=True, check=True)
+            self.assertEqual(json.loads(left.stdout), json.loads(right.stdout))
+            return json.loads(left.stdout)
+        result = reports()
+        self.assertEqual(result[0]['status'], 'verified', result[0])
+        self.assertEqual([x['status'] for x in result[1]['checks']], ['supported', 'unsupported', 'unknown'])
+        self.assertEqual(result[1]['modules'][1]['status'], 'unsupported')
+        self.assertEqual(result[2]['status'], 'unsupported')
+        with (artifact / 'LICENSE').open('a', encoding='utf-8') as target:
+            target.write('Synthetic tamper')
+        self.assertEqual(reports()[0]['reason'], 'hash-mismatch')
 
 
 if __name__ == "__main__":

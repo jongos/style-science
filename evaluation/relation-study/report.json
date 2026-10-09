@@ -1,0 +1,426 @@
+{
+  "study": "rendered-relationships-0.1.0",
+  "evidenceKind": "synthetic-rendered-conformance",
+  "renderer": "Chromium 153.0.8010.12",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "python": "Python 3.12.10",
+  "generatedPages": 57,
+  "fixtures": 11,
+  "conditionCount": 44,
+  "assertions": 319,
+  "parityComparisons": 24,
+  "invarianceConditions": 6,
+  "summary": [
+    {
+      "fixture": "normal",
+      "environments": 4,
+      "observedStatuses": {
+        "parent-title": "pass",
+        "box-title": "pass",
+        "parent-description": "pass",
+        "box-description": "pass",
+        "dom-order": "pass",
+        "y-order": "pass"
+      },
+      "sampleEnvironment": "390-light",
+      "sampleValues": {
+        "parent-title": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "box-title": {
+          "value": 18,
+          "unit": "css-px"
+        },
+        "parent-description": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "box-description": {
+          "value": 18,
+          "unit": "css-px"
+        },
+        "dom-order": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "y-order": {
+          "value": 8,
+          "unit": "css-px"
+        }
+      }
+    },
+    {
+      "fixture": "escaped-child",
+      "environments": 4,
+      "observedStatuses": {
+        "parent-title": "pass",
+        "box-title": "fail",
+        "parent-description": "pass",
+        "box-description": "pass",
+        "dom-order": "pass",
+        "y-order": "fail"
+      },
+      "sampleEnvironment": "390-light",
+      "sampleValues": {
+        "parent-title": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "box-title": {
+          "value": -342,
+          "unit": "css-px"
+        },
+        "parent-description": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "box-description": {
+          "value": 18,
+          "unit": "css-px"
+        },
+        "dom-order": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "y-order": {
+          "value": -32,
+          "unit": "css-px"
+        }
+      }
+    },
+    {
+      "fixture": "reversed-column",
+      "environments": 4,
+      "observedStatuses": {
+        "parent-title": "pass",
+        "box-title": "pass",
+        "parent-description": "pass",
+        "box-description": "pass",
+        "dom-order": "pass",
+        "y-order": "fail"
+      },
+      "sampleEnvironment": "390-light",
+      "sampleValues": {
+        "parent-title": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "box-title": {
+          "value": 18,
+          "unit": "css-px"
+        },
+        "parent-description": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "box-description": {
+          "value": 18,
+          "unit": "css-px"
+        },
+        "dom-order": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "y-order": {
+          "value": -88,
+          "unit": "css-px"
+        }
+      }
+    },
+    {
+      "fixture": "wrapper",
+      "environments": 4,
+      "observedStatuses": {
+        "parent-title": "fail",
+        "box-title": "pass",
+        "parent-description": "pass",
+        "box-description": "pass",
+        "dom-order": "pass",
+        "y-order": "pass"
+      },
+      "sampleEnvironment": "390-light",
+      "sampleValues": {
+        "parent-title": {
+          "value": false,
+          "unit": "boolean"
+        },
+        "box-title": {
+          "value": 18,
+          "unit": "css-px"
+        },
+        "parent-description": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "box-description": {
+          "value": 18,
+          "unit": "css-px"
+        },
+        "dom-order": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "y-order": {
+          "value": 8,
+          "unit": "css-px"
+        }
+      }
+    },
+    {
+      "fixture": "transformed",
+      "environments": 4,
+      "observedStatuses": {
+        "parent-title": "pass",
+        "box-title": "unknown",
+        "parent-description": "pass",
+        "box-description": "unknown",
+        "dom-order": "pass",
+        "y-order": "unknown"
+      },
+      "sampleEnvironment": "390-light",
+      "sampleValues": {
+        "parent-title": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "parent-description": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "dom-order": {
+          "value": true,
+          "unit": "boolean"
+        }
+      }
+    },
+    {
+      "fixture": "individual-transform",
+      "environments": 4,
+      "observedStatuses": {
+        "parent-title": "pass",
+        "box-title": "unknown",
+        "parent-description": "pass",
+        "box-description": "pass",
+        "dom-order": "pass",
+        "y-order": "unknown"
+      },
+      "sampleEnvironment": "390-light",
+      "sampleValues": {
+        "parent-title": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "parent-description": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "box-description": {
+          "value": 18,
+          "unit": "css-px"
+        },
+        "dom-order": {
+          "value": true,
+          "unit": "boolean"
+        }
+      }
+    },
+    {
+      "fixture": "hidden",
+      "environments": 4,
+      "observedStatuses": {
+        "parent-title": "pass",
+        "box-title": "unknown",
+        "parent-description": "pass",
+        "box-description": "pass",
+        "dom-order": "pass",
+        "y-order": "unknown"
+      },
+      "sampleEnvironment": "390-light",
+      "sampleValues": {
+        "parent-title": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "parent-description": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "box-description": {
+          "value": 18,
+          "unit": "css-px"
+        },
+        "dom-order": {
+          "value": true,
+          "unit": "boolean"
+        }
+      }
+    },
+    {
+      "fixture": "duplicate",
+      "environments": 4,
+      "observedStatuses": {
+        "parent-title": "unknown",
+        "box-title": "unknown",
+        "parent-description": "pass",
+        "box-description": "pass",
+        "dom-order": "unknown",
+        "y-order": "unknown"
+      },
+      "sampleEnvironment": "390-light",
+      "sampleValues": {
+        "parent-description": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "box-description": {
+          "value": 18,
+          "unit": "css-px"
+        }
+      }
+    },
+    {
+      "fixture": "missing",
+      "environments": 4,
+      "observedStatuses": {
+        "parent-title": "unknown",
+        "box-title": "unknown",
+        "parent-description": "pass",
+        "box-description": "pass",
+        "dom-order": "unknown",
+        "y-order": "unknown"
+      },
+      "sampleEnvironment": "390-light",
+      "sampleValues": {
+        "parent-description": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "box-description": {
+          "value": 18,
+          "unit": "css-px"
+        }
+      }
+    },
+    {
+      "fixture": "bad-selector",
+      "environments": 4,
+      "observedStatuses": {
+        "parent-title": "unknown",
+        "box-title": "unknown",
+        "parent-description": "pass",
+        "box-description": "pass",
+        "dom-order": "unknown",
+        "y-order": "unknown"
+      },
+      "sampleEnvironment": "390-light",
+      "sampleValues": {
+        "parent-description": {
+          "value": true,
+          "unit": "boolean"
+        },
+        "box-description": {
+          "value": 18,
+          "unit": "css-px"
+        }
+      }
+    },
+    {
+      "fixture": "aliased-selector",
+      "environments": 4,
+      "observedStatuses": {
+        "parent-title": "unknown",
+        "box-title": "unknown",
+        "parent-description": "unknown",
+        "box-description": "unknown",
+        "dom-order": "unknown",
+        "y-order": "unknown"
+      },
+      "sampleEnvironment": "390-light",
+      "sampleValues": {}
+    }
+  ],
+  "scopeChecks": [
+    {
+      "id": "actual-viewport",
+      "status": "unknown"
+    },
+    {
+      "id": "actual-theme",
+      "status": "unknown"
+    },
+    {
+      "id": "stale-artifact",
+      "status": "unknown"
+    },
+    {
+      "id": "stale-plan",
+      "status": "unknown"
+    },
+    {
+      "id": "stale-design",
+      "status": "unknown"
+    }
+  ],
+  "horizontalChecks": [
+    {
+      "instrument": "x-before",
+      "value": 8,
+      "unit": "css-px"
+    },
+    {
+      "instrument": "x-after",
+      "value": 8,
+      "unit": "css-px"
+    }
+  ],
+  "screenshotPaths": [
+    "dist/relation-evidence/normal-390.png",
+    "dist/relation-evidence/normal-1280.png",
+    "dist/relation-evidence/escaped-child-390.png",
+    "dist/relation-evidence/escaped-child-1280.png",
+    "dist/relation-evidence/reversed-column-390.png",
+    "dist/relation-evidence/reversed-column-1280.png"
+  ],
+  "sourceHashes": {
+    "relation-measures.mjs": "26bd40ae2b0935f5421d841fe45d30736f23ebd2b6db70612ffd8e41d970227c",
+    "relation_measures.py": "b1b376803bab9e5f6a882cdb41d4b6e595808a5137932f3bf7873832df465750",
+    "relation-html.mjs": "df7dda6ddb8e38f210f03307aeb7cba602a93321d9a68714052565755b000a01",
+    "language.mjs": "b7835603bc035cc6eaf96c06400bf48a6bbc15b87fdac956fba2e0f8a422b208",
+    "language.py": "72fa20dc47ca20cb0bcaa303a3049d0c855e8296a5ca354584ac472c626c387f",
+    "engine.mjs": "22240923ec5e537587c7220fb4f2de857a4f81ced2b578dfa0058295d2f287f0",
+    "gdc.py": "74c3eadf09baa00d8be950cc504bf5d5add6ae0c8c8e7a2b66f4d1d06b5a242a",
+    "evaluation/relation-study/PROTOCOL.md": "a976749409001ca76588177960c292953062a9d88079bbdf6caf8f5c327ba2f0",
+    "evaluation/relation-study/fixtures.mjs": "38853fede737259cf2bf0bc02dbfe63cbbe53a3ca8c0ce7b9b7c31c9ff752dd5",
+    "evaluation/relation-study/run.mjs": "adc2c1c77dcf75a66bab164266f6775e448641a1be50306b1458028d3e31672b"
+  },
+  "decisions": [
+    {
+      "feature": "DOM-parent-as-visual-containment",
+      "action": "reject",
+      "counterexample": "escaped-child"
+    },
+    {
+      "feature": "DOM-order-as-visual-order",
+      "action": "reject",
+      "counterexample": "reversed-column"
+    },
+    {
+      "feature": "separate-DOM-and-border-box-instruments",
+      "action": "retain",
+      "reason": "The authored interventions distinguish these predicates and both consumers agree."
+    },
+    {
+      "feature": "automatic-perceived-grouping-or-emphasis",
+      "action": "reject",
+      "reason": "No validated perceptual instrument is supplied; these relationships remain unprobed."
+    }
+  ],
+  "limitations": [
+    "Authored regression cases, not independent research holdouts or human preference evidence.",
+    "DOM order is not a meaningful-reading-order or accessibility verdict. Bounds are border boxes, not painted or occlusion-free regions.",
+    "One installed Chromium runtime, not multi-browser or native-medium validation.",
+    "No external website archive, corpus download, Jev calls, human study, model training or downstream upgrade."
+  ]
+}

@@ -3,21 +3,27 @@ import hashlib
 import json
 import math
 import re
+from pathlib import Path
 from gdc import verify
 
-DECISION_VERSION = '0.2.0'
+DECISION_VERSION = '0.3.0'
 VARIANTS = {'baseline', 'reordered', 'relabeled'}
-PINNED_MODEL = re.compile(r'(?:jev-(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)|sha256:[a-f0-9]{64})', re.ASCII)
+IDENTITY_POLICY = json.loads(Path(__file__).with_name('model-identity-policy.json').read_text(encoding='utf-8'))
+IDENTITY_POLICY_HASH = hashlib.sha256(json.dumps(IDENTITY_POLICY, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode('utf-8')).hexdigest()
+
+
+def scalar_text(value):
+    return isinstance(value, str) and not any(0xD800 <= ord(c) <= 0xDFFF for c in value)
 
 
 def nonempty(value):
-    return isinstance(value, str) and bool(value.strip())
+    return scalar_text(value) and bool(value.strip())
 
 
 def validate_contract(c):
-    if not isinstance(c, dict) or set(c) != {'id', 'context', 'requiredContext', 'options', 'abstainOptions'} or not nonempty(c['id']):
+    if not isinstance(c, dict) or set(c) - {'identityPolicy'} != {'id', 'context', 'requiredContext', 'options', 'abstainOptions'} or not nonempty(c['id']) or ('identityPolicy' in c and c['identityPolicy'] != IDENTITY_POLICY['version']):
         raise ValueError('Invalid decision contract')
-    if not isinstance(c['context'], dict) or any(v is not None and not isinstance(v, str) for v in c['context'].values()):
+    if not isinstance(c['context'], dict) or not all(scalar_text(k) for k in c['context']) or any(v is not None and not scalar_text(v) for v in c['context'].values()):
         raise ValueError('Context values must be text or null')
     required = c['requiredContext']
     if not isinstance(required, list) or not required or not all(nonempty(v) for v in required) or len(set(required)) != len(required):
@@ -32,13 +38,14 @@ def validate_contract(c):
 
 def decision_fingerprint(contract):
     validate_contract(contract)
-    encoded = json.dumps(contract, sort_keys=True, separators=(',', ':'), ensure_ascii=False)
+    value = dict(contract, identityPolicyHash=IDENTITY_POLICY_HASH) if contract.get('identityPolicy') else contract
+    encoded = json.dumps(value, sort_keys=True, separators=(',', ':'), ensure_ascii=False)
     return hashlib.sha256(encoded.encode('utf-8')).hexdigest()
 
 
 def assess_choice(contract, observations):
     stamp = decision_fingerprint(contract)
-    base = dict(decisionVersion=DECISION_VERSION, contractHash=stamp, evidenceClass='model-prediction', automaticAction=False, releaseEligible=False, evidenceScope='exploratory')
+    base = dict(decisionVersion=DECISION_VERSION, contractHash=stamp, identityPolicyVersion=IDENTITY_POLICY['version'], identityPolicyHash=IDENTITY_POLICY_HASH, evidenceClass='model-prediction', automaticAction=False, releaseEligible=False, evidenceScope='exploratory')
     missing = [k for k in contract['requiredContext'] if not nonempty(contract['context'].get(k))]
     if missing:
         return dict(base, status='needs-context', missing=missing)
@@ -50,16 +57,19 @@ def assess_choice(contract, observations):
         return dict(base, status='stale')
     model_identities = []
     for o in observations:
-        for key in ('model', 'resolvedModel', 'requestedModel'):
+        for key in ('model', 'resolvedModel', 'requestedModel', 'provider'):
             if o.get(key) is not None and not isinstance(o[key], str):
                 raise ValueError('Model identities must be text or null')
         resolved = o.get('resolvedModel') if 'resolvedModel' in o else o.get('model')
-        identity_status = 'missing' if not nonempty(resolved) else 'pinned' if PINNED_MODEL.fullmatch(resolved) else 'unpinned'
-        model_identities.append(dict(variant=o['variant'], requestedModel=o.get('requestedModel'), resolvedModel=resolved, identityStatus=identity_status))
+        provider = o.get('provider') if o.get('provider') is not None else (None if contract.get('identityPolicy') else 'typesafe')
+        rule = IDENTITY_POLICY['providers'].get(provider)
+        pinned = rule is not None and bool(re.fullmatch(rule['pattern'], resolved or '')) and (contract.get('identityPolicy') or provider == 'typesafe')
+        identity_status = 'missing' if not nonempty(resolved) else 'pinned' if pinned else 'unpinned'
+        model_identities.append(dict(variant=o['variant'], requestedModel=o.get('requestedModel'), resolvedModel=resolved, provider=provider, identityStatus=identity_status))
     base['modelIdentities'] = model_identities
     if any(o['identityStatus'] == 'missing' for o in model_identities):
         return dict(base, status='needs-model', modelIdentityStatus='missing')
-    if len({o['resolvedModel'] for o in model_identities}) != 1:
+    if len({(o['provider'], o['resolvedModel']) for o in model_identities}) != 1:
         return dict(base, status='model-mismatch', modelIdentityStatus='mixed')
     model_identity_status = model_identities[0]['identityStatus']
     ids = set(contract['options'])

@@ -2,7 +2,7 @@
 
 We can now produce a thousand designs before we have understood the need for one. Speed has changed. Responsibility has not.
 
-Style Science is an effort to make design knowledge explicit: something we can examine, test, share and improve. We want machines to work with the reasons behind a design, rather than merely reproduce its appearance.
+Style Science is an open, evidence-aware framework for design reasoning: helping AI agents express, test and revise design decisions in service of human needs. It complements design thinking. Style is our language; reasoning connects its choices to human needs. Our aim is to support human judgment, not replace it.
 
 ## 1. Begin With the Life It Enters.
 
@@ -35,6 +35,12 @@ Generation has a cost, even when another version feels free. It uses computation
 ## 8. Judge the Thing That Reaches People.
 
 The intention is not the result. Open the document. Use the interface. Read the chart at its real size. Invite people outside the project to judge the work. If our system does not help them, its elegance is no defence.
+
+## Work That Informs Ours
+
+Our research direction is informed by Penrose, Scout, C-K design theory, Design Model, AgentsORG / DESIGN, design-pact and the Design Tokens Community Group. We study their ideas, credit their contributions and test what we can build upon. This does not imply affiliation, endorsement or implemented compatibility.
+
+[Sources and research questions](./related-work.md)
 
 We do not need machines with impeccable taste. We need systems whose decisions we can understand, whose limits we can see, and whose work we can make better.
 

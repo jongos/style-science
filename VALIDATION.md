@@ -17,11 +17,28 @@ node --check site/app.js
 python tools/test_site_static.py
 ```
 
-Existing `test:browser`, `test:site` and `test:downstream` commands are retained as
-explicit optional browser-backed checks; they are not part of required CI and
-were not run for this workflow correction. Do not run them as a workaround for
-the instruction not to install or use Chromium. Historical saved browser
-evidence is checked for integrity by the core suite, not regenerated.
+`test:browser` and `test:site` are optional rendered checks using host-provided
+Playwright and an existing browser. Set `PLAYWRIGHT_EXECUTABLE_PATH` to its
+executable; no browser installation is performed by these commands. The adapter
+uses `GDC_PLAYWRIGHT_MODULE`; the site uses `PLAYWRIGHT_MODULE` and `AXE_SCRIPT`.
+They are separate from required non-browser CI. A skipped rendered check is not
+a pass. The optional host-rendered workflow fails clearly if its host lacks Chrome.
+
+`npm run test:research` validates local experimental modules separately from the
+release core. `test:research:browser` exercises their renderer instruments;
+`test:downstream` runs a synthetic comparison, not a production Dazzler benchmark.
+These source-checkout commands do not imply inclusion in the release ZIP.
+
+For research collectors that use the Playwright facade, set
+`GDC_PLAYWRIGHT_MODULE` to the file URL of `tools/host-playwright.mjs`,
+`PLAYWRIGHT_MODULE` to the host's existing Playwright module, and
+`PLAYWRIGHT_EXECUTABLE_PATH` to existing Chrome. This preserves historical
+collector sources and evidence hashes while selecting the installed browser.
+
+Validation counts belong to a named revision and command, not a permanent feature
+claim. Historical working-tree totals in the changelog included experimental
+modules that were not committed with the core. They are not reproducible totals
+for those published revisions. Use current command output for current counts.
 
 Static checks do not establish font loading, responsive geometry, overflow,
 focus behavior, keyboard interaction, rendered contrast, screenshot correctness

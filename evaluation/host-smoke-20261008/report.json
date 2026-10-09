@@ -1,0 +1,415 @@
+{
+  "scope": "Actual host recipe helper only; not an agent, generation or aesthetic benchmark",
+  "sourceHashes": {
+    "hostHelper": "5ed4f6b1b21aae5d9020967ef07513146c1057024ae1c9b7c82f193be2a84047",
+    "hostIndex": "90a4143f14a7240afe82b3dc05dad91a142c5490416b9e3b701c8767df83a618",
+    "researchRetrieval": "180f790181b33ff9facfb904e8b0e5c21b88f23412ad69f3cff69dba3e5e2a87"
+  },
+  "criteria": "Retain constraint filtering only with zero hard violations. Do not promote duplicate ranking unless it supplies feasible candidates where filtering cannot; neither establishes aesthetic value.",
+  "rows": [
+    {
+      "id": "editorial-available",
+      "request": {
+        "contexts": [
+          "editorial"
+        ],
+        "brief": "Find a clear editorial directory with useful navigation",
+        "audience": "First-time visitors",
+        "content": "Find an item and compare descriptions",
+        "limit": 3,
+        "mode": "available"
+      },
+      "availableFonts": [
+        "Archivo",
+        "Inter"
+      ],
+      "baseline": {
+        "ids": [
+          "R1128",
+          "R1858",
+          "R1308"
+        ],
+        "violations": 3,
+        "latencyMs": 36.98060003807768
+      },
+      "filter": {
+        "ids": [],
+        "violations": 0,
+        "latencyMs": 0.09510000000000218
+      },
+      "research": {
+        "ids": [
+          "R0808",
+          "R0308",
+          "R0303"
+        ],
+        "violations": 0,
+        "status": "shortlist",
+        "latencyMs": 12.5942
+      }
+    },
+    {
+      "id": "editorial-unavailable",
+      "request": {
+        "contexts": [
+          "editorial"
+        ],
+        "brief": "Find a clear editorial directory with useful navigation",
+        "audience": "First-time visitors",
+        "content": "Find an item and compare descriptions",
+        "limit": 3,
+        "mode": "unavailable"
+      },
+      "availableFonts": [],
+      "baseline": {
+        "ids": [
+          "R1128",
+          "R1858",
+          "R1308"
+        ],
+        "violations": 3,
+        "latencyMs": 38.70939998887479
+      },
+      "filter": {
+        "ids": [],
+        "violations": 0,
+        "latencyMs": 0.011999999999943611
+      },
+      "research": {
+        "ids": [],
+        "violations": 0,
+        "status": "no-fit",
+        "latencyMs": 13.284799999999905
+      }
+    },
+    {
+      "id": "commerce-available",
+      "request": {
+        "contexts": [
+          "commerce"
+        ],
+        "brief": "Find a clear commerce directory with useful navigation",
+        "audience": "First-time visitors",
+        "content": "Find an item and compare descriptions",
+        "limit": 3,
+        "mode": "available"
+      },
+      "availableFonts": [
+        "Archivo",
+        "Inter"
+      ],
+      "baseline": {
+        "ids": [
+          "R2318",
+          "R0408",
+          "R1458"
+        ],
+        "violations": 2,
+        "latencyMs": 22.199900005944073
+      },
+      "filter": {
+        "ids": [
+          "R0408"
+        ],
+        "violations": 0,
+        "latencyMs": 0.007399999999961437
+      },
+      "research": {
+        "ids": [
+          "R0908",
+          "R0408",
+          "R0403"
+        ],
+        "violations": 0,
+        "status": "shortlist",
+        "latencyMs": 6.533500000000004
+      }
+    },
+    {
+      "id": "commerce-unavailable",
+      "request": {
+        "contexts": [
+          "commerce"
+        ],
+        "brief": "Find a clear commerce directory with useful navigation",
+        "audience": "First-time visitors",
+        "content": "Find an item and compare descriptions",
+        "limit": 3,
+        "mode": "unavailable"
+      },
+      "availableFonts": [],
+      "baseline": {
+        "ids": [
+          "R2318",
+          "R0408",
+          "R1458"
+        ],
+        "violations": 3,
+        "latencyMs": 16.883300035260618
+      },
+      "filter": {
+        "ids": [],
+        "violations": 0,
+        "latencyMs": 0.005400000000008731
+      },
+      "research": {
+        "ids": [],
+        "violations": 0,
+        "status": "no-fit",
+        "latencyMs": 1.665899999999965
+      }
+    },
+    {
+      "id": "culture-available",
+      "request": {
+        "contexts": [
+          "culture"
+        ],
+        "brief": "Find a clear culture directory with useful navigation",
+        "audience": "First-time visitors",
+        "content": "Find an item and compare descriptions",
+        "limit": 3,
+        "mode": "available"
+      },
+      "availableFonts": [
+        "Archivo",
+        "Inter"
+      ],
+      "baseline": {
+        "ids": [
+          "R0738",
+          "R1648",
+          "R1328"
+        ],
+        "violations": 3,
+        "latencyMs": 23.335499980021268
+      },
+      "filter": {
+        "ids": [],
+        "violations": 0,
+        "latencyMs": 0.00680000000011205
+      },
+      "research": {
+        "ids": [
+          "R0008",
+          "R0503",
+          "R0003"
+        ],
+        "violations": 0,
+        "status": "shortlist",
+        "latencyMs": 2.473299999999881
+      }
+    },
+    {
+      "id": "culture-unavailable",
+      "request": {
+        "contexts": [
+          "culture"
+        ],
+        "brief": "Find a clear culture directory with useful navigation",
+        "audience": "First-time visitors",
+        "content": "Find an item and compare descriptions",
+        "limit": 3,
+        "mode": "unavailable"
+      },
+      "availableFonts": [],
+      "baseline": {
+        "ids": [
+          "R0738",
+          "R1648",
+          "R1328"
+        ],
+        "violations": 3,
+        "latencyMs": 19.71119997324422
+      },
+      "filter": {
+        "ids": [],
+        "violations": 0,
+        "latencyMs": 0.004400000000032378
+      },
+      "research": {
+        "ids": [],
+        "violations": 0,
+        "status": "no-fit",
+        "latencyMs": 5.022300000000087
+      }
+    },
+    {
+      "id": "information-available",
+      "request": {
+        "contexts": [
+          "information"
+        ],
+        "brief": "Find a clear information directory with useful navigation",
+        "audience": "First-time visitors",
+        "content": "Find an item and compare descriptions",
+        "limit": 3,
+        "mode": "available"
+      },
+      "availableFonts": [
+        "Archivo",
+        "Inter"
+      ],
+      "baseline": {
+        "ids": [
+          "R1928",
+          "R2158",
+          "R1158"
+        ],
+        "violations": 3,
+        "latencyMs": 26.943999982904643
+      },
+      "filter": {
+        "ids": [],
+        "violations": 0,
+        "latencyMs": 0.004599999999982174
+      },
+      "research": {
+        "ids": [
+          "R0108",
+          "R0905",
+          "R0009"
+        ],
+        "violations": 0,
+        "status": "shortlist",
+        "latencyMs": 2.927900000000136
+      }
+    },
+    {
+      "id": "information-unavailable",
+      "request": {
+        "contexts": [
+          "information"
+        ],
+        "brief": "Find a clear information directory with useful navigation",
+        "audience": "First-time visitors",
+        "content": "Find an item and compare descriptions",
+        "limit": 3,
+        "mode": "unavailable"
+      },
+      "availableFonts": [],
+      "baseline": {
+        "ids": [
+          "R1928",
+          "R2158",
+          "R1158"
+        ],
+        "violations": 3,
+        "latencyMs": 26.154500024858862
+      },
+      "filter": {
+        "ids": [],
+        "violations": 0,
+        "latencyMs": 0.004000000000132786
+      },
+      "research": {
+        "ids": [],
+        "violations": 0,
+        "status": "no-fit",
+        "latencyMs": 2.029899999999998
+      }
+    },
+    {
+      "id": "software-available",
+      "request": {
+        "contexts": [
+          "software"
+        ],
+        "brief": "Find a clear software directory with useful navigation",
+        "audience": "First-time visitors",
+        "content": "Find an item and compare descriptions",
+        "limit": 3,
+        "mode": "available"
+      },
+      "availableFonts": [
+        "Poppins",
+        "Roboto"
+      ],
+      "baseline": {
+        "ids": [
+          "R1208",
+          "R2208",
+          "R0208"
+        ],
+        "violations": 3,
+        "latencyMs": 15.860299987252802
+      },
+      "filter": {
+        "ids": [],
+        "violations": 0,
+        "latencyMs": 0.00430000000005748
+      },
+      "research": {
+        "ids": [
+          "R0348",
+          "R0145",
+          "R0645"
+        ],
+        "violations": 0,
+        "status": "shortlist",
+        "latencyMs": 10.141399999999976
+      }
+    },
+    {
+      "id": "software-unavailable",
+      "request": {
+        "contexts": [
+          "software"
+        ],
+        "brief": "Find a clear software directory with useful navigation",
+        "audience": "First-time visitors",
+        "content": "Find an item and compare descriptions",
+        "limit": 3,
+        "mode": "unavailable"
+      },
+      "availableFonts": [],
+      "baseline": {
+        "ids": [
+          "R1208",
+          "R2208",
+          "R0208"
+        ],
+        "violations": 3,
+        "latencyMs": 16.602399991825223
+      },
+      "filter": {
+        "ids": [],
+        "violations": 0,
+        "latencyMs": 0.010499999999865395
+      },
+      "research": {
+        "ids": [],
+        "violations": 0,
+        "status": "no-fit",
+        "latencyMs": 1.1343999999999141
+      }
+    }
+  ],
+  "metrics": {
+    "baseline": {
+      "violatingBriefs": 10,
+      "emptyBriefs": 0,
+      "selected": 30
+    },
+    "filter": {
+      "violatingBriefs": 0,
+      "emptyBriefs": 9,
+      "selected": 1
+    },
+    "research": {
+      "violatingBriefs": 0,
+      "emptyBriefs": 5,
+      "selected": 15
+    }
+  },
+  "providerCalls": 0,
+  "hostModified": false,
+  "decision": "retain-explicit-constraint-filtering",
+  "rankingDecision": "retain-for-targeted-research",
+  "limitations": [
+    "Original synthetic smoke briefs, not a preregistered held-out study",
+    "Baseline helper does not accept structured available-font constraints; this compares an additional filter, not a baseline contract bug",
+    "HTML medium is an explicit benchmark assumption; interaction compatibility is unmeasured",
+    "Timing excludes generation and is not a production performance estimate"
+  ]
+}

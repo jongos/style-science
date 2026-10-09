@@ -17,6 +17,8 @@ REQUIRED = {
     "schemas/plan.schema.json", "knowledge/LICENSE.txt", "knowledge/PROVENANCE.md",
     "knowledge/provenance.json", "knowledge/inventory.json", "knowledge/registry.json",
     "knowledge/graph.json",
+    "consumer-contract.json", "consumer.mjs", "consumer.py",
+    "model-identity-policy.json",
 }
 
 

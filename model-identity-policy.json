@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "providers": {
+    "typesafe": {"pattern": "jev-(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)", "basis": "Existing project release identity policy; not provider authentication"},
+    "openai": {"pattern": "gpt-4o-2024-08-06", "source": "https://developers.openai.com/api/docs/models/gpt-4o"},
+    "anthropic": {"pattern": "claude-sonnet-4-5-20250929", "source": "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions"}
+  },
+  "scope": "Reviewed identity forms only; not availability, authentication, model quality or a complete provider catalog. Bare digests are not model identities."
+}

@@ -8,13 +8,17 @@
     ".": "./engine.mjs",
     "./html": "./html.mjs",
     "./decision": "./decision.mjs",
-    "./canvas": "./canvas.mjs"
+    "./canvas": "./canvas.mjs",
+    "./consumer": "./consumer.mjs"
   },
   "scripts": {
-    "test": "node --test tools/study.test.mjs test.mjs decision.test.mjs canvas.test.mjs reasoning.test.mjs evaluation/recipe-study/study.test.mjs tools/python.test.mjs tools/knowledge-drift.test.mjs tools/packaging.test.mjs",
+    "test": "node --test tools/study.test.mjs test.mjs decision.test.mjs canvas.test.mjs consumer.test.mjs reasoning.test.mjs tools/python.test.mjs tools/knowledge-drift.test.mjs tools/capture-provenance.test.mjs tools/packaging.test.mjs tools/release-profile.test.mjs evaluation/recipe-study/study.test.mjs",
+    "test:research": "node --test tokens.test.mjs language.test.mjs relation-measures.test.mjs retrieval.test.mjs inspection.test.mjs evaluation/downstream/results.test.mjs evaluation/downstream/host-smoke.test.mjs",
+    "test:packaging": "node --test tools/packaging.test.mjs",
     "test:browser": "node --test browser.test.mjs",
-    "test:site": "node tools/build_site.mjs && node tools/test_site.mjs",
-    "test:packaging": "node --test tools/packaging.test.mjs"
+    "test:research:browser": "node --test relation-browser.test.mjs inspection-browser.test.mjs",
+    "test:downstream": "node evaluation/downstream/run.mjs --allow-working-tree",
+    "test:site": "node tools/build_site.mjs && node tools/test_site.mjs"
   },
   "engines": {
     "node": ">=22"

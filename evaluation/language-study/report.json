@@ -1,0 +1,76 @@
+{
+  "study": "design-language-foundations-0.1.0",
+  "evidenceKind": "computed",
+  "input": {
+    "path": "evaluation/recipe-study/winners.json",
+    "sha256": "686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+    "hashNormalization": "UTF-8 with CRLF normalized to LF",
+    "count": 1000
+  },
+  "descriptors": {
+    "ranges": {
+      "contrastRatio": {
+        "minimum": 11.247919499502693,
+        "maximum": 18.883060964594996
+      },
+      "typeRatio": {
+        "minimum": 1.4,
+        "maximum": 5.714285714285714
+      },
+      "lineHeightRatio": {
+        "minimum": 1.3,
+        "maximum": 1.75
+      },
+      "gapRatio": {
+        "minimum": 0.4,
+        "maximum": 3.4285714285714284
+      },
+      "colorDistance": {
+        "minimum": 0.6495183617410636,
+        "maximum": 0.8223622215563208
+      }
+    },
+    "distinctProjectedProfiles": 885,
+    "collisionGroups": 115,
+    "recipesInCollisionGroups": 230,
+    "roundingDecimals": 9
+  },
+  "corpus": {
+    "status": "blocked",
+    "splits": {
+      "train": 1000,
+      "validation": 0,
+      "test": 0
+    },
+    "issueCounts": {
+      "rights-not-cleared": 1000,
+      "missing-group:brandGroup": 1000,
+      "empty-split:validation": 1,
+      "empty-split:test": 1
+    },
+    "trainingAuthorized": false
+  },
+  "decisions": [
+    {
+      "feature": "numerical-descriptors",
+      "action": "retain",
+      "reason": "All retained recipes are representable; numerical parity and invariance are checked by language.test.mjs."
+    },
+    {
+      "feature": "universal-style-distance",
+      "action": "reject",
+      "reason": "The projection omits font identity, arrangement, accents and content. Its collisions are not evidence of perceptual equivalence."
+    },
+    {
+      "feature": "winner-library-as-independent-benchmark",
+      "action": "reject",
+      "reason": "One model-selected source with no independent validation or test set cannot establish generalization."
+    }
+  ],
+  "limitations": [
+    "No renders, participants, new Jev calls, model training, causal estimates, or aesthetic accuracy measurements.",
+    "Ranges describe a selected winner-only corpus, not the population of good designs.",
+    "Rights marked unknown means not reviewed for a training use, not a finding that use is prohibited.",
+    "Original URLs, winners, judgments and frozen study files are unchanged. No losing recipes are reconstructed or saved."
+  ]
+}

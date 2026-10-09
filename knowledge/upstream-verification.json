@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-07",
+  "publicRepository": "https://github.com/jongos/dazzler",
+  "comparedRevision": "362f92e00f091737b9f774347016124a1ea655ce",
+  "method": "GitHub commit and recursive tree read; path existence only",
+  "originalImportRevision": null,
+  "status": "import-not-reproducible-from-this-public-revision",
+  "missingPublicPaths": [
+    "skills/dazzler-frontend/references/agent-workflows.md",
+    "skills/dazzler-frontend/references/art-direction.md",
+    "skills/dazzler-frontend/references/color-relationships.json",
+    "skills/dazzler-frontend/references/document-archetypes.md",
+    "skills/dazzler-frontend/references/document-design-space.md",
+    "skills/dazzler-frontend/references/frontend-engineering.md",
+    "skills/dazzler-frontend/references/web-design-space.md"
+  ],
+  "limitation": "These files have unverified/unpublished original provenance relative to the compared public tree. This does not prove absence from all other revisions. No byte-drift counts are claimed."
+}

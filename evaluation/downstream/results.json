@@ -1,0 +1,4561 @@
+{
+  "schemaVersion": 1,
+  "scope": "offline synthetic implementation comparison; not measured Dazzler user value",
+  "sourceStatus": "explicit-working-tree",
+  "sourceHashes": {
+    "retrieval.mjs": "180f790181b33ff9facfb904e8b0e5c21b88f23412ad69f3cff69dba3e5e2a87",
+    "retrieval.py": "3b8b5c35136629cf4af957d24908e93bab56a5ac7fe7ffa0c93c02ec52daea9a",
+    "canvas.mjs": "d37f5064690eb7aac112f6e5939f3d64f66bf2fc9130dd3c90f0ab2484fa8241",
+    "engine.mjs": "22240923ec5e537587c7220fb4f2de857a4f81ced2b578dfa0058295d2f287f0",
+    "inspection.mjs": "c29a9a54a5ad51036eea685a7af552457136da317d4d3c2453e429de55ca7776",
+    "inspection.py": "e93feaedb2d515906d8a23f8790972d9ffda1c011da0730e185cc3d8a3994291",
+    "inspection-html.mjs": "6dd5d57d988253e5cdc24126ac69542d65ef5cb20c50e50b5fa208a2e5baea03",
+    "docx_adapter.py": "e16749e2f753ee47f6c326b4b972c73cb14160882161ab92b7f3e5b2c68d08ae",
+    "evaluation/native_fixtures.py": "a7e2496a7bdf68b9ac0b0947cfe2cfd024048330c26523b3920e248087a0f19a",
+    "evaluation/retrieval-fixtures.mjs": "f1b14d481c1d233ff5528f6324060b8bb87f5d716b8e8b21e16030bd3ad66c35",
+    "evaluation/downstream/PROTOCOL.md": "0d7a81fe2c4fad2d7ef07ac4cf392cd9caeb3b620bd962eaa5615c74bed3d39b",
+    "evaluation/downstream/rendered.mjs": "0bce7df1ed9a0ce7951f5233e6a3416e3b0d2c773c64c94c25421b53f3f653cf",
+    "evaluation/downstream/run.mjs": "1d672cbe14a22f4d4cff21f5cf24db3634a0bd725fdc628e1fd845ba64521952"
+  },
+  "fixtureHash": "6cabbae83594d8e27d2af1e7c90c28c52229db9fd8f6d3cae2776f4cc10839ea",
+  "host": "synthetic-offline-v1",
+  "model": null,
+  "generationPrompt": null,
+  "budget": {
+    "sharedIndexEntries": 10,
+    "maximumShortlist": 3,
+    "generationCalls": 0,
+    "revisionCalls": 0
+  },
+  "developmentIds": [
+    "dev-editorial",
+    "dev-commerce",
+    "dev-culture",
+    "dev-information",
+    "dev-software"
+  ],
+  "heldoutIds": [
+    "heldout-editorial-0",
+    "heldout-editorial-1",
+    "heldout-commerce-0",
+    "heldout-commerce-1",
+    "heldout-culture-0",
+    "heldout-culture-1",
+    "heldout-information-0",
+    "heldout-information-1",
+    "heldout-software-0",
+    "heldout-software-1"
+  ],
+  "rows": [
+    {
+      "id": "heldout-editorial-0",
+      "brief": {
+        "schemaVersion": 1,
+        "contexts": [
+          "editorial"
+        ],
+        "task": "Locate editorial material for a first visit 0",
+        "audience": "New readers",
+        "content": "Short original notes",
+        "intent": "restrained",
+        "medium": "html",
+        "interactions": [
+          "reading"
+        ],
+        "constraints": {
+          "availableFonts": [
+            "Inter"
+          ],
+          "minimumContrast": 4.5
+        }
+      },
+      "expected": "shortlist",
+      "baseline": {
+        "ids": [
+          "synthetic-editorial-expressive",
+          "synthetic-editorial-restrained",
+          "synthetic-commerce-expressive"
+        ],
+        "constraintViolations": 0,
+        "latencyMs": 26.927300000000002
+      },
+      "retrieval": {
+        "schemaVersion": 1,
+        "status": "shortlist",
+        "evidenceClass": "heuristic-retrieval",
+        "qualityClaim": false,
+        "shortlist": [
+          {
+            "id": "synthetic-editorial-restrained",
+            "score": 6.153846153846154,
+            "agreement": 0,
+            "reasons": [
+              "contexts:1/1",
+              "intent-match"
+            ],
+            "arrangement": "rows",
+            "typography": "compact",
+            "colorRelationship": "quiet",
+            "detail": null,
+            "diversity": 0,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          },
+          {
+            "id": "synthetic-editorial-expressive",
+            "score": 4.153846153846154,
+            "agreement": 0,
+            "reasons": [
+              "contexts:1/1",
+              "intent-differs"
+            ],
+            "arrangement": "columns",
+            "typography": "display",
+            "colorRelationship": "contrasting",
+            "detail": null,
+            "diversity": 3,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          },
+          {
+            "id": "synthetic-software-restrained",
+            "score": 2.076923076923077,
+            "agreement": 0,
+            "reasons": [
+              "contexts:0/1",
+              "intent-match"
+            ],
+            "arrangement": "rows",
+            "typography": "compact",
+            "colorRelationship": "quiet",
+            "detail": null,
+            "diversity": 0,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          }
+        ],
+        "excluded": [],
+        "constraintViolations": 0,
+        "latencyMs": 2.297399999999982
+      },
+      "providerCost": 0,
+      "inferenceTokens": 0
+    },
+    {
+      "id": "heldout-editorial-1",
+      "brief": {
+        "schemaVersion": 1,
+        "contexts": [
+          "editorial"
+        ],
+        "task": "Locate editorial material for a first visit 1",
+        "audience": "Returning contributors",
+        "content": "Detailed public descriptions",
+        "intent": "expressive",
+        "medium": "html",
+        "interactions": [
+          "reading"
+        ],
+        "constraints": {
+          "availableFonts": [],
+          "minimumContrast": 4.5
+        }
+      },
+      "expected": "no-fit",
+      "baseline": {
+        "ids": [
+          "synthetic-editorial-expressive",
+          "synthetic-editorial-restrained",
+          "synthetic-commerce-expressive"
+        ],
+        "constraintViolations": 1,
+        "latencyMs": 0.039600000000007185
+      },
+      "retrieval": {
+        "schemaVersion": 1,
+        "status": "no-fit",
+        "evidenceClass": "heuristic-retrieval",
+        "qualityClaim": false,
+        "shortlist": [],
+        "excluded": [
+          {
+            "id": "synthetic-editorial-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-editorial-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-commerce-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-commerce-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-culture-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-culture-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-information-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-information-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-software-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-software-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          }
+        ],
+        "constraintViolations": 0,
+        "latencyMs": 0.14769999999998618
+      },
+      "providerCost": 0,
+      "inferenceTokens": 0
+    },
+    {
+      "id": "heldout-commerce-0",
+      "brief": {
+        "schemaVersion": 1,
+        "contexts": [
+          "commerce"
+        ],
+        "task": "Locate commerce material for a first visit 0",
+        "audience": "New readers",
+        "content": "Short original notes",
+        "intent": "restrained",
+        "medium": "html",
+        "interactions": [
+          "reading"
+        ],
+        "constraints": {
+          "availableFonts": [
+            "Inter"
+          ],
+          "minimumContrast": 4.5
+        }
+      },
+      "expected": "shortlist",
+      "baseline": {
+        "ids": [
+          "synthetic-commerce-expressive",
+          "synthetic-commerce-restrained",
+          "synthetic-culture-expressive"
+        ],
+        "constraintViolations": 0,
+        "latencyMs": 0.023899999999969168
+      },
+      "retrieval": {
+        "schemaVersion": 1,
+        "status": "shortlist",
+        "evidenceClass": "heuristic-retrieval",
+        "qualityClaim": false,
+        "shortlist": [
+          {
+            "id": "synthetic-commerce-restrained",
+            "score": 6.153846153846154,
+            "agreement": 0,
+            "reasons": [
+              "contexts:1/1",
+              "intent-match"
+            ],
+            "arrangement": "rows",
+            "typography": "compact",
+            "colorRelationship": "quiet",
+            "detail": null,
+            "diversity": 0,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          },
+          {
+            "id": "synthetic-commerce-expressive",
+            "score": 4.153846153846154,
+            "agreement": 0,
+            "reasons": [
+              "contexts:1/1",
+              "intent-differs"
+            ],
+            "arrangement": "columns",
+            "typography": "display",
+            "colorRelationship": "contrasting",
+            "detail": null,
+            "diversity": 3,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          },
+          {
+            "id": "synthetic-software-restrained",
+            "score": 2.076923076923077,
+            "agreement": 0,
+            "reasons": [
+              "contexts:0/1",
+              "intent-match"
+            ],
+            "arrangement": "rows",
+            "typography": "compact",
+            "colorRelationship": "quiet",
+            "detail": null,
+            "diversity": 0,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          }
+        ],
+        "excluded": [],
+        "constraintViolations": 0,
+        "latencyMs": 0.22200000000003683
+      },
+      "providerCost": 0,
+      "inferenceTokens": 0
+    },
+    {
+      "id": "heldout-commerce-1",
+      "brief": {
+        "schemaVersion": 1,
+        "contexts": [
+          "commerce"
+        ],
+        "task": "Locate commerce material for a first visit 1",
+        "audience": "Returning contributors",
+        "content": "Detailed public descriptions",
+        "intent": "expressive",
+        "medium": "html",
+        "interactions": [
+          "reading"
+        ],
+        "constraints": {
+          "availableFonts": [],
+          "minimumContrast": 4.5
+        }
+      },
+      "expected": "no-fit",
+      "baseline": {
+        "ids": [
+          "synthetic-commerce-expressive",
+          "synthetic-commerce-restrained",
+          "synthetic-culture-expressive"
+        ],
+        "constraintViolations": 1,
+        "latencyMs": 0.026099999999985357
+      },
+      "retrieval": {
+        "schemaVersion": 1,
+        "status": "no-fit",
+        "evidenceClass": "heuristic-retrieval",
+        "qualityClaim": false,
+        "shortlist": [],
+        "excluded": [
+          {
+            "id": "synthetic-editorial-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-editorial-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-commerce-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-commerce-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-culture-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-culture-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-information-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-information-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-software-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-software-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          }
+        ],
+        "constraintViolations": 0,
+        "latencyMs": 0.04650000000003729
+      },
+      "providerCost": 0,
+      "inferenceTokens": 0
+    },
+    {
+      "id": "heldout-culture-0",
+      "brief": {
+        "schemaVersion": 1,
+        "contexts": [
+          "culture"
+        ],
+        "task": "Locate culture material for a first visit 0",
+        "audience": "New readers",
+        "content": "Short original notes",
+        "intent": "restrained",
+        "medium": "html",
+        "interactions": [
+          "reading"
+        ],
+        "constraints": {
+          "availableFonts": [
+            "Inter"
+          ],
+          "minimumContrast": 4.5
+        }
+      },
+      "expected": "shortlist",
+      "baseline": {
+        "ids": [
+          "synthetic-culture-expressive",
+          "synthetic-culture-restrained",
+          "synthetic-commerce-expressive"
+        ],
+        "constraintViolations": 0,
+        "latencyMs": 0.019000000000005457
+      },
+      "retrieval": {
+        "schemaVersion": 1,
+        "status": "shortlist",
+        "evidenceClass": "heuristic-retrieval",
+        "qualityClaim": false,
+        "shortlist": [
+          {
+            "id": "synthetic-culture-restrained",
+            "score": 6.153846153846154,
+            "agreement": 0,
+            "reasons": [
+              "contexts:1/1",
+              "intent-match"
+            ],
+            "arrangement": "rows",
+            "typography": "compact",
+            "colorRelationship": "quiet",
+            "detail": null,
+            "diversity": 0,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          },
+          {
+            "id": "synthetic-culture-expressive",
+            "score": 4.153846153846154,
+            "agreement": 0,
+            "reasons": [
+              "contexts:1/1",
+              "intent-differs"
+            ],
+            "arrangement": "columns",
+            "typography": "display",
+            "colorRelationship": "contrasting",
+            "detail": null,
+            "diversity": 3,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          },
+          {
+            "id": "synthetic-commerce-restrained",
+            "score": 2.076923076923077,
+            "agreement": 0,
+            "reasons": [
+              "contexts:0/1",
+              "intent-match"
+            ],
+            "arrangement": "rows",
+            "typography": "compact",
+            "colorRelationship": "quiet",
+            "detail": null,
+            "diversity": 0,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          }
+        ],
+        "excluded": [],
+        "constraintViolations": 0,
+        "latencyMs": 0.14179999999998927
+      },
+      "providerCost": 0,
+      "inferenceTokens": 0
+    },
+    {
+      "id": "heldout-culture-1",
+      "brief": {
+        "schemaVersion": 1,
+        "contexts": [
+          "culture"
+        ],
+        "task": "Locate culture material for a first visit 1",
+        "audience": "Returning contributors",
+        "content": "Detailed public descriptions",
+        "intent": "expressive",
+        "medium": "html",
+        "interactions": [
+          "reading"
+        ],
+        "constraints": {
+          "availableFonts": [],
+          "minimumContrast": 4.5
+        }
+      },
+      "expected": "no-fit",
+      "baseline": {
+        "ids": [
+          "synthetic-culture-expressive",
+          "synthetic-culture-restrained",
+          "synthetic-commerce-expressive"
+        ],
+        "constraintViolations": 1,
+        "latencyMs": 0.01989999999995007
+      },
+      "retrieval": {
+        "schemaVersion": 1,
+        "status": "no-fit",
+        "evidenceClass": "heuristic-retrieval",
+        "qualityClaim": false,
+        "shortlist": [],
+        "excluded": [
+          {
+            "id": "synthetic-editorial-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-editorial-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-commerce-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-commerce-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-culture-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-culture-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-information-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-information-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-software-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-software-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          }
+        ],
+        "constraintViolations": 0,
+        "latencyMs": 0.04210000000000491
+      },
+      "providerCost": 0,
+      "inferenceTokens": 0
+    },
+    {
+      "id": "heldout-information-0",
+      "brief": {
+        "schemaVersion": 1,
+        "contexts": [
+          "information"
+        ],
+        "task": "Locate information material for a first visit 0",
+        "audience": "New readers",
+        "content": "Short original notes",
+        "intent": "restrained",
+        "medium": "html",
+        "interactions": [
+          "reading"
+        ],
+        "constraints": {
+          "availableFonts": [
+            "Inter"
+          ],
+          "minimumContrast": 4.5
+        }
+      },
+      "expected": "shortlist",
+      "baseline": {
+        "ids": [
+          "synthetic-information-expressive",
+          "synthetic-information-restrained",
+          "synthetic-commerce-expressive"
+        ],
+        "constraintViolations": 0,
+        "latencyMs": 0.017800000000022465
+      },
+      "retrieval": {
+        "schemaVersion": 1,
+        "status": "shortlist",
+        "evidenceClass": "heuristic-retrieval",
+        "qualityClaim": false,
+        "shortlist": [
+          {
+            "id": "synthetic-information-restrained",
+            "score": 6.153846153846154,
+            "agreement": 0,
+            "reasons": [
+              "contexts:1/1",
+              "intent-match"
+            ],
+            "arrangement": "rows",
+            "typography": "compact",
+            "colorRelationship": "quiet",
+            "detail": null,
+            "diversity": 0,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          },
+          {
+            "id": "synthetic-information-expressive",
+            "score": 4.153846153846154,
+            "agreement": 0,
+            "reasons": [
+              "contexts:1/1",
+              "intent-differs"
+            ],
+            "arrangement": "columns",
+            "typography": "display",
+            "colorRelationship": "contrasting",
+            "detail": null,
+            "diversity": 3,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          },
+          {
+            "id": "synthetic-culture-restrained",
+            "score": 2.076923076923077,
+            "agreement": 0,
+            "reasons": [
+              "contexts:0/1",
+              "intent-match"
+            ],
+            "arrangement": "rows",
+            "typography": "compact",
+            "colorRelationship": "quiet",
+            "detail": null,
+            "diversity": 0,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          }
+        ],
+        "excluded": [],
+        "constraintViolations": 0,
+        "latencyMs": 0.20800000000002683
+      },
+      "providerCost": 0,
+      "inferenceTokens": 0
+    },
+    {
+      "id": "heldout-information-1",
+      "brief": {
+        "schemaVersion": 1,
+        "contexts": [
+          "information"
+        ],
+        "task": "Locate information material for a first visit 1",
+        "audience": "Returning contributors",
+        "content": "Detailed public descriptions",
+        "intent": "expressive",
+        "medium": "html",
+        "interactions": [
+          "reading"
+        ],
+        "constraints": {
+          "availableFonts": [],
+          "minimumContrast": 4.5
+        }
+      },
+      "expected": "no-fit",
+      "baseline": {
+        "ids": [
+          "synthetic-information-expressive",
+          "synthetic-information-restrained",
+          "synthetic-commerce-expressive"
+        ],
+        "constraintViolations": 1,
+        "latencyMs": 0.08220000000000027
+      },
+      "retrieval": {
+        "schemaVersion": 1,
+        "status": "no-fit",
+        "evidenceClass": "heuristic-retrieval",
+        "qualityClaim": false,
+        "shortlist": [],
+        "excluded": [
+          {
+            "id": "synthetic-editorial-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-editorial-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-commerce-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-commerce-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-culture-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-culture-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-information-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-information-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-software-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-software-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          }
+        ],
+        "constraintViolations": 0,
+        "latencyMs": 0.05170000000003938
+      },
+      "providerCost": 0,
+      "inferenceTokens": 0
+    },
+    {
+      "id": "heldout-software-0",
+      "brief": {
+        "schemaVersion": 1,
+        "contexts": [
+          "software"
+        ],
+        "task": "Locate software material for a first visit 0",
+        "audience": "New readers",
+        "content": "Short original notes",
+        "intent": "restrained",
+        "medium": "html",
+        "interactions": [
+          "reading"
+        ],
+        "constraints": {
+          "availableFonts": [
+            "Inter"
+          ],
+          "minimumContrast": 4.5
+        }
+      },
+      "expected": "shortlist",
+      "baseline": {
+        "ids": [
+          "synthetic-software-expressive",
+          "synthetic-software-restrained",
+          "synthetic-commerce-expressive"
+        ],
+        "constraintViolations": 0,
+        "latencyMs": 0.02250000000003638
+      },
+      "retrieval": {
+        "schemaVersion": 1,
+        "status": "shortlist",
+        "evidenceClass": "heuristic-retrieval",
+        "qualityClaim": false,
+        "shortlist": [
+          {
+            "id": "synthetic-software-restrained",
+            "score": 6.153846153846154,
+            "agreement": 0,
+            "reasons": [
+              "contexts:1/1",
+              "intent-match"
+            ],
+            "arrangement": "rows",
+            "typography": "compact",
+            "colorRelationship": "quiet",
+            "detail": null,
+            "diversity": 0,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          },
+          {
+            "id": "synthetic-software-expressive",
+            "score": 4.153846153846154,
+            "agreement": 0,
+            "reasons": [
+              "contexts:1/1",
+              "intent-differs"
+            ],
+            "arrangement": "columns",
+            "typography": "display",
+            "colorRelationship": "contrasting",
+            "detail": null,
+            "diversity": 3,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          },
+          {
+            "id": "synthetic-information-restrained",
+            "score": 2.076923076923077,
+            "agreement": 0,
+            "reasons": [
+              "contexts:0/1",
+              "intent-match"
+            ],
+            "arrangement": "rows",
+            "typography": "compact",
+            "colorRelationship": "quiet",
+            "detail": null,
+            "diversity": 0,
+            "renderedStatus": "untested",
+            "adaptationsRequired": [
+              "Verify fonts, responsive layout, states and native delivery constraints"
+            ],
+            "conflicts": []
+          }
+        ],
+        "excluded": [],
+        "constraintViolations": 0,
+        "latencyMs": 0.2407000000000039
+      },
+      "providerCost": 0,
+      "inferenceTokens": 0
+    },
+    {
+      "id": "heldout-software-1",
+      "brief": {
+        "schemaVersion": 1,
+        "contexts": [
+          "software"
+        ],
+        "task": "Locate software material for a first visit 1",
+        "audience": "Returning contributors",
+        "content": "Detailed public descriptions",
+        "intent": "expressive",
+        "medium": "html",
+        "interactions": [
+          "reading"
+        ],
+        "constraints": {
+          "availableFonts": [],
+          "minimumContrast": 4.5
+        }
+      },
+      "expected": "no-fit",
+      "baseline": {
+        "ids": [
+          "synthetic-software-expressive",
+          "synthetic-software-restrained",
+          "synthetic-commerce-expressive"
+        ],
+        "constraintViolations": 1,
+        "latencyMs": 0.03910000000001901
+      },
+      "retrieval": {
+        "schemaVersion": 1,
+        "status": "no-fit",
+        "evidenceClass": "heuristic-retrieval",
+        "qualityClaim": false,
+        "shortlist": [],
+        "excluded": [
+          {
+            "id": "synthetic-editorial-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-editorial-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-commerce-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-commerce-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-culture-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-culture-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-information-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-information-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-software-expressive",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          },
+          {
+            "id": "synthetic-software-restrained",
+            "status": "incompatible",
+            "conflicts": [
+              "font-unavailable"
+            ],
+            "unknown": []
+          }
+        ],
+        "constraintViolations": 0,
+        "latencyMs": 0.04270000000002483
+      },
+      "providerCost": 0,
+      "inferenceTokens": 0
+    }
+  ],
+  "comparison": [
+    {
+      "expected": "improved",
+      "result": {
+        "lower": 3,
+        "upper": 7,
+        "status": "improved"
+      }
+    },
+    {
+      "expected": "worsened",
+      "result": {
+        "lower": -7,
+        "upper": -3,
+        "status": "worsened"
+      }
+    },
+    {
+      "expected": "inconclusive",
+      "result": {
+        "lower": -5,
+        "upper": 5,
+        "status": "inconclusive"
+      }
+    }
+  ],
+  "rendered": {
+    "renderer": {
+      "name": "chromium",
+      "version": "153.0.8010.12"
+    },
+    "fontSha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+    "rows": [
+      {
+        "variant": "normal",
+        "width": 390,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "89d8f2fb21e748736b89224b35dc42f1eca5106c879d25581eabe2792c1f5786",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "5e0a05efa91729032c4d549f54b4685eadd5b876583edb251937289dc55c2841",
+          "artifactSha256": "89d8f2fb21e748736b89224b35dc42f1eca5106c879d25581eabe2792c1f5786",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "5e0a05efa91729032c4d549f54b4685eadd5b876583edb251937289dc55c2841",
+          "status": "pass",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "pass",
+          "hit": "pass"
+        },
+        "screenshot": "normal-390.png"
+      },
+      {
+        "variant": "missing-font",
+        "width": 390,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "c7a39ba723d6184b4572e7c19882dd13f3f17669796d9faf091d57b6c9f2de2f",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "2729309675f15fb96bab46a472dbe0f422d50718dec993846a9139609ce87fa1",
+          "artifactSha256": "c7a39ba723d6184b4572e7c19882dd13f3f17669796d9faf091d57b6c9f2de2f",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": false
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "2729309675f15fb96bab46a472dbe0f422d50718dec993846a9139609ce87fa1",
+          "status": "fail",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "fail",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "fail",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "pass",
+          "hit": "pass"
+        },
+        "screenshot": "missing-font-390.png"
+      },
+      {
+        "variant": "long-localized",
+        "width": 390,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "be47d93c5c34bb4f0fbb981243453283d85fa9d04bc3f2e324d981a8c45c5eff",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "ccf575df8d6f619ba2fc7f4f0f9c8c03c2d29bd1dc8e136773ab31b80306c6bc",
+          "artifactSha256": "be47d93c5c34bb4f0fbb981243453283d85fa9d04bc3f2e324d981a8c45c5eff",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 1200,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "ccf575df8d6f619ba2fc7f4f0f9c8c03c2d29bd1dc8e136773ab31b80306c6bc",
+          "status": "fail",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "fail",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "fail",
+          "focus": "pass",
+          "outline": "pass",
+          "hit": "pass"
+        },
+        "screenshot": "long-localized-390.png"
+      },
+      {
+        "variant": "overlay",
+        "width": 390,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "5156dc4af5eb59e8f045fcdaba4976cec0b6f902bf9678367a1d795d7515e68f",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "f5ee5d011ddc4e6af60e6a619d8c8523be233b45542eee4f8375b4aa3711240d",
+          "artifactSha256": "5156dc4af5eb59e8f045fcdaba4976cec0b6f902bf9678367a1d795d7515e68f",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": false
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "f5ee5d011ddc4e6af60e6a619d8c8523be233b45542eee4f8375b4aa3711240d",
+          "status": "fail",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "fail",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "pass",
+          "hit": "fail"
+        },
+        "screenshot": "overlay-390.png"
+      },
+      {
+        "variant": "hidden-focus",
+        "width": 390,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "4a62d70ff5aad3cc9fcc874617b6abc4cefb9fd6dccd58ccdf10976a9f7fdd07",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "c7d94d0071fd26b2d59fd3d5491c2257e6736702b8c68ea5eec6cb63189f20f9",
+          "artifactSha256": "4a62d70ff5aad3cc9fcc874617b6abc4cefb9fd6dccd58ccdf10976a9f7fdd07",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": false
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "c7d94d0071fd26b2d59fd3d5491c2257e6736702b8c68ea5eec6cb63189f20f9",
+          "status": "fail",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "fail",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "fail",
+          "hit": "pass"
+        },
+        "screenshot": "hidden-focus-390.png"
+      },
+      {
+        "variant": "expanded",
+        "width": 390,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "a670b7f95027785472c853f0dc4a036a4b8bd04c578216bb256dd43401413d31",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "expanded"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "21d51234dcd20c4a3d6b5e7367c1769c20591524b939569f5543671d343da6ad",
+          "artifactSha256": "a670b7f95027785472c853f0dc4a036a4b8bd04c578216bb256dd43401413d31",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "expanded"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "21d51234dcd20c4a3d6b5e7367c1769c20591524b939569f5543671d343da6ad",
+          "status": "pass",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "pass",
+          "hit": "pass"
+        },
+        "screenshot": "expanded-390.png"
+      },
+      {
+        "variant": "error",
+        "width": 390,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "76306842cd09ea4c3fcd8c0925cce8036ca6bc6aa9569b66f34da3011d517d26",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "error"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "dfa27896578d3a65c227f40c08ffce430091a1b2421f251f3dc3dced88a03be1",
+          "artifactSha256": "76306842cd09ea4c3fcd8c0925cce8036ca6bc6aa9569b66f34da3011d517d26",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "error"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "dfa27896578d3a65c227f40c08ffce430091a1b2421f251f3dc3dced88a03be1",
+          "status": "pass",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "pass",
+          "hit": "pass"
+        },
+        "screenshot": "error-390.png"
+      },
+      {
+        "variant": "loading",
+        "width": 390,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "408f9cd9e7e50d4d0e9e2f27aae75240777d3dc4b31e10c99796bf149c9b50c6",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "loading"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "7573e76f4d91e17dd20ee813358ef57db6539c8edb1987378e051b3e3ca84f1f",
+          "artifactSha256": "408f9cd9e7e50d4d0e9e2f27aae75240777d3dc4b31e10c99796bf149c9b50c6",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "loading"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": false,
+                "enabled": false
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": false,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "7573e76f4d91e17dd20ee813358ef57db6539c8edb1987378e051b3e3ca84f1f",
+          "status": "fail",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "fail",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "fail",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "fail",
+          "outline": "fail",
+          "hit": "pass"
+        },
+        "screenshot": "loading-390.png"
+      },
+      {
+        "variant": "animated",
+        "width": 390,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "3bf794c00f5936c8df2c89f2afe0f5beb2feaadaef3782ab3dde6c75a329b3fe",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "b02ca80e4c84dc32d577f31082ea30542540abfef92ef1e9ac4ecd6edf3c56ca",
+          "artifactSha256": "3bf794c00f5936c8df2c89f2afe0f5beb2feaadaef3782ab3dde6c75a329b3fe",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": false,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "unknown": "Unsupported paint or transform"
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "unknown": "Unsupported paint or transform"
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "b02ca80e4c84dc32d577f31082ea30542540abfef92ef1e9ac4ecd6edf3c56ca",
+          "status": "unknown",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "unknown",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "unknown",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "unknown",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "unknown",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "unknown",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "unknown",
+          "clip": "unknown",
+          "focus": "unknown",
+          "outline": "unknown",
+          "hit": "unknown"
+        },
+        "screenshot": "animated-390.png"
+      },
+      {
+        "variant": "shadow-focus",
+        "width": 390,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "a93d1660a2d0f2bce11412fc44357fd80d8f3fac39448be91255d180b2785f18",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "07f9c1e888d832b920919e4b2625eb6c1001f1eadb4ebe6b11ee1def53166021",
+          "artifactSha256": "a93d1660a2d0f2bce11412fc44357fd80d8f3fac39448be91255d180b2785f18",
+          "environment": {
+            "medium": "html",
+            "width": 390,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "unknown": "Shadow-based indicator needs paint review"
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "07f9c1e888d832b920919e4b2625eb6c1001f1eadb4ebe6b11ee1def53166021",
+          "status": "unknown",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "unknown",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "unknown",
+          "hit": "pass"
+        },
+        "screenshot": "shadow-focus-390.png"
+      },
+      {
+        "variant": "normal",
+        "width": 1280,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "89d8f2fb21e748736b89224b35dc42f1eca5106c879d25581eabe2792c1f5786",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "675eedecaca5aef3888994b73f7b7b705b71d3be60de8116d6181f9f3db2bc27",
+          "artifactSha256": "89d8f2fb21e748736b89224b35dc42f1eca5106c879d25581eabe2792c1f5786",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "675eedecaca5aef3888994b73f7b7b705b71d3be60de8116d6181f9f3db2bc27",
+          "status": "pass",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "pass",
+          "hit": "pass"
+        },
+        "screenshot": "normal-1280.png"
+      },
+      {
+        "variant": "missing-font",
+        "width": 1280,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "c7a39ba723d6184b4572e7c19882dd13f3f17669796d9faf091d57b6c9f2de2f",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "b3ba2faf47f3dcaa48b8e17423dc9392dd649ca7f271d58fdf097a6f74584351",
+          "artifactSha256": "c7a39ba723d6184b4572e7c19882dd13f3f17669796d9faf091d57b6c9f2de2f",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": false
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "b3ba2faf47f3dcaa48b8e17423dc9392dd649ca7f271d58fdf097a6f74584351",
+          "status": "fail",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "fail",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "fail",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "pass",
+          "hit": "pass"
+        },
+        "screenshot": "missing-font-1280.png"
+      },
+      {
+        "variant": "long-localized",
+        "width": 1280,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "be47d93c5c34bb4f0fbb981243453283d85fa9d04bc3f2e324d981a8c45c5eff",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "1c04cdc82a5f13b8b927e63a3092e5432568c87b14c4e1b49ca29df7fa85b4ab",
+          "artifactSha256": "be47d93c5c34bb4f0fbb981243453283d85fa9d04bc3f2e324d981a8c45c5eff",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 1200,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "1c04cdc82a5f13b8b927e63a3092e5432568c87b14c4e1b49ca29df7fa85b4ab",
+          "status": "fail",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "fail",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "fail",
+          "focus": "pass",
+          "outline": "pass",
+          "hit": "pass"
+        },
+        "screenshot": "long-localized-1280.png"
+      },
+      {
+        "variant": "overlay",
+        "width": 1280,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "5156dc4af5eb59e8f045fcdaba4976cec0b6f902bf9678367a1d795d7515e68f",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "74947733bbfdc793066291a92a295c48d6000cabc547317223e96296aa841bf6",
+          "artifactSha256": "5156dc4af5eb59e8f045fcdaba4976cec0b6f902bf9678367a1d795d7515e68f",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": false
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "74947733bbfdc793066291a92a295c48d6000cabc547317223e96296aa841bf6",
+          "status": "fail",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "fail",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "pass",
+          "hit": "fail"
+        },
+        "screenshot": "overlay-1280.png"
+      },
+      {
+        "variant": "hidden-focus",
+        "width": 1280,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "4a62d70ff5aad3cc9fcc874617b6abc4cefb9fd6dccd58ccdf10976a9f7fdd07",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "1be366f208906b956ec0fbfacf285388b1e7f553abe1ace3c007663116f1ea33",
+          "artifactSha256": "4a62d70ff5aad3cc9fcc874617b6abc4cefb9fd6dccd58ccdf10976a9f7fdd07",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": false
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "1be366f208906b956ec0fbfacf285388b1e7f553abe1ace3c007663116f1ea33",
+          "status": "fail",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "fail",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "fail",
+          "hit": "pass"
+        },
+        "screenshot": "hidden-focus-1280.png"
+      },
+      {
+        "variant": "expanded",
+        "width": 1280,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "a670b7f95027785472c853f0dc4a036a4b8bd04c578216bb256dd43401413d31",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "expanded"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "d09bb52e208f5b26057ca70798b306fc8b2cdb7a09df184c6efccbc357f890a1",
+          "artifactSha256": "a670b7f95027785472c853f0dc4a036a4b8bd04c578216bb256dd43401413d31",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "expanded"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "d09bb52e208f5b26057ca70798b306fc8b2cdb7a09df184c6efccbc357f890a1",
+          "status": "pass",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "pass",
+          "hit": "pass"
+        },
+        "screenshot": "expanded-1280.png"
+      },
+      {
+        "variant": "error",
+        "width": 1280,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "76306842cd09ea4c3fcd8c0925cce8036ca6bc6aa9569b66f34da3011d517d26",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "error"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "b1f7d275c3ded5c91ff14ad68e45e2f2c54ef7967ddf19e528183146eec80f62",
+          "artifactSha256": "76306842cd09ea4c3fcd8c0925cce8036ca6bc6aa9569b66f34da3011d517d26",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "error"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "b1f7d275c3ded5c91ff14ad68e45e2f2c54ef7967ddf19e528183146eec80f62",
+          "status": "pass",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "pass",
+          "hit": "pass"
+        },
+        "screenshot": "error-1280.png"
+      },
+      {
+        "variant": "loading",
+        "width": 1280,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "408f9cd9e7e50d4d0e9e2f27aae75240777d3dc4b31e10c99796bf149c9b50c6",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "loading"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "d1f13a25f7fcbb01220350b35695792b443b1d169952d32ac674ff71ae82ff52",
+          "artifactSha256": "408f9cd9e7e50d4d0e9e2f27aae75240777d3dc4b31e10c99796bf149c9b50c6",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "loading"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": false,
+                "enabled": false
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": false,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "d1f13a25f7fcbb01220350b35695792b443b1d169952d32ac674ff71ae82ff52",
+          "status": "fail",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "fail",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "fail",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "fail",
+          "outline": "fail",
+          "hit": "pass"
+        },
+        "screenshot": "loading-1280.png"
+      },
+      {
+        "variant": "animated",
+        "width": 1280,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "3bf794c00f5936c8df2c89f2afe0f5beb2feaadaef3782ab3dde6c75a329b3fe",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "3ae6b12802e5018ac4780818e9e69623702aaf6e30fd4b4b6327508fe2d72d3f",
+          "artifactSha256": "3bf794c00f5936c8df2c89f2afe0f5beb2feaadaef3782ab3dde6c75a329b3fe",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": false,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "unknown": "Unsupported paint or transform"
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "unknown": "Unsupported paint or transform"
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "outlinePresent": true
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "3ae6b12802e5018ac4780818e9e69623702aaf6e30fd4b4b6327508fe2d72d3f",
+          "status": "unknown",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "unknown",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "unknown",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "unknown",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "unknown",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "unknown",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "unknown",
+          "clip": "unknown",
+          "focus": "unknown",
+          "outline": "unknown",
+          "hit": "unknown"
+        },
+        "screenshot": "animated-1280.png"
+      },
+      {
+        "variant": "shadow-focus",
+        "width": 1280,
+        "plan": {
+          "schemaVersion": 1,
+          "artifactSha256": "a93d1660a2d0f2bce11412fc44357fd80d8f3fac39448be91255d180b2785f18",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "checks": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "selector": "#copy",
+              "expected": "FixtureFont"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "selector": "#copy"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "selector": "#target"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "selector": "#target"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "selector": "#target"
+            }
+          ]
+        },
+        "snapshot": {
+          "planHash": "5ab40b8f6360c5af76fd74a7af7b83d6e2ccd914014b10dd1ed799ef70071388",
+          "artifactSha256": "a93d1660a2d0f2bce11412fc44357fd80d8f3fac39448be91255d180b2785f18",
+          "environment": {
+            "medium": "html",
+            "width": 1280,
+            "height": 844,
+            "theme": "light",
+            "state": "default"
+          },
+          "renderer": {
+            "name": "chromium",
+            "version": "153.0.8010.12"
+          },
+          "settled": true,
+          "observations": {
+            "font": {
+              "source": "rendered",
+              "facts": {
+                "declared": true,
+                "loaded": true
+              }
+            },
+            "clip": {
+              "source": "rendered",
+              "facts": {
+                "scrollWidth": 250,
+                "clientWidth": 250,
+                "scrollHeight": 60,
+                "clientHeight": 60
+              }
+            },
+            "focus": {
+              "source": "rendered",
+              "facts": {
+                "focused": true,
+                "enabled": true
+              }
+            },
+            "outline": {
+              "source": "rendered",
+              "facts": {
+                "unknown": "Shadow-based indicator needs paint review"
+              }
+            },
+            "hit": {
+              "source": "rendered",
+              "facts": {
+                "centerHitsTarget": true
+              }
+            }
+          }
+        },
+        "report": {
+          "schemaVersion": 1,
+          "planHash": "5ab40b8f6360c5af76fd74a7af7b83d6e2ccd914014b10dd1ed799ef70071388",
+          "status": "unknown",
+          "results": [
+            {
+              "id": "font",
+              "kind": "font-face-loaded",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "clip",
+              "kind": "scroll-containment",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "focus",
+              "kind": "focus-target",
+              "status": "pass",
+              "source": "rendered"
+            },
+            {
+              "id": "outline",
+              "kind": "focus-outline",
+              "status": "unknown",
+              "source": "rendered"
+            },
+            {
+              "id": "hit",
+              "kind": "center-hit-target",
+              "status": "pass",
+              "source": "rendered"
+            }
+          ],
+          "qualityClaim": false,
+          "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+        },
+        "expected": {
+          "font": "pass",
+          "clip": "pass",
+          "focus": "pass",
+          "outline": "unknown",
+          "hit": "pass"
+        },
+        "screenshot": "shadow-focus-1280.png"
+      }
+    ]
+  },
+  "native": [
+    {
+      "id": "normal",
+      "artifactSha256": "cdb6c0ad86311c194dc1464d0dd9acd0252b14444ea803e009a23e57e196b3ca",
+      "report": {
+        "schemaVersion": 1,
+        "planHash": "955ff62297b61388d1bb34e7c7c23f7e6f250555b502edf65a1fcdd76eb5f563",
+        "status": "unknown",
+        "results": [
+          {
+            "id": "native-title",
+            "kind": "native-title",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-headings",
+            "kind": "native-headings",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-fonts",
+            "kind": "native-fonts",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-page-geometry",
+            "kind": "native-page-geometry",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-table-bounds",
+            "kind": "native-table-bounds",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-pagination",
+            "kind": "native-pagination",
+            "status": "unknown",
+            "source": "package"
+          }
+        ],
+        "qualityClaim": false,
+        "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+      },
+      "renderedEvidence": null
+    },
+    {
+      "id": "missing-title",
+      "artifactSha256": "b8f705028c9c21e6687fcc10fb6bfb148fb6dc90bc83378c7e7ae90bfed0027c",
+      "report": {
+        "schemaVersion": 1,
+        "planHash": "329bb54919b22aa47a7c5ee6f9f7c776c7ca08fa0ef637a3a66e4890d056fc30",
+        "status": "fail",
+        "results": [
+          {
+            "id": "native-title",
+            "kind": "native-title",
+            "status": "fail",
+            "source": "package"
+          },
+          {
+            "id": "native-headings",
+            "kind": "native-headings",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-fonts",
+            "kind": "native-fonts",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-page-geometry",
+            "kind": "native-page-geometry",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-table-bounds",
+            "kind": "native-table-bounds",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-pagination",
+            "kind": "native-pagination",
+            "status": "unknown",
+            "source": "package"
+          }
+        ],
+        "qualityClaim": false,
+        "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+      },
+      "renderedEvidence": null
+    },
+    {
+      "id": "heading-jump",
+      "artifactSha256": "15c287a5f37a79b35a8a926e24e3a7a7949ff92b7da6f7fe85a46f28e8eee7e5",
+      "report": {
+        "schemaVersion": 1,
+        "planHash": "026504a1debde03c8f0c7b5ab3b3596124f799d01cd07f16a1872e5195293e0e",
+        "status": "fail",
+        "results": [
+          {
+            "id": "native-title",
+            "kind": "native-title",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-headings",
+            "kind": "native-headings",
+            "status": "fail",
+            "source": "package"
+          },
+          {
+            "id": "native-fonts",
+            "kind": "native-fonts",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-page-geometry",
+            "kind": "native-page-geometry",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-table-bounds",
+            "kind": "native-table-bounds",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-pagination",
+            "kind": "native-pagination",
+            "status": "unknown",
+            "source": "package"
+          }
+        ],
+        "qualityClaim": false,
+        "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+      },
+      "renderedEvidence": null
+    },
+    {
+      "id": "missing-font",
+      "artifactSha256": "f1be5e9a2d6511799c390179d7c851221eb6b26eae6b9a1a59f7f9f91da3565c",
+      "report": {
+        "schemaVersion": 1,
+        "planHash": "566c5e5540464862e270cba89dcf4a7779c6fec98782cb436a812dc94d99f37f",
+        "status": "fail",
+        "results": [
+          {
+            "id": "native-title",
+            "kind": "native-title",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-headings",
+            "kind": "native-headings",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-fonts",
+            "kind": "native-fonts",
+            "status": "fail",
+            "source": "package"
+          },
+          {
+            "id": "native-page-geometry",
+            "kind": "native-page-geometry",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-table-bounds",
+            "kind": "native-table-bounds",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-pagination",
+            "kind": "native-pagination",
+            "status": "unknown",
+            "source": "package"
+          }
+        ],
+        "qualityClaim": false,
+        "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+      },
+      "renderedEvidence": null
+    },
+    {
+      "id": "wide-table",
+      "artifactSha256": "3fc9022fb10393ed01ee54a53f7d4adb86cc02e8b06889f49cb6a90848417c76",
+      "report": {
+        "schemaVersion": 1,
+        "planHash": "601f0a0b104dc623e3cc70031420c4a9c7b3f690c87ff8d7108a6eac2215e4ee",
+        "status": "fail",
+        "results": [
+          {
+            "id": "native-title",
+            "kind": "native-title",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-headings",
+            "kind": "native-headings",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-fonts",
+            "kind": "native-fonts",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-page-geometry",
+            "kind": "native-page-geometry",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-table-bounds",
+            "kind": "native-table-bounds",
+            "status": "fail",
+            "source": "package"
+          },
+          {
+            "id": "native-pagination",
+            "kind": "native-pagination",
+            "status": "unknown",
+            "source": "package"
+          }
+        ],
+        "qualityClaim": false,
+        "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+      },
+      "renderedEvidence": null
+    },
+    {
+      "id": "bad-page",
+      "artifactSha256": "d73a277860c3e28f696df0991896963fa30737ac2ee727bdfaa4a348cd63da52",
+      "report": {
+        "schemaVersion": 1,
+        "planHash": "dfe1467bc624de8bc7d12ffc9a751f919d12a8a4470c2dc995cdd53b504e68da",
+        "status": "fail",
+        "results": [
+          {
+            "id": "native-title",
+            "kind": "native-title",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-headings",
+            "kind": "native-headings",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-fonts",
+            "kind": "native-fonts",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-page-geometry",
+            "kind": "native-page-geometry",
+            "status": "fail",
+            "source": "package"
+          },
+          {
+            "id": "native-table-bounds",
+            "kind": "native-table-bounds",
+            "status": "fail",
+            "source": "package"
+          },
+          {
+            "id": "native-pagination",
+            "kind": "native-pagination",
+            "status": "unknown",
+            "source": "package"
+          }
+        ],
+        "qualityClaim": false,
+        "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+      },
+      "renderedEvidence": null
+    },
+    {
+      "id": "long-content",
+      "artifactSha256": "2c53b81bf544a7404ccf4cd6f0556f0e5c0b8b8a8cd33b850e05b3150f7dcce8",
+      "report": {
+        "schemaVersion": 1,
+        "planHash": "399c3a7fccd93ae45c6955a5bc62705e394a7dcfccecaa42437651097a1f99b2",
+        "status": "unknown",
+        "results": [
+          {
+            "id": "native-title",
+            "kind": "native-title",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-headings",
+            "kind": "native-headings",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-fonts",
+            "kind": "native-fonts",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-page-geometry",
+            "kind": "native-page-geometry",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-table-bounds",
+            "kind": "native-table-bounds",
+            "status": "pass",
+            "source": "package"
+          },
+          {
+            "id": "native-pagination",
+            "kind": "native-pagination",
+            "status": "unknown",
+            "source": "package"
+          }
+        ],
+        "qualityClaim": false,
+        "coverage": "Declared facts only; not complete accessibility, aesthetic quality or native pagination certification"
+      },
+      "renderedEvidence": null
+    }
+  ],
+  "metrics": {
+    "baselineConstraintViolations": 5,
+    "retrievalConstraintViolations": 0,
+    "noFit": 5,
+    "unknown": 0,
+    "distinctArrangements": 2,
+    "distinctTypographyCategories": 2,
+    "distinctColorCategories": 2,
+    "injectedDefects": 12,
+    "detectedDefects": 12,
+    "missedDefects": 0,
+    "falseAlarms": 0,
+    "unsupportedMeasurements": 12,
+    "endToEndMs": 11039.8299,
+    "providerCost": 0
+  },
+  "decisions": [
+    {
+      "feature": "optional-retrieval",
+      "action": "retain-for-research",
+      "productionDefaultChanged": false
+    },
+    {
+      "feature": "bounded-instruments",
+      "action": "retain-for-research"
+    },
+    {
+      "feature": "automatic-overall-ranking",
+      "action": "reject"
+    }
+  ],
+  "unmeasured": [
+    "full Dazzler baseline",
+    "human preference and task outcomes",
+    "native rendered pages",
+    "real generation cost and latency"
+  ],
+  "evidenceDirectory": "C:\\Users\\jongo\\Dazzler\\style-science\\dist\\downstream-1791405129321\\"
+}

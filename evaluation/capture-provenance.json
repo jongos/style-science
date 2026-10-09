@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "inventoryCreatedOn": "2026-10-07",
+  "permission": "customer-confirmed-in-this-project-on-2026-10-07",
+  "permissionScope": "use of retained TypeSafe evidence; not an independently verified legal determination",
+  "records": [
+    {
+      "responsePath": "evaluation/jev-pass-2026-10-07/response-0-0.json",
+      "responseSha256": "44fe65b93309be6f810f5def84a8a87d080ce51f07015407fce59cd8a8894303",
+      "requestPath": "evaluation/jev-pass-2026-10-07/batch-0-0.json",
+      "requestSha256": "58b015fbf4ce58d1143ce4d61f5eb395ee8933e4092a6de2287be36127529786",
+      "capturedAt": null,
+      "captureTimestampStatus": "not-recorded",
+      "binding": "retrospective-file-pair-not-provider-attestation",
+      "resolvedModel": "jev-1.13.0",
+      "requestId": "playground_1814b1e3ee6654348baa045ec3f701953ff",
+      "evaluationTimeMs": 114.6208319996731,
+      "judgmentCount": 15
+    },
+    {
+      "responsePath": "evaluation/jev-pass-2026-10-07/response-0-1.json",
+      "responseSha256": "0b087adc2028e1815267e9b659314973f9f04ba2e2050921e98439ed04d0c5cf",
+      "requestPath": "evaluation/jev-pass-2026-10-07/batch-0-1.json",
+      "requestSha256": "bd79fac4ca4886a3e2b3a504f17c389ca50ec5a84406e8417ca8843e0462b2c9",
+      "capturedAt": null,
+      "captureTimestampStatus": "not-recorded",
+      "binding": "retrospective-file-pair-not-provider-attestation",
+      "resolvedModel": "jev-1.13.0",
+      "requestId": "playground_181c73e72e40b1e42b0a51d0e0316b8c482",
+      "evaluationTimeMs": 66.71583699062467,
+      "judgmentCount": 15
+    },
+    {
+      "responsePath": "evaluation/jev-pass-2026-10-07/response-0-2.json",
+      "responseSha256": "78edb77c8158eea37bd34c9cd3cd2d5b8ec9836e6872460ea8d4776c6769a403",
+      "requestPath": "evaluation/jev-pass-2026-10-07/batch-0-2.json",
+      "requestSha256": "2080462f90effa2ce0aa329c94f00ba94ef7c967532c520f429087655fb9b202",
+      "capturedAt": null,
+      "captureTimestampStatus": "not-recorded",
+      "binding": "retrospective-file-pair-not-provider-attestation",
+      "resolvedModel": "jev-1.13.0",
+      "requestId": "playground_18145534ba49d944e40957796847fe5238c",
+      "evaluationTimeMs": 116.259701011586,
+      "judgmentCount": 15
+    },
+    {
+      "responsePath": "evaluation/jev-pass-2026-10-07/response-1-0.json",
+      "responseSha256": "f42124a6a51d3deafe16e1b8444929ce908c6992c3ea11bdd05c51ba85d3bb7d",
+      "requestPath": "evaluation/jev-pass-2026-10-07/batch-1-0.json",
+      "requestSha256": "82002bcf0cd1060a664b868bcdf41fd4355fc163cfa058ce18b2ac895601d6c4",
+      "capturedAt": null,
+      "captureTimestampStatus": "not-recorded",
+      "binding": "retrospective-file-pair-not-provider-attestation",
+      "resolvedModel": "jev-1.13.0",
+      "requestId": "playground_1819948e45819b44de9929f3d9854e05fe7",
+      "evaluationTimeMs": 79.5281820001037,
+      "judgmentCount": 15
+    },
+    {
+      "responsePath": "evaluation/jev-pass-2026-10-07/smoke-response.json",
+      "responseSha256": "af285d02c1ca8eb638c8471bbfa1608bfe60bf11bb324f10743fb32fbbd089c1",
+      "requestPath": null,
+      "requestSha256": null,
+      "capturedAt": null,
+      "captureTimestampStatus": "not-recorded",
+      "binding": "retrospective-file-pair-not-provider-attestation",
+      "resolvedModel": "jev-1.13.0",
+      "requestId": "playground_181afa6f50c515f41e7ab9f022e401ae67a",
+      "evaluationTimeMs": 80.2030630002264,
+      "judgmentCount": 5
+    },
+    {
+      "responsePath": "evaluation/canvas-pass-2026-10-07/response-0.json",
+      "responseSha256": "171ab2711de1af249f86f969f20885eecb0a6513886b51b5b5bba5daaf83ad3a",
+      "requestPath": "evaluation/canvas-pass-2026-10-07/batch-0.json",
+      "requestSha256": "eda8e559ce802f7345c78dfb60d65896ad7d0e781e5384c5162ebcc13a52170f",
+      "capturedAt": null,
+      "captureTimestampStatus": "not-recorded",
+      "binding": "retrospective-file-pair-not-provider-attestation",
+      "resolvedModel": "jev-1.13.0",
+      "requestId": "playground_181ad251bd6afcf4947ac5a44806bf14f71",
+      "evaluationTimeMs": 58.77823200717103,
+      "judgmentCount": 12
+    },
+    {
+      "responsePath": "evaluation/canvas-pass-2026-10-07/response-1.json",
+      "responseSha256": "794a0a1a61aeff588b0c0d5def7ab4c345857fb3244ac077302f6f8f2aedd6a2",
+      "requestPath": "evaluation/canvas-pass-2026-10-07/batch-1.json",
+      "requestSha256": "abfe4fe2deba81f631ed97b9fc0e35dc6aa30c366e89e9d6d62f91943c555f8d",
+      "capturedAt": null,
+      "captureTimestampStatus": "not-recorded",
+      "binding": "retrospective-file-pair-not-provider-attestation",
+      "resolvedModel": "jev-1.13.0",
+      "requestId": "playground_18150acba52fdf347d886042c430a48bd5d",
+      "evaluationTimeMs": 68.41594200022882,
+      "judgmentCount": 12
+    },
+    {
+      "responsePath": "evaluation/canvas-pass-2026-10-07/response-2.json",
+      "responseSha256": "173e0f667f2a38575bc4d23c0833171983322a4b561d653bb5332aa51cefaacf",
+      "requestPath": "evaluation/canvas-pass-2026-10-07/batch-2.json",
+      "requestSha256": "f943d37e7edd0c9a0056044b41febdcd4e1b98d2549b9ea5fd77eb1c6d0eceb9",
+      "capturedAt": null,
+      "captureTimestampStatus": "not-recorded",
+      "binding": "retrospective-file-pair-not-provider-attestation",
+      "resolvedModel": "jev-1.13.0",
+      "requestId": "playground_1818b84dba43c4d4e6db15e25ec7febec0a",
+      "evaluationTimeMs": 86.47525998821948,
+      "judgmentCount": 12
+    }
+  ]
+}

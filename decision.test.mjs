@@ -8,6 +8,31 @@ import {fingerprint} from './engine.mjs';
 import {resolvePython} from './tools/python.mjs';
 
 const contract={id:'layout',context:{task:'Compare three plans',viewport:'Desktop'},requiredContext:['task','viewport'],options:{aligned:'Aligned comparison',narrative:'Sequential narratives',unknown:'Insufficient evidence',equal:'No relevant difference'},abstainOptions:['unknown','equal']};
+test('provider policy binds contracts and rejects aliases and digests with parity',()=>{
+  const c={...contract,identityPolicy:'1.0.0'};
+  assert.notEqual(decisionFingerprint(c),decisionFingerprint(contract));
+  const cases=[['typesafe','jev-1.13.0',true],['openai','gpt-4o-2024-08-06',true],['anthropic','claude-sonnet-4-5-20250929',true],['openai','gpt-4o-latest',false],['anthropic','claude-sonnet-4-5',false],['typesafe','jev-preview',false],['openai','gpt-4o-2024-08-06-preview',false],['openai','sha256:'+ 'a'.repeat(64),false],['wrong','gpt-4o-2024-08-06',false],[null,'jev-1.13.0',false]];
+  const inputs=cases.map(([provider,resolvedModel])=>observations(c).map(o=>({...o,provider,resolvedModel,requestedModel:'moving-alias'})));
+  const reports=inputs.map(x=>assessChoice(c,x));
+  assert.deepEqual(reports.map(x=>x.releaseEligible),cases.map(x=>x[2]));
+  const mixed=structuredClone(inputs[0]);mixed[1].provider='openai';
+  assert.equal(assessChoice(c,mixed).status,'model-mismatch');
+  assert.equal(assessChoice(contract,observations().map(o=>({...o,model:'sha256:'+'a'.repeat(64)}))).releaseEligible,false);
+  const source='import json,sys; from decision import assess_choice; x=json.load(sys.stdin); print(json.dumps([assess_choice(x["contract"],o) for o in x["inputs"]]))';
+  const run=spawnSync(resolvePython(),['-X','utf8','-c',source],{encoding:'utf8',input:JSON.stringify({contract:c,inputs})});
+  assert.equal(run.status,0,run.stderr);assert.deepEqual(JSON.parse(run.stdout),reports);
+});
+
+test('Unicode scalar keys and invalid abstention types have cross-language fingerprint parity',()=>{
+  const cases=[{...contract,context:{...contract.context,'\uFF01':'fullwidth','\u{1F600}':'astral','\u{10400}':'letter'}},
+    {...contract,options:{a:'Choice','1':'Abstain'},abstainOptions:[1]},
+    {...contract,context:{bad:'\uD800'}}, {...contract,options:{a:'Choice','\uDC00':'Bad'}}];
+  const attempt=c=>{try{return {hash:decisionFingerprint(c)};}catch{return {invalid:true};}};
+  const source="import json,sys\nfrom decision import decision_fingerprint\ndef f(c):\n try: return {'hash':decision_fingerprint(c)}\n except ValueError: return {'invalid':True}\nprint(json.dumps([f(c) for c in json.load(sys.stdin)]))";
+  const run=spawnSync(resolvePython(),['-X','utf8','-c',source],{cwd:fileURLToPath(new URL('.',import.meta.url)),input:JSON.stringify(cases),encoding:'utf8'});
+  assert.equal(run.status,0,run.stderr); assert.deepEqual(JSON.parse(run.stdout),cases.map(attempt));
+  assert.ok(attempt(cases[0]).hash); for(const c of cases.slice(1)) assert.deepEqual(attempt(c),{invalid:true});
+});
 function observations(c=contract,choice='aligned') {
   return ['baseline','reordered','relabeled'].map((variant,i)=>{
     const ids=Object.keys(c.options);
@@ -86,7 +111,7 @@ test('release evidence requires the closed immutable model identity policy',()=>
     assert.equal(report.releaseEligible,false);
     assert.equal(report.automaticAction,false);
   }
-  for (const model of ['jev-1.13.0',`sha256:${'a'.repeat(64)}`]) {
+  for (const model of ['jev-1.13.0']) {
     const input=observations().map(o=>({...o,model}));
     const report=assessChoice(contract,input);
     assert.equal(report.releaseEligible,true);

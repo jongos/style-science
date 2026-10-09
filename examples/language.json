@@ -1,0 +1,22 @@
+{
+  "languageVersion": "0.1.0",
+  "id": "synthetic-reference-entry",
+  "revision": "1",
+  "context": {
+    "task": "reference-lookup",
+    "audience": "declared-reader",
+    "medium": "web",
+    "intent": "quiet-hierarchy"
+  },
+  "nodes": [
+    {"id": "entry", "kind": "group", "role": "reference-entry", "tokenRefs": []},
+    {"id": "title", "kind": "text", "role": "entry-title", "tokenRefs": ["type.heading"]},
+    {"id": "description", "kind": "text", "role": "entry-description", "tokenRefs": ["type.body"]}
+  ],
+  "relations": [
+    {"id": "entry-title", "kind": "contains", "from": "entry", "to": "title"},
+    {"id": "entry-description", "kind": "contains", "from": "entry", "to": "description"},
+    {"id": "reading-order", "kind": "precedes", "from": "title", "to": "description"},
+    {"id": "hierarchy", "kind": "emphasizes", "from": "title", "to": "description"}
+  ]
+}
