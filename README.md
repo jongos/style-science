@@ -11,8 +11,6 @@ Style Science helps people and software express, test and revise design decision
 
 It complements design thinking: what does a choice serve, which constraints does it meet, and what remains uncertain? Human needs guide the questions. Human judgment stays in the process.
 
-> **Research prototype.** GDC reports **pass**, **fail** or **unknown** for declared requirements. A passing check is not proof of beauty, usability or human preference. No human study has been run.
-
 [**The Manifesto**](#eight-commitments-to-better-work) · [**The Live Study**](https://jongos.github.io/style-science/#design-study) · [**Try the Core**](#try-it) · [**Practical Uses**](#what-could-you-use-it-for) · [**Research**](#contextual-decisions-and-research)
 
 ---
