@@ -11,7 +11,8 @@ Oversized typography introduces the argument. Eight numbered commitments establi
 - Warm paper `#ece9df`, ink `#20211d`, oxide red `#ac301b`, secondary text `#585a51`, signal `#e3ef8c`.
 - Inter Variable, locally served under its included SIL Open Font License. Variable weight, close headline spacing and generous body leading create hierarchy without decorative fonts.
 - Body measure is capped at 52–53 characters. Desktop uses unequal columns; narrow screens use a single reading column.
-- The interactive study uses `x = 280 + (index − 3) × interval`. It illustrates proximity; it does not calculate beauty.
+- The interactive study couples Structure and Expression. Forty-eight points interpolate between an expression-dependent ordered grid and a rotating, expanding two-dimensional field. Both inputs change positions in both axes; the specimen and prompt share the same deterministic state. This is an authored illustration, not learned causality or a beauty calculation.
+- Live fields expose typeface, weight, heading size, spacing, line height, corners and two color roles. Two text specimens and a sample prompt reflect those values. Inter is bundled; Georgia and Courier New use declared system fallbacks. Reduced-motion preferences disable point transitions.
 - `site/color-intent.json` records the reproducible Dazzler exploration brief. Final tokens are editorial selections checked for contrast, not an optimized quality score.
 
 ## Delivery

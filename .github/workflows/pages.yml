@@ -2,7 +2,7 @@ name: Publish Style Science
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'tools/build_site.mjs', '.github/workflows/pages.yml']
+    paths: ['site/**', 'tools/build_site.mjs', 'tools/study_markup.mjs', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read

@@ -61,8 +61,12 @@ class StaticSiteTests(unittest.TestCase):
             self.assertIn(manifesto[key], markdown)
         self.assertTrue(any(tag == 'html' and a.get('lang') == 'en' for tag, a in page.tags))
         self.assertTrue(any(tag == 'meta' and a.get('name') == 'viewport' for tag, a in page.tags))
-        self.assertTrue(any(tag == 'label' and a.get('for') == 'interval' for tag, a in page.tags))
-        self.assertEqual(sum('data-point' in a for _, a in page.tags), 14)
+        for control in ('structure', 'expression'):
+            self.assertTrue(any(tag == 'label' and a.get('for') == control for tag, a in page.tags))
+            self.assertTrue(any(tag == 'input' and a.get('id') == control and a.get('type') == 'range' for tag, a in page.tags))
+        self.assertEqual(sum('data-point' in a for _, a in page.tags), 48)
+        self.assertEqual(sum('data-value' in a for _, a in page.tags), 8)
+        self.assertIn('sample-prompt', page.ids)
         self.assertTrue((SITE / 'fonts/LICENSE.txt').read_text(encoding='utf-8').strip())
 
     def test_broken_references_and_duplicate_ids_fail(self):

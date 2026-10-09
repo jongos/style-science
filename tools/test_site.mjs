@@ -42,7 +42,7 @@ const server = createServer(async (req, res) => {
   }
 });
 await new Promise((r) => server.listen(0, "127.0.0.1", r));
-const browser = await chromium.launch({ headless: true });
+const browser = await chromium.launch({ headless: true, ...(process.env.PLAYWRIGHT_EXECUTABLE_PATH ? {executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH} : {}) });
 const reports = [];
 try {
   for (const width of [1440, 768, 390, 320]) {
@@ -79,19 +79,30 @@ try {
         .map((a) => a.hash),
     );
     assert.deepEqual(missing, []);
-    await page.locator("#interval").focus();
+    const initialPrompt=await page.locator('#sample-prompt').textContent();
+    const initialPoints=await page.locator('[data-point]').evaluateAll(nodes=>nodes.map(n=>[n.getAttribute('cx'),n.getAttribute('cy')]));
+    await page.locator("#structure").focus();
     await page.keyboard.press("ArrowRight");
-    assert.equal(await page.locator("#interval-value").textContent(), "25");
-    assert.equal(
-      await page.locator('[data-point="0"]').getAttribute("cx"),
-      "205",
-    );
-    await page.locator("#interval").fill("56");
-    assert.equal(
-      await page.locator('[data-point="6"]').getAttribute("cx"),
-      "448",
-    );
-    await page.locator("#interval").fill("24");
+    assert.equal(await page.locator("#structure-value").textContent(), "66");
+    await page.locator('#expression').focus();
+    await page.keyboard.press('ArrowRight');
+    assert.equal(await page.locator('#expression-value').textContent(),'46');
+    assert.notEqual(await page.locator('#sample-prompt').textContent(),initialPrompt);
+    assert.notDeepEqual(await page.locator('[data-point]').evaluateAll(nodes=>nodes.map(n=>[n.getAttribute('cx'),n.getAttribute('cy')])),initialPoints);
+    const states=[];
+    for(const [structure,expression] of [[0,0],[0,100],[100,0],[100,100],[40,75]]) {
+      await page.locator('#structure').fill(String(structure));
+      await page.locator('#expression').fill(String(expression));
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`Study overflow ${width}/${structure}/${expression}`);
+      states.push(await page.locator('#specimen').evaluate(n=>({font:getComputedStyle(n.querySelector('h3')).fontFamily,gap:getComputedStyle(n).gap,color:getComputedStyle(n).backgroundColor})));
+      await page.locator('.experiment').screenshot({path:resolve(evidence,`study-${width}-${structure}-${expression}.png`)});
+    }
+    assert.ok(new Set(states.map(s=>s.font)).size>=3);
+    assert.ok(new Set(states.map(s=>s.gap)).size>1);
+    assert.ok(new Set(states.map(s=>s.color)).size>1);
+    assert.equal(await page.locator('[data-point="0"]').evaluate(n=>getComputedStyle(n).transitionDuration),'0s');
+    await page.locator('#structure').fill('65');
+    await page.locator('#expression').fill('45');
     await page.addScriptTag({
       path:
         process.env.AXE_SCRIPT ||
@@ -139,6 +150,12 @@ try {
     });
     await page.close();
   }
+  const staticPage=await browser.newPage({javaScriptEnabled:false,viewport:{width:390,height:1000}});
+  await staticPage.goto(`http://127.0.0.1:${server.address().port}/`);
+  assert.ok((await staticPage.locator('#sample-prompt').textContent()).includes('Design a field-notes page'));
+  assert.equal(await staticPage.locator('[data-point]').count(),48);
+  assert.equal(await staticPage.locator('#specimen').isVisible(),true);
+  await staticPage.close();
   await writeFile(
     resolve(evidence, "report.json"),
     JSON.stringify({ checkedAt: new Date().toISOString(), reports }, null, 2),

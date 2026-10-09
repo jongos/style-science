@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased - Interactive Design Relationships
+
+- Replaced the one-axis interval study with two coupled inputs, 48 multidirectional points, eight live attribute fields, two styled specimens and a prompt generated from the current settings. Mappings remain explicit demonstrations, not design-quality predictions.
+- Added deterministic input-grid, bounds, contrast and multidirectional-motion tests, updated static checks, and expanded optional browser checks for both sliders, three typography families and viewport extremes. Existing local Chrome can be selected explicitly; no browser installation is required or performed.
+- Validation: six focused core/study tests and two static-site checks passed; rendered checks cover 1440, 768, 390 and 320px, keyboard controls, slider extremes, reduced motion and a no-JavaScript fallback. Heading audit passed 16 headings. Automated accessibility checks report no violations; the pre-existing decorative arrow requires manual contrast interpretation. These checks do not establish aesthetic quality.
+
 ## Unreleased - Practical GDC Use Cases
 
 - Added six README workflows for people, agents and software systems: actionable reviews, outcome comparisons, candidate filtering, experimental dependency checks, UI regression gates and cross-runtime integration. Each distinguishes host responsibilities and measured conformance from aesthetic judgment. Documentation only; runtime behavior is unchanged.
