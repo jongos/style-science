@@ -19,6 +19,8 @@
     "model-identity-policy.json",
     "distribution.json",
     "docs/assets/design-study.png",
+    "docs/assets/readme-desktop.png",
+    "docs/assets/readme-mobile.png",
     "engine.mjs",
     "examples/canvas.mjs",
     "examples/plan.json",

@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased - README Art Direction
+
+- Brought the manifesto's Inter typography, paper/ink/red palette and numbered commitments into the main README. Added desktop/mobile masthead artwork with editable HTML and a host-browser-only renderer; preserved native text, technical instructions and research limitations.
+- Explicitly listed both artwork files in the release manifest so packaged READMEs keep their images. No runtime or public-site behavior changed.
+- Verified GitHub-rendered Markdown in a local frozen GitHub page shell at 1440px and 390px: responsive image selection, all eight commitments and no README overflow. The five core/parity/release-profile checks and 23-heading audit passed. This is draft validation, not a published GitHub update.
+
 ## Unreleased - Backlog Release Foundation
 
 - After the existing-host rendered workflow passed remotely, enabled path-filtered renderer/site push and PR checks. Added a separate non-browser research CI job. Neither changes branch protection, installs a browser, or promotes experimental APIs into the runtime archive.

@@ -17,7 +17,7 @@ Oversized typography introduces the argument. Eight numbered commitments establi
 
 ## Delivery
 
-The GitHub README uses native Markdown hierarchy, a screenshot of the actual study (Structure 35, Expression 80), a short audience table and collapsible technical detail. No custom CSS, simulated badges or aesthetic-performance claims. Keep research qualifications visible beside the opening and preserve the detailed limitations inside the measurement section.
+The GitHub README carries the manifesto's editorial identity through a responsive raster masthead: the same licensed Inter, paper, ink and oxide red, with large type and fine rules. `docs/readme-artwork.html` is its editable source; `tools/build_readme_artwork.mjs` renders desktop/mobile PNGs using explicitly supplied existing host Playwright and Chrome. No browser download. The `<picture>` element switches composition for narrow screens; meaningful alt text preserves the message without images. Raster text is limited to the masthead: all eight commitments, documentation and links remain selectable native Markdown. The actual study screenshot (Structure 35, Expression 80) links to the interactive page. Technical qualifications remain intact. GitHub controls body fonts, themes and spacing; the README does not pretend to support the site's CSS or interactive sliders. Both PNGs are explicitly included in the distribution manifest.
 
 The chart now retains the original ink backdrop (#20211d), muted grid and monochrome paper-colored marks. The specimen palette still responds to the sliders; chart colors do not. Filled/hollow nodes, connection weight, position and depth supply hierarchy without categorical hues.
 

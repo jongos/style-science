@@ -1,14 +1,55 @@
-# Style Science
+<a href="https://jongos.github.io/style-science/#manifesto">
+  <picture>
+    <source media="(max-width: 600px)" srcset="docs/assets/readme-mobile.png">
+    <img src="docs/assets/readme-desktop.png" width="960" alt="Style Science. Design Deserves Better Questions. Style is a language. Make its decisions legible. Design reasoning for AI, agents and automated systems.">
+  </picture>
+</a>
 
-### Design Reasoning for AI, Agents and Automated Systems
-
-**Style is a language. Make its decisions legible.**
+# Design Reasoning
 
 Style Science helps people and software express, test and revise design decisions. Its working foundation, the **Generative Design Canvas (GDC)**, connects declared requirements to captured evidence and inspectable results.
 
 It complements design thinking: what does a choice serve, which constraints does it meet, and what remains uncertain? Human needs guide the questions. Human judgment stays in the process.
 
-[Explore the Live Study](https://jongos.github.io/style-science/#design-study) · [Try the Core](#try-it) · [Practical Uses](#what-could-you-use-it-for) · [Research](#contextual-decisions-and-research)
+> **Research prototype.** GDC reports **pass**, **fail** or **unknown** for declared requirements. A passing check is not proof of beauty, usability or human preference. No human study has been run.
+
+[**The Manifesto**](#eight-commitments-to-better-work) · [**The Live Study**](https://jongos.github.io/style-science/#design-study) · [**Try the Core**](#try-it) · [**Practical Uses**](#what-could-you-use-it-for) · [**Research**](#contextual-decisions-and-research)
+
+---
+
+## Eight Commitments to Better Work
+
+For the people who build design systems. And the systems that make designs.
+
+**01 / Begin With the Life It Enters.**<br>
+The prompt is a brief; the person is the reason.
+
+**02 / Give Every Decision a Reason.**<br>
+A type size establishes importance. A distance separates or connects. A color directs attention. These choices act on one another.
+
+**03 / Make Room for Character.**<br>
+Let the subject determine the voice. A quiet page can be exacting. A vivid page can be disciplined.
+
+**04 / Measure What You Can Defend.**<br>
+A correct ratio cannot tell us whether a page moves someone. A preference cannot excuse text that cannot be read.
+
+**05 / Let the Rule Be Challenged.**<br>
+Record where a rule applies, where it fails and why an exception was made. Keep the evidence that changes your mind.
+
+**06 / Build Knowledge That Travels.**<br>
+Share the relationship, the calculation and the test. Carry understanding between systems without carrying the same appearance everywhere.
+
+**07 / Spend Attention Carefully.**<br>
+Explore alternatives that answer different questions. Keep what earns its place.
+
+**08 / Judge the Thing That Reaches People.**<br>
+Open the document. Use the interface. Read the chart at its real size.
+
+[Read the Full Manifesto](https://jongos.github.io/style-science/#manifesto)
+
+---
+
+## Relationships You Can See
 
 [![The live Style Science study: fine connections and near/far nodes on a dark grid.](docs/assets/design-study.png)](https://jongos.github.io/style-science/#design-study)
 
@@ -19,8 +60,6 @@ It complements design thinking: what does a choice serve, which constraints does
 | A design question | Turn it into explicit requirements and evidence gaps |
 | An agent's alternatives | Check declared constraints before carrying a candidate forward |
 | A software pipeline | Repeat supported checks across tools and environments |
-
-> **Research prototype.** GDC reports **pass**, **fail** or **unknown** for declared requirements. A passing check is not proof of beauty, usability or human preference. No human study has been run.
 
 ---
 
@@ -230,6 +269,8 @@ Keep native medium representations. DTCG tokens and DESIGN.md remain interchange
 Generation and final aesthetic judgment stay with the host and reviewer. `filterCandidates` preserves the eligible input order without ranking it. Boldness, distinction and contextual voice remain deliberate review criteria. A numerical distance is not evidence of perceptual diversity. Candidate selection may be extended only with declared instruments and evaluation evidence.
 
 ## Help Shape the Work
+
+> We do not need machines with impeccable taste. We need systems whose decisions we can understand, whose limits we can see, and whose work we can make better.
 
 Useful contributions begin with a concrete design question, a reproducible example, or a limitation you can demonstrate. Good places to start include:
 
