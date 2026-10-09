@@ -93,6 +93,12 @@ try {
     for(const [structure,expression] of [[0,0],[0,100],[100,0],[100,100],[40,75]]) {
       await page.locator('#structure').fill(String(structure));
       await page.locator('#expression').fill(String(expression));
+      assert.equal(await page.locator('.study-controls input[type="range"]').count(),2);
+      assert.equal(await page.locator('#study').evaluate(n=>getComputedStyle(n).backgroundColor),'rgb(32, 33, 29)');
+      assert.equal(await page.locator('[data-point="0"]').evaluate(n=>getComputedStyle(n).stroke),'rgb(236, 233, 223)');
+      const depth=Math.round(expression/100*(1-structure/100)*100);
+      assert.equal(await page.locator('#depth-value').textContent(),`${depth}/100`);
+      assert.ok((await page.locator('#sample-prompt').textContent()).includes(`Depth: ${depth}/100`));
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`Study overflow ${width}/${structure}/${expression}`);
       states.push(await page.locator('#specimen').evaluate(n=>({font:getComputedStyle(n.querySelector('h3')).fontFamily,gap:getComputedStyle(n).gap,color:getComputedStyle(n).backgroundColor})));
       await page.locator('.experiment').screenshot({path:resolve(evidence,`study-${width}-${structure}-${expression}.png`)});
@@ -152,7 +158,7 @@ try {
   }
   const staticPage=await browser.newPage({javaScriptEnabled:false,viewport:{width:390,height:1000}});
   await staticPage.goto(`http://127.0.0.1:${server.address().port}/`);
-  assert.ok((await staticPage.locator('#sample-prompt').textContent()).includes('Design a field-notes page'));
+  assert.ok((await staticPage.locator('#sample-prompt').textContent()).includes('Create a field-notes page'));
   assert.equal(await staticPage.locator('[data-point]').count(),48);
   assert.equal(await staticPage.locator('#specimen').isVisible(),true);
   await staticPage.close();

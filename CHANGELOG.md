@@ -1,5 +1,21 @@
 # Changelog
 
+## Unreleased - Restore Dark Study Backdrop
+
+- Restored the original ink backdrop and muted grid with monochrome paper-colored nodes and fine connections (0.6-1.6 before viewport scaling). Preserved derived depth, both sliders, all metrics, specimen colors and the dynamic prompt.
+
+## Unreleased - Derived Depth
+
+- Added near/far scale and layering cues derived from Expression times inverse Structure, with a depth readout and matching prompt text. Retained exactly two sliders; no blur, new dependency or browser installation.
+- Extended input-grid regressions for bounded points, deterministic depth and flat endpoints, and browser checks for the derived readout and prompt.
+- Validation: six core/study tests, two static checks and four-width browser checks passed. Existing decorative-arrow contrast remains an automated incomplete check; no new accessibility violations were reported.
+
+## Unreleased - Study Visual Hierarchy
+
+- Replaced the single connecting trace with six connected phrases and filled/hollow point hierarchy. The final chart retains the original monochrome backdrop; specimen surfaces follow the live output.
+- Made the generated prompt explicitly name all eight outputs and adapt composition guidance to both inputs. Added exhaustive grouping, bounds and specimen contrast checks across 441 input pairs.
+- Verified six core/study tests, two static checks and rendered interactions at 1440, 768, 390 and 320px using existing Chrome. Zero automated accessibility violations; the existing decorative-arrow contrast check remains incomplete. No aesthetic-quality claim follows from these checks.
+
 ## Unreleased - Interactive Design Relationships
 
 - Replaced the one-axis interval study with two coupled inputs, 48 multidirectional points, eight live attribute fields, two styled specimens and a prompt generated from the current settings. Mappings remain explicit demonstrations, not design-quality predictions.

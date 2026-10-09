@@ -286,8 +286,8 @@ p {
 .apparatus svg {
   width: 100%;
   display: block;
-  color: #c4ccce;
-  background: #f1f5f5;
+  color: #73776a;
+  background: var(--ink);
   height: 360px;
   border-radius: 4px;
   overflow: hidden;
@@ -325,9 +325,12 @@ p {
 .study-controls .control { margin: 0; }
 .control label { font-size: 15px; font-weight: 600; }
 .range-ends { display: flex; justify-content: space-between; color: #c1c2b7; font-size: 12px; }
-#study circle { fill: var(--dot-color, #5b384f); transition: cx 180ms ease-out, cy 180ms ease-out, r 180ms ease-out, fill 180ms; }
-#study circle:nth-of-type(3n) { fill: #20211d; }
-#study-links { fill: none; stroke: var(--dot-color, #5b384f); stroke-width: .7; opacity: .22; }
+#study circle { fill: var(--paper); stroke: var(--paper); transition: cx 180ms ease-out, cy 180ms ease-out, r 180ms ease-out, fill 180ms; }
+#study circle { stroke-width: 2; }
+#study-links { fill: none; stroke: var(--paper); stroke-linejoin: round; stroke-linecap: round; opacity: .62; }
+#study-links path { transition: stroke-width 180ms, stroke 180ms; }
+.depth-readout { display: flex; gap: 16px; align-items: baseline; font-variant-numeric: tabular-nums; }
+.depth-readout output { color: #e3ef8c; font-weight: 600; }
 .study-values { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; gap: 22px 24px; }
 .study-values > div { border-top: 1px solid #73776a; padding-top: 12px; min-width: 0; }
 .study-values dt { color: #c1c2b7; font-size: 12px; margin-bottom: 8px; }
@@ -354,7 +357,9 @@ p {
 .specimen-schedule dt { font-variant-numeric: tabular-nums; }
 .prompt-field { grid-column: 1 / -1; border-top: 1px solid #73776a; padding-top: 24px; }
 .prompt-field h3 { font-size: 16px; font-weight: 600; margin: 0 0 14px; }
-.prompt-field p { max-width: 74ch; font-size: 15px; min-height: 150px; margin: 0; line-height: 1.7; }
+.prompt-field p { max-width: 74ch; font-size: 15px; margin: 0; line-height: 1.7; }
+.prompt-field #sample-prompt { min-height: 150px; }
+.prompt-field .depth-readout { margin-bottom: 20px; }
 @media (max-width: 700px) {
   .experiment { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .experiment h2 { font-size: 30px; }
@@ -362,7 +367,7 @@ p {
   .study-values { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .specimen { grid-template-columns: minmax(0, 1fr); padding: 20px; min-height: 690px; }
   .specimen-schedule { border-left: 0; border-top: 1px solid var(--sample-accent); padding-left: 0; padding-top: var(--sample-gap); }
-  .prompt-field p { min-height: 340px; }
+  .prompt-field #sample-prompt { min-height: 340px; }
 }
 @media (prefers-reduced-motion: reduce) {
   #study circle { transition: none; }

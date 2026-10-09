@@ -10,6 +10,7 @@ export function deriveStudy(structure = 65, expression = 45) {
   const families = {sans: ['Inter', 'Inter, Arial, sans-serif'], serif: ['Georgia', 'Georgia, "Times New Roman", serif'], monospace: ['Courier New', '"Courier New", Courier, monospace']};
   const state = {
     structure: Math.round(s * 100), expression: Math.round(e * 100),
+    depth: Math.round(interaction * 100),
     family: families[family][0], font: families[family][1],
     weight: family === 'sans' ? Math.round((400 + 350 * e + 100 * s) / 50) * 50 : e + s * .2 > .55 ? 700 : 400,
     heading: Math.round(24 + 12 * e + 6 * interaction),
@@ -33,6 +34,21 @@ export function deriveStudy(structure = 65, expression = 45) {
       radius: Number((3 + e * 3 + (i % 6 === 0 ? 3 + 3 * interaction : 0)).toFixed(2)),
     };
   });
-  state.prompt = `Design a field-notes page with ${state.arrangement}. Set headings in ${state.family} at ${state.heading}px and weight ${state.weight}; use ${state.leading} line height for body copy. Space groups ${state.gap}px apart. Pair ${state.surface} surfaces with ${state.ink} text and ${state.accent} accents, using ${state.radius}px corners. Keep the reading order clear and verify rendered contrast, font availability and mobile overflow. Preserve the content rather than letting the style dictate it.`;
+  // Stable near/far ranks provide 2D depth cues without introducing another input.
+  state.points.forEach((point, i) => {
+    const z = Math.sin(i * 2.3999632297 + .7) * interaction;
+    point.depth = z;
+    point.radius = Number((point.radius * (1 + .65 * z)).toFixed(2));
+    const margin = point.radius + 4;
+    point.x = Number(Math.max(margin, Math.min(600 - margin, 300 + (point.x - 300) * (1 + .1 * z))).toFixed(2));
+    point.y = Number(Math.max(margin, Math.min(360 - margin, 180 + (point.y - 180) * (1 + .1 * z))).toFixed(2));
+  });
+  // A fixed sequence connects eight neighboring elements into each visual phrase.
+  state.bands = Array.from({length: 6}, (_, i) => ({
+    indices: Array.from({length: 8}, (_, j) => i * 8 + j),
+    width: Number((.6 + e * .6 + (1 - s) * .4).toFixed(2)),
+  }));
+  state.prompt = `Create a field-notes page with ${state.arrangement}, reflecting structure ${state.structure}/100 and expression ${state.expression}/100. Typography: ${state.family}, heading size ${state.heading}px, weight ${state.weight}, body line height ${state.leading}. Layout: ${state.gap}px between groups and ${state.radius}px corner radius. Palette: accent ${state.accent}, surface ${state.surface}, text ${state.ink}. ${s > .7 ? 'Use consistent alignment and a clear repeated rhythm.' : 'Let groups breathe while preserving a clear reading order.'} ${e > .55 ? 'Give headings a confident presence and use accent color selectively.' : 'Keep the hierarchy quiet and the emphasis precise.'} Verify rendered contrast, font availability and mobile overflow. Preserve the content rather than letting the style dictate it.`;
+  state.prompt += ` Depth: ${state.depth}/100, derived from expression multiplied by openness (the inverse of structure). ${state.depth === 0 ? 'Keep the composition flat.' : 'Suggest near and far layers with restrained scale differences; keep distant elements sharp and readable.'}`;
   return state;
 }

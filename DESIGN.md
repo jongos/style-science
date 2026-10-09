@@ -17,6 +17,12 @@ Oversized typography introduces the argument. Eight numbered commitments establi
 
 ## Delivery
 
+The chart now retains the original ink backdrop (#20211d), muted grid and monochrome paper-colored marks. The specimen palette still responds to the sliders; chart colors do not. Filled/hollow nodes, connection weight, position and depth supply hierarchy without categorical hues.
+
+Derived depth is Expression / 100 multiplied by (1 - Structure / 100), displayed on a 0-100 scale. Stable sinusoidal node ranks vary radius and radial displacement, with near nodes painted last. These are bounded 2D depth cues, not a physical camera or an empirical aesthetic metric. Zero expression or full structure preserves a flat field. No third control is introduced; the prompt records the derived value.
+
+The study uses six connected visual phrases and filled anchors against hollow satellite points. Fine line weight (0.6-1.6 before viewport scaling) responds to the inputs; the prompt explicitly names all eight output values plus depth. Grouping and hierarchy are authored design choices, not empirical claims about beauty.
+
 `node tools/build_site.mjs` builds the semantic page and text edition from `site/manifesto.json`. JavaScript progressively enhances the spacing study; the entire manifesto remains readable without it. GitHub Pages serves the generated artifact.
 
 Run `node tools/test_site.mjs` with host-installed Playwright and axe-core. Optional `PLAYWRIGHT_MODULE`, `AXE_SCRIPT` and `SITE_EVIDENCE_DIR` select host tooling and screenshot destinations. Browser checks cover narrow and wide viewports, local font loading, anchor targets, keyboard operation and automated accessibility rules. Visual inspection and these checks do not establish human preference or design-quality improvement.
