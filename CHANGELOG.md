@@ -2,6 +2,8 @@
 
 ## Unreleased - Backlog Release Foundation
 
+- After the existing-host rendered workflow passed remotely, enabled path-filtered renderer/site push and PR checks. Added a separate non-browser research CI job. Neither changes branch protection, installs a browser, or promotes experimental APIs into the runtime archive.
+
 - Follow-up CI diagnosis: Ubuntu failed while deleting a synthetic Git fixture because its object directory changed during cleanup. Disabled automatic/detached Git maintenance only for fixture commands and asserted those settings; no cleanup error is suppressed. The optional remote host-rendered run passed using existing Chrome.
 
 - Aligned supported exports with the distribution manifest; split core and experimental tests. Packaging fixtures now validate actual public exports rather than a hand-maintained subset.

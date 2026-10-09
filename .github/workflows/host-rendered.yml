@@ -1,6 +1,11 @@
 name: Optional host-rendered validation
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['html.mjs', 'engine.mjs', 'browser.test.mjs', 'site/**', 'tools/build_site.mjs', 'tools/study_markup.mjs', 'tools/test_site.mjs', '.github/workflows/host-rendered.yml']
+  pull_request:
+    paths: ['html.mjs', 'engine.mjs', 'browser.test.mjs', 'site/**', 'tools/build_site.mjs', 'tools/study_markup.mjs', 'tools/test_site.mjs', '.github/workflows/host-rendered.yml']
 jobs:
   rendered:
     runs-on: windows-latest

@@ -16,9 +16,10 @@ preserve native gates and the prior pin. Packaging tests use actual public expor
 ## Phase 2: Bounded Instruments and Retrieval
 
 Keep rendered instruments (#16) and constraint-aware retrieval (#15) experimental.
-An optional manually triggered workflow (#19) uses existing host Chrome, has a
-ten-minute timeout and never installs a browser. It is not required CI and does
-not close the automated-coverage issue until exercised on the remote host.
+An optional workflow (#19) uses existing host Chrome, has a ten-minute timeout
+and never installs a browser. Its initial remote run passed. It now triggers on
+renderer/site changes as well as manual dispatch; branch protections are unchanged.
+Experimental non-browser tests run in a distinct CI job, not the core suite.
 
 The actual-host smoke comparison invokes Dazzler's existing recipe helper without
 changing it. Ten original synthetic briefs compare its shortlist, a font-availability

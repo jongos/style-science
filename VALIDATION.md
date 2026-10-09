@@ -23,6 +23,9 @@ executable; no browser installation is performed by these commands. The adapter
 uses `GDC_PLAYWRIGHT_MODULE`; the site uses `PLAYWRIGHT_MODULE` and `AXE_SCRIPT`.
 They are separate from required non-browser CI. A skipped rendered check is not
 a pass. The optional host-rendered workflow fails clearly if its host lacks Chrome.
+It runs automatically for renderer/site changes and can also be dispatched
+manually. No branch-protection requirements are changed. A separate non-browser
+research job checks experimental source without promoting it into the release ZIP.
 
 `npm run test:research` validates local experimental modules separately from the
 release core. `test:research:browser` exercises their renderer instruments;
