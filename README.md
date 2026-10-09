@@ -15,38 +15,6 @@ It complements design thinking: what does a choice serve, which constraints does
 
 ---
 
-## Eight Commitments to Better Work
-
-For the people who build design systems. And the systems that make designs.
-
-**01 / Begin With the Life It Enters.**<br>
-The prompt is a brief; the person is the reason.
-
-**02 / Give Every Decision a Reason.**<br>
-A type size establishes importance. A distance separates or connects. A color directs attention. These choices act on one another.
-
-**03 / Make Room for Character.**<br>
-Let the subject determine the voice. A quiet page can be exacting. A vivid page can be disciplined.
-
-**04 / Measure What You Can Defend.**<br>
-A correct ratio cannot tell us whether a page moves someone. A preference cannot excuse text that cannot be read.
-
-**05 / Let the Rule Be Challenged.**<br>
-Record where a rule applies, where it fails and why an exception was made. Keep the evidence that changes your mind.
-
-**06 / Build Knowledge That Travels.**<br>
-Share the relationship, the calculation and the test. Carry understanding between systems without carrying the same appearance everywhere.
-
-**07 / Spend Attention Carefully.**<br>
-Explore alternatives that answer different questions. Keep what earns its place.
-
-**08 / Judge the Thing That Reaches People.**<br>
-Open the document. Use the interface. Read the chart at its real size.
-
-[Read the Full Manifesto](https://jongos.github.io/style-science/#manifesto)
-
----
-
 ## Relationships You Can See
 
 [![The live Style Science study: fine connections and near/far nodes on a dark grid.](docs/assets/design-study.png)](https://jongos.github.io/style-science/#design-study)
@@ -63,9 +31,7 @@ Open the document. Use the interface. Read the chart at its real size.
 
 ## From Principles to Working Tools
 
-Our research direction is informed by [Penrose](https://penrose.cs.cmu.edu/docs/ref), [Scout](https://arxiv.org/abs/2001.05424), [C-K design theory](https://www.cambridge.org/core/journals/ai-edam/article/abs/teaching-innovative-design-reasoning-how-conceptknowledge-theory-can-help-overcome-fixation-effects/C6BBCFEB0A1368C37A616E4F26AA7EAC), [Design Model](https://github.com/sherizan/design-model), [AgentsORG / DESIGN](https://github.com/AgentsORG/DESIGN), [design-pact](https://github.com/no7z/design-pact) and the [DTCG token specification](https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/). They approach different parts of the problem: formal representations, design exploration, executable contracts and interoperability. We acknowledge their contributions without claiming affiliation, endorsement or implemented compatibility. [Related work and proposed experiments](RELATED-WORK.md) distinguish the source ideas from our hypotheses and implementation status.
-
-A type size establishes importance. A distance separates or connects. A color directs attention. Style Science asks how those decisions can become knowledge that travels between tools without making every result look the same.
+Our research direction is informed by [Penrose](https://penrose.cs.cmu.edu/docs/ref), [Scout](https://arxiv.org/abs/2001.05424), [C-K design theory](https://www.cambridge.org/core/journals/ai-edam/article/abs/teaching-innovative-design-reasoning-how-conceptknowledge-theory-can-help-overcome-fixation-effects/C6BBCFEB0A1368C37A616E4F26AA7EAC), [Design Model](https://github.com/sherizan/design-model), [AgentsORG / DESIGN](https://github.com/AgentsORG/DESIGN), [design-pact](https://github.com/no7z/design-pact) and the [DTCG token specification](https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/). 
 
 Three commitments guide the work:
 
