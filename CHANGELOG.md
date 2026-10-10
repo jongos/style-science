@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased - Bounded Constraint Repairs
+
+- Saved the mathematical design-reasoning plan and predeclared first-experiment protocol. Compared verification-only, local first-failure repair and bounded all-requirement search on 48 synthetic cases; all case outcomes and source hashes are retained.
+- Retained experimental JS/Python finite-domain repair proposals and inclusion-minimal conflicts. Bounded search repaired 20/20 repairable held-out cases; the local heuristic repaired 8, missed 8 and made 8 invalid proposals across the complete held-out set. The weak scale-based holdout does not establish real-world or aesthetic benefit.
+- Kept the unsuccessful heuristic only as evaluation code. No automatic edits, browser installs, Jev calls, stable exports, distribution additions or Dazzler changes. Added regression/parity, abstention, exact-budget and supplementary independent-oracle checks to the research suite.
+- Local verification: 47 core, 31 research and two downstream provenance/routing tests passed. The initial sandboxed extracted-archive consumer failure passed in the unchanged unsandboxed rerun. No renderer changes; browser checks were not run.
+
 ## Unreleased - README Art Direction
 
 - Brought the manifesto's Inter typography, paper/ink/red palette and numbered commitments into the main README. Added desktop/mobile masthead artwork with editable HTML and a host-browser-only renderer; preserved native text, technical instructions and research limitations.

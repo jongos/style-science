@@ -1,0 +1,2198 @@
+[
+  {
+    "id": "already-valid-1",
+    "family": "already-valid",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-already-valid-1",
+      "observedRevision": "synthetic-already-valid-1",
+      "variables": {
+        "x": {
+          "value": 1,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 1,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": "single-repair-1",
+    "family": "single-repair",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-single-repair-1",
+      "observedRevision": "synthetic-single-repair-1",
+      "variables": {
+        "x": {
+          "value": 3,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 2,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": "coupled-repair-1",
+    "family": "coupled-repair",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-coupled-repair-1",
+      "observedRevision": "synthetic-coupled-repair-1",
+      "variables": {
+        "x": {
+          "value": 3,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 3,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "secondary-trap-1",
+    "family": "secondary-trap",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-secondary-trap-1",
+      "observedRevision": "synthetic-secondary-trap-1",
+      "variables": {
+        "x": {
+          "value": 3,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 2,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 4
+        },
+        {
+          "id": "minimum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "ge",
+          "rhs": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "locked-obstruction-1",
+    "family": "locked-obstruction",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-locked-obstruction-1",
+      "observedRevision": "synthetic-locked-obstruction-1",
+      "variables": {
+        "x": {
+          "value": 3,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": true,
+          "unit": "px"
+        },
+        "y": {
+          "value": 2,
+          "domain": [
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": "contradiction-1",
+    "family": "contradiction",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-contradiction-1",
+      "observedRevision": "synthetic-contradiction-1",
+      "variables": {
+        "x": {
+          "value": 3,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 2,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "maximum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "le",
+          "rhs": 1
+        },
+        {
+          "id": "minimum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "ge",
+          "rhs": 2
+        },
+        {
+          "id": "irrelevant-y",
+          "terms": {
+            "y": 1
+          },
+          "relation": "ge",
+          "rhs": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "equal-cost-1",
+    "family": "equal-cost",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-equal-cost-1",
+      "observedRevision": "synthetic-equal-cost-1",
+      "variables": {
+        "x": {
+          "value": 3,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 3,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": "signed-equality-1",
+    "family": "signed-equality",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-signed-equality-1",
+      "observedRevision": "synthetic-signed-equality-1",
+      "variables": {
+        "x": {
+          "value": 1,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 3,
+          "domain": [
+            1,
+            2,
+            3
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "difference",
+          "terms": {
+            "x": 1,
+            "y": -1
+          },
+          "relation": "eq",
+          "rhs": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "already-valid-2",
+    "family": "already-valid",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-already-valid-2",
+      "observedRevision": "synthetic-already-valid-2",
+      "variables": {
+        "x": {
+          "value": 2,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 2,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 8
+        }
+      ]
+    }
+  },
+  {
+    "id": "single-repair-2",
+    "family": "single-repair",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-single-repair-2",
+      "observedRevision": "synthetic-single-repair-2",
+      "variables": {
+        "x": {
+          "value": 6,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 4,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 8
+        }
+      ]
+    }
+  },
+  {
+    "id": "coupled-repair-2",
+    "family": "coupled-repair",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-coupled-repair-2",
+      "observedRevision": "synthetic-coupled-repair-2",
+      "variables": {
+        "x": {
+          "value": 6,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 6,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": "secondary-trap-2",
+    "family": "secondary-trap",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-secondary-trap-2",
+      "observedRevision": "synthetic-secondary-trap-2",
+      "variables": {
+        "x": {
+          "value": 6,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 4,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 8
+        },
+        {
+          "id": "minimum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "ge",
+          "rhs": 6
+        }
+      ]
+    }
+  },
+  {
+    "id": "locked-obstruction-2",
+    "family": "locked-obstruction",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-locked-obstruction-2",
+      "observedRevision": "synthetic-locked-obstruction-2",
+      "variables": {
+        "x": {
+          "value": 6,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": true,
+          "unit": "px"
+        },
+        "y": {
+          "value": 4,
+          "domain": [
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 8
+        }
+      ]
+    }
+  },
+  {
+    "id": "contradiction-2",
+    "family": "contradiction",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-contradiction-2",
+      "observedRevision": "synthetic-contradiction-2",
+      "variables": {
+        "x": {
+          "value": 6,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 4,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "maximum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "le",
+          "rhs": 2
+        },
+        {
+          "id": "minimum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "ge",
+          "rhs": 4
+        },
+        {
+          "id": "irrelevant-y",
+          "terms": {
+            "y": 1
+          },
+          "relation": "ge",
+          "rhs": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "equal-cost-2",
+    "family": "equal-cost",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-equal-cost-2",
+      "observedRevision": "synthetic-equal-cost-2",
+      "variables": {
+        "x": {
+          "value": 6,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 6,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 10
+        }
+      ]
+    }
+  },
+  {
+    "id": "signed-equality-2",
+    "family": "signed-equality",
+    "split": "development",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-signed-equality-2",
+      "observedRevision": "synthetic-signed-equality-2",
+      "variables": {
+        "x": {
+          "value": 2,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 6,
+          "domain": [
+            2,
+            4,
+            6
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "difference",
+          "terms": {
+            "x": 1,
+            "y": -1
+          },
+          "relation": "eq",
+          "rhs": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "already-valid-3",
+    "family": "already-valid",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-already-valid-3",
+      "observedRevision": "synthetic-already-valid-3",
+      "variables": {
+        "x": {
+          "value": 3,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 3,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 12
+        }
+      ]
+    }
+  },
+  {
+    "id": "single-repair-3",
+    "family": "single-repair",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-single-repair-3",
+      "observedRevision": "synthetic-single-repair-3",
+      "variables": {
+        "x": {
+          "value": 9,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 6,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 12
+        }
+      ]
+    }
+  },
+  {
+    "id": "coupled-repair-3",
+    "family": "coupled-repair",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-coupled-repair-3",
+      "observedRevision": "synthetic-coupled-repair-3",
+      "variables": {
+        "x": {
+          "value": 9,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 9,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 6
+        }
+      ]
+    }
+  },
+  {
+    "id": "secondary-trap-3",
+    "family": "secondary-trap",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-secondary-trap-3",
+      "observedRevision": "synthetic-secondary-trap-3",
+      "variables": {
+        "x": {
+          "value": 9,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 6,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 12
+        },
+        {
+          "id": "minimum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "ge",
+          "rhs": 9
+        }
+      ]
+    }
+  },
+  {
+    "id": "locked-obstruction-3",
+    "family": "locked-obstruction",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-locked-obstruction-3",
+      "observedRevision": "synthetic-locked-obstruction-3",
+      "variables": {
+        "x": {
+          "value": 9,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": true,
+          "unit": "px"
+        },
+        "y": {
+          "value": 6,
+          "domain": [
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 12
+        }
+      ]
+    }
+  },
+  {
+    "id": "contradiction-3",
+    "family": "contradiction",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-contradiction-3",
+      "observedRevision": "synthetic-contradiction-3",
+      "variables": {
+        "x": {
+          "value": 9,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 6,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "maximum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "le",
+          "rhs": 3
+        },
+        {
+          "id": "minimum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "ge",
+          "rhs": 6
+        },
+        {
+          "id": "irrelevant-y",
+          "terms": {
+            "y": 1
+          },
+          "relation": "ge",
+          "rhs": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "equal-cost-3",
+    "family": "equal-cost",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-equal-cost-3",
+      "observedRevision": "synthetic-equal-cost-3",
+      "variables": {
+        "x": {
+          "value": 9,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 9,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 15
+        }
+      ]
+    }
+  },
+  {
+    "id": "signed-equality-3",
+    "family": "signed-equality",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-signed-equality-3",
+      "observedRevision": "synthetic-signed-equality-3",
+      "variables": {
+        "x": {
+          "value": 3,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 9,
+          "domain": [
+            3,
+            6,
+            9
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "difference",
+          "terms": {
+            "x": 1,
+            "y": -1
+          },
+          "relation": "eq",
+          "rhs": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "already-valid-5",
+    "family": "already-valid",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-already-valid-5",
+      "observedRevision": "synthetic-already-valid-5",
+      "variables": {
+        "x": {
+          "value": 5,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 5,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "single-repair-5",
+    "family": "single-repair",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-single-repair-5",
+      "observedRevision": "synthetic-single-repair-5",
+      "variables": {
+        "x": {
+          "value": 15,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 10,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "coupled-repair-5",
+    "family": "coupled-repair",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-coupled-repair-5",
+      "observedRevision": "synthetic-coupled-repair-5",
+      "variables": {
+        "x": {
+          "value": 15,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 15,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 10
+        }
+      ]
+    }
+  },
+  {
+    "id": "secondary-trap-5",
+    "family": "secondary-trap",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-secondary-trap-5",
+      "observedRevision": "synthetic-secondary-trap-5",
+      "variables": {
+        "x": {
+          "value": 15,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 10,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 20
+        },
+        {
+          "id": "minimum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "ge",
+          "rhs": 15
+        }
+      ]
+    }
+  },
+  {
+    "id": "locked-obstruction-5",
+    "family": "locked-obstruction",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-locked-obstruction-5",
+      "observedRevision": "synthetic-locked-obstruction-5",
+      "variables": {
+        "x": {
+          "value": 15,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": true,
+          "unit": "px"
+        },
+        "y": {
+          "value": 10,
+          "domain": [
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "contradiction-5",
+    "family": "contradiction",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-contradiction-5",
+      "observedRevision": "synthetic-contradiction-5",
+      "variables": {
+        "x": {
+          "value": 15,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 10,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "maximum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "le",
+          "rhs": 5
+        },
+        {
+          "id": "minimum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "ge",
+          "rhs": 10
+        },
+        {
+          "id": "irrelevant-y",
+          "terms": {
+            "y": 1
+          },
+          "relation": "ge",
+          "rhs": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": "equal-cost-5",
+    "family": "equal-cost",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-equal-cost-5",
+      "observedRevision": "synthetic-equal-cost-5",
+      "variables": {
+        "x": {
+          "value": 15,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 15,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 25
+        }
+      ]
+    }
+  },
+  {
+    "id": "signed-equality-5",
+    "family": "signed-equality",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-signed-equality-5",
+      "observedRevision": "synthetic-signed-equality-5",
+      "variables": {
+        "x": {
+          "value": 5,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 15,
+          "domain": [
+            5,
+            10,
+            15
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "difference",
+          "terms": {
+            "x": 1,
+            "y": -1
+          },
+          "relation": "eq",
+          "rhs": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": "already-valid-7",
+    "family": "already-valid",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-already-valid-7",
+      "observedRevision": "synthetic-already-valid-7",
+      "variables": {
+        "x": {
+          "value": 7,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 7,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 28
+        }
+      ]
+    }
+  },
+  {
+    "id": "single-repair-7",
+    "family": "single-repair",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-single-repair-7",
+      "observedRevision": "synthetic-single-repair-7",
+      "variables": {
+        "x": {
+          "value": 21,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 14,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 28
+        }
+      ]
+    }
+  },
+  {
+    "id": "coupled-repair-7",
+    "family": "coupled-repair",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-coupled-repair-7",
+      "observedRevision": "synthetic-coupled-repair-7",
+      "variables": {
+        "x": {
+          "value": 21,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 21,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 14
+        }
+      ]
+    }
+  },
+  {
+    "id": "secondary-trap-7",
+    "family": "secondary-trap",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-secondary-trap-7",
+      "observedRevision": "synthetic-secondary-trap-7",
+      "variables": {
+        "x": {
+          "value": 21,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 14,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 28
+        },
+        {
+          "id": "minimum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "ge",
+          "rhs": 21
+        }
+      ]
+    }
+  },
+  {
+    "id": "locked-obstruction-7",
+    "family": "locked-obstruction",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-locked-obstruction-7",
+      "observedRevision": "synthetic-locked-obstruction-7",
+      "variables": {
+        "x": {
+          "value": 21,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": true,
+          "unit": "px"
+        },
+        "y": {
+          "value": 14,
+          "domain": [
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 28
+        }
+      ]
+    }
+  },
+  {
+    "id": "contradiction-7",
+    "family": "contradiction",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-contradiction-7",
+      "observedRevision": "synthetic-contradiction-7",
+      "variables": {
+        "x": {
+          "value": 21,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 14,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "maximum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "le",
+          "rhs": 7
+        },
+        {
+          "id": "minimum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "ge",
+          "rhs": 14
+        },
+        {
+          "id": "irrelevant-y",
+          "terms": {
+            "y": 1
+          },
+          "relation": "ge",
+          "rhs": 7
+        }
+      ]
+    }
+  },
+  {
+    "id": "equal-cost-7",
+    "family": "equal-cost",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-equal-cost-7",
+      "observedRevision": "synthetic-equal-cost-7",
+      "variables": {
+        "x": {
+          "value": 21,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 21,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 35
+        }
+      ]
+    }
+  },
+  {
+    "id": "signed-equality-7",
+    "family": "signed-equality",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-signed-equality-7",
+      "observedRevision": "synthetic-signed-equality-7",
+      "variables": {
+        "x": {
+          "value": 7,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 21,
+          "domain": [
+            7,
+            14,
+            21
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "difference",
+          "terms": {
+            "x": 1,
+            "y": -1
+          },
+          "relation": "eq",
+          "rhs": 7
+        }
+      ]
+    }
+  },
+  {
+    "id": "already-valid-11",
+    "family": "already-valid",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-already-valid-11",
+      "observedRevision": "synthetic-already-valid-11",
+      "variables": {
+        "x": {
+          "value": 11,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 11,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 44
+        }
+      ]
+    }
+  },
+  {
+    "id": "single-repair-11",
+    "family": "single-repair",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-single-repair-11",
+      "observedRevision": "synthetic-single-repair-11",
+      "variables": {
+        "x": {
+          "value": 33,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 22,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 44
+        }
+      ]
+    }
+  },
+  {
+    "id": "coupled-repair-11",
+    "family": "coupled-repair",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-coupled-repair-11",
+      "observedRevision": "synthetic-coupled-repair-11",
+      "variables": {
+        "x": {
+          "value": 33,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 33,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 22
+        }
+      ]
+    }
+  },
+  {
+    "id": "secondary-trap-11",
+    "family": "secondary-trap",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-secondary-trap-11",
+      "observedRevision": "synthetic-secondary-trap-11",
+      "variables": {
+        "x": {
+          "value": 33,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 22,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 44
+        },
+        {
+          "id": "minimum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "ge",
+          "rhs": 33
+        }
+      ]
+    }
+  },
+  {
+    "id": "locked-obstruction-11",
+    "family": "locked-obstruction",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-locked-obstruction-11",
+      "observedRevision": "synthetic-locked-obstruction-11",
+      "variables": {
+        "x": {
+          "value": 33,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": true,
+          "unit": "px"
+        },
+        "y": {
+          "value": 22,
+          "domain": [
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 44
+        }
+      ]
+    }
+  },
+  {
+    "id": "contradiction-11",
+    "family": "contradiction",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-contradiction-11",
+      "observedRevision": "synthetic-contradiction-11",
+      "variables": {
+        "x": {
+          "value": 33,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 22,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "maximum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "le",
+          "rhs": 11
+        },
+        {
+          "id": "minimum-x",
+          "terms": {
+            "x": 1
+          },
+          "relation": "ge",
+          "rhs": 22
+        },
+        {
+          "id": "irrelevant-y",
+          "terms": {
+            "y": 1
+          },
+          "relation": "ge",
+          "rhs": 11
+        }
+      ]
+    }
+  },
+  {
+    "id": "equal-cost-11",
+    "family": "equal-cost",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-equal-cost-11",
+      "observedRevision": "synthetic-equal-cost-11",
+      "variables": {
+        "x": {
+          "value": 33,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 33,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "capacity",
+          "terms": {
+            "x": 1,
+            "y": 1
+          },
+          "relation": "le",
+          "rhs": 55
+        }
+      ]
+    }
+  },
+  {
+    "id": "signed-equality-11",
+    "family": "signed-equality",
+    "split": "held-out",
+    "problem": {
+      "version": 1,
+      "artifactRevision": "synthetic-signed-equality-11",
+      "observedRevision": "synthetic-signed-equality-11",
+      "variables": {
+        "x": {
+          "value": 11,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        },
+        "y": {
+          "value": 33,
+          "domain": [
+            11,
+            22,
+            33
+          ],
+          "locked": false,
+          "unit": "px"
+        }
+      },
+      "requirements": [
+        {
+          "id": "difference",
+          "terms": {
+            "x": 1,
+            "y": -1
+          },
+          "relation": "eq",
+          "rhs": 11
+        }
+      ]
+    }
+  }
+]

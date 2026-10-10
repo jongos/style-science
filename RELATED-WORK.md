@@ -1,5 +1,11 @@
 # Related work informing Style Science
 
+The October 10 follow-on [mathematical research plan](evaluation/MATHEMATICAL-RESEARCH-PLAN.md)
+connects constraint solving, color perception and interaction models. Its first
+[bounded conflict/repair experiment](evaluation/constraint-repair/README.md) retains
+an experimental finite-domain helper after synthetic comparisons. It does not
+implement Cassowary/Draco, validate rendered layouts or establish aesthetic benefit.
+
 Reviewed October 8, 2026. Style Science is an open, evidence-aware framework for
 design reasoning: helping AI agents express, test and revise design decisions in
 service of human needs. We are not inventing design reasoning from scratch.

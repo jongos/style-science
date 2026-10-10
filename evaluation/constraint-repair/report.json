@@ -1,0 +1,3413 @@
+{
+  "experiment": "constraint-repair-1",
+  "scope": "synthetic-finite-domain-engineering-only",
+  "releaseEligible": false,
+  "sourceRevision": "20e45834d08aaf0ba3d26ba7346449e23dcf6030",
+  "workingTree": "?? constraint-repair.mjs\n?? constraint-repair.test.mjs\n?? constraint_repair.py\n?? debug.log\n?? evaluation/MATHEMATICAL-RESEARCH-PLAN.md\n?? evaluation/constraint-repair/",
+  "sources": {
+    "constraint-repair.mjs": "468ab742aebc75d996e24ff73f35523983c7cd0efbed3bf895f72cca9e22a40e",
+    "constraint_repair.py": "d4efd9ac30e8722276d7a7f34b37ef3fe60450ceef71b609b3feaa71924fa19a",
+    "constraint-repair.test.mjs": "786a8413931c62f572bcd15f97a5e5470e1ab2f954487612990a4de26cb19f08",
+    "evaluation/constraint-repair/PROTOCOL.md": "317d667f8f37b841bd9213c3973e9f9d98d6999cac2b148852cba5cd294ab36d",
+    "evaluation/constraint-repair/fixtures.mjs": "06b5070ae2790ae3456798ec1baa47248f31fb3730361acc250ba50725b4273c",
+    "evaluation/constraint-repair/compare.mjs": "57ac15ac558ac39c16d4294912a7684d78fd555a2a37560d4a0fa75b898a0266",
+    "evaluation/constraint-repair/run.mjs": "745d5cb8f9ee7f4d668e82debcc03598f482ea1c3290a3fc95162096c1fdf12e"
+  },
+  "corpusSha256": "372f732682169d6f4cbc56fbcb9c8dc97a48156ee8db9e44d1b8a75eae14bec5",
+  "elapsedMs": 10.058399999999999,
+  "node": "v24.19.0",
+  "timingScope": "one local JS comparison pass including reference enumeration; not a cross-machine benchmark",
+  "retention": "retain-experimentally-subject-to-abstention-and-parity-tests",
+  "summary": {
+    "development": {
+      "cases": 16,
+      "repairable": 10,
+      "feasibilityCorrect": 16,
+      "optimal": 16,
+      "conflictCorrect": 16,
+      "irrelevantConstraintsRemoved": 2,
+      "baseline": {
+        "validRepairs": 0,
+        "invalidProposals": 0,
+        "missingRepairs": 10,
+        "lockViolations": 0
+      },
+      "local": {
+        "validRepairs": 4,
+        "invalidProposals": 4,
+        "missingRepairs": 4,
+        "lockViolations": 0
+      },
+      "candidate": {
+        "validRepairs": 10,
+        "invalidProposals": 0,
+        "missingRepairs": 0,
+        "lockViolations": 0
+      }
+    },
+    "held-out": {
+      "cases": 32,
+      "repairable": 20,
+      "feasibilityCorrect": 32,
+      "optimal": 32,
+      "conflictCorrect": 32,
+      "irrelevantConstraintsRemoved": 4,
+      "baseline": {
+        "validRepairs": 0,
+        "invalidProposals": 0,
+        "missingRepairs": 20,
+        "lockViolations": 0
+      },
+      "local": {
+        "validRepairs": 8,
+        "invalidProposals": 8,
+        "missingRepairs": 8,
+        "lockViolations": 0
+      },
+      "candidate": {
+        "validRepairs": 20,
+        "invalidProposals": 0,
+        "missingRepairs": 0,
+        "lockViolations": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "already-valid-1",
+      "family": "already-valid",
+      "split": "development",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          0,
+          0
+        ]
+      },
+      "currentValid": true,
+      "repairable": false,
+      "baseline": {
+        "failed": [],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": null,
+        "artifactRevision": "synthetic-already-valid-1",
+        "inputHash": "237727d76543bc7a91c614bc4f1b1eb9b1889b5df884ed31dc7d475eb0aae891",
+        "status": "satisfied",
+        "failed": [],
+        "evaluatedAssignments": 0
+      }
+    },
+    {
+      "id": "single-repair-1",
+      "family": "single-repair",
+      "split": "development",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          1
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 2,
+          "y": 2
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 2,
+          "y": 2
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 2,
+            "y": 2
+          },
+          "cost": [
+            1,
+            1
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 3,
+              "to": 2
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-single-repair-1",
+        "inputHash": "fc7c6e043b4816c66a4bd6747a2eea4d6c057b080b4ee2b90ebb1b68f9211b90",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "coupled-repair-1",
+      "family": "coupled-repair",
+      "split": "development",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          2,
+          4
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 1,
+          "y": 1
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 1,
+            "y": 1
+          },
+          "cost": [
+            2,
+            4
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 3,
+              "to": 1
+            },
+            {
+              "variable": "y",
+              "from": 3,
+              "to": 1
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-coupled-repair-1",
+        "inputHash": "ba04667aa88d80e17cb4b82855e04dc4da85eec86f25dab90bf62996a43bfd04",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "secondary-trap-1",
+      "family": "secondary-trap",
+      "split": "development",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          1
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 2,
+          "y": 2
+        },
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 3,
+          "y": 1
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 3,
+            "y": 1
+          },
+          "cost": [
+            1,
+            1
+          ],
+          "changes": [
+            {
+              "variable": "y",
+              "from": 2,
+              "to": 1
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-secondary-trap-1",
+        "inputHash": "9ffc6cac63f49ec70d826ecfcde1d3704a8d21277f23518c4d45af586abbc8d0",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "locked-obstruction-1",
+      "family": "locked-obstruction",
+      "split": "development",
+      "reference": {
+        "feasible": false,
+        "minimumCost": null
+      },
+      "currentValid": false,
+      "repairable": false,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": {
+          "requirements": [
+            "capacity"
+          ],
+          "domains": {
+            "x": [
+              3
+            ],
+            "y": [
+              2,
+              3
+            ]
+          },
+          "locked": [
+            "x"
+          ],
+          "minimality": "inclusion-minimal-relative-to-domains-and-locks"
+        },
+        "artifactRevision": "synthetic-locked-obstruction-1",
+        "inputHash": "bf8b60fd6998dbe11e0051fc5c648a4f9f59db3ab8b468b31d4d65d650205eda",
+        "status": "infeasible",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 2
+      }
+    },
+    {
+      "id": "contradiction-1",
+      "family": "contradiction",
+      "split": "development",
+      "reference": {
+        "feasible": false,
+        "minimumCost": null
+      },
+      "currentValid": false,
+      "repairable": false,
+      "baseline": {
+        "failed": [
+          "maximum-x"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 1,
+          "y": 2
+        },
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": {
+          "requirements": [
+            "maximum-x",
+            "minimum-x"
+          ],
+          "domains": {
+            "x": [
+              1,
+              2,
+              3
+            ],
+            "y": [
+              1,
+              2,
+              3
+            ]
+          },
+          "locked": [],
+          "minimality": "inclusion-minimal-relative-to-domains-and-locks"
+        },
+        "artifactRevision": "synthetic-contradiction-1",
+        "inputHash": "4b2f3a1bb276893d756e3d16ce03abff559f5df637d7ec5a925dcb5cd7c06477",
+        "status": "infeasible",
+        "failed": [
+          "maximum-x"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "equal-cost-1",
+      "family": "equal-cost",
+      "split": "development",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          1
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 2,
+          "y": 3
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 2,
+          "y": 3
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 2,
+            "y": 3
+          },
+          "cost": [
+            1,
+            1
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 3,
+              "to": 2
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-equal-cost-1",
+        "inputHash": "850465949af34121255a72334bbee4fb55baa367f4b8169506497906fc6e215c",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "signed-equality-1",
+      "family": "signed-equality",
+      "split": "development",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          2,
+          3
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "difference"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 2,
+          "y": 1
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 2,
+            "y": 1
+          },
+          "cost": [
+            2,
+            3
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 1,
+              "to": 2
+            },
+            {
+              "variable": "y",
+              "from": 3,
+              "to": 1
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-signed-equality-1",
+        "inputHash": "f174f96271b39ce4d630424d9a9876cbca354cd81d19fea4f973a531829ba441",
+        "status": "repair-proposed",
+        "failed": [
+          "difference"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "already-valid-2",
+      "family": "already-valid",
+      "split": "development",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          0,
+          0
+        ]
+      },
+      "currentValid": true,
+      "repairable": false,
+      "baseline": {
+        "failed": [],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": null,
+        "artifactRevision": "synthetic-already-valid-2",
+        "inputHash": "7945780f3bfa52421e78c1414c8b4b050887b9348114dcb2b623a317e09e4dea",
+        "status": "satisfied",
+        "failed": [],
+        "evaluatedAssignments": 0
+      }
+    },
+    {
+      "id": "single-repair-2",
+      "family": "single-repair",
+      "split": "development",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          2
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 4,
+          "y": 4
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 4,
+          "y": 4
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 4,
+            "y": 4
+          },
+          "cost": [
+            1,
+            2
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 6,
+              "to": 4
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-single-repair-2",
+        "inputHash": "5826f7e02317079984f8d7e6bc536d16466bd44a21bf3d3e7ddf7bb35d9add32",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "coupled-repair-2",
+      "family": "coupled-repair",
+      "split": "development",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          2,
+          8
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 2,
+          "y": 2
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 2,
+            "y": 2
+          },
+          "cost": [
+            2,
+            8
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 6,
+              "to": 2
+            },
+            {
+              "variable": "y",
+              "from": 6,
+              "to": 2
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-coupled-repair-2",
+        "inputHash": "dc99246b0c4e463353a987179c001157c9a3eb63a25ecdaf2739e18d3b68803a",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "secondary-trap-2",
+      "family": "secondary-trap",
+      "split": "development",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          2
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 4,
+          "y": 4
+        },
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 6,
+          "y": 2
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 6,
+            "y": 2
+          },
+          "cost": [
+            1,
+            2
+          ],
+          "changes": [
+            {
+              "variable": "y",
+              "from": 4,
+              "to": 2
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-secondary-trap-2",
+        "inputHash": "9a6f43b42edf286ab6582ede395d708fca57eda9097bd3e5f3f25e93b351d3d3",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "locked-obstruction-2",
+      "family": "locked-obstruction",
+      "split": "development",
+      "reference": {
+        "feasible": false,
+        "minimumCost": null
+      },
+      "currentValid": false,
+      "repairable": false,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": {
+          "requirements": [
+            "capacity"
+          ],
+          "domains": {
+            "x": [
+              6
+            ],
+            "y": [
+              4,
+              6
+            ]
+          },
+          "locked": [
+            "x"
+          ],
+          "minimality": "inclusion-minimal-relative-to-domains-and-locks"
+        },
+        "artifactRevision": "synthetic-locked-obstruction-2",
+        "inputHash": "c7f05af5ba99cdebb7e9fcea961890951b34fda4548f5f177b9dd6845ec4b081",
+        "status": "infeasible",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 2
+      }
+    },
+    {
+      "id": "contradiction-2",
+      "family": "contradiction",
+      "split": "development",
+      "reference": {
+        "feasible": false,
+        "minimumCost": null
+      },
+      "currentValid": false,
+      "repairable": false,
+      "baseline": {
+        "failed": [
+          "maximum-x"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 2,
+          "y": 4
+        },
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": {
+          "requirements": [
+            "maximum-x",
+            "minimum-x"
+          ],
+          "domains": {
+            "x": [
+              2,
+              4,
+              6
+            ],
+            "y": [
+              2,
+              4,
+              6
+            ]
+          },
+          "locked": [],
+          "minimality": "inclusion-minimal-relative-to-domains-and-locks"
+        },
+        "artifactRevision": "synthetic-contradiction-2",
+        "inputHash": "944b908084d6073fa7d82e0c3dbef4c5d650944452dbf1ef70c79ad741910d6d",
+        "status": "infeasible",
+        "failed": [
+          "maximum-x"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "equal-cost-2",
+      "family": "equal-cost",
+      "split": "development",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          2
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 4,
+          "y": 6
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 4,
+          "y": 6
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 4,
+            "y": 6
+          },
+          "cost": [
+            1,
+            2
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 6,
+              "to": 4
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-equal-cost-2",
+        "inputHash": "5285738a37647d4d0b01924b1fb6cf0f49f27fa3cf13e5a34aa536aafda6580e",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "signed-equality-2",
+      "family": "signed-equality",
+      "split": "development",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          2,
+          6
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "difference"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 4,
+          "y": 2
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 4,
+            "y": 2
+          },
+          "cost": [
+            2,
+            6
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 2,
+              "to": 4
+            },
+            {
+              "variable": "y",
+              "from": 6,
+              "to": 2
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-signed-equality-2",
+        "inputHash": "5083e7cd27dbb9e1a5780f68a4ee9a002f4cec38c878815eebd3d17eae27cfe9",
+        "status": "repair-proposed",
+        "failed": [
+          "difference"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "already-valid-3",
+      "family": "already-valid",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          0,
+          0
+        ]
+      },
+      "currentValid": true,
+      "repairable": false,
+      "baseline": {
+        "failed": [],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": null,
+        "artifactRevision": "synthetic-already-valid-3",
+        "inputHash": "38ccbfee2e4d079b1f2f0f82846c66bb24121343a8508da39ceb56a819783490",
+        "status": "satisfied",
+        "failed": [],
+        "evaluatedAssignments": 0
+      }
+    },
+    {
+      "id": "single-repair-3",
+      "family": "single-repair",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          3
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 6,
+          "y": 6
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 6,
+          "y": 6
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 6,
+            "y": 6
+          },
+          "cost": [
+            1,
+            3
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 9,
+              "to": 6
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-single-repair-3",
+        "inputHash": "bb9c3627e17efb37840f4977d0a694ee43fa693b823e127663a99f0975850847",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "coupled-repair-3",
+      "family": "coupled-repair",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          2,
+          12
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 3,
+          "y": 3
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 3,
+            "y": 3
+          },
+          "cost": [
+            2,
+            12
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 9,
+              "to": 3
+            },
+            {
+              "variable": "y",
+              "from": 9,
+              "to": 3
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-coupled-repair-3",
+        "inputHash": "b64e594bcf52c27de0fdd528838a8b6f45d96e4ad5ccf18b2afcdd8f1010d1ce",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "secondary-trap-3",
+      "family": "secondary-trap",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          3
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 6,
+          "y": 6
+        },
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 9,
+          "y": 3
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 9,
+            "y": 3
+          },
+          "cost": [
+            1,
+            3
+          ],
+          "changes": [
+            {
+              "variable": "y",
+              "from": 6,
+              "to": 3
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-secondary-trap-3",
+        "inputHash": "c921b7b2e62c73a55a14426f41df4a9f9b855db61e9bc58982eb1ecc29b2203d",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "locked-obstruction-3",
+      "family": "locked-obstruction",
+      "split": "held-out",
+      "reference": {
+        "feasible": false,
+        "minimumCost": null
+      },
+      "currentValid": false,
+      "repairable": false,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": {
+          "requirements": [
+            "capacity"
+          ],
+          "domains": {
+            "x": [
+              9
+            ],
+            "y": [
+              6,
+              9
+            ]
+          },
+          "locked": [
+            "x"
+          ],
+          "minimality": "inclusion-minimal-relative-to-domains-and-locks"
+        },
+        "artifactRevision": "synthetic-locked-obstruction-3",
+        "inputHash": "87a6ae0b6aff81f0cc8930516e26d8a0a85cbfc4fc67eb81b3751ff7ad484d3a",
+        "status": "infeasible",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 2
+      }
+    },
+    {
+      "id": "contradiction-3",
+      "family": "contradiction",
+      "split": "held-out",
+      "reference": {
+        "feasible": false,
+        "minimumCost": null
+      },
+      "currentValid": false,
+      "repairable": false,
+      "baseline": {
+        "failed": [
+          "maximum-x"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 3,
+          "y": 6
+        },
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": {
+          "requirements": [
+            "maximum-x",
+            "minimum-x"
+          ],
+          "domains": {
+            "x": [
+              3,
+              6,
+              9
+            ],
+            "y": [
+              3,
+              6,
+              9
+            ]
+          },
+          "locked": [],
+          "minimality": "inclusion-minimal-relative-to-domains-and-locks"
+        },
+        "artifactRevision": "synthetic-contradiction-3",
+        "inputHash": "8115fe4012a9212024b85e255e529cddde791bf06b78dcd29198067a7683e3c6",
+        "status": "infeasible",
+        "failed": [
+          "maximum-x"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "equal-cost-3",
+      "family": "equal-cost",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          3
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 6,
+          "y": 9
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 6,
+          "y": 9
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 6,
+            "y": 9
+          },
+          "cost": [
+            1,
+            3
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 9,
+              "to": 6
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-equal-cost-3",
+        "inputHash": "1069b132244e8a4072161990ce063fa21940f4f65224d9bbda8882d4edf7e8a7",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "signed-equality-3",
+      "family": "signed-equality",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          2,
+          9
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "difference"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 6,
+          "y": 3
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 6,
+            "y": 3
+          },
+          "cost": [
+            2,
+            9
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 3,
+              "to": 6
+            },
+            {
+              "variable": "y",
+              "from": 9,
+              "to": 3
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-signed-equality-3",
+        "inputHash": "9cb78befae4a12b0881d192ebfa313bb9ff0a64ed71d3a869ed0df142bf6b2c7",
+        "status": "repair-proposed",
+        "failed": [
+          "difference"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "already-valid-5",
+      "family": "already-valid",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          0,
+          0
+        ]
+      },
+      "currentValid": true,
+      "repairable": false,
+      "baseline": {
+        "failed": [],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": null,
+        "artifactRevision": "synthetic-already-valid-5",
+        "inputHash": "c77390695b270c43f59a9bfbf93e87aea9b830140398f005687cdc418c3fadce",
+        "status": "satisfied",
+        "failed": [],
+        "evaluatedAssignments": 0
+      }
+    },
+    {
+      "id": "single-repair-5",
+      "family": "single-repair",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          5
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 10,
+          "y": 10
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 10,
+          "y": 10
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 10,
+            "y": 10
+          },
+          "cost": [
+            1,
+            5
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 15,
+              "to": 10
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-single-repair-5",
+        "inputHash": "484b359cafc8bb8cdec0938f944223bbbd9a4d7a6c3c3de55ff2d9674e2b8912",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "coupled-repair-5",
+      "family": "coupled-repair",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          2,
+          20
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 5,
+          "y": 5
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 5,
+            "y": 5
+          },
+          "cost": [
+            2,
+            20
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 15,
+              "to": 5
+            },
+            {
+              "variable": "y",
+              "from": 15,
+              "to": 5
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-coupled-repair-5",
+        "inputHash": "ab03385dab9c973acbce086cabda7f45e8824f13aec74f6e40059146cccd4aaf",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "secondary-trap-5",
+      "family": "secondary-trap",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          5
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 10,
+          "y": 10
+        },
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 15,
+          "y": 5
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 15,
+            "y": 5
+          },
+          "cost": [
+            1,
+            5
+          ],
+          "changes": [
+            {
+              "variable": "y",
+              "from": 10,
+              "to": 5
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-secondary-trap-5",
+        "inputHash": "056433ee8b64be01d46fe3231f19b091f4819d177de1aa1776a443082703eb36",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "locked-obstruction-5",
+      "family": "locked-obstruction",
+      "split": "held-out",
+      "reference": {
+        "feasible": false,
+        "minimumCost": null
+      },
+      "currentValid": false,
+      "repairable": false,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": {
+          "requirements": [
+            "capacity"
+          ],
+          "domains": {
+            "x": [
+              15
+            ],
+            "y": [
+              10,
+              15
+            ]
+          },
+          "locked": [
+            "x"
+          ],
+          "minimality": "inclusion-minimal-relative-to-domains-and-locks"
+        },
+        "artifactRevision": "synthetic-locked-obstruction-5",
+        "inputHash": "35f048c816841d02aac92716afc23ace7cdbde8471538d34d08abc71f35e87c1",
+        "status": "infeasible",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 2
+      }
+    },
+    {
+      "id": "contradiction-5",
+      "family": "contradiction",
+      "split": "held-out",
+      "reference": {
+        "feasible": false,
+        "minimumCost": null
+      },
+      "currentValid": false,
+      "repairable": false,
+      "baseline": {
+        "failed": [
+          "maximum-x"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 5,
+          "y": 10
+        },
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": {
+          "requirements": [
+            "maximum-x",
+            "minimum-x"
+          ],
+          "domains": {
+            "x": [
+              5,
+              10,
+              15
+            ],
+            "y": [
+              5,
+              10,
+              15
+            ]
+          },
+          "locked": [],
+          "minimality": "inclusion-minimal-relative-to-domains-and-locks"
+        },
+        "artifactRevision": "synthetic-contradiction-5",
+        "inputHash": "aef3e06de85d7c4aa333954a22d68140597d8235b3667f3053be265d629e4891",
+        "status": "infeasible",
+        "failed": [
+          "maximum-x"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "equal-cost-5",
+      "family": "equal-cost",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          5
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 10,
+          "y": 15
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 10,
+          "y": 15
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 10,
+            "y": 15
+          },
+          "cost": [
+            1,
+            5
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 15,
+              "to": 10
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-equal-cost-5",
+        "inputHash": "6155c2daada4c82f9ad214c72c1b178e0de41585ab0da246b84024290dd08333",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "signed-equality-5",
+      "family": "signed-equality",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          2,
+          15
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "difference"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 10,
+          "y": 5
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 10,
+            "y": 5
+          },
+          "cost": [
+            2,
+            15
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 5,
+              "to": 10
+            },
+            {
+              "variable": "y",
+              "from": 15,
+              "to": 5
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-signed-equality-5",
+        "inputHash": "d5c25bf9959c6da91b0d1a8e24530676a3dbadb015d4cdec2f362871e50e2b1c",
+        "status": "repair-proposed",
+        "failed": [
+          "difference"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "already-valid-7",
+      "family": "already-valid",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          0,
+          0
+        ]
+      },
+      "currentValid": true,
+      "repairable": false,
+      "baseline": {
+        "failed": [],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": null,
+        "artifactRevision": "synthetic-already-valid-7",
+        "inputHash": "caf6fbbb56d1412682e2667af270ee1cc6ac443ae471e0bf6ed2d5e2536229b5",
+        "status": "satisfied",
+        "failed": [],
+        "evaluatedAssignments": 0
+      }
+    },
+    {
+      "id": "single-repair-7",
+      "family": "single-repair",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          7
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 14,
+          "y": 14
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 14,
+          "y": 14
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 14,
+            "y": 14
+          },
+          "cost": [
+            1,
+            7
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 21,
+              "to": 14
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-single-repair-7",
+        "inputHash": "d109c3a072da2ce219a737b7e6318992f90d29354058d83c47f02ecc6d7b3564",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "coupled-repair-7",
+      "family": "coupled-repair",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          2,
+          28
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 7,
+          "y": 7
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 7,
+            "y": 7
+          },
+          "cost": [
+            2,
+            28
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 21,
+              "to": 7
+            },
+            {
+              "variable": "y",
+              "from": 21,
+              "to": 7
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-coupled-repair-7",
+        "inputHash": "665865c350f87f0babb49f1821fd1fdc89bef4db6d8ddcf0711617ff5c128863",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "secondary-trap-7",
+      "family": "secondary-trap",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          7
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 14,
+          "y": 14
+        },
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 21,
+          "y": 7
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 21,
+            "y": 7
+          },
+          "cost": [
+            1,
+            7
+          ],
+          "changes": [
+            {
+              "variable": "y",
+              "from": 14,
+              "to": 7
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-secondary-trap-7",
+        "inputHash": "891efb9bb5f6dc1b3bd39d94d18fb6e7f58439f052b5a8e11d8963286206361a",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "locked-obstruction-7",
+      "family": "locked-obstruction",
+      "split": "held-out",
+      "reference": {
+        "feasible": false,
+        "minimumCost": null
+      },
+      "currentValid": false,
+      "repairable": false,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": {
+          "requirements": [
+            "capacity"
+          ],
+          "domains": {
+            "x": [
+              21
+            ],
+            "y": [
+              14,
+              21
+            ]
+          },
+          "locked": [
+            "x"
+          ],
+          "minimality": "inclusion-minimal-relative-to-domains-and-locks"
+        },
+        "artifactRevision": "synthetic-locked-obstruction-7",
+        "inputHash": "7b05fc48392df881230ee11db6811e04ba6770a5776439cc91a0a0e14f7358b5",
+        "status": "infeasible",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 2
+      }
+    },
+    {
+      "id": "contradiction-7",
+      "family": "contradiction",
+      "split": "held-out",
+      "reference": {
+        "feasible": false,
+        "minimumCost": null
+      },
+      "currentValid": false,
+      "repairable": false,
+      "baseline": {
+        "failed": [
+          "maximum-x"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 7,
+          "y": 14
+        },
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": {
+          "requirements": [
+            "maximum-x",
+            "minimum-x"
+          ],
+          "domains": {
+            "x": [
+              7,
+              14,
+              21
+            ],
+            "y": [
+              7,
+              14,
+              21
+            ]
+          },
+          "locked": [],
+          "minimality": "inclusion-minimal-relative-to-domains-and-locks"
+        },
+        "artifactRevision": "synthetic-contradiction-7",
+        "inputHash": "a0409dae8a1a6ce543691a10b69ec25cf86c24aca7bb92a32d721cfc65bfb949",
+        "status": "infeasible",
+        "failed": [
+          "maximum-x"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "equal-cost-7",
+      "family": "equal-cost",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          7
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 14,
+          "y": 21
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 14,
+          "y": 21
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 14,
+            "y": 21
+          },
+          "cost": [
+            1,
+            7
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 21,
+              "to": 14
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-equal-cost-7",
+        "inputHash": "58f6abf28a0331b0ec36e5a85a72c902b4c4e75621828f482822f3ad37a64fce",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "signed-equality-7",
+      "family": "signed-equality",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          2,
+          21
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "difference"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 14,
+          "y": 7
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 14,
+            "y": 7
+          },
+          "cost": [
+            2,
+            21
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 7,
+              "to": 14
+            },
+            {
+              "variable": "y",
+              "from": 21,
+              "to": 7
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-signed-equality-7",
+        "inputHash": "4284fce0a6e7fd3e2a39523b48d780504c021428a05cf4023b17c23c3dcce51a",
+        "status": "repair-proposed",
+        "failed": [
+          "difference"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "already-valid-11",
+      "family": "already-valid",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          0,
+          0
+        ]
+      },
+      "currentValid": true,
+      "repairable": false,
+      "baseline": {
+        "failed": [],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": null,
+        "artifactRevision": "synthetic-already-valid-11",
+        "inputHash": "ebdbca13cf19ae3b1e7f636de10a67123980a216aff53f787e543802b062cace",
+        "status": "satisfied",
+        "failed": [],
+        "evaluatedAssignments": 0
+      }
+    },
+    {
+      "id": "single-repair-11",
+      "family": "single-repair",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          11
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 22,
+          "y": 22
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 22,
+          "y": 22
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 22,
+            "y": 22
+          },
+          "cost": [
+            1,
+            11
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 33,
+              "to": 22
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-single-repair-11",
+        "inputHash": "52c1fa493b4f82e3967d3065349571450695490211e073d7da1873019e4a042a",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "coupled-repair-11",
+      "family": "coupled-repair",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          2,
+          44
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 11,
+          "y": 11
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 11,
+            "y": 11
+          },
+          "cost": [
+            2,
+            44
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 33,
+              "to": 11
+            },
+            {
+              "variable": "y",
+              "from": 33,
+              "to": 11
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-coupled-repair-11",
+        "inputHash": "39bfb24d2d79fb68e15f3c12f77c7ce1a761283f27432aa81b015f5c1d3a43bd",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "secondary-trap-11",
+      "family": "secondary-trap",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          11
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 22,
+          "y": 22
+        },
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 33,
+          "y": 11
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 33,
+            "y": 11
+          },
+          "cost": [
+            1,
+            11
+          ],
+          "changes": [
+            {
+              "variable": "y",
+              "from": 22,
+              "to": 11
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-secondary-trap-11",
+        "inputHash": "fb280db594fc3c4445bb9735cbfcb85a6d8d0836a8b1dc45ad4e701cda16a585",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "locked-obstruction-11",
+      "family": "locked-obstruction",
+      "split": "held-out",
+      "reference": {
+        "feasible": false,
+        "minimumCost": null
+      },
+      "currentValid": false,
+      "repairable": false,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": {
+          "requirements": [
+            "capacity"
+          ],
+          "domains": {
+            "x": [
+              33
+            ],
+            "y": [
+              22,
+              33
+            ]
+          },
+          "locked": [
+            "x"
+          ],
+          "minimality": "inclusion-minimal-relative-to-domains-and-locks"
+        },
+        "artifactRevision": "synthetic-locked-obstruction-11",
+        "inputHash": "81d42faf9a2db19f1ba7142e9632e8686dcf31c97477816b1399d7bfd04fc020",
+        "status": "infeasible",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 2
+      }
+    },
+    {
+      "id": "contradiction-11",
+      "family": "contradiction",
+      "split": "held-out",
+      "reference": {
+        "feasible": false,
+        "minimumCost": null
+      },
+      "currentValid": false,
+      "repairable": false,
+      "baseline": {
+        "failed": [
+          "maximum-x"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 11,
+          "y": 22
+        },
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": null,
+        "conflict": {
+          "requirements": [
+            "maximum-x",
+            "minimum-x"
+          ],
+          "domains": {
+            "x": [
+              11,
+              22,
+              33
+            ],
+            "y": [
+              11,
+              22,
+              33
+            ]
+          },
+          "locked": [],
+          "minimality": "inclusion-minimal-relative-to-domains-and-locks"
+        },
+        "artifactRevision": "synthetic-contradiction-11",
+        "inputHash": "035ece5a192a82767b99fb70bd459ad5d41c0a17e80de0f48ac9106bc1bc5e98",
+        "status": "infeasible",
+        "failed": [
+          "maximum-x"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "equal-cost-11",
+      "family": "equal-cost",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          1,
+          11
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "capacity"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": {
+          "x": 22,
+          "y": 33
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 22,
+          "y": 33
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 22,
+            "y": 33
+          },
+          "cost": [
+            1,
+            11
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 33,
+              "to": 22
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-equal-cost-11",
+        "inputHash": "906c784a1686162e3011876e74298b176d037888c6ee52348637a3842a5eca53",
+        "status": "repair-proposed",
+        "failed": [
+          "capacity"
+        ],
+        "evaluatedAssignments": 9
+      }
+    },
+    {
+      "id": "signed-equality-11",
+      "family": "signed-equality",
+      "split": "held-out",
+      "reference": {
+        "feasible": true,
+        "minimumCost": [
+          2,
+          33
+        ]
+      },
+      "currentValid": false,
+      "repairable": true,
+      "baseline": {
+        "failed": [
+          "difference"
+        ],
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "local": {
+        "proposal": null,
+        "valid": false,
+        "lockViolation": false
+      },
+      "candidate": {
+        "proposal": {
+          "x": 22,
+          "y": 11
+        },
+        "valid": true,
+        "lockViolation": false
+      },
+      "feasibilityCorrect": true,
+      "optimal": true,
+      "conflictCorrect": true,
+      "report": {
+        "version": "0.1.0",
+        "experimental": true,
+        "scope": "declared-finite-domain-only",
+        "releaseEligible": false,
+        "automaticAction": false,
+        "repair": {
+          "values": {
+            "x": 22,
+            "y": 11
+          },
+          "cost": [
+            2,
+            33
+          ],
+          "changes": [
+            {
+              "variable": "x",
+              "from": 11,
+              "to": 22
+            },
+            {
+              "variable": "y",
+              "from": 33,
+              "to": 11
+            }
+          ],
+          "requiresRenderedVerification": true
+        },
+        "conflict": null,
+        "artifactRevision": "synthetic-signed-equality-11",
+        "inputHash": "c7c95ad3e82c054d9e77223c8d6fd3c3e729529812a18744a7a8e696e10d4bf8",
+        "status": "repair-proposed",
+        "failed": [
+          "difference"
+        ],
+        "evaluatedAssignments": 9
+      }
+    }
+  ]
+}
