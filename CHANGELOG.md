@@ -150,3 +150,10 @@
 - **Changed:** The proposal is narrowed to executable knowledge and measured constraints. Medium representations remain native. Generation stays with the consuming agent.
 - **Why:** Test whether explicit knowledge adds value beyond a compute-matched generation/review loop. Keep the portable core independent of Dazzler.
 - **Validation:** Shared fixtures exercise numerical checks, missing/stale observations, invalid input and cross-language agreement. Browser checks exercise actual rendered DOM. These are implementation tests, not evidence of aesthetic improvement.
+
+## 2026-10-23 — Cross-Link the Design and Testing Companions
+
+- **Changed:** README and landing page explain Dazzler's creation role, Style Science's inspectable reasoning, and Longshot's independent task testing.
+- **Added:** Longshot repository and live website links, current skill identifier, and a bounded create/check/challenge/retest workflow.
+- **Why:** Make the three projects discoverable without implying automatic integration or human-validated usability.
+- **Validation:** Focused rendered checks at 1280px and 390px confirmed reciprocal repository and website links; screenshots inspected. Staged whitespace checked. Four core tests passed. Site builder ran; broad site check stopped because axe-core is unavailable, so focused rendered checks were used. No runtime changes.
