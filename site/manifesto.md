@@ -2,7 +2,7 @@
 
 We can now produce a thousand designs before we have understood the need for one. Speed has changed. Responsibility has not.
 
-Style Science is an open, evidence-aware framework for design reasoning: helping AI agents express, test and revise design decisions in service of human needs. It complements design thinking. Style is our language; reasoning connects its choices to human needs. Our aim is to support human judgment, not replace it.
+Style Science is a design reasoning and constraint toolkit: helping AI agents express, test and revise design decisions in service of human needs. It complements design thinking. Style is our language; reasoning connects its choices to human needs. Our aim is to support human judgment, not replace it.
 
 ## 1. Begin With the Life It Enters.
 
