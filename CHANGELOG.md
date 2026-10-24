@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-24 - Portable Evidence Metadata
+
+- Redacted the machine-specific prefix from the stored downstream evidence-directory field, retaining its repository-relative run location. Original observations, protocol and recorded source hashes are unchanged; this is not a rerun.
+- Added a regression assertion and publication guidance requiring a relative evidence location before checking in reports. The local runner may still emit a local absolute path for its own working output.
+- Five core/parity and downstream provenance tests pass. Tracked-text privacy-pattern review and diff whitespace checks pass for this scope. No renderer or decision behavior changed; historical commits were inspected without rewriting them.
+
 ## Unreleased - Bounded Constraint Repairs
 
 - Saved the mathematical design-reasoning plan and predeclared first-experiment protocol. Compared verification-only, local first-failure repair and bounded all-requirement search on 48 synthetic cases; all case outcomes and source hashes are retained.

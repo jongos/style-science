@@ -4,6 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 test('offline comparison retains failures, scope, source bindings and disjoint brief IDs',async()=>{
   const report=JSON.parse(await readFile(new URL('./results.json',import.meta.url),'utf8'));
+  assert.match(report.evidenceDirectory,/^dist\/downstream-[0-9]+\/$/,'published evidence location must be repository-relative');
   for(const [path,stamp] of Object.entries(report.sourceHashes)) assert.equal(createHash('sha256').update(await readFile(new URL('../../'+path,import.meta.url))).digest('hex'),stamp,path);
   assert.ok(report.developmentIds.every(id=>!report.heldoutIds.includes(id)));
   assert.equal(new Set(report.rows.flatMap(x=>x.brief.contexts)).size,5);
