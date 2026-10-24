@@ -645,3 +645,9 @@ footer span {
 
 /* Related-project editorial section follows the existing type and palette. */
 .family-editorial{max-width:72rem;margin:3rem auto;padding:2rem clamp(1rem,4vw,3rem);border-top:1px solid currentColor}.family-editorial p{max-width:65ch;line-height:1.65}.family-editorial h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.15}.family-editorial a{text-decoration:underline;text-underline-offset:.2em}
+
+/* Hex Men collection list */
+.family-editorial .collection-list{list-style:none;margin:1.5rem 0 0;padding:0;max-width:65ch}.family-editorial .collection-list li{padding:.65rem 0;border-top:1px solid currentColor;line-height:1.5}.family-editorial .collection-list li:last-child{border-bottom:1px solid currentColor}
+
+/* Plain-language problem and solution */
+.plain-language{margin-top:0}.plain-language h2{margin:0 0 1rem}.plain-language h2+p~h2{margin-top:2.5rem}.plain-language .plain-example{max-width:65ch;margin-top:1.5rem;padding:1rem 1.25rem;border:1px solid currentColor}.plain-language .plain-example p{margin:0}.plain-language code{overflow-wrap:anywhere}
