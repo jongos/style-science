@@ -38,7 +38,7 @@ The intention is not the result. Open the document. Use the interface. Read the 
 
 ## Work That Informs Ours
 
-Our research direction is informed by Penrose, Scout, C-K design theory, Design Model, AgentsORG / DESIGN, design-pact and the Design Tokens Community Group. We study their ideas, credit their contributions and test what we can build upon. This does not imply affiliation, endorsement or implemented compatibility.
+Our research direction is informed by Penrose, Scout, C-K design theory, Design Model, AgentsORG / DESIGN, design-pact and the Design Tokens Community Group. We study their ideas, credit their contributions and test what we can build upon.
 
 [Sources and research questions](./related-work.md)
 

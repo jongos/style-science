@@ -22,17 +22,15 @@ Its Generative Design Canvas (GDC) turns declared requirements and captured obse
 
 ## Try the Core
 
-Style Science is a toolkit, not an automatically installable agent skill. From a checkout, with Node.js 22+:
+Use Style Science through its JavaScript or Python toolkit. From a checkout, with Node.js 22+:
 
 ```sh
 node --input-type=module -e "import { contrast } from './engine.mjs'; console.log(contrast('#000000', '#ffffff'));"
 ```
 
-Start with the [example requirement plan](examples/plan.json), then follow the [integration guide](REFERENCE.md#try-it) for JavaScript, Python and rendered observations. A numerical check answers a specific requirement; it does not establish overall design quality.
+Start with the [example requirement plan](examples/plan.json), then follow the [integration guide](REFERENCE.md#try-it) for JavaScript, Python and rendered observations.
 
-GDC is an early engineering prototype. Its broader effect on design quality has not been established, and no human study has been run.
-
-[Read the manifesto](https://jongos.github.io/style-science/) · [Explore the interactive study](https://jongos.github.io/style-science/#design-study) · [Research and limits](REFERENCE.md#contextual-decisions-and-research)
+[Read the manifesto](https://jongos.github.io/style-science/) · [Explore the interactive study](https://jongos.github.io/style-science/#design-study) · [Research foundations](REFERENCE.md#contextual-decisions-and-research)
 
 ## In the Hex Men Family
 
@@ -43,7 +41,7 @@ GDC is an early engineering prototype. Its broader effect on design quality has 
 | [Spiral](https://github.com/jongos/Spiral) | Trace multi-person workflows, handoffs and waiting states before building. |
 | [Shatterstar](https://github.com/jongos/Shatterstar) | Evaluate what to remove, combine, hide or defer while preserving important tasks. |
 
-[Hex Men](https://github.com/jongos/Hex-Men) brings the collection together. Choose the project your question needs; there is no required sequence. Spiral and Shatterstar are research-informed drafts and their repositories require access.
+[Hex Men](https://github.com/jongos/Hex-Men) brings the collection together. Choose the project your question needs; there is no required sequence.
 
 ## Further Reading
 

@@ -4,7 +4,7 @@ export function studyMarkup() {
   const state = deriveStudy();
   const styles = `--sample-weight:${state.weight};--sample-heading:${state.heading}px;--sample-gap:${state.gap}px;--sample-leading:${state.leading};--sample-radius:${state.radius}px;--sample-accent:${state.accent};--sample-surface:${state.surface};--sample-ink:${state.ink}`;
   return `<section class="experiment" id="design-study" aria-labelledby="experiment-title">
-<div class="study-heading"><span class="eyebrow">02 / Relationships in motion</span><h2 id="experiment-title">A Change Here.<br>A Different Design Everywhere.</h2><p class="caption">Explore how structure and expression change a composition. This authored study illustrates relationships; it does not score beauty.</p></div>
+<div class="study-heading"><span class="eyebrow">02 / Relationships in motion</span><h2 id="experiment-title">A Change Here.<br>A Different Design Everywhere.</h2><p class="caption">Explore how structure and expression change a composition. Explore the relationships between the choices.</p></div>
 <div class="study-controls">
 <div class="control"><label for="structure">Structure <output id="structure-value" for="structure">65</output></label><input id="structure" type="range" min="0" max="100" value="65" step="1"><div class="range-ends"><span>Dispersed</span><span>Ordered</span></div></div>
 <div class="control"><label for="expression">Expression <output id="expression-value" for="expression">45</output></label><input id="expression" type="range" min="0" max="100" value="45" step="1"><div class="range-ends"><span>Restrained</span><span>Expressive</span></div></div>
