@@ -183,3 +183,13 @@
 - **Added:** Longshot repository and live website links, current skill identifier, and a bounded create/check/challenge/retest workflow.
 - **Why:** Make the three projects discoverable without implying automatic integration or human-validated usability.
 - **Validation:** Focused rendered checks at 1280px and 390px confirmed reciprocal repository and website links; screenshots inspected. Staged whitespace checked. Four core tests passed. Site builder ran; broad site check stopped because axe-core is unavailable, so focused rendered checks were used. No runtime changes.
+
+## 2026-10-24 — Mojo Marketing Copy Review
+
+**Changed:** Tightened product introductions and removed repeated qualifications and explanations. Preserved setup requirements, commands, material claims and each project’s voice.
+
+**Added:** Mojo links in the companion lists.
+
+**Why:** Help readers understand the product and choose their next action with less reading.
+
+**Validation:** Local links and command preservation checked. Landing pages checked in Chrome at 1440, 390 and 320 pixels: no horizontal overflow, broken in-page anchors or script errors. Rendered desktop/mobile copy reviewed. Site rebuilt from its source; all four core tests passed. Canonical skill instructions and runtime behavior are unchanged.

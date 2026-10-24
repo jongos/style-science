@@ -9,9 +9,9 @@
 
 **Give Design Decisions a Reason.**
 
-Style Science is a design reasoning and constraint toolkit for people, agents and software systems. It connects what a design must do with evidence of what it actually does, so decisions can be questioned, compared and revised.
+Style Science connects design requirements to measurable checks. Teams and agents can use its JavaScript and Python tools to compare alternatives, inspect results and revise decisions.
 
-Its Generative Design Canvas (GDC) turns declared requirements and captured observations into inspectable results: **pass, fail or unknown**. It supports human judgment without turning taste into a universal score.
+Its Generative Design Canvas (GDC) checks declared requirements against captured observations and reports **pass, fail or unknown** for design review.
 
 ## Put It to Work
 
@@ -36,12 +36,13 @@ Start with the [example requirement plan](examples/plan.json), then follow the [
 
 | Project | How It Complements This Work |
 |---|---|
-| [Dazzler](https://github.com/jongos/Dazzler) | Create and refine expressive interfaces, documents and visual stories. |
-| [Longshot](https://github.com/jongos/Longshot) | Independently attempt rendered interface tasks and return reproducible evidence. |
-| [Spiral](https://github.com/jongos/Spiral) | Trace multi-person workflows, handoffs and waiting states before building. |
-| [Shatterstar](https://github.com/jongos/Shatterstar) | Evaluate what to remove, combine, hide or defer while preserving important tasks. |
+| [Dazzler](https://github.com/jongos/Dazzler) | Create and refine interfaces, documents and slides. |
+| [Longshot](https://github.com/jongos/Longshot) | Test interface tasks and report reproducible findings. |
+| [Spiral](https://github.com/jongos/Spiral) | Find gaps in workflow handoffs, ownership and recovery. |
+| [Shatterstar](https://github.com/jongos/Shatterstar) | Simplify products while preserving important tasks. |
+| [Mojo](https://github.com/jongos/Mojo) | Make AI outputs clear and direct. |
 
-[Hex Men](https://github.com/jongos/Hex-Men) brings the collection together. Choose the project your question needs; there is no required sequence.
+[Explore Hex Men](https://github.com/jongos/Hex-Men) for tools that complement your task.
 
 ## Further Reading
 
