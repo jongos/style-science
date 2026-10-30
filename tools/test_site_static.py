@@ -1,5 +1,6 @@
 """Dependency-free site artifact checks, not rendered/browser validation."""
 import json
+import re
 import unittest
 from html.parser import HTMLParser
 from pathlib import Path
@@ -43,6 +44,24 @@ def check_references(page, root):
             assert unquote(url.fragment) in page.ids, f'Missing anchor: {reference}'
 
 
+def check_markdown_references(source, directory, root):
+    """Check inline and reference-style file links in the authored Markdown subset."""
+    references = re.findall(r'\]\(<?([^\s)>]+)>?(?:\s+"[^"\n]*")?\)', source)
+    references += re.findall(r'^\s*\[[^\]]+\]:\s*<?([^\s>]+)>?', source, re.MULTILINE)
+    root = root.resolve()
+    repo_prefix = 'https://github.com/jongos/style-science/blob/main/'
+    for reference in references:
+        url = urlsplit(reference)
+        if reference.startswith(repo_prefix):
+            target = (SITE.parent / unquote(url.path.split('/blob/main/', 1)[1])).resolve()
+            assert target.is_relative_to(SITE.parent), f'Repository link escapes root: {reference}'
+            assert target.is_file(), f'Missing repository target: {reference}'
+        elif not url.scheme and not url.netloc and url.path:
+            target = (directory / unquote(url.path)).resolve()
+            assert target.is_relative_to(root), f'Markdown link escapes site: {reference}'
+            assert target.is_file() and target.stat().st_size, f'Missing Markdown asset: {reference}'
+
+
 class StaticSiteTests(unittest.TestCase):
     def test_built_content_and_references(self):
         page = Page((SITE / 'index.html').read_text(encoding='utf-8'))
@@ -69,7 +88,23 @@ class StaticSiteTests(unittest.TestCase):
         self.assertIn('sample-prompt', page.ids)
         self.assertTrue((SITE / 'fonts/LICENSE.txt').read_text(encoding='utf-8').strip())
         self.assertEqual((SITE / 'related-work.md').read_text(encoding='utf-8'),
-                         (SITE.parent / 'RELATED-WORK.md').read_text(encoding='utf-8'))
+                         re.sub(r'\]\(([^()\s]+)\)', lambda m: m[0] if re.match(r'(?:[a-z][a-z\d+.-]*:|//|#)', m[1], re.I)
+                                else '](https://github.com/jongos/style-science/blob/main/' + m[1].removeprefix('./') + ')',
+                                (SITE.parent / 'RELATED-WORK.md').read_text(encoding='utf-8')))
+
+    def test_built_markdown_file_links(self):
+        for path in SITE.rglob('*.md'):
+            with self.subTest(path=path.relative_to(SITE)):
+                check_markdown_references(path.read_text(encoding='utf-8'), path.parent, SITE)
+
+    def test_missing_markdown_targets_fail(self):
+        for source in ('[plan](evaluation/MATHEMATICAL-RESEARCH-PLAN.md)',
+                       '[plan][research]\n[research]: evaluation/MATHEMATICAL-RESEARCH-PLAN.md',
+                       '[escape](../README.md)',
+                       '[missing](https://github.com/jongos/style-science/blob/main/not-a-file.md)'):
+            with self.subTest(source=source), self.assertRaises(AssertionError):
+                check_markdown_references(source, SITE, SITE)
+        check_markdown_references('[text](./manifesto.md) [web](https://example.org/) [anchor](#section)', SITE, SITE)
 
     def test_broken_references_and_duplicate_ids_fail(self):
         for source in ('<a href="#missing">x</a>', '<script src="missing-static-fixture.js"></script>',

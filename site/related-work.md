@@ -1,5 +1,11 @@
 # Related work informing Style Science
 
+The October 10 follow-on [mathematical research plan](https://github.com/jongos/style-science/blob/main/evaluation/MATHEMATICAL-RESEARCH-PLAN.md)
+connects constraint solving, color perception and interaction models. Its first
+[bounded conflict/repair experiment](https://github.com/jongos/style-science/blob/main/evaluation/constraint-repair/README.md) retains
+an experimental finite-domain helper after synthetic comparisons. It does not
+implement Cassowary/Draco, validate rendered layouts or establish aesthetic benefit.
+
 Reviewed October 8, 2026. Style Science is an open, evidence-aware framework for
 design reasoning: helping AI agents express, test and revise design decisions in
 service of human needs. We are not inventing design reasoning from scratch.
@@ -116,10 +122,10 @@ already supplies it.
 **Test and decision:** start with a declared subset, round-trip supported types
 and aliases, and reject cycles, unsupported values and lossy conversions. Retain
 an adapter only with matching JavaScript/Python outcomes. The first
-[experimental adapter](TOKENS.md) now covers numbers, dimensions, font families
+[experimental adapter](https://github.com/jongos/style-science/blob/main/TOKENS.md) now covers numbers, dimensions, font families
 and curly-brace aliases, with original synthetic regression/parity tests. Other
 types and reference mechanisms remain unsupported; no full DTCG conformance
-claim is made. See the [experiment protocol](evaluation/TOKEN-INTERCHANGE.md).
+claim is made. See the [experiment protocol](https://github.com/jongos/style-science/blob/main/evaluation/TOKEN-INTERCHANGE.md).
 
 ## Our synthesis, not a new name for their systems
 

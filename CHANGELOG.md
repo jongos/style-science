@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased - Related-Work Links
+
+- Corrected #29: the Pages build rewrites repository-relative related-work links to GitHub source URLs, including the research plan, repair experiment and token documentation. Repository Markdown retains relative links.
+- Added Markdown file-link checks and negative fixtures to the existing site-static CI suite. Site build, four static tests and four core/parity tests passed outside the sandbox. No runtime or research behavior changed.
+
 ## 2026-10-24 - Focused Marketing Copy
 
 **Changed:** Removed repeated maturity labels and research disclaimers from the README and landing page. Kept purpose, uses, companion roles and operational instructions. Existing follow-up-review explanations remain intact.

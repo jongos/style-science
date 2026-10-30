@@ -30,7 +30,12 @@ ${studyMarkup()}
 <section class="closing" aria-label="Our commitment"><p>${esc(m.closing)}</p><div class="pledge"><span class="mark" aria-hidden="true">✳</span><p>${esc(m.pledge)}</p></div></section><section id="related-projects" class="family-editorial" aria-label="Related projects"><h2>Find Your Next Question.</h2><p><a href="https://github.com/jongos/Dazzler">Dazzler</a> creates and refines interfaces, documents and slides. <a href="https://github.com/jongos/Longshot">Longshot</a> tests interface tasks and reports reproducible findings. <a href="https://github.com/jongos/Spiral">Spiral</a> finds gaps in workflow handoffs, ownership and recovery. <a href="https://github.com/jongos/Shatterstar">Shatterstar</a> simplifies products while preserving important tasks. <a href="https://github.com/jongos/Mojo">Mojo</a> makes AI outputs clear and direct.</p><p>Explore the <a href="https://github.com/jongos/Hex-Men">Hex Men collection</a>. Choose the tool that fits your task.</p></section></main>
 <footer><div><strong>Style Science</strong><span>An open investigation into design.</span></div><div class="footer-links"><a href="./manifesto.md">Read as Text ↗</a><a href="https://github.com/jongos/style-science">GitHub ↗</a><a href="#top">Back to Top ↑</a></div><p class="credits">Original manifesto by Style Science. Design by <a href="https://jongos.github.io/Dazzler/">Dazzler</a>. Typographic voice: Inter by Rasmus Andersson. <a href="./fonts/LICENSE.txt">Font license</a>. Written in the tradition of principled industrial design; not a text by or an endorsement from Dieter Rams.</p></footer><script type="module" src="./app.js"></script></body></html>`;
 await writeFile(new URL("index.html", out), html);
-await writeFile(new URL("related-work.md", out), await readFile(new URL("RELATED-WORK.md", root), "utf8"));
+// Research stays in the repository, not in the Pages artifact.
+const relatedWork = (await readFile(new URL("RELATED-WORK.md", root), "utf8"))
+  .replace(/\]\(([^()\s]+)\)/g, (link, target) =>
+    /^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(target) ? link :
+      `](https://github.com/jongos/style-science/blob/main/${target.replace(/^\.\//, '')})`);
+await writeFile(new URL("related-work.md", out), relatedWork);
 await writeFile(
   new URL("manifesto.md", out),
   `# ${m.title}\n\n${m.introduction}\n\n${m.position}\n\n${m.principles.map((p, i) => `## ${i + 1}. ${p.title}\n\n${p.body}`).join("\n\n")}\n\n## Work That Informs Ours\n\n${m.researchAcknowledgment}\n\n[Sources and research questions](./related-work.md)\n\n${m.closing}\n\n${m.pledge}\n\n---\n\nAn original Style Science manifesto. October 2026.\n`,
