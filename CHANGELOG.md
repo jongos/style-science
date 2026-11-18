@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased - Provenance manifest and design self-check
+
+- Added `knowledge/upstream-manifest.json`, `tools/upstream-drift.mjs`, and CI `check:upstream` plus a weekly remote upstream watch workflow. Records vendored palette bytes, adaptation provenance sidecars, and inspiration-only references; no third-party skill text copied.
+- Added `self-check.mjs`, `self-check.py`, and `examples/self-check-input.json` for declared contrast and CSS source checks without rendered observations (`qualityClaim: false`).
+
 ## Unreleased - Related-Work Links
 
 - Corrected #29: the Pages build rewrites repository-relative related-work links to GitHub source URLs, including the research plan, repair experiment and token documentation. Repository Markdown retains relative links.

@@ -17,6 +17,7 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python --version
       - run: npm test
+      - run: npm run check:upstream
       - run: python tools/build_knowledge_graph.py
       - run: git diff --exit-code knowledge/graph.json
       - run: python tools/build_package.py --revision "${{ github.sha }}" --output dist/ci-package

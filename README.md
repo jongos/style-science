@@ -18,6 +18,7 @@ Its Generative Design Canvas (GDC) checks declared requirements against captured
 - **Make a brief actionable.** Turn “make it clearer” into requirements such as visible pricing, readable contrast and no mobile overflow.
 - **Compare alternatives honestly.** Keep benefits, costs and missing evidence visible rather than hiding them in one score.
 - **Check an agent’s output.** Test declared constraints before carrying a candidate forward for design review.
+- **Self-check from tokens or CSS.** When screenshots are unavailable, run the dependency-free design self-check on declared contrast pairs and source styles ([example](examples/self-check-input.json)).
 - **Share the reasoning.** Keep requirements and evidence understandable across a team and its tools.
 
 ## Try the Core
