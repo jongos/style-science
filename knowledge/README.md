@@ -12,6 +12,8 @@ Migration is incremental: color conversions and palette exploration, typography,
 
 ## Provenance and updates
 
+`upstream-manifest.json` lists each upstream or adapted source with commit, license and SHA-256 pins for vendored bytes. Run `npm run check:upstream` (or `node tools/upstream-drift.mjs`) before releases; pass `--remote` to compare pinned GitHub files when the network is available (see `.github/workflows/upstream-watch.yml`). Nothing in that manifest is copied from third-party skill text; DSH frontend-design patterns informed the drift layout only.
+
 `provenance.json` pins the import commit and inventory hash. The original upstream revision was not recorded and the source included development changes, so it remains explicitly unknown. The imported bytes are reproducible from Style Science commit `443f60c05385284548369057fa10fd4e9f1450a9`; this is not a Dazzler release identifier.
 
 Compare a proposed source snapshot without modifying either tree:

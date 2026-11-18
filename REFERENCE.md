@@ -111,6 +111,8 @@ node --input-type=module -e "import { contrast } from './engine.mjs'; console.lo
 
 This prints `21`, the contrast ratio of black and white. Next, open the [example plan](examples/plan.json) to see how requirements and desktop/mobile environments are declared.
 
+When rendered captures are unavailable, run the declared [design self-check](examples/self-check-input.json) on contrast pairs and CSS source text (`node --input-type=module -e "import {runDesignSelfCheck} from './self-check.mjs'; ..."` or `python self-check.py examples/self-check-input.json`). It reports pass, fail or unknown for declared checks and measured layout candidates without claiming design quality.
+
 <details>
 <summary><strong>Optional Browser and Site Tests</strong></summary>
 

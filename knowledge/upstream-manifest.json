@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-18",
+  "summary": "Style Science adapts and freezes knowledge; it does not install upstream skill trees as runtime authorities. Palette JSON and provenance sidecars are vendored bytes. Dazzler reference knowledge is a frozen snapshot. npm color bundles referenced in PROVENANCE.md are owned by Dazzler's build, not this repository.",
+  "entries": [
+    {
+      "id": "dazzler-knowledge-snapshot",
+      "kind": "frozen-snapshot",
+      "license": "See knowledge/LICENSE.txt and per-file notices",
+      "repository": "https://github.com/jongos/Dazzler",
+      "commit": null,
+      "commitStatus": "Unrecorded at import; see knowledge/provenance.json",
+      "localArtifacts": [
+        {
+          "path": "knowledge/inventory.json",
+          "sha256": "24986bf4f464acad4f147bb6025fdc3d75a57b2ffca2fbb9dbef876b0d6c7db3"
+        },
+        {
+          "path": "knowledge/provenance.json",
+          "sha256": "1184521dcb4e8161f66038846814597af83d6bb71f9c183995887ec531986f09"
+        }
+      ],
+      "driftScript": "node tools/knowledge-drift.mjs <dazzler-references-dir>"
+    },
+    {
+      "id": "hue3-palettes",
+      "kind": "vendored-data",
+      "license": "MIT",
+      "licenseFile": "knowledge/library/hue3-LICENSE.txt",
+      "repository": "https://github.com/ktzzypo938/hue3",
+      "commit": "a306210b7240e183366998ce39fbe7543cc09b41",
+      "localArtifacts": [
+        {
+          "path": "knowledge/library/color-palettes.json",
+          "sha256": "50f2b6176886721743a16945259a966dcc8ac0a7ada17a582a9ca371a0e7640e"
+        }
+      ],
+      "remotePins": []
+    },
+    {
+      "id": "samber-deslop",
+      "kind": "adapted-guidance",
+      "license": "MIT",
+      "licenseFile": "knowledge/library/deslop-LICENSE.txt",
+      "provenanceFile": "knowledge/library/deslop-provenance.json",
+      "repository": "https://github.com/samber/cc-skills",
+      "commit": "f866b800353719270a9ea101a41c5e2a2618d460",
+      "upstreamSkillVersion": "1.2.2",
+      "localArtifacts": [
+        {
+          "path": "knowledge/library/deslop-provenance.json",
+          "sha256": "c912fad300cf9be29d7ab496af3d5d2555c610d271128a1b6e78931e33ac5903"
+        }
+      ],
+      "remotePins": [
+        {
+          "path": "skills/frontend-design-deslop/SKILL.md",
+          "sha256": "653c74f73b2961133871cb0c1e7a18923032bb4090a1d942f16725c4997bd345",
+          "url": "https://raw.githubusercontent.com/samber/cc-skills/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop/SKILL.md"
+        },
+        {
+          "path": "skills/frontend-design-deslop/references/slop-checklist.md",
+          "sha256": "a84f39fafe014e290fdb3c1836a0ce5ad9390cd52c29fb5fc528abd7bb4a9054",
+          "url": "https://raw.githubusercontent.com/samber/cc-skills/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop/references/slop-checklist.md"
+        }
+      ]
+    },
+    {
+      "id": "pbakaus-bolder",
+      "kind": "adapted-guidance",
+      "license": "Apache-2.0",
+      "licenseFile": "knowledge/library/bolder-LICENSE.txt",
+      "provenanceFile": "knowledge/library/bolder-provenance.json",
+      "repository": "https://github.com/pbakaus/impeccable",
+      "commit": "2a26f1c50b9c4f86d10c0fec8f74cf523a2236e7",
+      "localArtifacts": [
+        {
+          "path": "knowledge/library/bolder-provenance.json",
+          "sha256": "7183655e768f2779fbc7a381b72edb7a558816ab982f17ac61b0362331b5df23"
+        }
+      ],
+      "remotePins": [
+        {
+          "path": "skill/reference/bolder.md",
+          "sha256": "a4e4d986f74ef5f3c8218dfcfd5b04fe103b47182cf1e16aeb979e5703d5cd87",
+          "url": "https://raw.githubusercontent.com/pbakaus/impeccable/2a26f1c50b9c4f86d10c0fec8f74cf523a2236e7/skill/reference/bolder.md"
+        }
+      ]
+    },
+    {
+      "id": "yang-editorial",
+      "kind": "adapted-guidance",
+      "license": "MIT",
+      "licenseFile": "knowledge/library/editorial-LICENSE.txt",
+      "provenanceFile": "knowledge/library/editorial-provenance.json",
+      "repository": "https://github.com/petergyang/no-ai-slop",
+      "commit": "000650b156983f5159695b441477f4e63b25dc85",
+      "localArtifacts": [
+        {
+          "path": "knowledge/library/editorial-provenance.json",
+          "sha256": "62c94ea2a441ca8117baceefc270f974c405c8685740faec4e640bcb8778608f"
+        }
+      ],
+      "remotePins": [
+        {
+          "path": "skills/no-ai-slop/SKILL.md",
+          "sha256": "992b365f51a2f62cf4c1c5ed22049a9ee551dfea677550c1a72b371c0ceadd62",
+          "url": "https://raw.githubusercontent.com/petergyang/no-ai-slop/000650b156983f5159695b441477f4e63b25dc85/skills/no-ai-slop/SKILL.md"
+        }
+      ]
+    },
+    {
+      "id": "composition-rules",
+      "kind": "original-heuristic",
+      "license": "Apache-2.0",
+      "repository": null,
+      "commit": null,
+      "localArtifacts": [
+        {
+          "path": "knowledge/library/composition-rules.json",
+          "sha256": "b91cdae1b95c057af6fa79ae53c0175b4f44cfa48b14effae8f2dc04f1153279"
+        }
+      ],
+      "remotePins": []
+    },
+    {
+      "id": "davila7-frontend-design-skill",
+      "kind": "historical-reference",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/davila7/claude-code-templates",
+      "commit": null,
+      "commitStatus": "Inspected 2026-09-28 from main; see knowledge/PROVENANCE.md",
+      "vendored": false,
+      "localArtifacts": [],
+      "remotePins": []
+    },
+    {
+      "id": "dsh-frontend-design-patterns",
+      "kind": "inspiration-only",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/kechao-sgp/dsh-frontend-design-skill",
+      "commit": "f3eddb2f38a9c2fd03bec8fe4a4b7e0b766e636c",
+      "vendored": false,
+      "note": "Provenance manifest and no-vision self-check patterns informed this repository update; no skill text was copied.",
+      "localArtifacts": [],
+      "remotePins": []
+    }
+  ]
+}

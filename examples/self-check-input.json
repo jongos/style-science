@@ -1,0 +1,20 @@
+{
+  "policy": {
+    "spacingGridPx": 4,
+    "minDistinctFontSizes": 3
+  },
+  "contrastPairs": [
+    {
+      "id": "body-on-surface",
+      "foreground": "#1a1a1a",
+      "background": "#ffffff"
+    },
+    {
+      "id": "muted-on-surface",
+      "foreground": "#6b6b6b",
+      "background": "#ffffff",
+      "fontSizePx": 14
+    }
+  ],
+  "css": ":root { --text: #1a1a1a; --bg: #fff; }\nbody { font-size: 16px; color: var(--text); background: var(--bg); margin: 0; padding: 16px; }\nh1 { font-size: 32px; margin: 0 0 8px; }\np { font-size: 16px; line-height: 1.6; margin: 0 0 16px; }\nsmall { font-size: 14px; }\nbutton:focus-visible { outline: 2px solid #005fcc; outline-offset: 2px; }\n@media (prefers-reduced-motion: reduce) {\n  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }\n}"
+}
